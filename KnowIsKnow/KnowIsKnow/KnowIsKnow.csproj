@@ -61,6 +61,7 @@
     <Content Include="css\AdminPage.css" />
     <Content Include="css\CareTopic.css" />
     <Content Include="css\FindHot.css" />
+    <Content Include="css\Helper.css" />
     <Content Include="css\Home.css" />
     <Content Include="css\Message.css" />
     <Content Include="css\MessageDetail.css" />
@@ -79,6 +80,7 @@
     <Content Include="js\adminpage.js" />
     <Content Include="js\caretopic.js" />
     <Content Include="js\findhot.js" />
+    <Content Include="js\helper.js" />
     <Content Include="js\home.js" />
     <Content Include="js\jquery-1.9.1.min.js" />
     <Content Include="js\index.js" />
@@ -102,6 +104,7 @@
     <Content Include="SuperAdminPage.aspx" />
     <Content Include="css\images\Thumbs.db" />
     <Content Include="MessageDetail.aspx" />
+    <Content Include="Helper.aspx" />
     <Content Include="WS.asmx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -205,6 +208,13 @@
     </Compile>
     <Compile Include="MessageDetail.aspx.designer.cs">
       <DependentUpon>MessageDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.aspx.cs">
+      <DependentUpon>Helper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helper.aspx.designer.cs">
+      <DependentUpon>Helper.aspx</DependentUpon>
     </Compile>
     <Compile Include="WS.asmx.cs">
       <DependentUpon>WS.asmx</DependentUpon>
