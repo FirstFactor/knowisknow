@@ -85,6 +85,7 @@
     <Content Include="js\home.js" />
     <Content Include="js\jquery-1.9.1.min.js" />
     <Content Include="js\index.js" />
+    <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\message.js" />
     <Content Include="js\messagedetail.js" />
     <Content Include="js\mmaster.js" />
