@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="KnowIsKnow.master.cs" Inherits="KnowIsKnow.KnowIsKnow" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/Mmaster.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+   
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="Mheader">
+            <div id="wttop">
+		<div id="wtzh-top-inner" class="wtzg-wrap">
+			<a href="/" class="wtzu-top-link-logo" id="wtzh-top-link-logo">知乎</a>
+			<div id="wtwho">
+				<img src="http://pic1.zhimg.com/da8e974dc_s.jpg" class="wtavatar">
+				<div id="wtname"><span>文韬</span></div>
+			</div>
+			<div role="search" id="wtzh-top-search" class="wtzu-top-search">
+				<div id="wtzh-top-search-form" class="wtzu-top-search-form wtform-with-magnify">
+					<input type="text" class="wtzu-top-search-input" id="q" name="q" autocomplete="off" ariahaapopup="true" placeholder="搜索话题、问题或人...">
+					<button type="submit" class="wtmagnify-button">
+						<i class="wticon wticon-magnify-q"></i>
+					</button>
+				</div>
+				<button class="wtzu-top-add-question" id="wtzu-top-add-question">提问</button>
+			</div>
+			<div id="wtzg-top-nav" class="wtzu-top-nav">
+				<ul class="wtzu-top-nav-ul wtzg-clear">
+					<li class="wtzu-top-nav-li" id="wtzh-top-home-link">
+						<a href="/" class="wtzu-top-nav-link" id="wtzh-top-link-home">首页</a>
+					</li>
+					<li class="wttop-nav-topic-selector wtzu-top-nav-li" id="wtzh-top-nav-item-topic">
+						<a href="/topic" class="wtzu-top-nav-link" id="wttop-nav-dd-topic">话题</a>
+					</li>
+					<li class="wtzu-top-nav-li">
+						<a href="/explore" class="wtzu-top-nav-link">发现</a>
+					</li>
+					<li class="wttop-nav-noti wtzu-top-nav-li ">
+						<a href="javascript" class="wtzu-top-nav-link" id="wtzh-top-nav-count-wrap" role="button" >
+							<span class="wtmobi-arrow"></span>
+							消息
+
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+            
+        </div>
+    <div id="Mmain">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div id="Mfooter">
+            <div id="wk-footer" class="wk-footer">
+		<div class="zg-wrap clearfix">
+			<ul>
+				<li>
+					<a href="#">知为知指南</a>
+				</li>
+				<li>
+					<a href="#">建议反馈</a>
+				</li>
+				<li>
+					<a href="#">移动应用</a>
+				</li>
+				<li>
+					<a href="#">知为知阅读</a>
+				</li>
+				<li>
+					<a href="#">加入知为知</a>
+				</li>
+				<li>
+					<a href="#">知为知协议</a>
+				</li>
+				<li>
+					<a href="#">商务合作</a>
+				</li>
+			</ul>
+			<span class="copy">© 2014 知为知</span>
+		</div>
+	</div>
+        </div>
+    </form>
+</body>
+</html>

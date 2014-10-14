@@ -1,0 +1,9 @@
+F:\KnowIsKnow\Model\bin\Debug\Model.dll
+F:\KnowIsKnow\Model\bin\Debug\Model.pdb
+F:\KnowIsKnow\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+F:\KnowIsKnow\Model\obj\Debug\Model.dll
+F:\KnowIsKnow\Model\obj\Debug\Model.pdb
+C:\Users\just\Desktop\KnowIsKnow\Model\bin\Debug\Model.dll
+C:\Users\just\Desktop\KnowIsKnow\Model\bin\Debug\Model.pdb
+C:\Users\just\Desktop\KnowIsKnow\Model\obj\Debug\Model.dll
+C:\Users\just\Desktop\KnowIsKnow\Model\obj\Debug\Model.pdb

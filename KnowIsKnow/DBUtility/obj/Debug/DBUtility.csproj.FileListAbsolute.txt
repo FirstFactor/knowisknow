@@ -1,0 +1,9 @@
+F:\KnowIsKnow\DBUtility\bin\Debug\DBUtility.dll
+F:\KnowIsKnow\DBUtility\bin\Debug\DBUtility.pdb
+F:\KnowIsKnow\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+F:\KnowIsKnow\DBUtility\obj\Debug\DBUtility.dll
+F:\KnowIsKnow\DBUtility\obj\Debug\DBUtility.pdb
+C:\Users\just\Desktop\KnowIsKnow\DBUtility\bin\Debug\DBUtility.dll
+C:\Users\just\Desktop\KnowIsKnow\DBUtility\bin\Debug\DBUtility.pdb
+C:\Users\just\Desktop\KnowIsKnow\DBUtility\obj\Debug\DBUtility.dll
+C:\Users\just\Desktop\KnowIsKnow\DBUtility\obj\Debug\DBUtility.pdb
