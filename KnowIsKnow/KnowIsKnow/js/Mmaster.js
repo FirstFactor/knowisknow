@@ -1,3 +1,3 @@
 ﻿$(function () {
-    alert("Mmaster");
+    alert("123");
 });

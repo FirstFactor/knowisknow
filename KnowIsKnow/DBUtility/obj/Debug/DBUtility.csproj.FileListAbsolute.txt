@@ -7,3 +7,7 @@ C:\Users\just\Desktop\KnowIsKnow\DBUtility\bin\Debug\DBUtility.dll
 C:\Users\just\Desktop\KnowIsKnow\DBUtility\bin\Debug\DBUtility.pdb
 C:\Users\just\Desktop\KnowIsKnow\DBUtility\obj\Debug\DBUtility.dll
 C:\Users\just\Desktop\KnowIsKnow\DBUtility\obj\Debug\DBUtility.pdb
+E:\guithub\knowisknow\KnowIsKnow\DBUtility\bin\Debug\DBUtility.dll
+E:\guithub\knowisknow\KnowIsKnow\DBUtility\bin\Debug\DBUtility.pdb
+E:\guithub\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.dll
+E:\guithub\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.pdb

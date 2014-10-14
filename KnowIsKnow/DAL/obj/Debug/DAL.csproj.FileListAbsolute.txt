@@ -16,3 +16,12 @@ C:\Users\just\Desktop\KnowIsKnow\DAL\bin\Debug\Model.pdb
 C:\Users\just\Desktop\KnowIsKnow\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\just\Desktop\KnowIsKnow\DAL\obj\Debug\DAL.dll
 C:\Users\just\Desktop\KnowIsKnow\DAL\obj\Debug\DAL.pdb
+E:\guithub\knowisknow\KnowIsKnow\DAL\bin\Debug\DAL.dll
+E:\guithub\knowisknow\KnowIsKnow\DAL\bin\Debug\DAL.pdb
+E:\guithub\knowisknow\KnowIsKnow\DAL\bin\Debug\DBUtility.dll
+E:\guithub\knowisknow\KnowIsKnow\DAL\bin\Debug\Model.dll
+E:\guithub\knowisknow\KnowIsKnow\DAL\bin\Debug\DBUtility.pdb
+E:\guithub\knowisknow\KnowIsKnow\DAL\bin\Debug\Model.pdb
+E:\guithub\knowisknow\KnowIsKnow\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\guithub\knowisknow\KnowIsKnow\DAL\obj\Debug\DAL.dll
+E:\guithub\knowisknow\KnowIsKnow\DAL\obj\Debug\DAL.pdb

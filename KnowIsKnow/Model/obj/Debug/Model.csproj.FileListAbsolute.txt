@@ -7,3 +7,7 @@ C:\Users\just\Desktop\KnowIsKnow\Model\bin\Debug\Model.dll
 C:\Users\just\Desktop\KnowIsKnow\Model\bin\Debug\Model.pdb
 C:\Users\just\Desktop\KnowIsKnow\Model\obj\Debug\Model.dll
 C:\Users\just\Desktop\KnowIsKnow\Model\obj\Debug\Model.pdb
+E:\guithub\knowisknow\KnowIsKnow\Model\bin\Debug\Model.dll
+E:\guithub\knowisknow\KnowIsKnow\Model\bin\Debug\Model.pdb
+E:\guithub\knowisknow\KnowIsKnow\Model\obj\Debug\Model.dll
+E:\guithub\knowisknow\KnowIsKnow\Model\obj\Debug\Model.pdb

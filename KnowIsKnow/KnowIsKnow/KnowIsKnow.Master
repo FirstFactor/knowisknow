@@ -19,12 +19,12 @@
 		<div id="wtzh-top-inner" class="wtzg-wrap">
 			<a href="/" class="wtzu-top-link-logo" id="wtzh-top-link-logo">知乎</a>
 			<div id="wtwho">
-				<img src="http://pic1.zhimg.com/da8e974dc_s.jpg" class="wtavatar">
+				<img src="http://pic1.zhimg.com/da8e974dc_s.jpg" class="wtavatar" />
 				<div id="wtname"><span>文韬</span></div>
 			</div>
 			<div role="search" id="wtzh-top-search" class="wtzu-top-search">
 				<div id="wtzh-top-search-form" class="wtzu-top-search-form wtform-with-magnify">
-					<input type="text" class="wtzu-top-search-input" id="q" name="q" autocomplete="off" ariahaapopup="true" placeholder="搜索话题、问题或人...">
+					<input type="text" class="wtzu-top-search-input" id="q" name="q" autocomplete="off" ariahaapopup="true" placeholder="搜索话题、问题或人..." />
 					<button type="submit" class="wtmagnify-button">
 						<i class="wticon wticon-magnify-q"></i>
 					</button>
