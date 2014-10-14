@@ -33,3 +33,14 @@ E:\guithub\knowisknow\KnowIsKnow\BLL\bin\Debug\DBUtility.pdb
 E:\guithub\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 E:\guithub\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.dll
 E:\guithub\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.pdb
+E:\github\knowisknow\KnowIsKnow\BLL\bin\Debug\BLL.dll
+E:\github\knowisknow\KnowIsKnow\BLL\bin\Debug\BLL.pdb
+E:\github\knowisknow\KnowIsKnow\BLL\bin\Debug\DAL.dll
+E:\github\knowisknow\KnowIsKnow\BLL\bin\Debug\Model.dll
+E:\github\knowisknow\KnowIsKnow\BLL\bin\Debug\DBUtility.dll
+E:\github\knowisknow\KnowIsKnow\BLL\bin\Debug\DAL.pdb
+E:\github\knowisknow\KnowIsKnow\BLL\bin\Debug\Model.pdb
+E:\github\knowisknow\KnowIsKnow\BLL\bin\Debug\DBUtility.pdb
+E:\github\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\github\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.dll
+E:\github\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.pdb

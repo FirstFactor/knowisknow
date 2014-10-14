@@ -11,5 +11,6 @@ namespace KnowIsKnow {
     
     
     public partial class CareTopic {
+
     }
 }
