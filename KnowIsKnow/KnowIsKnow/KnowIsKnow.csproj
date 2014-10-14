@@ -63,6 +63,8 @@
     <Content Include="css\FindHot.css" />
     <Content Include="css\Helper.css" />
     <Content Include="css\Home.css" />
+    <Content Include="css\images\ico_qq.png" />
+    <Content Include="css\images\ico_sina.gif" />
     <Content Include="css\Message.css" />
     <Content Include="css\MessageDetail.css" />
     <Content Include="css\Mmaster.css" />
