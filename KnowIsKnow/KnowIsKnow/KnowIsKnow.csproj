@@ -60,7 +60,6 @@
     <Content Include="AdminPage.aspx" />
     <Content Include="css\AdminPage.css" />
     <Content Include="css\CareTopic.css" />
-    <Content Include="css\error.css" />
     <Content Include="css\FindHot.css" />
     <Content Include="css\Helper.css" />
     <Content Include="css\Home.css" />
@@ -77,12 +76,10 @@
     <Content Include="css\Setting.css" />
     <Content Include="css\SuperAdminPage.css" />
     <Content Include="css\TopicSquare.css" />
-    <Content Include="Error.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Index.aspx" />
     <Content Include="js\adminpage.js" />
     <Content Include="js\caretopic.js" />
-    <Content Include="js\error.js" />
     <Content Include="js\findhot.js" />
     <Content Include="js\helper.js" />
     <Content Include="js\home.js" />
@@ -132,13 +129,6 @@
     </Compile>
     <Compile Include="AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Error.aspx.cs">
-      <DependentUpon>Error.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Error.aspx.designer.cs">
-      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
