@@ -1,2 +1,366 @@
-﻿body {background:black;
+﻿*{ margin:0; padding:0; font-family:'Microsoft YaHei',Arial; }
+ul,li{ list-style:none;}
+a{ text-decoration:none;}
+img{ border:0;}
+
+#adTop
+{ 
+    width:100%; 
+    height:45px; 
+    background: linear-gradient(#086ED5, #055DB5) repeat-x scroll 0% 0% #0767C8;
+    border-bottom: 1px solid #044E97;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25), 0px 1px 0px rgba(255, 255, 255, 0.15) inset;
+}
+#adTopDetail
+{
+    width:960px; 
+    height:45px;
+    margin:auto;
+}
+.adTitle
+{
+    width:auto;
+    height:45px;
+    line-height:45px;
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    float:left;
+}
+.adPerson
+{
+    display:block;
+    width:auto;
+    height:45px;
+    line-height:45px;
+    float:right;
+    color:#fff;
+    font-size:14px;
+}
+#adContentArea 
+{
+    width:960px;
+    height:600px;
+    border:1px solid #ccc;
+    overflow:auto;
+    margin:0 auto;
+    background-color:#fff;
+}
+.adNavOperation 
+{
+    width:auto;
+    height:45px;
+    border-bottom:1px solid #cccccc;
+}
+.adNavOperation li
+{
+    width:auto;
+    float:left;
+    border-top:1px solid #cccccc;
+    border-right:1px solid #cccccc;
+    border-left:1px solid #FFFFFF;
+    padding:0 20px;
+    height:44px;
+    line-height:44px;
+    font-size:14px;
+    color:#000;
+    cursor:pointer;
+}
+.adOperaDetail
+{
+    display:none;
+    width:960px;
+    height:auto;
+}
+.addTopic
+{
+    display:block;
+}
+.adNavActive
+{
+    background-color:#fff;
+    border-top:3px solid #ECF4F9;
+    margin-top:1px;
+}
+/*********************添加话题****************************/
+.adInput 
+{
+    width:600px;
+    height:50px;
+    line-height:50px;
+}
+.adInputSpecial
+{
+    width:900px;
+    height:200px;
+}
+.adSpanstyle 
+{
+    display:block;
+    width:100px;
+    height:50px;
+    line-height:50px;
+    float:left;
+    text-align:right;
+    font-size:14px;
+}
+.adTextstyle
+{
+    display:block;
+    margin-top:10px;
+    width:300px;
+    height:30px;
+    line-height:30px;
+    float:left;
+    padding:0 0 0 10px;
+    font-size:14px;
+    outline:0;
+}
+.adTextareastyle 
+{
+    width:490px;
+    height:200px;
+    line-height:20px;
+    font-size:14px;
+    resize:none;
+    outline:0;
+    overflow:auto;
+}
+.adThemeImgstyle 
+{
+    margin-top:10px;
+    width:470px;
+    height:30px;
+    line-height:30px;
+    float:left;
+    font-size:14px;
+    outline:0;
+}
+.adThemeUrl
+{
+    display:block;
+    float:left;
+    width:400px;
+    height:30px;
+    line-height:30px;
+    float:left;
+    padding:0 0 0 10px;
+    font-size:14px;
+    outline:0;
+}
+.adImgOpen 
+{
+    float:right;
+    width:50px;
+    height:30px;
+    border:1px solid #cccccc;
+    cursor:pointer;
+}
+.adCarestyle
+{
+    display:block;
+    margin-top:10px;
+    width:50px;
+    height:30px;
+    line-height:30px;
+    float:left;
+    padding:0 0 0 10px;
+    font-size:14px;
+    outline:0;
+    text-align:right;
+}
+.adCombox
+{
+    position:relative;
+    z-index:10;
+    float:left;
+    width:100px;
+    height:28px;
+    border:1px solid #cccccc;
+    margin-top:10px;
+    cursor:pointer;
+}
+.adComboxSpan 
+{
+    display:block;
+    float:left;
+    width:70px;
+    padding:0 0 0 10px;
+    height:30px;
+    line-height:30px;
+}
+.adComboxImg
+{
+    display:block;
+    float:left;
+    width:20px;
+    height:30px;
+    border:0;
+}
+.adStateList 
+{
+    display:none;
+    position:absolute;
+    z-index:12;
+    top:28px;
+    left:-1px;
+    width:90px;
+    height:auto;
+    border:1px solid #cccccc;
+    border-bottom:0;
+}
+.adStateli
+{
+    width:80px;
+    padding:0 0 0 10px;
+    height:30px;
+    line-height:30px;
+    border-bottom:1px solid #cccccc;
+    background-color:#fff;
+}
+.adStateli:hover
+{
+    background-color:#cccccc;
+}
+.adButtonstyle
+{
+    width:100px;
+    height:45px;
+    float:right;
+    cursor:pointer;
+}
+/*********************修改/删除话题****************************/
+.adSearchArea 
+{
+    width:500px;
+    height:30px;
+    line-height:30px;
+    font-size:14px;
+    padding:10px 0;
+}
+.adSearchSpan 
+{
+    display:block;
+    float:left;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    text-align:right;
+}
+.adSearch 
+{
+    float:left;
+    width:350px;
+    height:30px;
+}
+.adSearchInput
+{
+    display:block;
+    float:left;
+    width:284px;
+    height:28px;
+    outline:none;
+    padding:0 0 0 10px;
+}
+.adSearchImg
+{
+    float:left;
+    width:50px;
+    height:30px;
+    border:1px solid #ccc;
+    border-left:0;
+}
+.adTopicList {
+    width:920px;
+    height:auto;
+    border-top:1px solid #cccccc;
+    padding: 0 20px;
+}
+.adTopicli {
+    width:890px;
+    height:30px;
+    padding:10px 10px;
+    line-height:30px;
+    border-bottom:1px solid #cccccc;
+}
+.adTopicImg {
+    float:left;
+    padding:0 10px;
+    width:30px;
+    height:30px;
+}
+.adTopicImg img{
+    width:30px;
+    height:30px;
+}
+.adTopicTitle {
+    float:left;
+    padding:0 10px;
+    width:150px;
+    height:30px;
+    line-height:30px;
+    font-size:14px;
+    text-align:center;
+}
+.adTopicTitleInput{
+    float:left;
+    padding:0 10px;
+    width:130px;
+    height:26px;
+    line-height:30px;
+    font-size:14px;
+    text-align:left;
+    outline:none;
+}
+.adTopicDes {
+    float:left;
+    padding:0 10px;
+    width:360px;
+    height:30px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.adTopicDesInput{
+    float:left;
+    padding:0 10px;
+    width:340px;
+    height:26px;
+    outline:none;
+}
+.adTopicAttention {
+    float:left;
+    padding:0 10px;
+    width:50px;
+    height:30px;
+}
+.adTopicAttentInput{
+    float:left;
+    padding:0 10px;
+    width:40px;
+    height:26px;
+    outline:none;
+}
+.adTopicState {
+    float:left;
+    padding:0 10px;
+    width:100px;
+    height:30px;
+}
+.adTopicAlter {
+    float:left;
+    width:50px;
+    height:30px;
+    color:blue;
+    cursor:pointer;
+}
+.adComboxInput
+{
+    margin-top:0;
+}
+.adTopicDele{
+    float:left;
+    width:50px;
+    height:30px;
+    color:blue;
+    cursor:pointer;
 }
