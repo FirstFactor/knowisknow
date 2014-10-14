@@ -96,6 +96,7 @@
     <Content Include="KnowIsKnow.Master" />
     <Content Include="Home.aspx" />
     <Content Include="ProCenter.aspx" />
+    <Content Include="SiteMap.aspx" />
     <Content Include="TopicSquare.aspx" />
     <Content Include="CareTopic.aspx" />
     <Content Include="Setting.aspx" />
@@ -157,6 +158,13 @@
     </Compile>
     <Compile Include="ProCenter.aspx.designer.cs">
       <DependentUpon>ProCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMap.aspx.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMap.aspx.designer.cs">
+      <DependentUpon>SiteMap.aspx</DependentUpon>
     </Compile>
     <Compile Include="TopicSquare.aspx.cs">
       <DependentUpon>TopicSquare.aspx</DependentUpon>
