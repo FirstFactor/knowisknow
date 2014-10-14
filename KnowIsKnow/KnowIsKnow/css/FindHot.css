@@ -1,3 +1,181 @@
-﻿body {
-    background:black;
+﻿*{margin: 0;padding: 0;}
+ul li{list-style: none;list-style-type: none;}
+.clear{clear: both;}
+
+body{font-size:13px;line-height: 1.7;}
+#zmxtop{position: fixed;left: 0;top: 0;z-index: 20;width: 100%;height: 45px;background: #0666c5;background-color: #0767c8;
+       border-bottom: 1px solid #044e97;
+box-shadow: 0 1px 2px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.15);}
+#zmxtopinner{width: 960px;margin: 0 auto;clear: both;position: relative;height: inherit;}
+#zmxtoplogo{background-position: 0 8px;color: #fff;display: block;width: 122px;
+            height: 100%;float: left;text-indent: -9999px;background-image: url("images/logo.png");
+            background-repeat: no-repeat;}
+
+
+#zmxmian{min-height: 340px;padding: 80px 0 50px;position: relative;z-index: 2;width: 960px;
+	       margin: 0 auto;clear: both;}
+#zmxcontent{float: left;width: 100%;}
+#zmxcontentinner{margin: 0 328px 0 0;}
+#zmxrecommend-title{padding-bottom: 10px;color: #666;border-bottom: 1px solid #ccc;}
+#zmx-icon{width: 16px;height: 16px;vertical-align: -4px;margin-right: 5px;
+	     background-position: -71px -88px;background-image: url("images/sprites.png");
+         background-repeat: no-repeat;display: inline-block;}
+.zmxmore{color: #999;font-weight: 400;float: right;margin-top: 3px;text-decoration: none;}
+.zmxmore:hover{text-decoration: underline;color: #259;}
+.zmxlisttop{padding: 10px 0;position: relative;margin-left: 0;outline: 0;}
+.zmxquextion{font-weight: 700;font-size: 14px;text-decoration: none;color: #259;}
+.zmxquextion:hover{text-decoration: underline;}
+.zmxava{display: block;width: 38px;height: 38px;float: left;margin: 3px 0 0;}
+.zmximg{display: block;width: 38px;height: 38px;}
+.zmxfeedmain{margin-left: 48px;}
+.zmxfeedid{margin-bottom: 2px;}
+.zmxh3{margin: 0 0 1px;font-size: 13px;}
+.zmxcon{display: table;content: "";}
+.zmxfix:before{display: table;content: "";}
+.zmxfix:after{display: table;content: "";}
+.zmxrecommendfed{border-top: 1px solid #eee;}
+.zmxfeditem{padding: 10px 0;position: relative;margin-left: 0;outline: 0;}
+.zmxrecommendfedsp{color: #999;font-weight: 400;float: right;}
+.zmxrecommendfeda{color: #259;text-decoration: none;font-size: 14px;}
+.zmxrecommendfeda:hover{text-decoration: underline;}
+
+
+.zmxexplore{margin-top: 10px;}
+.zmxtab-nav{position: relative;float: left;margin-right: 5px;margin-bottom: -1px;cursor: pointer;}
+.zmxtab-navs{padding: 0;text-align: center;border-bottom: 1px solid #ccc;height: 33px;}
+.zmxanchor{color: #666;display: block;padding: 5px 15px;min-width: 45px;text-decoration: none;border-radius: 2px 2px 0 0;}
+.active a{background: #fff;border: 1px solid #ccc;border-bottom-color: transparent;cursor: default;}
+.zmxfeed-item{padding: 10px 0;position: relative;margin-left: 0;outline: 0;}
+.zmxfeda{color: #259;text-decoration: none;font-weight: 700;font-size: 14px;}
+.zmxfeda:hover{text-decoration: underline;}
+.zmxnew{height: 28px;display: block;}
+.zmxvote{margin-top: -1px;width: 38px;float: left;}
+.zmxcount{display: block;
+           color: #698ebf;
+           height: 24px;
+           line-height: 24px;
+           width: 38px;
+           border-radius: 3px;
+           border: 0;
+           cursor: pointer;
+           background: #eff6fa;
+           font-weight: 500;
+           text-align: center;
+           text-decoration: none;
+           overflow: hidden;
+       }
+ .zmxanser{float: left;margin-left: 5px;display: block;}
+ .zmxanser1{margin-bottom: 2px;}
+ .zmxanserh3{margin: 0 0 1px;font-size: 13px;}
+ .zmxanserh3 a{color: inherit;text-decoration: none;}
+ .zmxrich{display:block;  -webkit-tap-highlight-color: rgba(225,225,225,.5);position: relative;cursor: pointer;}
+ .zmxrich img{float: left;max-height: 100px;max-width: 180px;margin: 4px 10px 5px 50px;}
+ 
+.zmxshouqi{margin: 3px 0;font-size: .9em;color: #999;margin-left: 50px;display: none;}
+.zmxshouqispan{font-size: .9em;color: #999;display: inline;}
+.zmxshouqispan a{color: inherit;font-size: inherit;text-decoration: none;}
+.zmxshouqispan a:hover{text-decoration: underline;color: #259;}
+.zmxdr{color: inherit;font-size: inherit;text-decoration: none;}
+.zmxcollapse{float: right;text-decoration: none;color: #999;margin-left: 10px;cursor: pointer;}
+.zmxcollapse:hover{text-decoration: underline;color: #259;}
+.zmxcollapse i{display: inline-block;
+                line-height: 10px;
+                vertical-align: 0;
+                background-image: url("images/sprites.png");
+                background-repeat: no-repeat;
+                width: 8px;
+                height: 9px;
+                background-position: -135px -22px;
+                margin-right: 7px;
+              }
+.zmxhidecontent{margin-left: 40px;display: none;}
+.zmxdate{margin-left: 40px;display: none;}
+.zmxdate a{color: #999;text-decoration: none;}
+ 
+
+ .zmxex{display: inline-block;padding: 0 3px;border-radius: 2px;font-size: .9em;text-decoration: none;
+        color: #259;}
 }
+ 
+#zmxtabpanelmou{display:none;}
+
+.zmxpanel{padding: 5px 0;margin-bottom: -5px;background: transparent;}
+.zmxpanel1{display: inline-block;vertical-align: middle;color: #999;margin-left: 50px;text-decoration: none;}
+.zmxpanel1:hover{text-decoration: underline;color: #259;}
+.zmxpanel1 i{display: inline-block;
+              line-height: 10px;
+              vertical-align: 0;
+              background-image: url("images/sprites.png");
+              background-repeat: no-repeat;
+              margin-right: 5px;
+              width: 8px;
+              height: 9px;
+              background-position: -97px -23px;
+             }
+.zmxpanel2{margin-left: 7px;color: #999;display: inline-block;vertical-align: middle;text-decoration: none;}
+.zmxpanel2:hover{text-decoration: underline;color: #259;}
+.zmxpanel2 i{display: inline-block;
+             line-height: 10px;
+             vertical-align: 0;
+             background-image: url("images/sprites.png");
+             background-repeat: no-repeat;
+             margin-right: 5px; 
+             width: 9px;
+             height: 10px;
+             background-position: -28px -22px;            
+            }
+.zmxpanel3{display:none;margin-left: 7px;color: #999;vertical-align: middle;text-decoration: none;}
+.zmxpanel3:hover{text-decoration: underline;color: #259;}
+.zmxpanel3 i{display: inline-block;
+             line-height: 10px;
+             vertical-align: 0;
+             background-image: url("images/sprites.png");
+             background-repeat: no-repeat;
+             margin-right: 5px; 
+             width: 10px;
+             height: 10px;
+             background-position: -41px -22px;
+             }
+.zmxpanel4{display:none;margin-left: 7px;color: #999;vertical-align: middle;text-decoration: none;}
+.zmxpanel4:hover{text-decoration: underline;color: #259;}
+.zmxpanel4 i{display: inline-block;
+             line-height: 10px;
+             vertical-align: 0;
+             background-image: url("images/sprites.png");
+             background-repeat: no-repeat;
+             margin-right: 5px; 
+             width: 11px;
+             height: 10px;
+             background-position: -67px -22px;
+             }
+.zmxpanel5{display:none; margin-left: 7px;color: #999;vertical-align: middle;text-decoration: none;}
+.zmxpanel5:hover{text-decoration: underline;color: #259;}
+.zmxpanel5 i{display: inline-block;
+             line-height: 10px;
+             vertical-align: 0;
+             background-image: url("images/sprites.png");
+             background-repeat: no-repeat;
+             margin-right: 5px; 
+             width: 7px;
+             height: 10px;
+             background-position: -56px -22px;
+             }
+.zmxdian{display:none;padding: 0 3px;color: #BBB;font-family: Arial;}
+.zmxpanel6{display:none;color: #999;vertical-align: middle;text-decoration: none;}
+.zmxpanel6:hover{text-decoration: underline;color: #259;}
+
+
+#zmxright{float: left;margin: 0 0 0 -270px;width: 270px;}
+.zmxhothuati{position: relative;}
+.zmxhuatititle{border-bottom: 1px solid #ccc;color: #666;border: 0;}
+.zmxhuatititle h3{margin-bottom: 10px;font-weight: 700;font-size: 14px;outline: 0;margin: 0;float: left;}
+.zmxhuatititle a{text-decoration: none;font-size: 12px;float: right;color: #999;font-weight: 400;}
+.zmxhuaitiul{margin-top: 8px;display: block;}
+.zmxclearfix{padding-bottom: 1em;}
+.zmxclearfix a{float: left;margin-right: 10px;color: #259;text-decoration: none;}
+.zmxclearcon a:hover{text-decoration: underline;}
+.zmxclearfix a img{width: 40px;height: 40px;border-radius: 4px;}
+.zmxclearcon{overflow: hidden;display: block;}
+.zmxmeta{color: #999;}
+.zmxbottom a{text-decoration: none;color: #259;}
+.zmxbottom a:hover{text-decoration: underline;}
