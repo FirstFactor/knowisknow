@@ -76,6 +76,7 @@
     <Content Include="css\Setting.css" />
     <Content Include="css\SuperAdminPage.css" />
     <Content Include="css\TopicSquare.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Index.aspx" />
     <Content Include="js\adminpage.js" />
     <Content Include="js\caretopic.js" />
@@ -106,6 +107,10 @@
     <Content Include="MessageDetail.aspx" />
     <Content Include="Helper.aspx" />
     <Content Include="WS.asmx" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
