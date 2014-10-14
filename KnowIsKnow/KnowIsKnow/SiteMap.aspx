@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        这里是站点地图
+        在这里我工作了一天，写了一行代码，那么问题来了，挖掘机技术哪家强？
     </div>
     </form>
 </body>
