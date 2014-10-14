@@ -6,11 +6,7 @@
         $(".zqq-menban").show();
 
         $(".zqq-tiwen-search").show();
-        $(".zqq-tiwen-menban-close").click(function () {
-            $(".zqq-tiwen-search").hide();
-            $(".zqq-menban").hide();
-            $(".zqq-search-area").val("");
-        });
+       
         ////拖动
         //$(".zqq-tiwen-search").draggable({
         //    handle: ".zqq-tiwen-menban-title",
@@ -20,6 +16,11 @@
 
 
 
+    });
+    $(".zqq-tiwen-menban-close").click(function () {
+        $(".zqq-tiwen-search").hide();
+        $(".zqq-menban").hide();
+        $(".zqq-search-area").val("");
     });
 
     $(document).on("click", ".zqq-search-area", function () {

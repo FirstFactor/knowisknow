@@ -104,13 +104,13 @@
 			<div id="wtzg-top-nav" class="wtzu-top-nav">
 				<ul class="wtzu-top-nav-ul wtzg-clear">
 					<li class="wtzu-top-nav-li" id="wtzh-top-home-link">
-						<a href="/" class="wtzu-top-nav-link" id="wtzh-top-link-home">首页</a>
+						<a href="Home.aspx" class="wtzu-top-nav-link" id="wtzh-top-link-home">首页</a>
 					</li>
 					<li class="wttop-nav-topic-selector wtzu-top-nav-li" id="wtzh-top-nav-item-topic">
-						<a href="/topic" class="wtzu-top-nav-link" id="wttop-nav-dd-topic">话题</a>
+						<a href="CareTopic.aspx" class="wtzu-top-nav-link" id="wttop-nav-dd-topic">话题</a>
 					</li>
 					<li class="wtzu-top-nav-li">
-						<a href="/explore" class="wtzu-top-nav-link">发现</a>
+						<a href="FindHot.aspx" class="wtzu-top-nav-link">发现</a>
 					</li>
 					<li class="wttop-nav-noti wtzu-top-nav-li ">
 						<a href="javascript" class="wtzu-top-nav-link" id="wtzh-top-nav-count-wrap" role="button" >

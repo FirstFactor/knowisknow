@@ -4,7 +4,7 @@
     <script type="text/javascript" src="js/message.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <body>
+    
 	<div class="main">
 		<div class="content">
 			<div class="main-content-inner" id="wk-page">
@@ -73,5 +73,5 @@
 		</div>
 	</div>
 	<div class="mengban"></div>
-</body>
+
 </asp:Content>
