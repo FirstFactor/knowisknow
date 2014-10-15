@@ -6,6 +6,28 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+     <script language="javascript"> 
+    function Check_FileType() 
+    { 
+        var str = document.getElementById("FileUpload1").value;
+        if (str == "") {
+            alert("请选择图片");
+            return;
+        }
+        var pos=str.lastIndexOf("."); 
+        var lastname = str.substring(pos, str.length);
+        
+        if(lastname.toLowerCase()!=".jpg"&&lastname.toLowerCase()!=".gif"&&lastname.toLowerCase()!=".png") 
+        { 
+            alert("您上传的文件类型为"+lastname+"，图片必须为.jpg,.gif,.png类型"); 
+            return false; 
+        } 
+        else 
+        { 
+            return true; 
+        }         
+    } 
+    </script> 
     <link href="css/AdminPage.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome-ie7.min.css" />
@@ -38,9 +60,11 @@
                 <li class="adInput">
                     <span class="adSpanstyle">主题图片：</span>
                     <div class="adThemeImgstyle">
-                        <input type="text" class="adThemeUrl" />
-                        <div class="adImgOpen fa fa-lightbulb-o"></div>
+                        <asp:FileUpload ID="FileUpload1" class="adThemeUrl" runat="server" Width="250px" />   
+                        <asp:Button ID="UpLoadbtn1" class="adImgOpen" runat="server" Text="上传图片" OnClientClick="return Check_FileType()" OnClick="UpLoadbtn1_Click" />     
+                        <asp:Label ID="Label2" runat="server" ForeColor="Red"></asp:Label>               
                     </div>
+                    <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
                 </li>
                 <li class="adInput">
                     <span class="adSpanstyle">关注数：</span>
