@@ -15,6 +15,21 @@ namespace BLL
         private readonly DAL.MessageUserView dal = new DAL.MessageUserView();
         public MessageUserView()
         { }
+        public DataSet GetUnreadSenderList(string sql)
+        {
+            DAL.MessageUserView dalMUV = new DAL.MessageUserView();
+            return dalMUV.GetUnreadSenderList(sql);
+        }
+        public DataSet GetLastMessage(string sql)
+        {
+            DAL.MessageUserView dalMUV = new DAL.MessageUserView();
+            return dalMUV.GetUnreadSenderList(sql);
+        }
+        public DataSet GetMessageCount(string sql)
+        {
+            DAL.MessageUserView dalMUV = new DAL.MessageUserView();
+            return dalMUV.GetUnreadSenderList(sql);
+        }
         #region  BasicMethod
         /// <summary>
         /// 是否存在该记录

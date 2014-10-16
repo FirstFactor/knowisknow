@@ -16,6 +16,20 @@ namespace DAL
     {
         public MessageUserView()
         { }
+        public DataSet GetUnreadSenderList(string sql)
+        {
+            return DbHelperSQL.Query(sql);
+
+        }
+
+        public DataSet GetLastMessage(string sql)
+        {
+            return DbHelperSQL.Query(sql);
+        }
+        public DataSet GetMessageCount(string sql)
+        {
+            return DbHelperSQL.Query(sql);
+        }
         #region  BasicMethod
 
         /// <summary>

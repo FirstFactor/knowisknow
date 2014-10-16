@@ -24,7 +24,32 @@
 							<a name="send"class="zg-btn-blue zg-r3px">发送</a>
 						</div>
 				</div>
-				<div id="zh-pm-detail-item-wrap" class="navigable">
+                <asp:Repeater runat="server" ID="repMsg">
+                    <ItemTemplate>
+                        				<div id="zh-pm-detail-item-wrap" class="navigable">
+					<div class="zm-pm-item">
+						<a class="zm-item-link-avatar50">
+							<img class="zm-item-img-avatar50" src="Images/touxiang.jpg"/>
+						</a>
+						<div class="zm-pm-item-main">
+							<a><%# Eval("userNickName") %></a>
+							：<%# Eval("MessageContent") %>
+						</div>
+						<div class="zg-gray zu-pm-item-meta clearfix">
+							<span class="zg-gray zg-left"><%# Eval("MessageSendTime") %>
+							</span>
+							<a class="zg-link-litblue">回复</a>
+							<span class="zg-bull">|</span>
+							<a class="zg-link-litblue" >举报</a>
+							<span class="zg-bull">|</span>
+							<a class="zg-link-litblue" >删除</a>
+						</div>
+					</div>
+				
+				</div>
+                    </ItemTemplate>
+                </asp:Repeater>
+				<%--<div id="zh-pm-detail-item-wrap" class="navigable">
 					<div class="zm-pm-item">
 						<a class="zm-item-link-avatar50">
 							<img class="zm-item-img-avatar50" src="Images/touxiang.jpg"/>
@@ -57,7 +82,7 @@
 							<a class="zg-link-litblue" >删除</a>
 						</div>
 					</div>
-				</div>
+				</div>--%>
 			</div>
 		</div>
 	</div>
