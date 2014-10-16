@@ -5,13 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace KnowIsKnow
 {
     public partial class AdminPage : System.Web.UI.Page
     {
+      
+        
         protected void Page_Load(object sender, EventArgs e)
         {
- 
+            
         }
 
         protected void UpLoadbtn1_Click(object sender, EventArgs e)
@@ -35,7 +38,11 @@ namespace KnowIsKnow
                     if (IsAllowedExtension(FileUpload1) == true)
                     {
                         string filename = filepath.Substring(filepath.LastIndexOf("\\") + 1);
-                        string serverpath = Server.MapPath("~/images/") + filename;
+                         int idx = filename.LastIndexOf(".");
+                         string suffix = filename.Substring(idx);
+                         string newname  = DateTime.Now.Ticks.ToString() + suffix;
+                         Session["newname"] = newname;
+                         string serverpath = Server.MapPath("~/images/topicImages") + newname;
                         FileUpload1.PostedFile.SaveAs(serverpath);
                         this.Label1.Text = "上传成功！";
                     }
@@ -54,6 +61,7 @@ namespace KnowIsKnow
         private static bool IsAllowedExtension(FileUpload upfile)
         {
             string strOldFilePath = "";
+           
             string strExtension = "";
             string[] arrExtension = { ".gif", ".jpg", ".bmp", ".png" };
 
@@ -63,7 +71,10 @@ namespace KnowIsKnow
             if (upfile.PostedFile.FileName != string.Empty)
             {
                 strOldFilePath = upfile.PostedFile.FileName;//获得文件的完整路径名 
+               
                 strExtension = strOldFilePath.Substring(strOldFilePath.LastIndexOf("."));//获得文件的扩展名，如：.jpg 
+                
+                
                 for (int i = 0; i < arrExtension.Length; i++)
                 {
                     if (strExtension.Equals(arrExtension[i]))
@@ -73,6 +84,20 @@ namespace KnowIsKnow
                 }
             }
             return false;
+        }
+
+        protected void addbtn_Click(object sender, EventArgs e)
+        {
+            BLL.TopicInfo addtopic = new BLL.TopicInfo();
+            Model.TopicInfo topic = new Model.TopicInfo();
+            topic.topicTitle = this.txttopictitle.Text;
+            topic.topicDes = this.txtDesc.Text;
+            topic.topicPicUrl = "images/topicImages/" + Session["newname"];
+            topic.topicAttention = 0;
+           
+            addtopic.Add(topic);
+            Response.Write("<script>alert('添加成功')</script>");
+            
         } 
     }
 }

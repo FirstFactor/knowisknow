@@ -129,7 +129,7 @@ img{ border:0;}
 .adThemeImgstyle 
 {
     margin-top:10px;
-    width:470px;
+    width:350px;
     height:30px;
     line-height:30px;
     float:left;
@@ -150,8 +150,8 @@ img{ border:0;}
 }
 .adImgOpen 
 {
-    float:right;
-    width:50px;
+    float:left;
+    width:60px;
     height:30px;
     border:1px solid #cccccc;
     cursor:pointer;

@@ -11,7 +11,7 @@
     { 
         var str = document.getElementById("FileUpload1").value;
         if (str == "") {
-            alert("请选择图片");
+            
             return;
         }
         var pos=str.lastIndexOf("."); 
@@ -51,11 +51,13 @@
             <ul class="adOperaDetail addTopic">
                 <li class="adInput">
                     <span class="adSpanstyle">主题：</span>
-                    <input type="text" class="adTextstyle" />
+                    <asp:TextBox runat="server" ID="txttopictitle" Class="adTextstyle"></asp:TextBox>
+                   
                 </li>
                 <li class="adInputSpecial">
                     <span class="adSpanstyle">详细说明：</span>
-                    <textarea class="adTextareastyle"></textarea>
+                    <asp:TextBox runat="server" ID="txtDesc" Class="adTextareastyle" TextMode="MultiLine"></asp:TextBox>
+                    
                 </li>
                 <li class="adInput">
                     <span class="adSpanstyle">主题图片：</span>
@@ -72,17 +74,18 @@
                 </li>
                  <li class="adInput">
                     <span class="adSpanstyle">话题状态：</span>
-                     <div class="adCombox" IsOpen="false">
-                        <span class="adComboxSpan">normal</span>
+                     <div class="adCombox" IsOpen="false">                     
+                        <span runat="server" id="topicState1" class="adComboxSpan">normal</span>
                         <span class="adComboxImg fa fa-lightbulb-o"></span>
-                         <ul class="adStateList">
+                         <%--<ul class="adStateList">
                              <li class="adStateli">normal</li>
                              <li class="adStateli">deleted</li>
-                         </ul>
+                         </ul>--%>
                      </div>
                 </li>
                  <li class="adInput">
-                    <input type="button" class="adButtonstyle" value="添加" />
+                     <asp:Button runat="server" ID="addbtn" class="adButtonstyle" value="添加" OnClick="addbtn_Click" Text="添加" />
+                    
                 </li>
             </ul>
             <div class="adOperaDetail alterTopic">
@@ -106,27 +109,68 @@
                             <li class="adTopicAlter">操作</li>
                         </ul>
                     </li>
-                    <li class="adTopicli">
+
+                    <asp:Repeater runat="server" ID="rpttopic">
+                        <ItemTemplate>
+                            <li class="adTopicli">
+                                <ul>
+                                    <li class="adTopicImg">
+                                        <img class="spanshow" src="images/light-bulb-4.png" />
+                                        <span class="adComboxImg fa fa-lightbulb-o"></span>
+                                    </li>
+                                    <li class="adTopicTitle">
+                                        <span class="spanshow spanTitle">体育</span>
+                                        <input type="text" class="adTopicTitleInput" value="" /></li>
+                                    <li class="adTopicDes">
+                                        <span class="spanshow spanContent">体育体育体育体育体育体育体育体育体育体育</span>
+                                        <input type="text" class="adTopicDesInput" value="" />
+                                    </li>
+                                    <li class="adTopicAttention">
+                                        <span >12</span>
+                                
+                                    </li>
+                                    <li class="adTopicState">
+                                        <span class="spanshow topicstate">normal</span>
+                                        <div class="adCombox adComboxInput" IsOpen="false">
+                                            <span class="adComboxSpan selectedtopicstate">normal</span>
+                                            <span class="adComboxImg fa fa-lightbulb-o"></span>
+                                             <ul class="adStateList">
+                                                 <li class="adStateli">normal</li>
+                                                 <li class="adStateli">deleted</li>
+                                             </ul>
+                                         </div>
+                                    </li>
+                                    <li class="adTopicAlter adxiugai">修改
+                                    </li>
+                                    <li class="adTopicAlter submit">确认
+                                    </li>
+                                    <li class="adTopicAlter adshanchu">删除
+                                    </li>
+                                </ul>
+                             </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <%--<li class="adTopicli">
                         <ul>
                             <li class="adTopicImg">
                                 <img class="spanshow" src="images/light-bulb-4.png" />
                                 <span class="adComboxImg fa fa-lightbulb-o"></span>
                             </li>
                             <li class="adTopicTitle">
-                                <span class="spanshow">体育</span>
-                                <input type="text" class="adTopicTitleInput" value="体育" /></li>
+                                <span class="spanshow spanTitle">体育</span>
+                                <input type="text" class="adTopicTitleInput" value="" /></li>
                             <li class="adTopicDes">
-                                <span class="spanshow">体育体育体育体育体育体育体育体育体育体育</span>
-                                <input type="text" class="adTopicDesInput" value="体育体育体育体育体育体育体育体育体育体育" />
+                                <span class="spanshow spanContent">体育体育体育体育体育体育体育体育体育体育</span>
+                                <input type="text" class="adTopicDesInput" value="" />
                             </li>
                             <li class="adTopicAttention">
-                                <span class="spanshow">12</span>
-                                <input type="text" class="adTopicAttentInput" value="12" />
+                                <span >12</span>
+                                
                             </li>
                             <li class="adTopicState">
-                                <span class="spanshow">normal</span>
+                                <span class="spanshow topicstate">normal</span>
                                 <div class="adCombox adComboxInput" IsOpen="false">
-                                    <span class="adComboxSpan">normal</span>
+                                    <span class="adComboxSpan selectedtopicstate">normal</span>
                                     <span class="adComboxImg fa fa-lightbulb-o"></span>
                                      <ul class="adStateList">
                                          <li class="adStateli">normal</li>
@@ -136,44 +180,13 @@
                             </li>
                             <li class="adTopicAlter adxiugai">修改
                             </li>
-                            <li class="adTopicAlter adshanchu">删除
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="adTopicli">
-                        <ul>
-                            <li class="adTopicImg">
-                                <img class="spanshow" src="images/light-bulb-4.png" />
-                                <span class="adComboxImg fa fa-lightbulb-o"></span>
-                            </li>
-                            <li class="adTopicTitle">
-                                <span class="spanshow">体育</span>
-                                <input type="text" class="adTopicTitleInput" value="体育" /></li>
-                            <li class="adTopicDes">
-                                <span class="spanshow">体育体育体育体育体育体育体育体育体育体育</span>
-                                <input type="text" class="adTopicDesInput" value="体育体育体育体育体育体育体育体育体育体育" />
-                            </li>
-                            <li class="adTopicAttention">
-                                <span class="spanshow">12</span>
-                                <input type="text" class="adTopicAttentInput" value="12" />
-                            </li>
-                            <li class="adTopicState">
-                                <span class="spanshow">normal</span>
-                                <div class="adCombox adComboxInput" IsOpen="false">
-                                    <span class="adComboxSpan">normal</span>
-                                    <span class="adComboxImg fa fa-lightbulb-o"></span>
-                                     <ul class="adStateList">
-                                         <li class="adStateli">normal</li>
-                                         <li class="adStateli">deleted</li>
-                                     </ul>
-                                 </div>
-                            </li>
-                            <li class="adTopicAlter adxiugai">修改
+                            <li class="adTopicAlter submit">确认
                             </li>
                             <li class="adTopicAlter adshanchu">删除
                             </li>
                         </ul>
-                    </li>
+                    </li>--%>
+                    
                 </ul>
             </div>
             <div class="adOperaDetail dealReport">3</div>
