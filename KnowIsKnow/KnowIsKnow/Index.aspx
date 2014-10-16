@@ -34,23 +34,32 @@
 						</div>
 
 						<div class="zqyinput">
-							<input placeholder="姓" class="zqyfirst"/>
-							<input placeholder="名" class="zqylast"/>
-						</div>
-
-						<div class="zqyinput">
-							<input placeholder="邮箱" class="normalinput zqymail" type="email"/>
-						</div>
-
-						<div class="zqyinput">
-							<input placeholder="密码" class="normalinput zqymima" type="password"/>
-						</div>
-						<div class="zqyzhucefailure">
+							<div class="xmleft">
+								<span class="zqyplaspan emailfirst">姓</span>
+								<input  class="zqyfirst">
+							</div>
+							<div class="xmright">
+								<span class="zqyplaspan emaillast">名</span>
+								<input  class="zqylast">
+							</div>
 							
 						</div>
 
+						<div class="zqyinput spec">
+							<span class="zqyplaspan emailspan">邮箱</span>
+							<input  class="normalinput zqymail" type="email">
+						</div>
+
+						<div class="zqyinput spec">
+							<span class="zqyplaspan pwdspan">密码</span>
+							<input class="normalinput zqymima" type="password">
+						</div>
+						<div class="zqyzhucefailure">
+					
+						</div>
+
 						<div class="zqyinput">
-							<button type="button"  class="zqyzhuceordenglu zqyzhucesign">注册知乎</button>
+							<button   class="zqyzhuceordenglu zqyzhucesign">注册知乎</button>
 						</div>
 
 					</div>
@@ -65,12 +74,14 @@
 							</a>
 						</div>
 
-						<div class="zqyinput">
-							<input placeholder="知乎注册邮箱" class="normalinput zqysignmail" type="email">
+						<div class="zqyinput spec inputmail">
+							<span class="zqyplaspan signemailspan">邮箱</span>
+							<input  class="normalinput zqysignmail" type="email">
 						</div>
 
-						<div class="zqyinput">
-							<input placeholder="密码" class="normalinput zqysignmima" type="password">
+						<div class="zqyinput spec inputsignmima">
+							<span class="zqyplaspan signpwdspan">密码</span>
+							<input  class="normalinput zqysignmima" type="password">
 						</div>
 						<div class="zqydenglufailure">
 							<ul>
@@ -81,7 +92,7 @@
 						</div>
 
 						<div class="zqyinput">
-							<button type="submit"  class="zqyzhuceordenglu  zqydenglusign">登陆</button>
+							<button  class="zqyzhuceordenglu  zqydenglusign">登陆</button>
 						</div>
 
 
@@ -91,7 +102,75 @@
 				<br style="clear:both;" />
 			</div>
 		</div>
-		<div class="zqybottom"></div>
+		<div class="zqybottom">
+			<div class="bottomwrap">
+				<div class="zqyuserlist">
+					<div class="zqyuserph">
+						<img src="css/images/user1.jpg" class="zqyuserimg zqyuserspec" phid="1">
+					</div>
+
+					<div class="zqyuserph">
+						<img src="css/images/user2.jpg" class="zqyuserimg" phid="2">
+					</div>
+
+					<div class="zqyuserph">
+						<img src="css/images/user3.jpg" class="zqyuserimg" phid="3">
+					</div>
+
+					<div class="zqyuserph">
+						<img src="css/images/user4.jpg" class="zqyuserimg" phid="4">
+					</div>
+
+					<div class="zqyuserph">
+						<img src="css/images/user5.jpg" class="zqyuserimg" phid="5">
+					</div>
+				</div>
+				<div class="zqyuserstory">
+ 					<div class="zqytopic">
+						<img src="css/images/user1.jpg" class="story_avatar">
+						<div class="story_title">
+							<div>
+								<a href="#" class="story_jies mingzi">Cat Chen</a>
+								<span>上知乎，求欢乐</span>
+							</div>
+							<div class="story_jies">68743 人关注该话题，1000 个精华回答</div>
+						</div>
+						<div class="sep"></div>
+						<div class="story_content">
+							<div class="story_content_answer">
+								<span class="vote">
+									2222
+								</span>
+								<p>
+									<a href="#" class="answer_jies">Chrome 浏览器的哪些设计符合「Don't Make Me Think」原则？</a>
+								</p>
+							</div>
+							<div class="story_content_answer">
+								<span class="vote">
+									2222
+								</span>
+								<p>
+									<a href="#" class="answer_jies">Chrome 浏览器的哪些设计符合「Don't Make Me Think」原则？</a>
+								</p>
+							</div>
+							<div class="story_content_answer">
+								<span class="vote">
+									2222
+								</span>
+								<p>
+									<a href="#" class="answer_jies">Chrome 浏览器的哪些设计符合「Don't Make Me Think」原则？</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="sep"></div>
+						<div class="story_end">
+							Cat Chen在<a href="#" class="huati"> Facebook</a>、<a href="#" class="huati">政治</a>、<a href="#" class="huati">历史</a>等话题下获得了 <span>11024</span> 个赞同
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="zqyfooter"></div>
 	</div> 
     </div>
