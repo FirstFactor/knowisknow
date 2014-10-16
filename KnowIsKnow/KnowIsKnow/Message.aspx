@@ -12,7 +12,36 @@
 					<div class="zg-btn" id="wk-pm">写私信</div>
 					<h2>我的私信</h2>
 				</div>
-				<div id="wk-item" class="navigable">
+                <asp:Repeater runat="server" ID="rptMsg">
+                    <ItemTemplate>
+                        
+                
+                        <div id="wk-item" class="navigable">
+					<div class="zm-pm-item">
+						<a class="zm-item-link">
+							<img class="zm-pm-item-img" src="<%#getHeaderImage(Eval("MessageSenderID")) %>"/>
+						</a>
+						<div class="zm-pm-item-main">
+							<a class="pm-touser"><%# getNickName(Eval("MessageSenderID")) %></a>
+							：<%# getContent( Eval("MessageSenderID")) %>
+						</div>
+						<div class="zg-gray zu-pm-item-meta">
+							<span class="zg-gray zg-left">
+								<%#getDatatime( Eval("MessageSenderID")) %>
+							</span>
+							<a href="MessageDetail.aspx" class="zg-link-litblue">共 <%#getMessageCount(Eval("MessageSenderID")) %> 条对话</a>
+							<span class="zg-bull">|</span>
+							<a href="#" class="zg-link-litblue">回复</a>
+							<span class="zg-bull">|</span>
+							<a href="#" class="zg-link-litblue">举报</a>
+							<span class="zg-bull">|</span>
+							<a href="#" class="zg-link-litblue">删除</a>
+						</div>
+					</div>
+				</div>
+                    </ItemTemplate>
+                </asp:Repeater>
+				<%--<div id="wk-item" class="navigable">
 					<div class="zm-pm-item">
 						<a class="zm-item-link">
 							<img class="zm-pm-item-img" src="Images/touxiang.jpg"/>
@@ -34,7 +63,7 @@
 							<a href="#" class="zg-link-litblue">删除</a>
 						</div>
 					</div>
-				</div>
+				</div>--%>
 			</div>
 		</div>
 		<div class="main-sidebar"></div>
