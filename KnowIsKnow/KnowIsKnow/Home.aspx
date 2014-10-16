@@ -8,7 +8,51 @@
 			
 
 		<%--<div class="zqq-tiwen">提问</div>--%>
-
+        
+        <!******举报问题框*******>
+        <div class="zqq-jubao-inner">
+            <div class="zqq-tiwen-menban-title">
+                <div class="zqq-tiwen-menban-title-main">为什么举报这个问题？</div>
+                <div class="zqq-tiwen-menban-close">X</div>
+            </div>
+            <div class="zqq-jubao-chose">
+                <div class="zqq-jubao-chose-title">请选择理由</div>
+                <ul class="zqq-jubao-chose-main">
+                    <li class="zqq-jubao-chose-list">
+                        <label>
+                            <input class="zqq-jubao-checked1" value="1" mark="0" type="radio" />
+                             广告等垃圾信息
+                        </label>
+                    </li>
+                    <li class="zqq-jubao-chose-list">
+                        <label>
+                            <input class="zqq-jubao-checked2" value="2" mark="0" type="radio" />
+                             不友善内容
+                        </label>
+                    </li>
+                    <li class="zqq-jubao-chose-list">
+                        <label>
+                            <input class="zqq-jubao-checked3" value="3" mark="0" type="radio" />
+                             违法违规内容
+                        </label>
+                    </li>
+                    <li class="zqq-jubao-chose-list">
+                        <label>
+                            <input class="zqq-jubao-checked4" value="4" mark="0" type="radio" />
+                             不宜公开讨论的政治内容
+                        </label>
+                    </li>
+                    <li class="zqq-jubao-chose-list">
+                        <label>
+                             <input class="zqq-jubao-checked5" value="5" mark="0" type="radio" />
+                             其他（可自行填写）
+                        </label>
+                        <input class="zqq-jubao-otherReason" type="text" placeholder="请填写原因" />
+                    </li>
+                </ul>
+                <div class="zqq-jubao-submit">确定</div>
+            </div>
+        </div>
 		<!******首页内容**********>
 		<div class="zqq-main">
 			<div class="zqq-mini-main">
@@ -30,7 +74,10 @@
 									<img class="zqq-content-pic" src="" /> 
 								</div>
 								<div class="zqq-question-ft">
-									<div class="zqq-follow-topic">关注话题</div>
+									<div class="zqq-follow-topic">
+                                        <a class="zqq-follow-topic-button">关注话题</a>
+                                        <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>
+									</div>
 									<div class="zqq-jubao">举报</div>
 								</div>
 							</div>
