@@ -41,4 +41,12 @@
         $(".zmxdate").css("display", "none");
         $(".zmxrich").css("display", "block");
     })
+    $(".zmxpanel1").click(function () {
+        $(".zmxpanel1").css("display", "none");
+        $(".zmxpanel1give").show();
+    })
+    $(".zmxpanel1give").click(function () {
+        $(".zmxpanel1").show();
+        $(".zmxpanel1give").hide();
+    })
 });
