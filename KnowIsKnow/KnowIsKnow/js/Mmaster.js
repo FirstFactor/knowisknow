@@ -1,24 +1,19 @@
 ﻿$(function () {
-
-
     $(document).on("click", ".wtzu-top-add-question", function () {
-        
         $(".zqq-menban").show();
-
         $(".zqq-tiwen-search").show();
-       
-        ////拖动
-        //$(".zqq-tiwen-search").draggable({
-        //    handle: ".zqq-tiwen-menban-title",
-        //    containment: "parent"
-        //});
-
-
-
-
     });
+
+    //提问前搜索框拖动
+    $(".zqq-tiwen-search").draggable({
+        handle: ".zqq-tiwen-menban-title",
+        containment: "parent"
+    });
+
+    //关闭按钮通用
     $(".zqq-tiwen-menban-close").click(function () {
         $(".zqq-tiwen-search").hide();
+        $(".zqq-tiwen-inner").hide();
         $(".zqq-menban").hide();
         $(".zqq-search-area").val("");
     });
@@ -29,35 +24,21 @@
     });
 
     $(document).on("click", ".zqq-search-list-last", function () {
-        $(this).parent().parent().parent().hide();
-        $(this).parent().parent().parent().parent().find(".zqq-tiwen-inner").show();
+        $(".zqq-tiwen-search").hide();
+        $(".zqq-tiwen-inner").show();
 
-        var searchQuestion = $(this).parent().parent().find(".zqq-search-area").val();
-        $(this).parent().parent().parent().parent().find(".zqq-tiwen-inner").find(".zqq-publish").find(".zqq-publish-input-title").val() = searchQuestion;
-        //拖动
-        $(".zqq-tiwen-inner").draggable({
-            handle: ".zqq-tiwen-menban-title",
-            containment: "parent"
-        });
-
-        $(".zqq-tiwen-menban-close").click(function () {
-            $(this).parent().parent().hide();
-            $(this).parent().parent().parent().find(".zqq-menban").hide();
-            $(this).parent().parent().parent().find(".zqq-tiwen-search").find(".zqq-tiwen-search-bar").find(".zqq-search-area").val("");
-
-        });
+        var searchWord = $(".zqq-search-area").val();
+        $(".zqq-publish-input-title").html(searchWord);
     })
-
-
-   
-
-    $(".zqq-publish-input").click(function () {
-        $(this).next().find(".zqq-btn-publish").removeClass("btn-publish1");
-        $(this).next().find(".zqq-btn-publish").addClass("btn-publish2");
+    //提问框拖动
+    $(".zqq-tiwen-inner").draggable({
+        handle: ".zqq-tiwen-menban-title",
+        containment: "parent"
     });
+
     $(".zqq-btn-publish").click(function () {
-        var questionTitle = $(this).parent().parent().find(".zqq-publish-input-title").val();
-        var questionContent = $(this).parent().parent().find(".zqq-publish-input-content").val();
+        var questionTitle = $(".zqq-publish-input-title").val();
+        var questionContent = $(".zqq-publish-input-content").val();
         if (questionTitle == "") {
             alert("请输入提问标题");
             if (questionContent == "") {
@@ -69,12 +50,12 @@
         else {
             addQuestion(questionTitle, questionContent);
         }
-        $(this).parent().parent().find(".zqq-publish-input-title").val("");
-        $(this).parent().parent().find(".zqq-publish-input-content").val("");
-        $(this).parent().parent().parent().parent().find(".zqq-tiwen-search-bar").find(".zqq-search-area").val("");
+        $(".zqq-publish-input-title").val("");
+        $(".zqq-publish-input-content").val("");
+        $(".zqq-search-area").val("");
 
-        $(this).parent().parent().parent().hide();
-        $(this).parent().parent().parent().parent().find(".zqq-menban").hide();
+        $(".zqq-tiwen-inner").hide();
+        $(".zqq-menban").hide();
     });
 
 });
@@ -102,9 +83,9 @@ function addQuestion(questionTitle, questionContent) {
     $(".zqq-newQuestion").html(shtml + ssnHtml);
 
     $(".zqq-question-detail").hover(function () {
-        $(this).find(".zqq-question-ft").find(".zqq-jubao").show();
+        $(".zqq-jubao").show();
     }, function () {
-        $(this).find(".zqq-question-ft").find(".zqq-jubao").hide();
+        $(".zqq-jubao").hide();
     });
 }
 
