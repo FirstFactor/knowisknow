@@ -19,19 +19,7 @@
     }, function () {
         $(this).find(".ghmiddlecontentleftcontentdivdiv").find(".ghmiddlecontentleftcontentdivdivdiv").find(".ghmiddlecontentleftcontentdivdivdivguanzhutitle").find(".guanzhuhuatispecial").hide();
     });
-    $(".ghgzchuangquhuati").hover(function () {
 
-        $(this).find(".ghgzchuangquhuatidiv").find(".ghgzchuangquhuatidivcontent").find(".ghgzchuangquhuatidivcontentnumber").find(".ghycbuttom").css("visibility", "visible");
-    }, function () {
-        $(this).find(".ghgzchuangquhuatidiv").find(".ghgzchuangquhuatidivcontent").find(".ghgzchuangquhuatidivcontentnumber").find(".ghycbuttom").css("visibility", "hidden");
-
-    });
-    $(".bianjibuttom").click(function () {
-        $(this).parent().parent().parent().parent().hide();
-    });
-    $(".quxiaoguding").click(function () {
-        $(this).parent().parent().parent().parent().hide();
-    });
 
 
 });
