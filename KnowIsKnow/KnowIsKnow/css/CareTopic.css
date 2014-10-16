@@ -42,12 +42,12 @@
 #ghmiddlecontentrighttop{width: 270px;height: 23px;margin-bottom: 10px;line-height: 23px;}
 #ghmiddlecontentrighttop span{font-size: 14px;font-weight: 700;color: #666;float: left;}
 #ghmiddlecontentrightmiddle{width: 270px;min-height: 4px;overflow: hidden;}
-.ghgzchuangquhuati{width: 244px;height: 47px;border: 1px solid #ccc;border-radius: 5px;margin-bottom: 15px;padding: 10px 10px;cursor: move;}
+.ghgzchuangquhuati{width: 244px;height: 47px;border: 1px solid #ccc;border-radius: 5px;margin-bottom: 15px;padding: 10px 10px;cursor: move;position: relative;}
 .ghgzchuangquhuatidiv{width: 242px;height: 45px;border: 1px solid rgb(255,255,255);}
 .ghgzchuangquhuatidivpic{width: 38px;height: 44px;float: left;display: block;}
 .ghgzchuangquhuatidivpicimg{width: 38px;height: 38px;}
 .ghgzchuangquhuatidivcontent{width: 192px;height: 38px;margin-left: 50px !important;margin-left: 12px\9;}
-.ghgzchuangquhuatidivcontentname{width: 56px;height: 22px;color: #259;text-decoration: none;line-height: 1.7;font-size: 13px;font-weight: bolder;display: block;}
+.ghgzchuangquhuatidivcontentname{max-width: 145px;height: 22px;color: #259;text-decoration: none;line-height: 1.7;font-size: 13px;font-weight: bolder;display: block;}
 .ghgzchuangquhuatidivcontentname:hover{text-decoration: underline;}
 .ghgzchuangquhuatidivcontentnumber{width: 192px;height: 17px;color: #999;line-height: 16px;}
 .zg-gray{color: #999;font-size: 12px;font-weight: 400;}
@@ -67,4 +67,9 @@
 #ghbottommenuallright a{color: #999;text-decoration: none;}
 #ghbottommenuallright a:hover{text-decoration: underline;}
 
-
+.ghycbuttom{visibility: hidden;}
+.bianjibuttom{cursor:pointer; width: 15px;height: 15px;display: block;position: absolute;right: 30px;top: 10px;background-image: url("images/close.png") ;background-position:  -264px -103px;background-color: #698EBF;}
+.bianjibuttom:hover{background-color: #259;}
+.bianjibuttom2{cursor:pointer;width: 15px;height: 15px;display: block;position: absolute;right: 10px;top: 10px;background-image: url("images/close.png");background-position: -263px -84px;background-color: #698EBF;}
+.bianjibuttom2:hover{background-color: #259;}
+.quxiaoguding {cursor:pointer;}
