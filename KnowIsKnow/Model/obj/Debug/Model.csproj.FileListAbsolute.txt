@@ -17,3 +17,7 @@ E:\github\knowisknow\KnowIsKnow\Model\bin\Debug\Model.pdb
 E:\github\knowisknow\KnowIsKnow\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\github\knowisknow\KnowIsKnow\Model\obj\Debug\Model.dll
 E:\github\knowisknow\KnowIsKnow\Model\obj\Debug\Model.pdb
+E:\githup\knowisknow\KnowIsKnow\Model\bin\Debug\Model.dll
+E:\githup\knowisknow\KnowIsKnow\Model\bin\Debug\Model.pdb
+E:\githup\knowisknow\KnowIsKnow\Model\obj\Debug\Model.dll
+E:\githup\knowisknow\KnowIsKnow\Model\obj\Debug\Model.pdb
