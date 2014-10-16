@@ -163,9 +163,91 @@
 					
 				</div>
 				<div class="wtprofile-navbar">
-					
+					<a class="wtitemm  wtactive">
+						<i class="wticon wticon-profile-tab-home"></i>
+					</a>
+					<a class="wtitemm">
+						<span>提问</span>
+						<span class="wtnum">0</span>
+					</a>
+					<a class="wtitemm">
+						<span>回答</span>
+						<span class="wtnum">0</span>
+					</a>
+					<a class="wtitemm">
+						<span>专栏文章</span>
+						<span class="wtnum">0</span>
+					</a>
+					<a class="wtitemm">
+						<span>收藏</span>
+						<span class="wtnum">0</span>
+					</a>
+					<a class="wtitemm">
+						<span>公共编辑</span>
+						<span class="wtnum">0</span>
+					</a>
+
 				</div>
 			</div>
+			<div class="wtzm-profile-section-wrap">
+				<div class="wtzm-profile-section-head">
+					<h2 class="wtzm-profile-section-title">最新动态</h2>
+				</div>
+				<div id="wtzh-profile-activity-page-list">
+					<div class="wtzm-profile-section-item wtzm-item">
+						<span>关注了话题</span>
+						<a>
+							<img src="http://pic3.zhimg.com/2a098f9db_s.jpg" class="wtpic"/>
+							<span>NBA 总决赛</span>
+						</a>
+						<span class="wtweek">1周前</span> 
+					</div>
+					<div class="wtzm-profile-section-item wtzm-item">
+						<span>关注了话题</span>
+						<a>
+							<img src="http://pic4.zhimg.com/fb89e0ea3_s.jpg" class="wtpic"/>
+							<span>游戏</span>
+						</a>
+						<span class="wtweek">1周前</span> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wtzu-main-sidebar">
+			<div class="wtzm-profile-side-following wtzg-clear">
+				<a class="wtfoitem">
+					<span class="wtzg-gray-normal">关注了</span>
+					<br/>
+					<strong>0</strong>
+					<label>人</label>
+				</a>
+				<a class="wtfoitem wtleftborder">
+					<span class="wtzg-gray-normal">关注了</span>
+					<br/>
+					<strong>0</strong>
+					<label>人</label>
+				</a>
+			</div>
+			<div class="wtzm-profile-side-section">
+				<div class="wtzm-profile-side-section-title">
+					<span>关注了</span>
+					<a class="wtzg-link-litblue">
+						<span>2 个话题</span>
+					</a>
+				</div>
+				<div class="wtzm-profile-side-topics">
+					<a class="wtlink">
+						<img src="images/fb89e0ea3_m.jpg" class="wtavatar2"/>
+					</a>
+				</div>
+				<div class="wtzm-profile-side-topics">
+					<a class="wtlink">
+						<img src="images/2a098f9db_m.jpg" class="wtavatar2"/>
+					</a>
+				</div>
+			</div>
+			<div class="wtzm-profile-side-section2"></div>
+			
 		</div>
 	</div>
 </asp:Content>
