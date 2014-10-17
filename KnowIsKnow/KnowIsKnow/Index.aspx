@@ -13,8 +13,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <div class="zqywrapper">
-     <div class="zqytop">
+        <div class="zqywrapper">
+		<div class="zqytop">
 			<div class="zqytopContent">
 				<div class="zqytcleft">
 					<div class="zqylogo">
@@ -36,34 +36,32 @@
 						<div class="zqyinput">
 							<div class="xmleft">
 								<span class="zqyplaspan emailfirst">姓</span>
-								<input  class="zqyfirst" runat="server" id="inputxing" />
+								<input  class="zqyfirst">
 							</div>
 							<div class="xmright">
-								<span class="zqyplaspan emaillast" >名</span>
-								<input  class="zqylast" runat="server" id="inputming" />
+								<span class="zqyplaspan emaillast">名</span>
+								<input  class="zqylast">
 							</div>
 							
 						</div>
 
 						<div class="zqyinput spec">
 							<span class="zqyplaspan emailspan">邮箱</span>
-							<input runat="server" id="inputyx" class="normalinput zqymail" type="email" />
+							<input  class="normalinput zqymail" type="email">
 						</div>
 
 						<div class="zqyinput spec">
 							<span class="zqyplaspan pwdspan">密码</span>
-							<input runat="server" id="inputmm" class="normalinput zqymima" type="password" />
-                      
+							<input class="normalinput zqymima" type="password">
 						</div>
-                       
 						<div class="zqyzhucefailure">
 					
 						</div>
 
 						<div class="zqyinput">
-							<%--<button type="button" runat="server" class="zqyzhuceordenglu zqyzhucesign"  onclick="">注册知乎</button>--%>
-                            <asp:Button ID="btnzhuce" runat="server" Text="注册知乎" class="zqyzhuceordenglu zqyzhucesign" OnClick="btnzhuce_Click" />
+							<button   class="zqyzhuceordenglu zqyzhucesign">注册知乎</button>
 						</div>
+
 					</div>
 
 
@@ -78,56 +76,53 @@
 
 						<div class="zqyinput spec inputmail">
 							<span class="zqyplaspan signemailspan">邮箱</span>
-							<input  class="normalinput zqysignmail" type="email"  runat="server" id="inputsignyx" />
+							<input  class="normalinput zqysignmail" type="email">
 						</div>
 
 						<div class="zqyinput spec inputsignmima">
 							<span class="zqyplaspan signpwdspan">密码</span>
-							<input  class="normalinput zqysignmima" type="password"  runat="server" id="inputsignmm" />
+							<input  class="normalinput zqysignmima" type="password">
 						</div>
 						<div class="zqydenglufailure">
-							
+							<ul>
+								<li>
+								
+								</li>
+							</ul>
 						</div>
 
 						<div class="zqyinput">
-							<%--<button type="button"  class="zqyzhuceordenglu  zqydenglusign">登陆</button>--%>
-
-                            <asp:Button Text="登录" runat="server"  class="zqyzhuceordenglu  zqydenglusign" id="btndenglu" OnClick="btndenglu_Click"/>
+							<button  class="zqyzhuceordenglu  zqydenglusign">登陆</button>
 						</div>
 
 
 
 					</div>
-
-
-                    <div runat="server" id="faultshow" class="showfault"> 
-                     
-                    </div>
 				</div>
 				<br style="clear:both;" />
 			</div>
 		</div>
-	 <div class="zqybottom">
+		<div class="zqybottom">
 			<div class="bottomwrap">
 				<div class="zqyuserlist">
 					<div class="zqyuserph">
-						<img src="css/images/user1.jpg" class="zqyuserimg zqyuserspec" phid="1" />
+						<img src="css/images/user1.jpg" class="zqyuserimg zqyuserspec" phid="1">
 					</div>
 
 					<div class="zqyuserph">
-						<img src="css/images/user2.jpg" class="zqyuserimg" phid="2" />
+						<img src="css/images/user2.jpg" class="zqyuserimg" phid="2">
 					</div>
 
 					<div class="zqyuserph">
-						<img src="css/images/user3.jpg" class="zqyuserimg" phid="3" />
+						<img src="css/images/user3.jpg" class="zqyuserimg" phid="3">
 					</div>
 
 					<div class="zqyuserph">
-						<img src="css/images/user4.jpg" class="zqyuserimg" phid="4" />
+						<img src="css/images/user4.jpg" class="zqyuserimg" phid="4">
 					</div>
 
 					<div class="zqyuserph">
-						<img src="css/images/user5.jpg" class="zqyuserimg" phid="5" />
+						<img src="css/images/user5.jpg" class="zqyuserimg" phid="5">
 					</div>
 				</div>
 				<div class="zqyuserstory">
@@ -176,98 +171,8 @@
 				</div>
 			</div>
 		</div>
-	 <div class="zqyfooter"></div>
-    </div> 
-        <div class="mengban">
-            <div class="view">
-                <div class="wrapup">
-                    <p>
-                        欢迎你来到知为知。 这是一个能真正体现你价值的地方。<br /> 我们相信，娱乐至上的中国互联网，需要一个与众不同的新世界。     
-                    </p>
-
-                    <p>
-                            在这里，认真、求知、信任与相互尊重，比肤浅的趣味更有意义；<br />
-                       
-
-                                在这里，真正有价值的信息是绝对的稀缺品，远未得到有效的挖掘和利用；<br />
-                     
-                        
-                                在这里，人与人之间，可以通过言之有物的分享，建立起真诚而友善的关系。
-                    </p>
-
-                    <p> 
-                            建立这个新世界并不容易，但你会发现，这也不难，只需要你和我们一样：
-
-                    </p>
-                    <ul  style="padding:0px;">
-                        <li>
-                            <b>认真</b>
-                            、
-                            <b>专业</b>
-                            ：言之有物，不灌水，为自己的话负责
-                        </li>
-                        <li>
-                            <b>友善</b>
-                            、
-                            <b>互助</b>
-                            ：感谢每一个用心的回答，同时尊重与你观点不同的人
-                        </li>
-                    </ul>
-
-                    <p>
-                            独一无二的你，总有见解值得分享；世界那么大，也有等待着你的未知。 
-
-                    </p>
-                    <p> 
-                            欢迎你加入我们，一起创造知乎，发现更大的世界。
-
-                    </p>
-                    <a class="kaishi">开始</a>
-                </div>
-            </div>
-            <div class="followtopic">
-                <div class="followtip">
-                    <a class="tiaoguo">跳过</a>
-                    <p style="line-height:33px;">有哪些你擅长的领域，可以与我们分享？有哪些你感兴趣的领域，想要探索更多？</p>
-                </div>
-                <div class="topics">
-                    <ul style="padding:0px;">
-                        <li >
-                            <a class="box"></a>
-                        </li>
-                         <li >
-                            <a class="box"></a>
-                        </li>
-                        <li >
-                            <a class="box"></a>
-                        </li>
-                        <li >
-                            <a class="box"></a>
-                        </li>
-                        <li >
-                            <a class="box"></a>
-                        </li>
-                        <li >
-                            <a class="box"></a>
-                        </li>
-                        <li >
-                            <a class="box"></a>
-                        </li>
-                        <li >
-                            <a class="box"></a>
-                            <li >
-                            <a class="box"></a>
-                        </li>
-                        </li>
-                    </ul>
-                </div>
-                <div class="command">
-                     <a class="tiaoguo">跳过</a>
-                </div>
-            </div>
-
-            
-        </div>
+		<div class="zqyfooter"></div>
+	</div> 
     </div>
     </form>
 </body>

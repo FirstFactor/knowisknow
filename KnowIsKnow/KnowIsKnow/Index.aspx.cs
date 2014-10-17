@@ -22,6 +22,8 @@ namespace KnowIsKnow
             string youx = inputyx.Value;
             string mima = inputmm.Value;
             faultshow.InnerHtml = "";
+            BLL.UserInfo blluserinfo = new BLL.UserInfo();
+            int qq = blluserinfo.GetRecordCount("userEmail='" + youx + "' ");
 
             if (xing == "")
             {
@@ -41,9 +43,16 @@ namespace KnowIsKnow
                  faultshow.InnerHtml += "<p>请输入密码</p>";
             }
 
-            if (xing != "" && ming != "" && youx != "" && mima != "")
+            if (qq == 1)
             {
-                BLL.UserInfo blluserinfo = new BLL.UserInfo();
+                faultshow.InnerHtml = "";
+                faultshow.InnerHtml += "<p>该邮箱已注册，请直接登录！</p>";
+
+            }
+
+            if (xing != "" && ming != "" && youx != "" && mima != "" && qq !=1)
+            {
+                //BLL.UserInfo blluserinfo = new BLL.UserInfo();
                 Model.UserInfo modeluserinfo = new Model.UserInfo();
                 modeluserinfo.userEmail = inputyx.Value;
                 modeluserinfo.userPwd = inputmm.Value;
@@ -51,6 +60,8 @@ namespace KnowIsKnow
                 modeluserinfo.userVerifyCode = "123456";
                 modeluserinfo.userGender = "男";
                 blluserinfo.Add(modeluserinfo);
+                Response.Redirect("http://localhost:38547/Helper.aspx");
+
             }
 
         }
@@ -77,6 +88,7 @@ namespace KnowIsKnow
                 if ( info.Tables[0].Rows.Count != 0 )
                 {
                     Session["UserID"] = Convert.ToInt32(info.Tables[0].Rows[0]["userID"]);
+                    Session["UserPwd"] = Convert.ToInt32(info.Tables[0].Rows[0]["userPwd"]);
                     Session["UserNickName"] = Convert.ToString(info.Tables[0].Rows[0]["userNickName"]);
                     Session["UserHeadImage"] = Convert.ToString(info.Tables[0].Rows[0]["userHeadImage"]);
                     Response.Redirect("http://localhost:38547/Home.aspx");
