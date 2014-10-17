@@ -25,7 +25,7 @@ ul,li{list-style: none;list-style-position: outside;}
 
 .zqq-question-ft{width: 495px;height: 14px; font-size: 12px;color: #999;}
 .zqq-follow-topic{float: left;cursor: pointer;}
-.zqq-follow-topic:hover{text-decoration: underline;color: #259;}
+.zqq-follow-topic:hover{text-decoration: underline;}
 .zqq-display {display:none;}
 .zqq-follow-topic-button:hover{text-decoration: underline;color: #259;}
 .zqq-noFollow-topic-button:hover{text-decoration: underline;}
