@@ -26,7 +26,7 @@ namespace KnowIsKnow
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
 
             Model.MessageUserView msg = bllMsg.GetModel(senderID, 3);
-            string sql = "select top 1 MessageContent from MessageUserView  where MessageSenderID=" + senderID + " and MessageSenderID !=0 and MessageReceiverID =3 order by MessageSendTime desc";
+            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where MessageSenderID=" + senderID + " and MessageSenderID !=0 and MessageReceiverID =3 or MessageSenderID =3 and MessageSenderID !=0 and MessageReceiverID ="+senderID+" order by MessageSendTime desc";
             DataSet da = bllMsg.GetLastMessage(sql);
 
             return da.Tables[0].Rows[0]["MessageContent"].ToString();
@@ -39,8 +39,9 @@ namespace KnowIsKnow
 
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
             Model.MessageUserView msg = bllMsg.GetModel(senderID, 3);
-
-            return msg.userNickName;
+            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where MessageSenderID=" + senderID + " and MessageSenderID !=0 and MessageReceiverID =3 or MessageSenderID =3 and MessageSenderID !=0 and MessageReceiverID =" + senderID + " order by MessageSendTime desc";
+            DataSet da = bllMsg.GetLastMessage(sql);
+            return da.Tables[0].Rows[0]["userNickName"].ToString();
 
         }
         public string getDatatime(object id)
@@ -72,6 +73,20 @@ namespace KnowIsKnow
             DataSet da = bllMsg.GetMessageCount(sql);
 
             return da.Tables[0].Rows[0]["MessageSenderID"].ToString();
+        }
+        public void sendMessage(object o, EventArgs e)
+        {
+            string receiveNickName = this.txtMessageReceive.ToString();
+            string sendContent = this.txtMessageContent.Text;
+            DateTime now =DateTime.Now;
+            BLL.MessageInfo bllMsg = new BLL.MessageInfo();
+            Model.MessageInfo msg = new Model.MessageInfo();
+            msg.MessageSenderID = 3;
+            msg.MessageReceiverID = 4;
+            msg.MessageContent = sendContent;
+            msg.MessageSendTime = now;
+            msg.MessageSate = "unread";
+            bllMsg.Add(msg);
         }
     }
 }
