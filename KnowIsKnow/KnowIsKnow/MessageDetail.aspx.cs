@@ -14,22 +14,24 @@ namespace KnowIsKnow
         public string chatusername;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["UserID"] = 3;
-            userid = Session["UserID"].ToString();
-            if (userid != "" && userid != "null")
+            
+            
+            if (Session["UserID"] == null)
             {
+                Response.Write("<script>window.location.href='index.aspx'</script>");
+            }
+            else 
+            {
+               
+                userid = Session["UserID"].ToString();
                 msgsid = Request.QueryString["MsgsID"].ToString();
                 BLL.MessageUserView message = new BLL.MessageUserView();
                 DataSet da = message.GetList("MessageSenderID=" + msgsid + " and MessageReceiverID=" + userid + " or MessageSenderID=" + userid + " and MessageReceiverID=" + msgsid + " order by MessageSendTime desc");
                 this.repMsg.DataSource = da.Tables[0];
                 this.repMsg.DataBind();
                 BLL.UserInfo chatuserid = new BLL.UserInfo();
-                DataSet ds = chatuserid.GetList("userID="+msgsid+"");
+                DataSet ds = chatuserid.GetList("userID=" + msgsid + "");
                 chatusername = ds.Tables[0].Rows[0]["userNickName"].ToString();
-            }
-            else 
-            {
-                Response.Write("<script>window.location.href='index.aspx'</script>");
             }
            
         }
