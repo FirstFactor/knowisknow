@@ -32,55 +32,39 @@ $(function () {
         var ming = $(".zqylast").val();
         var email = $(".zqymail").val();
         var mima = $(".zqymima").val();
-        var checkmail = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
 
-        setInterval('setfaulthide()', 500);
-        //if (xing == "") {
+        if (xing == "") {
 
-        //    var xinghtml = "<div class='failtip'><i class='icon_sign'></i>姓氏未填写</div>";
-        //    $(".zqyzhucefailure").append(xinghtml);
-        //    $(".zqyzhucefailure").show();
+            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>姓氏未填写</div>";
+            $(".zqyzhucefailure").append(xinghtml);
+            $(".zqyzhucefailure").show();
 
-        //};
-        //if (ming == "") {
-        //    var xinghtml = "<div class='failtip'><i class='icon_sign'></i>名字未填写</div>";
-        //    $(".zqyzhucefailure").append(xinghtml);
-        //    $(".zqyzhucefailure").show();
-        //};
+        };
+        if (ming == "") {
+            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>名字未填写</div>";
+            $(".zqyzhucefailure").append(xinghtml);
+            $(".zqyzhucefailure").show();
+        };
 
-        //if (email == "") {
-        //    var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱未填写</div>";
-        //    $(".zqyzhucefailure").append(emailhtml);
-        //    $(".zqyzhucefailure").show();
-        //} else {
-           
-        //    if (!checkmail.test(email)) {
-        //        var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱格式不对</div>";
-        //        $(".zqyzhucefailure").append(emailhtml);
-        //        $(".zqyzhucefailure").show();
-        //    };
-        //};
+        if (email == "") {
+            var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱未填写</div>";
+            $(".zqyzhucefailure").append(emailhtml);
+            $(".zqyzhucefailure").show();
+        } else {
+            var checkmail = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+            if (!checkmail.test(email)) {
+                var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱格式不对</div>";
+                $(".zqyzhucefailure").append(emailhtml);
+                $(".zqyzhucefailure").show();
+            };
+        };
 
-        //if (mima == "") {
-        //    var mimahtml = "<div class='failtip'><i class='icon_sign'></i>密码未填写</div>";
-        //    $(".zqyzhucefailure").append(mimahtml);
-        //    $(".zqyzhucefailure").show();
-        //};
+        if (mima == "") {
+            var mimahtml = "<div class='failtip'><i class='icon_sign'></i>密码未填写</div>";
+            $(".zqyzhucefailure").append(mimahtml);
+            $(".zqyzhucefailure").show();
+        };
 
-        //if (xing != "" && ming != "" && checkmail.test(email) && email != "") {
-        //    $(".zqywrapper").hide();
-        //    $(".mengban").show();
-        //    $.ajax({
-        //        data: {},
-        //        dataType: "json",
-        //        url: "ws.asmx/HelloWorld",
-        //        type: "post",
-        //        contentType: "application/json",
-        //        success: function (res) {
-                  
-        //        }
-        //    });
-        //}
     });
 
 
@@ -92,25 +76,25 @@ $(function () {
         $(".zqydenglufailure").hide();
         var signmail = $(".zqysignmail").val();
         var signmima = $(".zqysignmima").val();
-        //if (signmail == "") {
-        //    var xinghtml = "<div class='failtip'><i class='icon_sign'></i>邮箱未填写</div>";
-        //    $(".zqydenglufailure").append(xinghtml);
-        //    $(".zqydenglufailure").show();
-        //} else {
-        //    //safsa@abc.ccom.cn
-        //    var checkmaildl = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
-        //    if (!checkmaildl.test(signmail)) {
-        //        var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱格式不对</div>";
-        //        $(".zqydenglufailure").append(emailhtml);
-        //        $(".zqydenglufailure").show();
-        //    }
-        //}
+        if (signmail == "") {
+            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>邮箱未填写</div>";
+            $(".zqydenglufailure").append(xinghtml);
+            $(".zqydenglufailure").show();
+        } else {
+            //safsa@abc.ccom.cn
+            var checkmaildl = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+            if (!checkmaildl.test(signmail)) {
+                var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱格式不对</div>";
+                $(".zqydenglufailure").append(emailhtml);
+                $(".zqydenglufailure").show();
+            }
+        }
 
-        //if (signmima == "") {
-        //    var xinghtml = "<div class='failtip'><i class='icon_sign'></i>密码未填写</div>";
-        //    $(".zqydenglufailure").append(xinghtml);
-        //    $(".zqydenglufailure").show();
-        //};
+        if (signmima == "") {
+            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>密码未填写</div>";
+            $(".zqydenglufailure").append(xinghtml);
+            $(".zqydenglufailure").show();
+        };
 
 
 
@@ -259,17 +243,6 @@ $(function () {
         $(".zqyuserstory").html(html);
     });
 
-
-
-
-    $(".kaishi").click(function () {
-        $(".view").hide();
-        $(".followtopic").show();
-    });
-
-
-    
-
 })
 
 
@@ -280,9 +253,4 @@ function ddd() {
 
     };
 
-}
-
-
-function setfaulthide() {
-    $("#faultshow").hide();
 }
