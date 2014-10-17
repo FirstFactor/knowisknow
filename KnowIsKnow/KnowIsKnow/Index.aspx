@@ -36,23 +36,23 @@
 						<div class="zqyinput">
 							<div class="xmleft">
 								<span class="zqyplaspan emailfirst">姓</span>
-								<input  class="zqyfirst">
+								<input  class="zqyfirst"  runat="server" id="inputxing"/>
 							</div>
 							<div class="xmright">
 								<span class="zqyplaspan emaillast">名</span>
-								<input  class="zqylast">
+								<input  class="zqylast" runat="server" id="inputming" />
 							</div>
 							
 						</div>
 
 						<div class="zqyinput spec">
 							<span class="zqyplaspan emailspan">邮箱</span>
-							<input  class="normalinput zqymail" type="email">
+							<input  class="normalinput zqymail" type="email" runat="server"  id="inputyx"/>
 						</div>
 
 						<div class="zqyinput spec">
 							<span class="zqyplaspan pwdspan">密码</span>
-							<input class="normalinput zqymima" type="password">
+							<input class="normalinput zqymima" type="password" runat="server" id="inputmm" />
 						</div>
 						<div class="zqyzhucefailure">
 					
@@ -76,12 +76,12 @@
 
 						<div class="zqyinput spec inputmail">
 							<span class="zqyplaspan signemailspan">邮箱</span>
-							<input  class="normalinput zqysignmail" type="email">
+							<input  class="normalinput zqysignmail" type="email"  runat="server" id="inputsignyx"/>
 						</div>
 
 						<div class="zqyinput spec inputsignmima">
 							<span class="zqyplaspan signpwdspan">密码</span>
-							<input  class="normalinput zqysignmima" type="password">
+							<input  class="normalinput zqysignmima" type="password"  runat="server"  id="inputsignmm"/>
 						</div>
 						<div class="zqydenglufailure">
 							<ul>
@@ -98,6 +98,9 @@
 
 
 					</div>
+
+
+
 				</div>
 				<br style="clear:both;" />
 			</div>
@@ -106,28 +109,28 @@
 			<div class="bottomwrap">
 				<div class="zqyuserlist">
 					<div class="zqyuserph">
-						<img src="css/images/user1.jpg" class="zqyuserimg zqyuserspec" phid="1">
+						<img src="css/images/user1.jpg" class="zqyuserimg zqyuserspec" phid="1" />
 					</div>
 
 					<div class="zqyuserph">
-						<img src="css/images/user2.jpg" class="zqyuserimg" phid="2">
+						<img src="css/images/user2.jpg" class="zqyuserimg" phid="2" />
 					</div>
 
 					<div class="zqyuserph">
-						<img src="css/images/user3.jpg" class="zqyuserimg" phid="3">
+						<img src="css/images/user3.jpg" class="zqyuserimg" phid="3" />
 					</div>
 
 					<div class="zqyuserph">
-						<img src="css/images/user4.jpg" class="zqyuserimg" phid="4">
+						<img src="css/images/user4.jpg" class="zqyuserimg" phid="4" />
 					</div>
 
 					<div class="zqyuserph">
-						<img src="css/images/user5.jpg" class="zqyuserimg" phid="5">
+						<img src="css/images/user5.jpg" class="zqyuserimg" phid="5" />
 					</div>
 				</div>
 				<div class="zqyuserstory">
  					<div class="zqytopic">
-						<img src="css/images/user1.jpg" class="story_avatar">
+						<img src="css/images/user1.jpg" class="story_avatar" />
 						<div class="story_title">
 							<div>
 								<a href="#" class="story_jies mingzi">Cat Chen</a>
