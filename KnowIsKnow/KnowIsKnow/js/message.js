@@ -12,4 +12,21 @@
             $(".modal-dialog").hide();
         })
     })
+    $(".zm-pm-user-selector").keyup(function ()
+    {
+       
+        $(".ac-renderer").show();
+        $(".ac-row").hover(function () {
+
+            $(this).addClass("ac-active");
+        }, function () {
+            $(this).removeClass("ac-active");
+        })
+        $(".ac-row").click(function () {
+            var nickname = $(this).find(".zu-autocomplete-row-name").text();
+            var mail = $(this).find(".zu-autocomplete-row-description").text();
+            $(".zg-form-text-input").val(nickname + mail);
+            $(".ac-renderer").hide();
+        })
+    })
 })
