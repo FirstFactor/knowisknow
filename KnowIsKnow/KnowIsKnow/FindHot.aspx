@@ -4,9 +4,9 @@
 	<title>知为知</title>
 	<meta charset=utf-8 />
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="js/zhihu.js"></script>
+	<script type="text/javascript" src="js/FindHot.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="css/zhihu.css">
+	<link rel="stylesheet" type="text/css" href="css/FindHot.css">
 </head>
 <body>
 	<div id="zmxtop">
