@@ -21,3 +21,7 @@ E:\githup\knowisknow\KnowIsKnow\Model\bin\Debug\Model.dll
 E:\githup\knowisknow\KnowIsKnow\Model\bin\Debug\Model.pdb
 E:\githup\knowisknow\KnowIsKnow\Model\obj\Debug\Model.dll
 E:\githup\knowisknow\KnowIsKnow\Model\obj\Debug\Model.pdb
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\Model\bin\Debug\Model.dll
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\Model\bin\Debug\Model.pdb
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\Model\obj\Debug\Model.dll
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\Model\obj\Debug\Model.pdb
