@@ -22,8 +22,9 @@ namespace KnowIsKnow
             string youx = inputyx.Value;
             string mima = inputmm.Value;
             faultshow.InnerHtml = "";
+
             BLL.UserInfo blluserinfo = new BLL.UserInfo();
-            int qq = blluserinfo.GetRecordCount("userEmail='" + youx + "' ");
+            int qq =blluserinfo.GetRecordCount("userEmail='" + youx + "'");
 
             if (xing == "")
             {
@@ -35,22 +36,23 @@ namespace KnowIsKnow
             }
             if (youx == "")
             {
-                 faultshow.InnerHtml += "<p>请输入邮箱</p>";
+                faultshow.InnerHtml += "<p>请输入邮箱</p>";
             }
 
             if (mima == "")
             {
-                 faultshow.InnerHtml += "<p>请输入密码</p>";
+                faultshow.InnerHtml += "<p>请输入密码</p>";
             }
+
 
             if (qq == 1)
             {
-                faultshow.InnerHtml = "";
-                faultshow.InnerHtml += "<p>该邮箱已注册，请直接登录！</p>";
+
+                faultshow.InnerHtml = "<p>该邮箱已注册，请直接登录！</p>";
 
             }
 
-            if (xing != "" && ming != "" && youx != "" && mima != "" && qq !=1)
+            if (xing != "" && ming != "" && youx != "" && mima != "" && qq != 1)
             {
                 //BLL.UserInfo blluserinfo = new BLL.UserInfo();
                 Model.UserInfo modeluserinfo = new Model.UserInfo();
@@ -60,47 +62,53 @@ namespace KnowIsKnow
                 modeluserinfo.userVerifyCode = "123456";
                 modeluserinfo.userGender = "男";
                 blluserinfo.Add(modeluserinfo);
-                Response.Redirect("http://localhost:38547/Helper.aspx");
+
+                Session["UserEmail"] = inputyx.Value;
+
+                Response.Redirect("http://localhost:38547/SelectTopic.aspx");
 
             }
 
         }
-        
+
         protected void btndenglu_Click(object sender, EventArgs e)
         {
-               BLL.UserInfo blldenglu = new BLL.UserInfo();
-               string signyx = inputsignyx.Value;
-               string signmm  = inputsignmm.Value;
-               //int qq= blldenglu.GetRecordCount("userEmail='" +signyx+"' and userPwd='" +signmm+"'");
-               // if(qq==1)
-               // {
-                   
-               //     Response.Redirect("http://localhost:38547/Home.aspx");
-               // }
-               // else
-               // {
-               //     faultshow.InnerHtml = "";
-               //     faultshow.InnerHtml = "<p>登录失败！</p>";
-               //     faultshow.InnerHtml += "<p>请检查您的帐号和密码是否正确</p>";
-               // }                      
+            BLL.UserInfo blldenglu = new BLL.UserInfo();
+            string signyx = inputsignyx.Value;
+            string signmm = inputsignmm.Value;
+            //int qq= blldenglu.GetRecordCount("userEmail='" +signyx+"' and userPwd='" +signmm+"'");
+            // if(qq==1)
+            // {
 
-                DataSet info = blldenglu.GetList("userEmail='" + signyx + "' and userPwd='" + signmm + "'");
-                if ( info.Tables[0].Rows.Count != 0 )
-                {
-                    Session["UserID"] = Convert.ToInt32(info.Tables[0].Rows[0]["userID"]);
-                    Session["UserPwd"] = Convert.ToInt32(info.Tables[0].Rows[0]["userPwd"]);
-                    Session["UserNickName"] = Convert.ToString(info.Tables[0].Rows[0]["userNickName"]);
-                    Session["UserHeadImage"] = Convert.ToString(info.Tables[0].Rows[0]["userHeadImage"]);
-                    Response.Redirect("http://localhost:38547/Home.aspx");
-                }
-                else
-                {
-                    faultshow.InnerHtml = "";
-                    faultshow.InnerHtml = "<p>登录失败！</p>";
-                    faultshow.InnerHtml += "<p>请检查您的帐号和密码是否正确</p>";
-                }
+            //     Response.Redirect("http://localhost:38547/Home.aspx");
+            // }
+            // else
+            // {
+            //     faultshow.InnerHtml = "";
+            //     faultshow.InnerHtml = "<p>登录失败！</p>";
+            //     faultshow.InnerHtml += "<p>请检查您的帐号和密码是否正确</p>";
+            // }                      
+
+            DataSet info = blldenglu.GetList("userEmail='" + signyx + "' and userPwd='" + signmm + "'");
+            if (info.Tables[0].Rows.Count != 0)
+            {
+                Session["UserID"] = Convert.ToInt32(info.Tables[0].Rows[0]["userID"]);
+                Session["UserNickName"] = Convert.ToString(info.Tables[0].Rows[0]["userNickName"]);
+                Session["UserHeadImage"] = Convert.ToString(info.Tables[0].Rows[0]["userHeadImage"]);
+                Session["UserEmail"] = Convert.ToString(info.Tables[0].Rows[0]["userEmail"]);
+                Session["UserPwd"] = Convert.ToString(info.Tables[0].Rows[0]["userPwd"]);
+                Response.Redirect("http://localhost:38547/Home.aspx");
                 
-                               
+                
+            }
+            else
+            {
+                faultshow.InnerHtml = "";
+                faultshow.InnerHtml = "<p>登录失败！</p>";
+                faultshow.InnerHtml += "<p>请检查您的帐号和密码是否正确</p>";
+            }
+
+
         }
 
     }
