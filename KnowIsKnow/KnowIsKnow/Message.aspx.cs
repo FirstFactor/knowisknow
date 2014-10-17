@@ -5,18 +5,32 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
+
 namespace KnowIsKnow
 {
     public partial class WebForm6 : System.Web.UI.Page
     {
+        string userId;
         protected void Page_Load(object sender, EventArgs e)
         {
-            BLL.MessageUserView message = new BLL.MessageUserView();
-            string sql = "select MessageSenderID from MessageUserView where MessageSenderID !=0 and MessageReceiverID =3 group by MessageSenderID";
-            DataSet ds = message.GetUnreadSenderList(sql);
-            this.rptMsg.DataSource = ds.Tables[0];
-            this.rptMsg.DataBind();
+            Session["UserID"] = 3;
+            userId = Session["UserID"].ToString();
+           
+            if (userId != "" && userId != "null")
+            {
+                BLL.MessageUserView message = new BLL.MessageUserView();
+                string sql = "select MessageSenderID from MessageUserView where MessageSenderID !=0 and MessageReceiverID ="+userId+" group by MessageSenderID";
+                DataSet ds = message.GetUnreadSenderList(sql);
+                this.rptMsg.DataSource = ds.Tables[0];
+                this.rptMsg.DataBind();
+               
+                
+            }
+            else
+            {
+                Response.Write("<script>window.location.href='index.aspx'</script>");
+            }
+           
 
         }
         public string getContent(object id)
@@ -26,7 +40,7 @@ namespace KnowIsKnow
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
 
             Model.MessageUserView msg = bllMsg.GetModel(senderID, 3);
-            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where MessageSenderID=" + senderID + " and MessageSenderID !=0 and MessageReceiverID =3 or MessageSenderID =3 and MessageSenderID !=0 and MessageReceiverID ="+senderID+" order by MessageSendTime desc";
+            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where MessageSenderID=" + senderID + " and MessageSenderID !=0 and MessageReceiverID ="+userId+" or MessageSenderID ="+userId+" and MessageSenderID !=0 and MessageReceiverID ="+senderID+" order by MessageSendTime desc";
             DataSet da = bllMsg.GetLastMessage(sql);
 
             return da.Tables[0].Rows[0]["MessageContent"].ToString();
@@ -39,7 +53,7 @@ namespace KnowIsKnow
 
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
             Model.MessageUserView msg = bllMsg.GetModel(senderID, 3);
-            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where MessageSenderID=" + senderID + " and MessageSenderID !=0 and MessageReceiverID =3 or MessageSenderID =3 and MessageSenderID !=0 and MessageReceiverID =" + senderID + " order by MessageSendTime desc";
+            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where MessageSenderID=" + senderID + " and MessageSenderID !=0 and MessageReceiverID ="+userId+" or MessageSenderID ="+userId+" and MessageSenderID !=0 and MessageReceiverID =" + senderID + " order by MessageSendTime desc";
             DataSet da = bllMsg.GetLastMessage(sql);
             return da.Tables[0].Rows[0]["userNickName"].ToString();
 
@@ -66,13 +80,19 @@ namespace KnowIsKnow
         public string getMessageCount(object id)
         {
             int senderID = (int)id;
-
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
             Model.MessageUserView msg = bllMsg.GetModel(senderID, 3);
-            string sql = "select COUNT(MessageSenderID) AS MessageSenderID from MessageUserView where MessageSenderID=" + senderID + " and MessageReceiverID=3 or MessageSenderID=3 and MessageReceiverID=" + senderID + " ";
+            string sql = "select COUNT(MessageSenderID) AS MessageSenderID from MessageUserView where MessageSenderID=" + senderID + " and MessageReceiverID="+userId+" or MessageSenderID="+userId+" and MessageReceiverID=" + senderID + " ";
             DataSet da = bllMsg.GetMessageCount(sql);
 
             return da.Tables[0].Rows[0]["MessageSenderID"].ToString();
+        }
+        public string getchatNickName(object id) 
+        {
+            int senderID = (int)id;
+            BLL.UserInfo blluser = new BLL.UserInfo();
+            DataSet da = blluser.GetList("userID="+senderID+"");
+            return da.Tables[0].Rows[0]["userNickName"].ToString();
         }
         public void sendMessage(object o, EventArgs e)
         {

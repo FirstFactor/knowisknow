@@ -22,15 +22,16 @@
 							<img class="zm-pm-item-img" src="<%#getHeaderImage(Eval("MessageSenderID")) %>"/>
 						</a>
 						<div class="zm-pm-item-main">
-							<a class="pm-touser"><%# getNickName(Eval("MessageSenderID")) %></a>
+							<a class="pm-touser" ><%# getNickName(Eval("MessageSenderID")) %></a>
 							：<%# getContent( Eval("MessageSenderID")) %></div>
 						<div class="zg-gray zu-pm-item-meta">
 							<span class="zg-gray zg-left">
 								<%#getDatatime( Eval("MessageSenderID")) %>
 							</span>
-							<a href="MessageDetail.aspx" class="zg-link-litblue">共 <%#getMessageCount(Eval("MessageSenderID")) %> 条对话</a>
+							<a href="MessageDetail.aspx?MsgsID=<%# Eval("MessageSenderID") %>" class="zg-link-litblue">共 <%#getMessageCount(Eval("MessageSenderID")) %> 条对话</a>
+                            
 							<span class="zg-bull">|</span>
-							<a href="#" class="zg-link-litblue">回复</a>
+							<a href="#" class="zg-link-litblue huifusixin" usernickname="<%#getchatNickName(Eval("MessageSenderID")) %>">回复</a>
 							<span class="zg-bull">|</span>
 							<a href="#" class="zg-link-litblue">举报</a>
 							<span class="zg-bull">|</span>
