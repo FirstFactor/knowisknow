@@ -10,6 +10,6 @@
 namespace KnowIsKnow {
     
     
-    public partial class WebForm7 {
+    public partial class FindHot {
     }
 }

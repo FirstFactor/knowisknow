@@ -1,20 +1,12 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-	<title>知为知</title>
-	<meta charset=utf-8 />
-	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="js/FindHot.js"></script>
-	
-	<link rel="stylesheet" type="text/css" href="css/FindHot.css">
-</head>
-<body>
-	<div id="zmxtop">
-		<div id="zmxtopinner">
-			<a id="zmxtoplogo" href="">知为知</a>
-		</div>
-	</div>
-	<div id="zmxmian">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/KnowIsKnow.Master" AutoEventWireup="true" CodeBehind="FindHot.aspx.cs" Inherits="KnowIsKnow.FindHot" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="css/FindHot.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/FindHot.js"></script>
+    
+</asp:Content>
+    
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="zmxmian">
 		<div id="zmxcontent">
 			<div id="zmxcontentinner">
 				<div id="zmxrecommend">
@@ -203,5 +195,4 @@
             
 		</div>
 	</div>
-</body>
-</html>
+</asp:Content>
