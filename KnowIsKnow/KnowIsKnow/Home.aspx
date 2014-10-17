@@ -69,7 +69,10 @@
 									<img class="zqq-content-pic" src="" /> 
 								</div>
 								<div class="zqq-question-ft">
-									<div class="zqq-follow-topic">关注话题</div>
+									<div class="zqq-follow-topic">
+                                        <a class="zqq-follow-topic-button">关注话题</a>
+                                        <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>
+									</div>
 									<div class="zqq-jubao">举报</div>
 								</div>
 							</div>
