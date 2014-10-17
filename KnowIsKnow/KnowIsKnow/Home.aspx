@@ -4,7 +4,7 @@
     <script type="text/javascript" src="js/home.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <%--举报问题框--%>
+        
         <div class="zqq-jubao-inner">
             <div class="zqq-tiwen-menban-title">
                 <div class="zqq-tiwen-menban-title-main">为什么举报这个问题？</div>
@@ -48,14 +48,43 @@
                 <div class="zqq-jubao-submit">确定</div>
             </div>
         </div>
-        <%--首页--%>
+        
         <div class="zqq-main">
 			<div class="zqq-mini-main">
 				<div class="zqq-mm-R">
 					<div class="zqq-mm-R-L">
 						<div class="zqq-question-area">
 						<div class="zqq-newQuestion"></div>
-						<div class="zqq-small-question">
+
+                        <asp:Repeater ID="rpt" runat="server">
+                            <ItemTemplate>
+                                <div class="zqq-small-question">
+							<div class="zqq-head-photo">
+								<img class="zqq-head-face" src="image/1.jpg"/>
+							</div>
+							<div class="zqq-question-detail">
+								<div class="zqq-question-info"><%# Eval("userNickName") %> 提出了问题</div>
+								<div class="zqq-question-title">
+									<%# Eval("questionTitle") %>
+								</div>
+								<div class="zqq-question-content">
+									<div class="zqq-content-word"><%# Eval("questionContent") %></div>
+									<img class="zqq-content-pic" src="" /> 
+								</div>
+								<div class="zqq-question-ft">
+									<div class="zqq-follow-topic">
+                                        <a class="zqq-follow-topic-button">关注话题</a>
+                                        <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>
+									</div>
+									<div class="zqq-jubao">举报</div>
+								</div>
+							</div>
+							</div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                           
+                        
+						<%--<div class="zqq-small-question">
 							<div class="zqq-head-photo">
 								<img class="zqq-head-face" src="image/1.jpg"/>
 							</div>
@@ -76,7 +105,7 @@
 									<div class="zqq-jubao">举报</div>
 								</div>
 							</div>
-							</div>
+							</div>--%>
 						</div>
 					</div>
 					<div class="zqq-mm-R-R"></div>
