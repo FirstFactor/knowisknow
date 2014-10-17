@@ -97,6 +97,23 @@
 					<a class="zm-command-cancel">取消</a>
 					<asp:Button  runat="server"  class="zg-btn-blue zg-r3px" id="btnsendMessage" OnClick="sendMessage" Text="发送"/>
 				</div>
+                <div class="ac-renderer">
+					<div class="ac-row">
+						<img class="zm-item-img-avatar zg-left" src="Images/sprites.png"/>
+						<span class="zu-autocomplete-row-name">aaa</span>
+						<span class="zg-gray-normal zu-autocomplete-row-description">呵呵</span>
+					</div>
+					<div class="ac-row">
+						<img class="zm-item-img-avatar zg-left" src="Images/sprites.png"/>
+						<span class="zu-autocomplete-row-name">nnn</span>
+						<span class="zg-gray-normal zu-autocomplete-row-description">呵呵</span>
+					</div>
+					<div class="ac-row">
+						<img class="zm-item-img-avatar zg-left" src="Images/sprites.png"/>
+						<span class="zu-autocomplete-row-name">ddd</span>
+						<span class="zg-gray-normal zu-autocomplete-row-description">呵呵</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
