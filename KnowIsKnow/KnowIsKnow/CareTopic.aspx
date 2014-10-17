@@ -28,7 +28,7 @@
 								<a class=" special ghmiddlecontentleftcontentdivdivdivguanzhutitlea2 ">
 									<i class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea2i"></i>取消固定
 								</a>
-								<a href="" class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea3 guanzhuhuatispecial">取消关注</a>
+								<a  class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea3 guanzhuhuatispecial quxiaoguanzhu">取消关注</a>
 							</div>
 							<div class="ghmiddlecontentleftcontentdivdivdivguanzhucontent">
 								<div class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion">
@@ -61,7 +61,7 @@
 								<a class=" special ghmiddlecontentleftcontentdivdivdivguanzhutitlea2 ">
 									<i class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea2i"></i>取消固定
 								</a>
-								<a href="" class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea3 guanzhuhuatispecial">取消关注</a>
+								<a  class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea3 guanzhuhuatispecial quxiaoguanzhu">取消关注</a>
 							</div>
 							<div class="ghmiddlecontentleftcontentdivdivdivguanzhucontent">
 								<div class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion">
@@ -97,18 +97,56 @@
 							<a href="" class="ghgzchuangquhuatidivcontentname">单机游戏</a>
 							<div class="ghgzchuangquhuatidivcontentnumber">
 								<span class="zg-gray">40 个子话题</span>
-								<span class="bull">•</span>
+								<span class="bull">?</span>
 								<span class="zg-gray">28328 人关注</span>
+                                <a class="ghycbuttom bianjibuttom "></a>
+								<%--<a href="" class="ghycbuttom bianjibuttom2 "></a>--%>
+                                
 							</div>
 						</div>
 					</div>
 				</div>
-
+                <div class="ghgzchuangquhuati">
+					<div class="ghgzchuangquhuatidiv">
+						<a href="" class="ghgzchuangquhuatidivpic">
+							<img src="images/1.jpg" class="ghgzchuangquhuatidivpicimg">
+						</a>
+						<div class="ghgzchuangquhuatidivcontent">
+							<a href="" class="ghgzchuangquhuatidivcontentname">单机游戏</a>
+							<div class="ghgzchuangquhuatidivcontentnumber">
+								<span class="zg-gray">40 个子话题</span>
+								<span class="bull">?</span>
+								<span class="zg-gray">28328 人关注</span>
+                                <a class="ghycbuttom bianjibuttom "></a>
+								<%--<a href="" class="ghycbuttom bianjibuttom2 "></a>--%>
+                                
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="ghgzchuangquhuati">
+					<div class="ghgzchuangquhuatidiv">
+						<a href="" class="ghgzchuangquhuatidivpic">
+							<img src="images/1.jpg" class="ghgzchuangquhuatidivpicimg">
+						</a>
+						<div class="ghgzchuangquhuatidivcontent">
+							<a href="" class="ghgzchuangquhuatidivcontentname">单机游戏</a>
+							<div class="ghgzchuangquhuatidivcontentnumber">
+								<span class="zg-gray">40 个子话题</span>
+								<span class="bull">?</span>
+								<span class="zg-gray">28328 人关注</span>
+                                <a class="ghycbuttom bianjibuttom "></a>
+								<%--<a href="" class="ghycbuttom bianjibuttom2 "></a>--%>
+                                
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div id="ghmiddlecontentrightbottom">
 				<a href="" id="ghmiddlecontentrightbottoma">
 					<p id="ghmiddlecontentrightbottomap"></p>
-					<span id="ghmiddlecontentrightbottomaspan">话题广场</span>
+					<span href="" id="ghmiddlecontentrightbottomaspan">话题广场</span>
 				</a>
 			</div>
 		</div>
