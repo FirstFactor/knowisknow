@@ -87,6 +87,7 @@ namespace KnowIsKnow
             msg.MessageSendTime = now;
             msg.MessageSate = "unread";
             bllMsg.Add(msg);
+            Response.Write("<script>window.location.href='message.aspx'</script>");
         }
     }
 }
