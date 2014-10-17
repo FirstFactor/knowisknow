@@ -94,8 +94,7 @@
 								<span class="zmxdate"><a href="">发布于 昨天 09:40</a></span>
 								
 								<div class="zmxpanel">
-									<a class="zmxpanel1"><i class="zmxpanel1i"></i>关注问题</a>
-									<a  class="zmxpanel1give">取消关注</a>
+									<a class="zmxpanel1" href=""><i></i>关注问题</a>
 									<a class="zmxpanel2" href=""><i></i>添加评论</a>
 									<a class="zmxpanel3" href=""><i></i>感谢</a>
                                     <a class="zmxpanel3give"><i></i>已感谢</a>
@@ -151,8 +150,7 @@
 								</div>
 								<span class="zmxdate"><a href="#">发布于 昨天 09:40</a></span>
 								<div class="zmxpanel">
-									<a class="zmxpanel1"><i class="zmxpanel1i"></i>关注问题</a>
-									<a  class="zmxpanel1give">取消关注</a>
+									<a class="zmxpanel1" href="#"><i></i>关注问题</a>
 									<a class="zmxpanel2" href="#"><i></i>添加评论</a>
 									<a class="zmxpanel3" href="#"><i></i>感谢</a>
                                     <a class="zmxpanel3give"><i></i>已感谢</a>
