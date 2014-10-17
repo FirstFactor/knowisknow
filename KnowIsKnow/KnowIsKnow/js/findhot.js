@@ -49,4 +49,8 @@
         $(".zmxpanel1").show();
         $(".zmxpanel1give").hide();
     })
+    $(".zmxpanel3").click(function () {
+        $(".zmxpanel3give").show();
+        $(".zmxpanel3").hide();
+    })
 });

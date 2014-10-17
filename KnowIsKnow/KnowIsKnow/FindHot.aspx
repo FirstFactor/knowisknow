@@ -98,6 +98,7 @@
 									<a  class="zmxpanel1give">取消关注</a>
 									<a class="zmxpanel2" href=""><i></i>添加评论</a>
 									<a class="zmxpanel3" href=""><i></i>感谢</a>
+                                    <a class="zmxpanel3give"><i></i>已感谢</a>
 									<a class="zmxpanel4" href=""><i></i>分享</a>
 									<a class="zmxpanel5" href=""><i></i>收藏</a>
 									<span class="zmxdian">•</span>
@@ -154,6 +155,7 @@
 									<a  class="zmxpanel1give">取消关注</a>
 									<a class="zmxpanel2" href="#"><i></i>添加评论</a>
 									<a class="zmxpanel3" href="#"><i></i>感谢</a>
+                                    <a class="zmxpanel3give"><i></i>已感谢</a>
 									<a class="zmxpanel4" href="#"><i></i>分享</a>
 									<a class="zmxpanel5" href="#"><i></i>收藏</a>
 									<span class="zmxdian">•</span>
