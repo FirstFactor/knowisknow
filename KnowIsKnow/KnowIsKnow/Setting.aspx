@@ -65,8 +65,8 @@
 
 							<div class="rename-tab hidden">
 								<p>
-									<input class="zg-form-text-input half" type="text" name="lastname" placeholder="姓">
-									<input class="zg-form-text-input half" type="text" name="firstname" placeholder="名">
+									<input class="zg-form-text-input half" type="text" name="lastname" placeholder="姓"/>
+									<input class="zg-form-text-input half" type="text" name="firstname" placeholder="名"/>
 
 								</p>
 								<div class="note gray">提示：180 天只能修改一次</div>
@@ -77,19 +77,19 @@
 					<div class="settings-item clearfix">
 						<label for="url_token" class="settings-item-title with-input">个性网址</label>
 						<div class="settings-item-content">
-						<input autocomplete="off" class="zg-form-text-input" name="url_token" id="url_token" value="lin-sen-6-49" required="">
+						<input autocomplete="off" class="zg-form-text-input" name="url_token" id="url_token" value="wen-tao-6-49" required=""/>
 
-						<div id="js-url-preview" class="url-preview">zhihu.com/people/<span class="token">lin-sen-6-49</span></div>
+						<div id="js-url-preview" class="url-preview">zhihu.com/people/<span class="token">wen-tao-6-49</span></div>
 						</div>
 					</div>
 					<div class="settings-item clearfix">
 						<label for="email" class="settings-item-title with-input">邮箱</label>
 						<div class="settings-item-content">
-							<input autocomplete="off" class="zg-form-text-input" type="email" name="email" id="email" value="135957091@163.com" required="">
+							<input autocomplete="off" class="zg-form-text-input" type="email" name="email" id="email" value="135957091@163.com" required=""/>
 
 
 							<div class="hidden email-confirm" id="js-email-confirm">
-								<input autocomplete="off" class="zg-form-text-input" type="password" value="" name="password" id="password" placeholder="	当前密码">
+								<input autocomplete="off" class="zg-form-text-input" type="password" value="" name="password" id="password" placeholder="	当前密码"/>
 							</div>
 
 
@@ -102,7 +102,7 @@
 
 
 						<label class="settings-checkbox-label">
-							<input type="checkbox" name="private" id="private"> 在站外搜到我在知乎创作的内容时，我的姓名将不会被显示
+							<input type="checkbox" name="private" id="private"/> 在站外搜到我在知乎创作的内容时，我的姓名将不会被显示
 						</label>
 						</div>
 						<div class="settings-item-content-desc">
@@ -126,20 +126,20 @@
 				<div class="settings-item clearfix">
 					<label for="op" class="settings-item-title with-input">当前密码</label>
 					<div class="settings-item-content">
-						<input type="password" autocomplete="off" class="zg-form-text-input" name="op" id="op" placeholder="当前密码" required="">
+						<input type="password" autocomplete="off" class="zg-form-text-input" name="op" id="op" placeholder="当前密码" required=""/>
 					</div>
 				</div>
 
 				<div class="settings-item clearfix">
 					<label for="np" class="settings-item-title with-input">新的密码</label>
 					<div class="settings-item-content">
-						<input data-rule-strongpassword="true" type="password" autocomplete="off" class="zg-form-text-input" name="np" id="np" placeholder="新的密码" required="">
+						<input data-rule-strongpassword="true" type="password" autocomplete="off" class="zg-form-text-input" name="np" id="np" placeholder="新的密码" required=""/>
 					</div>
 				</div>
 				<div class="settings-item clearfix">
 					<label for="rp" class="settings-item-title with-input">确认密码</label>
 					<div class="settings-item-content">
-						<input type="password" autocomplete="off" class="zg-form-text-input" name="rp" id="rp" placeholder="确认密码" required="">
+						<input type="password" autocomplete="off" class="zg-form-text-input" name="rp" id="rp" placeholder="确认密码" required=""/>
 					</div>
 				</div>
 				<div class="settings-save">
@@ -161,7 +161,7 @@
 				<div class="settings-item1 clearfix">
 					<div class="settings-item-content">
 						<label class="settings-checkbox-label">
-							<input checked="" type="checkbox" name="subscribe_member_follow" value="1"> 有人关注我
+							<input checked="" type="checkbox" name="subscribe_member_follow" value="1"/> 有人关注我
 						</label>
 					</div>
 				</div>
@@ -171,10 +171,10 @@
 					</div>
 					<div class="settings-item-content">
 						<label class="settings-radio-label">
-							<input checked="" type="radio" name="subscribe_question_invite" value="3"> 所有人
+							<input checked="" type="radio" name="subscribe_question_invite" value="3"/> 所有人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_question_invite" value="1"> 我关注的人
+							<input type="radio" name="subscribe_question_invite" value="1"/> 我关注的人
 						</label>
 					</div>
 				</div>
@@ -184,13 +184,13 @@
 					</div>
 					<div class="settings-item-content">
 						<label class="settings-radio-label">
-							<input checked="" type="radio" name="subscribe_answer_vote" value="3"> 所有人
+							<input checked="" type="radio" name="subscribe_answer_vote" value="3"/> 所有人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_answer_vote" value="1"> 我关注的人
+							<input type="radio" name="subscribe_answer_vote" value="1"/> 我关注的人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_answer_vote" value="0"> 我不接受此类通知
+							<input type="radio" name="subscribe_answer_vote" value="0"/> 我不接受此类通知
 						</label>
 					</div>
 				</div>
@@ -200,13 +200,13 @@
 					</div>
 					<div class="settings-item-content">
 						<label class="settings-radio-label">
-							<input checked="" type="radio" name="subscribe_answer_thank" value="3"> 所有人
+							<input checked="" type="radio" name="subscribe_answer_thank" value="3"/> 所有人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_answer_thank" value="1"> 我关注的人
+							<input type="radio" name="subscribe_answer_thank" value="1"/> 我关注的人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_answer_thank" value="0"> 我不接受此类通知
+							<input type="radio" name="subscribe_answer_thank" value="0"/> 我不接受此类通知
 						</label>
 					</div>
 				</div>
@@ -216,13 +216,13 @@
 					</div>
 					<div class="settings-item-content">
 						<label class="settings-radio-label">
-							<input checked="" type="radio" name="subscribe_comment_like" value="3"> 所有人
+							<input checked="" type="radio" name="subscribe_comment_like" value="3"/> 所有人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_comment_like" value="1"> 我关注的人
+							<input type="radio" name="subscribe_comment_like" value="1"/> 我关注的人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_comment_like" value="0"> 我不接受此类通知
+							<input type="radio" name="subscribe_comment_like" value="0"/> 我不接受此类通知
 						</label>
 					</div>
 				</div>
@@ -232,13 +232,13 @@
 					</div>
 					<div class="settings-item-content">
 						<label class="settings-radio-label">
-							<input checked="" type="radio" name="subscribe_column_article_vote" value="3"> 所有人
+							<input checked="" type="radio" name="subscribe_column_article_vote" value="3"/> 所有人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_column_article_vote" value="1"> 我关注的人
+							<input type="radio" name="subscribe_column_article_vote" value="1"/> 我关注的人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_column_article_vote" value="0"> 我不接受此类通知
+							<input type="radio" name="subscribe_column_article_vote" value="0"/> 我不接受此类通知
 						</label>
 					</div>
 				</div>
@@ -248,13 +248,13 @@
 					</div>
 					<div class="settings-item-content">
 						<label class="settings-radio-label">
-							<input checked="" type="radio" name="subscribe_column_follow" value="3"> 所有人
+							<input checked="" type="radio" name="subscribe_column_follow" value="3"/> 所有人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_column_follow" value="1"> 我关注的人
+							<input type="radio" name="subscribe_column_follow" value="1"/> 我关注的人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="subscribe_column_follow" value="0"> 我不接受此类通知
+							<input type="radio" name="subscribe_column_follow" value="0"/> 我不接受此类通知
 						</label>
 					</div>
 				</div>
@@ -266,10 +266,10 @@
 				<div class="settings-item1 clearfix">
 					<div class="settings-item-content">
 						<label class="settings-radio-label">
-							<input checked="" type="radio" name="recv_option" value="0"> 所有人
+							<input checked="" type="radio" name="recv_option" value="0"/> 所有人
 						</label>
 						<label class="settings-radio-label">
-							<input type="radio" name="recv_option" value="1"> 我关注的人
+							<input type="radio" name="recv_option" value="1"/> 我关注的人
 						</label>
 					</div>
 				</div>
@@ -284,7 +284,7 @@
 				<div class="settings-item1 clearfix">
 					<div class="settings-item-content">
 						<label class="settings-checkbox-label gray">
-							<input type="checkbox" name="subscribe_question_answered" value="1"> 我接受所关注问题的全部新回答的通知，即便这些回答与问题的相关度可能不够高
+							<input type="checkbox" name="subscribe_question_answered" value="1"/> 我接受所关注问题的全部新回答的通知，即便这些回答与问题的相关度可能不够高
 						</label>
 					</div>
 				</div>
@@ -301,19 +301,19 @@
 					</div>
 					<div class="settings-item1 clearfix">
 						<div class="settings-item-content"><label class="settings-checkbox-label">
-							<input id="action_153" name="action_153" type="checkbox" value="y"> 有人关注了我
+							<input id="action_153" name="action_153" type="checkbox" value="y"/> 有人关注了我
 						</label></div>
 					</div>
 
 					<div class="settings-item1 clearfix">
 						<div class="settings-item-content"><label class="settings-checkbox-label">
-							<input checked="" id="action_61" name="action_61" type="checkbox" value="y"> 有人邀请我回答一个问题
+							<input checked="" id="action_61" name="action_61" type="checkbox" value="y"/> 有人邀请我回答一个问题
 						</label></div>
 					</div>
 
 					<div class="settings-item1 clearfix">
 						<div class="settings-item-content"><label class="settings-checkbox-label">
-							<input checked="" id="action_251" name="action_251" type="checkbox" value="y"> 有人向我发送私信
+							<input checked="" id="action_251" name="action_251" type="checkbox" value="y"/> 有人向我发送私信
 						</label></div>
 					</div>
 					<div class="settings-section-title">
@@ -322,7 +322,7 @@
 					<div class="settings-item1 clearfix">
 						<div class="settings-item-content">
 							<label class="settings-checkbox-label">
-								<input checked="" id="newsletter" name="newsletter" type="checkbox" value="y"> 订阅知乎每周精选
+								<input checked="" id="newsletter" name="newsletter" type="checkbox" value="y"/> 订阅知乎每周精选
 							</label>
 							<div class="settings-item-content-desc">
 								你每周会收到一封根据你的兴趣精心定制的内容合集。
@@ -335,7 +335,7 @@
 					<div class="settings-item1 clearfix">
 						<div class="settings-item-content">
 							<label class="settings-checkbox-label">
-								<input checked="" id="promotion" name="promotion" type="checkbox" value="y"> 接收来自知乎的新产品发布、热点内容、活动信息等邮件
+								<input checked="" id="promotion" name="promotion" type="checkbox" value="y"/> 接收来自知乎的新产品发布、热点内容、活动信息等邮件
 							</label>
 						</div>
 					</div>
@@ -374,7 +374,7 @@
 					</div>
 					<div class="settings-item clearfix">
 						<div class="settings-item-content">
-							<div id="zh-topic-block-editor" class="zm-tag-editor zg-section">
+							<div id="zh-topic-block-editors" class="zm-tag-editor zg-section">
 								<div class="zm-tag-editor-labels clearfix" style="display: none;"></div><div class="zm-tag-editor-editor"><div class="zg-section zg-clear"></div><div class="zg-section zm-tag-editor-command-buttons-wrap"><input class="zg-form-text-input zg-mr15 label-input-label" type="text" placeholder="搜索话题" title="搜索话题" aria-haspopup="true"><a class="zg-mr15 zg-btn-blue" href="#" name="add" style="display: none;">添加</a><a href="#" name="close" style="display: none;">完成</a></div><div class="zm-tag-editor-maxcount zg-section" style="display: none;"><span>最多只能为一个问题绑定 Infinity 个话题</span><a href="#" name="close">完成</a></div></div>
 							</div>
 						</div>
@@ -384,7 +384,7 @@
 					<div class="settings-section-title">
 						<h2>受限话题</h2>
 						<p class="settings-section-desc">
-							除非主动关注，来自以下话题和它们的部分子话题的内容不会出现在你的首页动态中。<br>详情参见 <a class="zg-link-litblue" href="http://www.zhihu.com/question/20806546">知乎上的哪些内容需要主动关注才会出现在首页动态中？</a>
+							除非主动关注，来自以下话题和它们的部分子话题的内容不会出现在你的首页动态中。<br/>详情参见 <a class="zg-link-litblue" href="http://www.zhihu.com/question/20806546">知乎上的哪些内容需要主动关注才会出现在首页动态中？</a>
 						</p>
 					</div>
 					<div class="settings-item clearfix">
@@ -443,7 +443,7 @@
 				<div class="settings-item clearfix">
 					<div class="settings-item-content">
 						<label class="settings-checkbox-label">
-							<input type="checkbox" name="use_topstory" value="1"> 开启新版首页动态体验
+							<input type="checkbox" name="use_topstory" value="1"/> 开启新版首页动态体验
 							<span style="color:#999">（可随时在设置页开启或者关闭。）</span>
 						</label>
 						<div class="settings-item-content-desc">
