@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -14,7 +15,10 @@ namespace KnowIsKnow
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            BLL.TopicInfo topic = new BLL.TopicInfo();
+            DataSet ds=topic.GetAllList();
+            this.rpttopic.DataSource = ds.Tables[0];
+            this.rpttopic.DataBind();
         }
 
         protected void UpLoadbtn1_Click(object sender, EventArgs e)

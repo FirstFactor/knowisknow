@@ -113,20 +113,20 @@
                     <asp:Repeater runat="server" ID="rpttopic">
                         <ItemTemplate>
                             <li class="adTopicli">
-                                <ul>
+                                <ul topicinfoid='<%# Eval("topicID") %>'>
                                     <li class="adTopicImg">
                                         <img class="spanshow" src="images/light-bulb-4.png" />
                                         <span class="adComboxImg fa fa-lightbulb-o"></span>
                                     </li>
                                     <li class="adTopicTitle">
-                                        <span class="spanshow spanTitle">体育</span>
+                                        <span class="spanshow spanTitle"><%# Eval("topicTitle") %></span>
                                         <input type="text" class="adTopicTitleInput" value="" /></li>
                                     <li class="adTopicDes">
-                                        <span class="spanshow spanContent">体育体育体育体育体育体育体育体育体育体育</span>
+                                        <span class="spanshow spanContent"><%# Eval("topicDes") %></span>
                                         <input type="text" class="adTopicDesInput" value="" />
                                     </li>
                                     <li class="adTopicAttention">
-                                        <span >12</span>
+                                        <span class="topicAttention">12</span>
                                 
                                     </li>
                                     <li class="adTopicState">
@@ -189,7 +189,13 @@
                     
                 </ul>
             </div>
-            <div class="adOperaDetail dealReport">3</div>
+            <div class="adOperaDetail dealReport">
+                <ul>
+                    <li><span>处理举报提问</span></li>
+                    <li><span>处理举报回答</span></li>
+
+                </ul>
+            </div>
         </div>
     </form>
 </body>

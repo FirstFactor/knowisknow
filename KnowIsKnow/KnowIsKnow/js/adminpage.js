@@ -80,6 +80,25 @@
         $(this).parent().find(".topicstate").html($(this).parent().find(".selectedtopicstate").html());
         $(this).parent().find(".spanshow").show();
         $(this).parent().find(".spanshow").next().hide();
+
+        thistopicid = $(this).parent().attr("topicinfoid");
+        thistopicTitle = $(this).parent().find(".adTopicTitleInput").val();
+        thistopicDesc = $(this).parent().find(".adTopicDesInput").val();
+        thistopicPicUrl = "1";
+        thistopicAttention = $(this).parent().find(".topicAttention").html();
+        thistopicState = $(this).parent().find(".selectedtopicstate").html();
+       
+        $.ajax({
+            data: { "topicid": thistopicid, "topictitle": thistopicTitle, "topicdes": thistopicDesc, "topicpicurl": thistopicPicUrl, "topicattention": thistopicAttention, "topicstate": thistopicState },
+            datatype: "json",
+            url: "ws.asmx/UpdateTopicInfo",
+            type: "post",
+            contenttype: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+
+        });
         
     });
         

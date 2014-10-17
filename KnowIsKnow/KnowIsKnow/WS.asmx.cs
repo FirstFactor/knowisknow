@@ -23,5 +23,19 @@ namespace KnowIsKnow
         {
             return "Hello World";
         }
+        [WebMethod]
+        public string UpdateTopicInfo(string topicid, string topictitle, string topicdes, string topicpicurl, string topicattention, string topicstate) 
+        {
+            BLL.TopicInfo topic = new BLL.TopicInfo();
+            Model.TopicInfo topicinfo = new Model.TopicInfo();
+            topicinfo.topicID = Convert.ToInt32(topicid);
+            topicinfo.topicTitle = topictitle;
+            topicinfo.topicDes = topicdes;
+            topicinfo.topicPicUrl = topicpicurl;
+            topicinfo.topicAttention = Convert.ToInt32( topicattention);
+            topicinfo.topicState = topicstate;
+            topic.Update(topicinfo);
+            return "ok";
+        }
     }
 }
