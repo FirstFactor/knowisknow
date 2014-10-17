@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿*{margin: 0;padding: 0;font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif;}
 ul,li{list-style: none;}
 img{border: 0;}
@@ -133,6 +134,15 @@ line-height: 1.7;text-decoration: none;vertical-align: middle;display: inline-bl
 .wtlink{display: block;height: 34px;width: 34px;border-radius: 3px;float: left;margin-right: 4px;}
 .wtavatar2{display: block;height: 34px;width: 34px;border-radius: 3px;}
 .wtzm-profile-section-item a span{color:#256;}
+.wtzm-profile-side-section2{margin-top: 50px;border-top: 1px solid #eee;padding: 2px 0;}
+.wtzg-gray-normal{color: #999;font-weight: 400;}
+.wtzm-side-section-inner{padding-top: 15px;}
+.wtzh-footer{margin-top: 10px;text-align: left;color: #999;}
+.wtzg-wrap2{padding: 10px 0;width: auto;border-top-color: #eee;border-top: 1px solid #eee;}
+.wtzg-wrap2 a{color: #999;}
+.wtzg-wrap2 ul li{float: left;}
+.wtzh-footer li+li:before{margin-left: 4px; margin-right: 1px;content: '•';padding: 0 3px;color: #BBB;display: inline-block;font-family: Arial;}
+.wtcopy{margin-left: 1px;float: none;}
 
 
 
@@ -164,3 +174,12 @@ line-height: 1.7;text-decoration: none;vertical-align: middle;display: inline-bl
 
 
 
+
+
+
+
+
+=======
+﻿body {background:black;
+}
+>>>>>>> origin/master

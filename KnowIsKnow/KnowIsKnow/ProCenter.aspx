@@ -4,6 +4,7 @@
     <script type="text/javascript" src="js/procenter.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div id="wttop">
 		<div id="wtzh-top-inner" class="wtzg-wrap">
 			<a href="/" class="wtzu-top-link-logo" id="wtzh-top-link-logo">知乎</a>
@@ -197,7 +198,7 @@
 					<div class="wtzm-profile-section-item wtzm-item">
 						<span>关注了话题</span>
 						<a>
-							<img src="http://pic3.zhimg.com/2a098f9db_s.jpg" class="wtpic"/>
+							<img src="images/2a098f9db_s.jpg" class="wtpic"/>
 							<span>NBA 总决赛</span>
 						</a>
 						<span class="wtweek">1周前</span> 
@@ -205,7 +206,7 @@
 					<div class="wtzm-profile-section-item wtzm-item">
 						<span>关注了话题</span>
 						<a>
-							<img src="http://pic4.zhimg.com/fb89e0ea3_s.jpg" class="wtpic"/>
+							<img src="images/fb89e0ea3_s.jpg" class="wtpic"/>
 							<span>游戏</span>
 						</a>
 						<span class="wtweek">1周前</span> 
@@ -246,8 +247,46 @@
 					</a>
 				</div>
 			</div>
-			<div class="wtzm-profile-side-section2"></div>
+			<div class="wtzm-profile-side-section2">
+				<div class="wtzm-side-section-inner">
+					<span class="wtzg-gray-normal">
+						个人主页被
+						<strong>2</strong>
+						人浏览
+					</span>
+				</div>
+			</div>
+			<div class="wtzh-footer">
+				<div class="wtzg-wrap2">
+					<ul>
+						<li>
+							<a href="#">知乎指南</a>
+						</li>
+						<li>
+							<a href="#">建议反馈</a>
+						</li>
+						<li>
+							<a href="#">移动应用</a>
+						</li>
+						<li>
+							<a href="#">知乎阅读</a>
+						</li>
+						<br/>
+						<li>
+							<a href="#">加入知乎</a>
+						</li>
+						<li>
+							<a href="#">知乎协议</a>
+						</li>
+						<li>
+							<a href="#">商务合作</a>
+						</li>
+					</ul>
+					<span class="wtcopy">© 2014 知乎</span>
+				</div>
+			</div>
 			
 		</div>
 	</div>
+
 </asp:Content>
