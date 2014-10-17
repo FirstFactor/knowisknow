@@ -89,3 +89,5 @@ li{list-style-type: none;}
 .mingzi:hover{text-decoration: underline;}
 
 .huati:hover{text-decoration: underline;}
+
+.showfault{ width:200px;min-height:0px;font-size:18px;background-color:red;color:#FFF;position:absolute;top:0px;left:560px;text-align:center;}
