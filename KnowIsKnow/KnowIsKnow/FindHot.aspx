@@ -1,20 +1,12 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-	<title>知为知</title>
-	<meta charset=utf-8 />
-	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="js/zhihu.js"></script>
-	
-	<link rel="stylesheet" type="text/css" href="css/zhihu.css">
-</head>
-<body>
-	<div id="zmxtop">
-		<div id="zmxtopinner">
-			<a id="zmxtoplogo" href="">知为知</a>
-		</div>
-	</div>
-	<div id="zmxmian">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/KnowIsKnow.Master" AutoEventWireup="true" CodeBehind="FindHot.aspx.cs" Inherits="KnowIsKnow.FindHot" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="css/FindHot.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/FindHot.js"></script>
+    
+</asp:Content>
+    
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="zmxmian">
 		<div id="zmxcontent">
 			<div id="zmxcontentinner">
 				<div id="zmxrecommend">
@@ -60,7 +52,7 @@
 						</li>
 					</ul>
 					<div class="zmxtab-panel">
-						<div data-type="daily">
+						<%--<div data-type="daily">
 							<div class="zmxexplore-feed zmxfeed-item">
 								<h2>
 									<a class="zmxfeda" href="">长得丑是一种怎样的体验？</a>
@@ -116,7 +108,65 @@
 									<a class="zmxpanel6" href="">举报</a>
 								</div>
 							</div>
+						</div>--%>
+                        <asp:Repeater runat="server" ID="rptquestionlist">
+                            <ItemTemplate>
+                                <div data-type="daily">
+							<div class="zmxexplore-feed zmxfeed-item">
+								<h2>
+									<a class="zmxfeda" href=""><%# Eval("questionTitle") %></a>
+								</h2>
+								<div class="zmxnew">
+								    <div class="zmxvote">
+									    <a class="zmxcount" href="">473</a>
+								    </div>
+								    <div class="zmxanser">
+									    <div class="zmxanser1">
+										    <h3 class="zmxanserh3"><a href=""><%# Eval("userNickName") %></a></h3>
+									    </div>
+								    </div>
+								</div>
+								
+								<div class="zmxrich">
+									<img src="css/images/ze.jpg">
+
+                                   <%# Eval("questionContent") %>
+                                    <a class="zmxex" >显示全部</a>
+                                    <div class="clear"></div>
+								</div>
+								<div class="zmxshouqi">
+									<span class="zmxshouqispan">
+										<a href="">廖必栋</a>
+										、
+										<a href="">潘浩宇</a>
+										、
+										<a href="">Avartia tear</a>
+									</span>
+									<a class="zmxdr" href=""> 等人赞同</a>
+									<a class="zmxcollapse" ><i></i>收起</a>
+								</div>
+								<div class="zmxhidecontent">
+								  <%# Eval("questionContent") %>
+								</div>
+								<span class="zmxdate"><a href="">发布于 昨天 09:40</a></span>
+								
+								<div class="zmxpanel">
+									<a class="zmxpanel1"><i class="zmxpanel1i"></i>关注问题</a>
+									<a  class="zmxpanel1give">取消关注</a>
+									<a class="zmxpanel2" href=""><i></i>添加评论</a>
+									<a class="zmxpanel3"><i></i>感谢</a>
+									<a class="zmxpanel3give"><i></i>已感谢</a>
+									<a class="zmxpanel4" href=""><i></i>分享</a>
+									<a class="zmxpanel5" href=""><i></i>收藏</a>
+									<span class="zmxdian">•</span>
+									<a class="zmxpanel6" href="">没有帮助</a>
+									<span class="zmxdian">•</span>
+									<a class="zmxpanel6" href="">举报</a>
+								</div>
+							</div>
 						</div>
+                            </ItemTemplate>
+                        </asp:Repeater>
 					</div>
 					<div id="zmxtabpanelmou">
 						<div data-type="daily">
@@ -203,5 +253,4 @@
             
 		</div>
 	</div>
-</body>
-</html>
+</asp:Content>

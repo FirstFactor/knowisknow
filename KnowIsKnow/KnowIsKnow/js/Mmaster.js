@@ -14,8 +14,13 @@
     $(".zqq-tiwen-menban-close").click(function () {
         $(".zqq-tiwen-search").hide();
         $(".zqq-tiwen-inner").hide();
+        $(".zqq-jubao-inner").hide();
+        $(".zqq-jubao-otherReason").hide();
+        $(".zqq-jubao-chose-main li label input").attr("checked", false);
+        $(".zqq-jubao-chose-list").removeClass("checked");
         $(".zqq-menban").hide();
         $(".zqq-search-area").val("");
+        $(".zqq-jubao-otherReason").val("");
     });
 
     $(document).on("click", ".zqq-search-area", function () {

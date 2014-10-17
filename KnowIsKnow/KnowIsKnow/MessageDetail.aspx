@@ -13,35 +13,30 @@
 				</div>
 				<div class="zg-section zg-14px">
 					<span class="zg-gray-normal">发私信给 </span>
-					<span class="zg-gray-darker">朱祁钰</span>
+					<span class="zg-gray-darker"><%=chatusername %></span>
 					:
 				</div>
 				<div class="zg-section" id="zh-pm-editor-form">
 					<div class="zg-editor-simple-wrap zg-form-text-input">
-						<textarea class="zg-editor-input zu-seamless-input-origin-element" style="font-weight: normal; white-space: pre; height: 66px; min-height: 66px;"></textarea>
+						<asp:TextBox runat="server" ID="chatSendContent" class="zg-editor-input zu-seamless-input-origin-element" style="font-weight: normal; white-space: pre; height: 66px; min-height: 66px;" TextMode="MultiLine"></asp:TextBox>
 					</div>
 					<div class="zm-command">
-							<a name="send"class="zg-btn-blue zg-r3px">发送</a>
-						</div>
+						<asp:Button runat="server" ID="chatSendMessage" name="send" class="zg-btn-blue zg-r3px" Text="发送" OnClick="chatSendMessage_Click1"></asp:Button>	
+					</div>
 				</div>
                 <asp:Repeater runat="server" ID="repMsg">
                     <ItemTemplate>
-                        				<div id="zh-pm-detail-item-wrap" class="navigable">
+                    <div id="zh-pm-detail-item-wrap" class="navigable">
 					<div class="zm-pm-item">
 						<a class="zm-item-link-avatar50">
 							<img class="zm-item-img-avatar50" src="Images/touxiang.jpg"/>
 						</a>
 						<div class="zm-pm-item-main">
 							<a><%# Eval("userNickName") %></a>
-							：<%# Eval("MessageContent") %>
-						</div>
+							：<%# Eval("MessageContent") %></div>
 						<div class="zg-gray zu-pm-item-meta clearfix">
 							<span class="zg-gray zg-left"><%# Eval("MessageSendTime") %>
 							</span>
-							<a class="zg-link-litblue">回复</a>
-							<span class="zg-bull">|</span>
-							<a class="zg-link-litblue" >举报</a>
-							<span class="zg-bull">|</span>
 							<a class="zg-link-litblue" >删除</a>
 						</div>
 					</div>
