@@ -12,7 +12,7 @@ namespace KnowIsKnow
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserEmail"] == null || Session["UserEmail"].ToString()==null)
+            if (Session["UserID"] == null || Session["UserEmail"].ToString() == null)
             {
                 Response.Redirect("Index.aspx");
             }
@@ -21,12 +21,21 @@ namespace KnowIsKnow
             BLL.TopicInfo topic = new BLL.TopicInfo();
             DataSet ds = topic.GetList("topicState='"+no+"'");
             this.topiclist.DataSource = ds.Tables[0];
+          
             this.topiclist.DataBind();
 
 
+            int userid = Convert.ToInt32(Session["UserID"]);
+            aaa.InnerHtml = userid.ToString();
+
+           
+            
+            
            
           
            
         }
+
+      
     }
 }
