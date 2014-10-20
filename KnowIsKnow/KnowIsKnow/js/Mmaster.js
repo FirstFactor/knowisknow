@@ -55,8 +55,7 @@
         else {
             addQuestion(questionTitle, questionContent);
         }
-        $(".zqq-publish-input-title").val("");
-        $(".zqq-publish-input-content").val("");
+       
         $(".zqq-search-area").val("");
 
         $(".zqq-tiwen-inner").hide();
@@ -73,34 +72,34 @@
     }, function () { })
 });
 
-function addQuestion(questionTitle, questionContent) {
-    var shtml = '';
-    shtml += '<div class="zqq-small-question">';
-    shtml += '	<div class="zqq-head-photo">';
-    shtml += '		<img class="zqq-head-face" src="image/mypic.jpg">';
-    shtml += '	</div>';
-    shtml += '	<div class="zqq-question-detail">';
-    shtml += '		<div class="zqq-question-info">霸道总裁爱上市 提出了问题</div>';
-    shtml += '		<div class="zqq-question-title">' + questionTitle + '</div>';
-    shtml += '		<div class="zqq-question-content">';
-    shtml += '			<div class="zqq-content-word">' + questionContent + '</div>';
-    shtml += '			<img class="zqq-content-pic" src=""> ';
-    shtml += '		</div>';
-    shtml += '		<div class="zqq-question-ft">';
-    shtml += '			<div class="zqq-follow-topic">关注话题</div>';
-    shtml += '			<div class="zqq-jubao">举报</div>';
-    shtml += '		</div>';
-    shtml += '	</div>';
-    shtml += '</div>';
-    var ssnHtml = $(".zqq-newQuestion").html();
-    $(".zqq-newQuestion").html(shtml + ssnHtml);
+//function addQuestion(questionTitle, questionContent) {
+//    var shtml = '';
+//    shtml += '<div class="zqq-small-question">';
+//    shtml += '	<div class="zqq-head-photo">';
+//    shtml += '		<img class="zqq-head-face" src="image/mypic.jpg">';
+//    shtml += '	</div>';
+//    shtml += '	<div class="zqq-question-detail">';
+//    shtml += '		<div class="zqq-question-info">霸道总裁爱上市 提出了问题</div>';
+//    shtml += '		<div class="zqq-question-title">' + questionTitle + '</div>';
+//    shtml += '		<div class="zqq-question-content">';
+//    shtml += '			<div class="zqq-content-word">' + questionContent + '</div>';
+//    shtml += '			<img class="zqq-content-pic" src=""> ';
+//    shtml += '		</div>';
+//    shtml += '		<div class="zqq-question-ft">';
+//    shtml += '			<div class="zqq-follow-topic">关注话题</div>';
+//    shtml += '			<div class="zqq-jubao">举报</div>';
+//    shtml += '		</div>';
+//    shtml += '	</div>';
+//    shtml += '</div>';
+//    var ssnHtml = $(".zqq-newQuestion").html();
+//    $(".zqq-newQuestion").html(shtml + ssnHtml);
 
-    $(".zqq-question-detail").hover(function () {
-        $(".zqq-jubao").show();
-    }, function () {
-        $(".zqq-jubao").hide();
-    });
-}
+//    $(".zqq-question-detail").hover(function () {
+//        $(".zqq-jubao").show();
+//    }, function () {
+//        $(".zqq-jubao").hide();
+//    });
+//}
 
 function checkSearch() {
     var searchWord = $(".zqq-search-area").val();

@@ -1,11 +1,11 @@
 ﻿$(function () {
     $(".zqq-follow-topic-button").click(function () {
         $(this).toggleClass("zqq-display");
-        $(".zqq-noFollow-topic-button").toggleClass("zqq-display");
+        $(this).next().toggleClass("zqq-display");
     });
     $(".zqq-noFollow-topic-button").click(function () {
         $(this).toggleClass("zqq-display");
-        $(".zqq-follow-topic-button").toggleClass("zqq-display");
+        $(this).prev().toggleClass("zqq-display");
     });
 
     $(".zqq-question-detail").hover(function () {

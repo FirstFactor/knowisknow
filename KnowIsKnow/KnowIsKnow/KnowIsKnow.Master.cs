@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace KnowIsKnow
 {
@@ -22,6 +23,20 @@ namespace KnowIsKnow
             {
                 userid = Session["UserID"].ToString();
             }
+        }
+        public void sendQuestion(object o, EventArgs e) {
+            string questionTitle = this.txtQuestionTitle.Text;
+            string questionContent = this.txtQuestionContent.Text;
+            DateTime now = DateTime.Now;
+            BLL.QuestionInfo bllque = new BLL.QuestionInfo();
+            Model.QuestionInfo que = new Model.QuestionInfo();
+            que.questionProvider = 3;
+            que.questionTitle = questionTitle;
+            que.questionContent = questionContent;
+            que.quetionPubTime = now;
+            que.questionSate = "unread";
+            bllque.Add(que);
+            Response.Write("<script>window.location.href='home.aspx'</script>");
         }
     }
 }

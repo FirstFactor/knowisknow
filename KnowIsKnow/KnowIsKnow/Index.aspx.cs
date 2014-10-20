@@ -24,6 +24,7 @@ namespace KnowIsKnow
             faultshow.InnerHtml = "";
 
             BLL.UserInfo blluserinfo = new BLL.UserInfo();
+        
             int qq =blluserinfo.GetRecordCount("userEmail='" + youx + "'");
 
             if (xing == "")
@@ -56,14 +57,20 @@ namespace KnowIsKnow
             {
                 //BLL.UserInfo blluserinfo = new BLL.UserInfo();
                 Model.UserInfo modeluserinfo = new Model.UserInfo();
-                modeluserinfo.userEmail = inputyx.Value;
-                modeluserinfo.userPwd = inputmm.Value;
-                modeluserinfo.userNickName = inputxing.Value + inputming.Value;
+                modeluserinfo.userEmail = youx;
+                modeluserinfo.userPwd = mima;
+                modeluserinfo.userNickName = xing + ming;
                 modeluserinfo.userVerifyCode = "123456";
                 modeluserinfo.userGender = "男";
                 blluserinfo.Add(modeluserinfo);
-
-                Session["UserEmail"] = inputyx.Value;
+               
+                
+                DataSet ds = blluserinfo.GetList("userEmail='" + youx + "'");
+                Session["UserID"] = Convert.ToInt32(ds.Tables[0].Rows[0]["userID"]);
+                Session["UserNickName"] = Convert.ToString(ds.Tables[0].Rows[0]["userNickName"]);
+                Session["UserHeadImage"] = Convert.ToString(ds.Tables[0].Rows[0]["userHeadImage"]);
+                Session["UserEmail"] = Convert.ToString(ds.Tables[0].Rows[0]["userEmail"]);
+                Session["UserPwd"] = Convert.ToString(ds.Tables[0].Rows[0]["userPwd"]);
 
                 Response.Redirect("http://localhost:38547/SelectTopic.aspx");
 

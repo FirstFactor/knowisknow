@@ -16,7 +16,7 @@ namespace KnowIsKnow
     [System.Web.Script.Services.ScriptService]
     public class WS : System.Web.Services.WebService
     {
-        
+
 
         [WebMethod]
         public string HelloWorld()
@@ -24,7 +24,7 @@ namespace KnowIsKnow
             return "Hello World";
         }
         [WebMethod]
-        public string UpdateTopicInfo(string topicid, string topictitle, string topicdes, string topicpicurl, string topicattention, string topicstate) 
+        public string UpdateTopicInfo(string topicid, string topictitle, string topicdes, string topicpicurl, string topicattention, string topicstate)
         {
             BLL.TopicInfo topic = new BLL.TopicInfo();
             Model.TopicInfo topicinfo = new Model.TopicInfo();
@@ -32,12 +32,13 @@ namespace KnowIsKnow
             topicinfo.topicTitle = topictitle;
             topicinfo.topicDes = topicdes;
             topicinfo.topicPicUrl = topicpicurl;
-            topicinfo.topicAttention = Convert.ToInt32( topicattention);
+            topicinfo.topicAttention = Convert.ToInt32(topicattention);
             topicinfo.topicState = topicstate;
             topic.Update(topicinfo);
             return "ok";
         }
         [WebMethod]
+<<<<<<< HEAD
         public List<Model.UserInfo> selectUserInfo(string usernickname ) 
         {
             BLL.UserInfo userinfo = new BLL.UserInfo();
@@ -48,10 +49,22 @@ namespace KnowIsKnow
         }
         [WebMethod]
         public void AddCareTopic(string topicid,string userid)
+=======
+        public string selectUserInfo(string usernickname)
+        {
+            BLL.UserInfo userinfo = new BLL.UserInfo();
+            DataSet da = userinfo.GetList("userNickName like '%" + usernickname + "%'");
+
+            return da.Tables[0].Rows[0]["userNickName"].ToString(); ;
+        }
+        [WebMethod]
+        public string AddCareTopic(string topicid, string userid)
+>>>>>>> origin/master
         {
             BLL.CareTopic topic = new BLL.CareTopic();
             Model.CareTopic topicinfo = new Model.CareTopic();
             topicinfo.careTopicID = Convert.ToInt32(topicid);
+<<<<<<< HEAD
             topicinfo.topicCaredByUID = Convert.ToInt32( userid);
         
             topic.Add(topicinfo);
@@ -64,6 +77,21 @@ namespace KnowIsKnow
             Model.CareTopic topicinfo = new Model.CareTopic();
             topic.Delete(topicid,userid);
             
+=======
+            topicinfo.topicCaredByUID = Convert.ToInt32(userid);
+
+            topic.Add(topicinfo);
+            return "ok";
+
+        }
+        [WebMethod]
+        public string DeleteCareTopic(string topicid, string userid)
+        {
+            BLL.CareTopic topic = new BLL.CareTopic();
+            Model.CareTopic topicinfo = new Model.CareTopic();
+            topic.Delete(Convert.ToInt32(topicid),Convert.ToInt32( userid));
+            return "qqq";
+>>>>>>> origin/master
         }
     }
 }
