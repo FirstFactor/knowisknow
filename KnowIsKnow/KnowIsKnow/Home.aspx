@@ -63,7 +63,7 @@
 								<img class="zqq-head-face" src="image/1.jpg"/>
 							</div>
 							<div class="zqq-question-detail">
-								<div class="zqq-question-info"><%# Eval("userNickName") %> 提出了问题</div>
+								<div class="zqq-question-info"><%# Eval("questionProvider") %> 提出了问题</div>
 								<div class="zqq-question-title">
 									<%# Eval("questionTitle") %>
 								</div>

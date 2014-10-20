@@ -72,13 +72,13 @@
 				<div class="zqq-tiwen-menban-close">X</div>
 			</div>
 			<div class="zqq-publish">
-				<textarea class="zqq-publish-input-title"></textarea>
+                <asp:TextBox runat="server" ID="txtQuestionTitle" class="zqq-publish-input-title" ></asp:TextBox>
 				<div class="zqq-publish-contentTitle">问题说明（可选）：</div>
-				<textarea class="zqq-publish-input-content"></textarea>
+                <asp:TextBox runat="server" ID="txtQuestionContent" class="zqq-publish-input-content" ></asp:TextBox>
 				<div class="zqq-publish-topicChose">选择话题：</div>
 				<textarea class="zqq-publish-input-topic"></textarea>
 				<div class="zqq-publish-ft">
-					<div class="zqq-btn-publish">发布</div>
+                    <asp:Button runat="server" ID="btnsendQuestion" Class="zqq-btn-publish"  Text="发布" OnClick="sendQuestion"/>
 				</div>						
 			</div>
 		</div>
