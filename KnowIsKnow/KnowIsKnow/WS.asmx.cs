@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
-
+using System.Data;
 namespace KnowIsKnow
 {
     /// <summary>
@@ -36,6 +36,34 @@ namespace KnowIsKnow
             topicinfo.topicState = topicstate;
             topic.Update(topicinfo);
             return "ok";
+        }
+        [WebMethod]
+        public List<Model.UserInfo> selectUserInfo(string usernickname ) 
+        {
+            BLL.UserInfo userinfo = new BLL.UserInfo();
+            List<Model.UserInfo> da = userinfo.GetModelList("userNickName like '%" + usernickname + "%'");
+         
+            
+            return da; 
+        }
+        [WebMethod]
+        public void AddCareTopic(string topicid,string userid)
+        {
+            BLL.CareTopic topic = new BLL.CareTopic();
+            Model.CareTopic topicinfo = new Model.CareTopic();
+            topicinfo.careTopicID = Convert.ToInt32(topicid);
+            topicinfo.topicCaredByUID = Convert.ToInt32( userid);
+        
+            topic.Add(topicinfo);
+            
+        }
+        [WebMethod]
+        public  void DeleteCareTopic(int topicid, int userid)
+        {
+            BLL.CareTopic topic = new BLL.CareTopic();
+            Model.CareTopic topicinfo = new Model.CareTopic();
+            topic.Delete(topicid,userid);
+            
         }
     }
 }
