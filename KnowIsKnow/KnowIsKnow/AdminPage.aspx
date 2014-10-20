@@ -190,11 +190,37 @@
                 </ul>
             </div>
             <div class="adOperaDetail dealReport">
-                <ul>
-                    <li><span>处理举报提问</span></li>
-                    <li><span>处理举报回答</span></li>
-
+                <ul class="reportul">
+                    <li class="report reportactive" id="reportquestion" showID="reportques">
+                        <span>处理举报提问</span>                      
+                    </li>
+                    <li class="report" id="reportreply" showID="reportrep">
+                        <span>处理举报回答</span>                     
+                    </li>
                 </ul>
+                <div class="reportlistArea">
+                    <div class="reportlist reportques">
+                        <ul>
+                            <li ><span class="questionTitle">Title</span> <span class="reportReason">reason</span> <span class="reportOperation">operation1</span></li>
+
+                            <asp:Repeater runat="server" ID="rptreportQeslist">
+                                <ItemTemplate>
+                                     <li ><span class="questionTitle"><a href="#"><%# Eval("questionTitle") %></a></span> <span class="reportReason"><%#Eval("reportReasonContent") %></span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op">删除</dd><dd class="op">忽略</dd></dl></div></li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                           <%-- <li ><span class="questionTitle"><a href="#">content</a></span> <span class="reportReason">reason</span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op">删除</dd><dd class="op">忽略</dd></dl></div></li>
+                           <li ><span class="questionTitle"><a href="#">content</a></span> <span class="reportReason">reason</span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op">删除</dd><dd class="op">忽略</dd></dl></div></li>--%>
+                        </ul>
+                    </div>
+                    <div class="reportlist reportrep">
+                        <ul>
+                            <li ><span class="questionTitle">Title</span> <span class="reportReason">reason</span> <span class="reportOperation">operation1</span></li>
+
+                            <li ><span class="questionTitle"><a href="#">content</a></span> <span class="reportReason">reason</span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op">删除</dd><dd class="op">忽略</dd></dl></div></li>
+                           <li ><span class="questionTitle"><a href="#">content</a></span> <span class="reportReason">reason</span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op">删除</dd><dd class="op">忽略</dd></dl></div></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </form>

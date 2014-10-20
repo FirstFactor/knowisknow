@@ -1,6 +1,6 @@
 ﻿*{ margin:0; padding:0; font-family:'Microsoft YaHei',Arial; }
 ul,li{ list-style:none;}
-a{ text-decoration:none;}
+a{ text-decoration:none; cursor:pointer}
 img{ border:0;}
 
 #adTop
@@ -364,3 +364,79 @@ img{ border:0;}
     color:blue;
     cursor:pointer;
 }
+.reportul {
+    margin-left:20px;
+    height:60px;
+}
+
+.report {
+    float:left;
+   margin-top:20px;
+   line-height:40px;
+    height:40px;
+    padding-left:10px;
+    padding-right:10px;
+    
+    cursor:pointer;
+    
+}
+.reportactive {
+    border:1px solid #ccc;
+    border-bottom:0;
+}
+.reportlistArea {
+    
+    width:880px;
+    height:440px;
+    margin-left:20px;
+    overflow:auto;
+    border:1px solid #ccc;
+    padding:20px;
+}
+
+
+.reportrep {
+    display:none;
+}
+
+.reportlist span {
+    display:block;
+    float:left;
+}
+
+.questionTitle {
+    width:300px;
+}
+.reportReason {
+    width:300px;
+    
+}
+.reportOperationArea {
+    float:left;
+    position:relative;
+}
+
+.reportOperation {
+   
+    width:100px;
+    text-align:center;
+}
+
+.reportOperation1 {
+    float:left;
+    position:absolute;
+       width:100px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.op {
+    background:#fff;
+    display:none;
+}
+    .op:hover {
+        background:#ccc;
+        z-index:99;
+    } 
+
+

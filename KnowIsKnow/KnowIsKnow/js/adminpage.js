@@ -112,5 +112,32 @@
     });
 
 
+    $(".report").click(function () {
+        $(".report").removeClass("reportactive");
+        $(this).addClass("reportactive");
+
+        var showID = $(this).attr("showID");
+        $(".reportlist").hide();
+        $("." + showID).show();
+    });
+
+
+    $(".reportOperation1").click(function () {
+        
+
+        $(".reportOperation1").css("z-index", "");
+        $(this).css("z-index", "99");
+
+        if ($(this).find("dd").css("display") == "block") {
+            $(this).find("dd").hide();
+        } else {
+            $(this).find("dd").show();
+        }
+
+    });
+    $(".op").click(function () {
+        $(this).parent().find("dt").html("已" + $(this).html());
+        $(this).parent().find("dd").remove();
+    });
     
 });

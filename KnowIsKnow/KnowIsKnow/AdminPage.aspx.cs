@@ -19,6 +19,11 @@ namespace KnowIsKnow
             DataSet ds=topic.GetAllList();
             this.rpttopic.DataSource = ds.Tables[0];
             this.rpttopic.DataBind();
+
+            BLL.ReportQuestionUserView reportquestion = new BLL.ReportQuestionUserView();
+             DataSet ds2=reportquestion.GetList("1=1");
+             this.rptreportQeslist.DataSource = ds2.Tables[0];
+             this.rptreportQeslist.DataBind();
         }
 
         protected void UpLoadbtn1_Click(object sender, EventArgs e)
