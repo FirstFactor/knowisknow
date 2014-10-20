@@ -62,7 +62,15 @@
         $(".zqq-tiwen-inner").hide();
         $(".zqq-menban").hide();
     });
-
+    $("#wtwho").hover(function () {
+        $(".top-nav-dropdown").show();
+    }, function () {
+        $(".top-nav-dropdown").hide();
+    })
+    $(".lhovercolor").hover(function () {
+       
+        $("hovercolor").css("background-color", "#0267cc");
+    }, function () { })
 });
 
 function addQuestion(questionTitle, questionContent) {

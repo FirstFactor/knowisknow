@@ -90,7 +90,44 @@
 			<a href="/" class="wtzu-top-link-logo" id="wtzh-top-link-logo">知为知</a>
 			<div id="wtwho">
 				<img src="http://pic1.zhimg.com/da8e974dc_s.jpg" class="wtavatar" />
-				<div id="wtname"><span>文韬</span></div>
+				<div id="wtname">
+                    <span>文韬</span>
+                   
+				</div>
+                 <ul class="top-nav-dropdown">
+                        <li class="lhovercolor">
+                            <a class="hovercolor" href="#">
+                                <i class="zg-icon zg-icon-dd-home">
+                                   
+                                </i>
+                                 我的主页
+                            </a>
+                        </li>
+                        <li class="lhovercolor">
+                            <a class="hovercolor" href="Message.aspx">
+                                <i class="zg-icon zg-icon-dd-pm">
+                                    
+                                </i>
+                                私信
+                            </a>
+                        </li>
+                        <li class="lhovercolor">
+                            <a class="hovercolor" href="#">
+                                <i class="zg-icon zg-icon-dd-settings">
+                                    
+                                </i>
+                                设置
+                            </a>
+                        </li>
+                        <li class="lhovercolor">
+                            <a class="hovercolor" href="#">
+                                <i class="zg-icon zg-icon-dd-logout">
+                                   
+                                </i>
+                                 退出
+                            </a>
+                        </li>
+                    </ul>
 			</div>
 			<div role="search" id="wtzh-top-search" class="wtzu-top-search">
 				<div id="wtzh-top-search-form" class="wtzu-top-search-form wtform-with-magnify">
