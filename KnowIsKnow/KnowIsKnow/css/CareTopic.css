@@ -17,7 +17,7 @@
 .ghmiddlecontentleftcontentdivdivimg{background-size: 50px 50px;width: 50px;height: 50px;float: left;}
 .ghmiddlecontentleftcontentdivdivdivguanzhutitle{width: 568px;height: 23px;margin-bottom: 6px;line-height: 16px;}
 .ghmiddlecontentleftcontentdivdivdivguanzhucontent{width: 568px;height: 78px;}
-.ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion{width: 568px;height: 22px;margin-bottom: 6px;}
+.ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion{width: 568px;height: 78px;}
 .ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion1{width: 568px;height: 22px;}
 .ghmiddlecontentleftcontentdivdivdivguanzhutitlea1{ font-weight: 700;font-size: 14px;color:  #222;text-decoration: none;float: left;}
 .ghmiddlecontentleftcontentdivdivdivguanzhutitlea1:hover{text-decoration: underline;}
@@ -73,3 +73,4 @@
 .bianjibuttom2{cursor:pointer;width: 15px;height: 15px;display: block;position: absolute;right: 10px;top: 10px;background-image: url("images/close.png");background-position: -263px -84px;background-color: #698EBF;}
 .bianjibuttom2:hover{background-color: #259;}
 .quxiaoguanzhu {cursor:pointer;}
+
