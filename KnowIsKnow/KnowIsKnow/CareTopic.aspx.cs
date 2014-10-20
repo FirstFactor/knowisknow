@@ -10,6 +10,7 @@ namespace KnowIsKnow
 {
     public partial class CareTopic : System.Web.UI.Page
     {
+        public int userID;
         protected void Page_Load(object sender, EventArgs e)
         {
             //BLL.QuestionUserReplyView questionlist = new BLL.QuestionUserReplyView();
@@ -23,7 +24,8 @@ namespace KnowIsKnow
             }
             else { 
             BLL.TopicUserView  caretopic= new BLL.TopicUserView();
-            DataSet ds = caretopic.GetList("userID = "+Session["UserID"]);
+            userID = Convert.ToInt32( Session["UserID"]);
+            DataSet ds = caretopic.GetList("userID = "+userID);
             this.rptquestionlist.DataSource = ds.Tables[0];
             this.rptquestionlist.DataBind();
         }

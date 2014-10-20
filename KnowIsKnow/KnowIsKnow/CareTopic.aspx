@@ -6,6 +6,7 @@
 </asp:Content>
     
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="ycid"><%=userID %></div>
     <div id="ghmiddlecontent">
 		<div id="ghmiddlecontentleft">
 			<div id="ghmiddlecontentlefttitle">
@@ -97,7 +98,7 @@
 								        <a class=" special ghmiddlecontentleftcontentdivdivdivguanzhutitlea2 ">
 									        <i class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea2i"></i>取消固定
 								        </a>
-								        <a  class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea3 guanzhuhuatispecial quxiaoguanzhu">取消关注</a>
+								        <a  class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea3 guanzhuhuatispecial quxiaoguanzhu" tpid="<%# Eval("topicID")%>">取消关注</a>
 							        </div>
 							        <div class="ghmiddlecontentleftcontentdivdivdivguanzhucontent">
 								        <div class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion">

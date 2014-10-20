@@ -69,5 +69,7 @@ namespace KnowIsKnow
             topic.Delete(Convert.ToInt32(topicid), Convert.ToInt32(userid));
             return "ok";
         }
+
+       
     }
 }
