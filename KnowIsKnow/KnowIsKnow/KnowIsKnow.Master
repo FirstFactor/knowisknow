@@ -26,7 +26,7 @@
 			</div>
 			<div class="zqq-tiwen-search-content">
 				<p>
-					知乎是一个真诚、友善、认真、互助的社区
+					知为知是一个真诚、友善、认真、互助的社区
 					<br/>
 					我们希望每一个疑惑都有解答，好的问题更容易得到好答案
 				</p>
@@ -43,7 +43,7 @@
 					<br/>
 				</p>
 				<p>
-					<b>知乎禁止这些提问</b>
+					<b>知为知禁止这些提问</b>
 					<br/>
 					1、和已有问题完全重复的问题，
 					<b>为避免重复，提问前可以先进行搜索</b>
@@ -53,7 +53,7 @@
 					3、投票类问题。例如：你支持方舟子还是韩寒？
 					<br/>
 					4、作业或其他希望代为完成个人任务类的内容，以及针对个人具体病情的求医问药类问题
-					完整的提问建议可查看 知乎的提问规范有哪些？
+					完整的提问建议可查看 知为知的提问规范有哪些？
 				</p>
 			</div>
 			<div class="zqq-tiwen-search-bar">
@@ -76,7 +76,7 @@
 				<div class="zqq-publish-contentTitle">问题说明（可选）：</div>
                 <asp:TextBox runat="server" ID="txtQuestionContent" class="zqq-publish-input-content" ></asp:TextBox>
 				<div class="zqq-publish-topicChose">选择话题：</div>
-				<textarea class="zqq-publish-"></textarea>
+				<textarea class="zqq-publish-input-topic"></textarea>
 				<div class="zqq-publish-ft">
                     <asp:Button runat="server" ID="btnsendQuestion" Class="zqq-btn-publish"  Text="发布" OnClick="sendQuestion"/>
 				</div>						
@@ -87,7 +87,7 @@
         <div id="Mheader">
             <div id="wttop">
 		<div id="wtzh-top-inner" class="wtzg-wrap">
-			<a href="/" class="wtzu-top-link-logo" id="wtzh-top-link-logo">知乎</a>
+			<a href="/" class="wtzu-top-link-logo" id="wtzh-top-link-logo">知为知</a>
 			<div id="wtwho">
 				<img src="http://pic1.zhimg.com/da8e974dc_s.jpg" class="wtavatar" />
 				<div id="wtname">
