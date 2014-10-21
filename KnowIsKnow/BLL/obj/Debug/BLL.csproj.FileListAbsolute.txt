@@ -66,3 +66,14 @@ E:\git\knowisknow\KnowIsKnow\BLL\bin\Debug\DBUtility.pdb
 E:\git\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 E:\git\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.dll
 E:\git\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.pdb
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\bin\Debug\BLL.dll
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\bin\Debug\BLL.pdb
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\bin\Debug\DAL.dll
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\bin\Debug\Model.dll
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\bin\Debug\DBUtility.dll
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\bin\Debug\DAL.pdb
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\bin\Debug\Model.pdb
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\bin\Debug\DBUtility.pdb
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.dll
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\BLL\obj\Debug\BLL.pdb

@@ -155,6 +155,9 @@
     <Compile Include="KnowIsKnow.Master.designer.cs">
       <DependentUpon>KnowIsKnow.Master</DependentUpon>
     </Compile>
+    <Compile Include="MailHelper.cs" />
+    <Compile Include="MailRequest.cs" />
+    <Compile Include="MailRequestAttachments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProCenter.aspx.cs">
       <DependentUpon>ProCenter.aspx</DependentUpon>
