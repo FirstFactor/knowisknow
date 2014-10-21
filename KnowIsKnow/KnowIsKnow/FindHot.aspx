@@ -1,26 +1,27 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/KnowIsKnow.Master" AutoEventWireup="true" CodeBehind="WebForm7.aspx.cs" Inherits="KnowIsKnow.WebForm7" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/KnowIsKnow.Master" AutoEventWireup="true" CodeBehind="FindHot.aspx.cs" Inherits="KnowIsKnow.FindHot" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/FindHot.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="js/findhot.js"></script>
+    <script type="text/javascript" src="js/FindHot.js"></script>
+    
 </asp:Content>
+    
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  
-	<div id="zmxmian">
+    <div id="zmxmian">
 		<div id="zmxcontent">
 			<div id="zmxcontentinner">
 				<div id="zmxrecommend">
 					<div id="zmxrecommend-title">
 						<i id="zmx-icon"></i>
 						<span>编辑推荐</span>
-						<a href="#" class="zmxmore"><span>更多推荐>></span></a>
+						<a href="" class="zmxmore"><span>更多推荐>></span></a>
 					</div>
 					<div id="zmxrecommend-list">
 						<div class="zmxlisttop">
 							<h2>
-								<a class="zmxquextion" href="#">如何看待类似《变形金刚》这样的纯以商业为目的的文化现象？</a>
+								<a class="zmxquextion" href="">如何看待类似《变形金刚》这样的纯以商业为目的的文化现象？</a>
 							</h2>
 							<div class="zmxava">
-								<span><img class="zmximg" src="css/images/aa.jpg" /></span>
+								<span><img class="zmximg" src="css/images/aa.jpg"></span>
 							</div>
 							<div class="zmxfeedmain">
 								<div class="zmxfeedid">
@@ -51,7 +52,7 @@
 						</li>
 					</ul>
 					<div class="zmxtab-panel">
-						<div data-type="daily">
+						<%--<div data-type="daily">
 							<div class="zmxexplore-feed zmxfeed-item">
 								<h2>
 									<a class="zmxfeda" href="">长得丑是一种怎样的体验？</a>
@@ -94,9 +95,67 @@
 								<span class="zmxdate"><a href="">发布于 昨天 09:40</a></span>
 								
 								<div class="zmxpanel">
-									<a class="zmxpanel1" href=""><i></i>关注问题</a>
+									<a class="zmxpanel1"><i class="zmxpanel1i"></i>关注问题</a>
+									<a  class="zmxpanel1give">取消关注</a>
 									<a class="zmxpanel2" href=""><i></i>添加评论</a>
-									<a class="zmxpanel3" href=""><i></i>感谢</a>
+									<a class="zmxpanel3"><i></i>感谢</a>
+									<a class="zmxpanel3give"><i></i>已感谢</a>
+									<a class="zmxpanel4" href=""><i></i>分享</a>
+									<a class="zmxpanel5" href=""><i></i>收藏</a>
+									<span class="zmxdian">•</span>
+									<a class="zmxpanel6" href="">没有帮助</a>
+									<span class="zmxdian">•</span>
+									<a class="zmxpanel6" href="">举报</a>
+								</div>
+							</div>
+						</div>--%>
+                        <asp:Repeater runat="server" ID="rptquestionlist">
+                            <ItemTemplate>
+                                <div data-type="daily">
+							<div class="zmxexplore-feed zmxfeed-item">
+								<h2>
+									<a class="zmxfeda" href=""><%# Eval("questionTitle") %></a>
+								</h2>
+								<div class="zmxnew">
+								    <div class="zmxvote">
+									    <a class="zmxcount" href="">473</a>
+								    </div>
+								    <div class="zmxanser">
+									    <div class="zmxanser1">
+										    <h3 class="zmxanserh3"><a href=""><%# Eval("userNickName") %></a></h3>
+									    </div>
+								    </div>
+								</div>
+								
+								<div class="zmxrich">
+									<img src="css/images/ze.jpg">
+
+                                   <%# Eval("questionContent") %>
+                                    <a class="zmxex" >显示全部</a>
+                                    <div class="clear"></div>
+								</div>
+								<div class="zmxshouqi">
+									<span class="zmxshouqispan">
+										<a href="">廖必栋</a>
+										、
+										<a href="">潘浩宇</a>
+										、
+										<a href="">Avartia tear</a>
+									</span>
+									<a class="zmxdr" href=""> 等人赞同</a>
+									<a class="zmxcollapse" ><i></i>收起</a>
+								</div>
+								<div class="zmxhidecontent">
+								  <%# Eval("questionContent") %>
+								</div>
+								<span class="zmxdate"><a href="">发布于 昨天 09:40</a></span>
+								
+								<div class="zmxpanel">
+									<a class="zmxpanel1"><i class="zmxpanel1i"></i>关注问题</a>
+									<a  class="zmxpanel1give">取消关注</a>
+									<a class="zmxpanel2" href=""><i></i>添加评论</a>
+									<a class="zmxpanel3"><i></i>感谢</a>
+									<a class="zmxpanel3give"><i></i>已感谢</a>
 									<a class="zmxpanel4" href=""><i></i>分享</a>
 									<a class="zmxpanel5" href=""><i></i>收藏</a>
 									<span class="zmxdian">•</span>
@@ -106,6 +165,8 @@
 								</div>
 							</div>
 						</div>
+                            </ItemTemplate>
+                        </asp:Repeater>
 					</div>
 					<div id="zmxtabpanelmou">
 						<div data-type="daily">
@@ -147,17 +208,18 @@
 									<br>
 									二是把上知乎当成做逻辑改错题，好像时刻准备着发现题主在措辞和提问方式上的漏洞，等待一击得手的机会，然后深藏功与名。知乎上太多的提问不严谨，如果把题主当成假想敌的话，那真的是天天战不过来。这种对抗性的心态很无聊唉，我不禁要问，你战赢了题主又有什么益处？这好像不是大家上知乎的主要目的吧？一般人总是因为不了解才来提问，所以问题表述上不专业、有漏洞乃是常态。我还是提倡一种更有建设性和同理心的方式，试着从提问者的角度来理解一下，他希望了解什么？或者，我从哪些角度回答，能给题主和旁观者带来更丰富的信息？至于他的问题中是否存在逻辑漏洞，是最重要的吗？
 								</div>
-								<span class="zmxdate"><a href="#">发布于 昨天 09:40</a></span>
+								<span class="zmxdate"><a href="">发布于 昨天 09:40</a></span>
 								<div class="zmxpanel">
-									<a class="zmxpanel1" href="#"><i></i>关注问题</a>
-									<a class="zmxpanel2" href="#"><i></i>添加评论</a>
-									<a class="zmxpanel3" href="#"><i></i>感谢</a>
-									<a class="zmxpanel4" href="#"><i></i>分享</a>
-									<a class="zmxpanel5" href="#"><i></i>收藏</a>
+									<a class="zmxpanel1"><i class="zmxpanel1i"></i>关注问题</a>
+									<a  class="zmxpanel1give">取消关注</a>
+									<a class="zmxpanel2" href=""><i></i>添加评论</a>
+									<a class="zmxpanel3" href=""><i></i>感谢</a>
+									<a class="zmxpanel4" href=""><i></i>分享</a>
+									<a class="zmxpanel5" href=""><i></i>收藏</a>
 									<span class="zmxdian">•</span>
-									<a class="zmxpanel6" href="#">没有帮助</a>
+									<a class="zmxpanel6" href="">没有帮助</a>
 									<span class="zmxdian">•</span>
-									<a class="zmxpanel6" href="#">举报</a>
+									<a class="zmxpanel6" href="">举报</a>
 								</div>
 							</div>
 						</div>
@@ -169,19 +231,19 @@
 		    <div class="zmxhothuati">
 				<div class="zmxhuatititle">
 					<h3>热门话题</h3>
-					<a href="#">更多话题>></a>
+					<a href="">更多话题>></a>
 					<div class="clear"></div>
 				</div>
 				<ul class="zmxhuaitiul">
 					<li class="zmxclearfix">
-						<a href="#"><img src="css/images/ee.jpg" /></a>
+						<a href=""><img src="css/images/ee.jpg"></a>
 						<div class="zmxclearcon">
-							<a href="#">瑞典银行经济学奖</a>
+							<a href="">瑞典银行经济学奖</a>
 							<div class="clear"></div>
 							<div class="zmxmeta"><span>2573 人关注</span></div>
 						</div>
 						<div class="zmxbottom">
-							<a href="#">2014 年诺贝尔经济学奖得主 Jean Tirole 对于经济学的发展做出哪些贡献？</a>
+							<a href="">2014 年诺贝尔经济学奖得主 Jean Tirole 对于经济学的发展做出哪些贡献？</a>
 						</div>
 					</li>
 					<div class="clear"></div>

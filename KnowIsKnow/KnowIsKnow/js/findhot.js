@@ -28,6 +28,7 @@
         $(".zmxpanel5").hide();
         $(".zmxpanel6").hide();
         $(".zmxdian").hide();
+        $(".zmxpanel3give").hide();
     });
     $(".zmxex").click(function () {
         $(".zmxshouqi").css("display", "block");
@@ -40,5 +41,17 @@
         $(".zmxhidecontent").css("display", "none");
         $(".zmxdate").css("display", "none");
         $(".zmxrich").css("display", "block");
+    })
+    $(".zmxpanel1").click(function () {
+        $(".zmxpanel1").css("display", "none");
+        $(".zmxpanel1give").show();
+    })
+    $(".zmxpanel1give").click(function () {
+        $(".zmxpanel1").show();
+        $(".zmxpanel1give").hide();
+    })
+    $(".zmxpanel3").click(function () {
+        $(".zmxpanel3give").show();
+        $(".zmxpanel3").hide();
     })
 });
