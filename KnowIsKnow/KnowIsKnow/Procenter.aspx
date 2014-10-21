@@ -4,6 +4,45 @@
     <script type="text/javascript" src="js/procenter.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="wttop">
+		<div id="wtzh-top-inner" class="wtzg-wrap">
+			<a href="/" class="wtzu-top-link-logo" id="wtzh-top-link-logo">知乎</a>
+			<div id="wtwho">
+				<img src="http://pic1.zhimg.com/da8e974dc_s.jpg" class="wtavatar"/>
+				<div id="wtname"><span>文韬</span></div>
+			</div>
+			<div role="search" id="wtzh-top-search" class="wtzu-top-search">
+				<form id="wtzh-top-search-form" class="wtzu-top-search-form wtform-with-magnify">
+					<input type="text" class="wtzu-top-search-input" id="q" name="q" autocomplete="off" placeholder="搜索话题、问题或人..."/>
+					<button type="submit" class="wtmagnify-button">
+						<i class="wticon wticon-magnify-q"></i>
+					</button>
+				</form>
+				<button class="wtzu-top-add-question" id="wtzu-top-add-question">提问</button>
+			</div>
+			<div id="wtzg-top-nav" class="wtzu-top-nav">
+				<ul class="wtzu-top-nav-ul wtzg-clear">
+					<li class="wtzu-top-nav-li" id="wtzh-top-home-link">
+						<a href="/" class="wtzu-top-nav-link" id="wtzh-top-link-home">首页</a>
+					</li>
+					<li class="wttop-nav-topic-selector wtzu-top-nav-li" id="wtzh-top-nav-item-topic">
+						<a href="/topic" class="wtzu-top-nav-link" id="wttop-nav-dd-topic">话题</a>
+					</li>
+					<li class="wtzu-top-nav-li">
+						<a href="/explore" class="wtzu-top-nav-link">发现</a>
+					</li>
+					<li class="wttop-nav-noti wtzu-top-nav-li ">
+						<a href="javascript" class="wtzu-top-nav-link" id="wtzh-top-nav-count-wrap" role="button" >
+							<span class="wtmobi-arrow"></span>
+							消息
+
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
 	<div class="wtzg-wrap wtzu-main">
 		<div class="wtzu-main-content-inner">
 			<div class="wtzm-profile-header">
