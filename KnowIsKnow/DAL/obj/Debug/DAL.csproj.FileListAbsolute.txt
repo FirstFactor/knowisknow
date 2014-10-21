@@ -43,3 +43,12 @@ F:\knowisknow\KnowIsKnow\DAL\bin\Debug\Model.pdb
 F:\knowisknow\KnowIsKnow\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 F:\knowisknow\KnowIsKnow\DAL\obj\Debug\DAL.dll
 F:\knowisknow\KnowIsKnow\DAL\obj\Debug\DAL.pdb
+E:\git\knowisknow\KnowIsKnow\DAL\bin\Debug\DAL.dll
+E:\git\knowisknow\KnowIsKnow\DAL\bin\Debug\DAL.pdb
+E:\git\knowisknow\KnowIsKnow\DAL\bin\Debug\DBUtility.dll
+E:\git\knowisknow\KnowIsKnow\DAL\bin\Debug\Model.dll
+E:\git\knowisknow\KnowIsKnow\DAL\bin\Debug\DBUtility.pdb
+E:\git\knowisknow\KnowIsKnow\DAL\bin\Debug\Model.pdb
+E:\git\knowisknow\KnowIsKnow\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\git\knowisknow\KnowIsKnow\DAL\obj\Debug\DAL.dll
+E:\git\knowisknow\KnowIsKnow\DAL\obj\Debug\DAL.pdb

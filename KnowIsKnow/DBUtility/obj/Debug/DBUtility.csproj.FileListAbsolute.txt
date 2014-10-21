@@ -22,3 +22,8 @@ F:\knowisknow\KnowIsKnow\DBUtility\bin\Debug\DBUtility.pdb
 F:\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
 F:\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.dll
 F:\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.pdb
+E:\git\knowisknow\KnowIsKnow\DBUtility\bin\Debug\DBUtility.dll
+E:\git\knowisknow\KnowIsKnow\DBUtility\bin\Debug\DBUtility.pdb
+E:\git\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+E:\git\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.dll
+E:\git\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.pdb
