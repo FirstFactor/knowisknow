@@ -16,7 +16,7 @@ h2{font-weight: 700;font-size: 14px;outline: 0;margin: 0;color: #666;}
 .wtzg-wrap{width: 960px;margin: 0 auto;clear: both;display: block;}
 .wtzu-top-link-logo{background-image: url("images/new_logo.png");background-repeat: no-repeat;background-position: 0 8px;color: #fff;display: block;
 width: 61px;height: 100%;float: left;text-indent: -9999px;}
-#wtwho{line-height: 45px; min-width: 120px;height: 100%;display: block;float: right;background-image: -webkit-linear-gradient(top,#055fb8,#095fb3);}
+#wtwho{position: relative; line-height: 45px; min-width: 120px;height: 100%;display: block;float: right;background-image: -webkit-linear-gradient(top,#055fb8,#095fb3);}
 
 #wtname{float: left;line-height: 45px;color: #fff;font-size: 14px;padding-left: 8px;}
 .wtavatar{width: 25px;border: 1px solid rgba(0,0,0,.1);box-shadow: 0 1px 0 rgba(255,255,255,.1);margin: 9px 0 0 8px;float: left;}
@@ -143,5 +143,8 @@ line-height: 1.7;text-decoration: none;vertical-align: middle;display: inline-bl
 .wtcopy{margin-left: 1px;float: none;}
 
 .wtzm-profile-header-info a:hover{color: #259;}
+
+
+
 
 

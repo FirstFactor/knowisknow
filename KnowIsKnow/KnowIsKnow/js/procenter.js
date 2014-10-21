@@ -1,5 +1,5 @@
 ﻿$(function () {
-
+    alert("123456");
     $(".wtlocation").click(function () {
         $(".wtinfo-wrap").hide();
         $(".wtedit-wrap").show();
@@ -41,4 +41,6 @@
         $(".wtgerenjianjie").show();
         $(".wtedit-wrap4").hide();
     });
+
+  
 });
