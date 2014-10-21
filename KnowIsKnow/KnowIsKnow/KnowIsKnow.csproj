@@ -81,6 +81,7 @@
     <Content Include="Home.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="js\adminpage.js" />
+    <Content Include="js\cancel.png" />
     <Content Include="js\caretopic.js" />
     <Content Include="js\findhot.js" />
     <Content Include="js\helper.js" />
@@ -88,6 +89,7 @@
     <Content Include="js\jquery-1.9.1.min.js" />
     <Content Include="js\index.js" />
     <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.uploadify.min.js" />
     <Content Include="js\message.js" />
     <Content Include="js\messagedetail.js" />
     <Content Include="js\mmaster.js" />
@@ -96,7 +98,10 @@
     <Content Include="js\selecttopic.js" />
     <Content Include="js\setting.js" />
     <Content Include="js\superadminpage.js" />
+    <Content Include="js\swfobject.js" />
     <Content Include="js\topicsquare.js" />
+    <Content Include="js\uploadify.css" />
+    <Content Include="js\uploadify.swf" />
     <Content Include="KnowIsKnow.Master" />
     <Content Include="ProCenter.aspx" />
     <Content Include="SelectTopic.aspx" />
@@ -111,6 +116,7 @@
     <Content Include="css\images\Thumbs.db" />
     <Content Include="MessageDetail.aspx" />
     <Content Include="Helper.aspx" />
+    <Content Include="Upload.aspx" />
     <Content Include="WS.asmx" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
@@ -242,6 +248,13 @@
     </Compile>
     <Compile Include="Helper.aspx.designer.cs">
       <DependentUpon>Helper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.aspx.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Upload.aspx.designer.cs">
+      <DependentUpon>Upload.aspx</DependentUpon>
     </Compile>
     <Compile Include="WS.asmx.cs">
       <DependentUpon>WS.asmx</DependentUpon>

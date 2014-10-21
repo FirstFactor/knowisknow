@@ -1,5 +1,31 @@
-﻿$(function () {
+﻿var imgurl;
+var adimg;
+$(function () {
     //alert("ok");
+    $("#mengban").css('opacity', 0.3);
+
+
+
+    upload();
+    $("#upAreaClose").click(function () {
+        $("#mengban").hide();
+        $("#uploadArea").hide();
+
+    });
+
+    $(".adComboxImg").click(function () {
+        $("#mengban").show();
+        $("#uploadArea").show();
+        adimg = $(this);
+    });
+
+
+
+
+
+
+
+
 
     $(".submit").css("display", "none");
     $(".adTopicTitleInput").keypress(function (e) {
@@ -11,11 +37,11 @@
             return false;
         }
 
-         return false;
-        
+        return false;
+
     });
 
-    
+
 
     $(".adTopicDesInput").keypress(function (e) {
         if (e.keyCode == 13) {
@@ -57,10 +83,10 @@
     //修改操作
     $(".adxiugai").click(function () {
 
-       
+
 
         $(this).parent().find(".adTopicTitleInput").val($(this).parent().find(".spanTitle").html());
-        
+
         $(this).parent().find(".adTopicDesInput").val($(this).parent().find(".spanContent").html());
 
 
@@ -74,9 +100,9 @@
     $(".submit").click(function () {
         $(this).hide();//隐藏确认按钮
         $(this).prev().show();//显示修改按钮
-        
+
         $(this).parent().find(".spanTitle").html($(this).parent().find(".adTopicTitleInput").val());
-        $(this).parent().find(".spanContent").html( $(this).parent().find(".adTopicDesInput").val());
+        $(this).parent().find(".spanContent").html($(this).parent().find(".adTopicDesInput").val());
         $(this).parent().find(".topicstate").html($(this).parent().find(".selectedtopicstate").html());
         $(this).parent().find(".spanshow").show();
         $(this).parent().find(".spanshow").next().hide();
@@ -84,10 +110,10 @@
         thistopicid = $(this).parent().attr("topicinfoid");
         thistopicTitle = $(this).parent().find(".adTopicTitleInput").val();
         thistopicDesc = $(this).parent().find(".adTopicDesInput").val();
-        thistopicPicUrl = "1";
+        thistopicPicUrl = $(this).parent().find(".logoimg").attr("src");
         thistopicAttention = $(this).parent().find(".topicAttention").html();
         thistopicState = $(this).parent().find(".selectedtopicstate").html();
-       
+
         $.ajax({
             data: { "topicid": thistopicid, "topictitle": thistopicTitle, "topicdes": thistopicDesc, "topicpicurl": thistopicPicUrl, "topicattention": thistopicAttention, "topicstate": thistopicState },
             datatype: "json",
@@ -99,10 +125,10 @@
             }
 
         });
-        
+
     });
-        
-    
+
+
     //假删操作
     $(".adshanchu").click(function () {
         var val = 'deleted';
@@ -123,7 +149,7 @@
 
 
     $(".reportOperation1").click(function () {
-        
+
 
         $(".reportOperation1").css("z-index", "");
         $(this).css("z-index", "99");
@@ -139,5 +165,26 @@
         $(this).parent().find("dt").html("已" + $(this).html());
         $(this).parent().find("dd").remove();
     });
-    
+
+
+
 });
+
+
+function upload() {
+
+    $("#uploadify").uploadify({
+        'uploader': 'js/uploadify.swf',
+        'script': 'Upload.aspx',
+        'cancelImg': 'js/cancel.png',
+        'folder': 'images/topicImages',
+        'queueID': 'fileQueue',
+        'auto': false,
+        'multi': true,
+        'onComplete': function (file, data, response, i, o) { //上传成功回调方法
+            imgurl = i;
+            $(adimg).prev().attr("src", imgurl);
+        }
+    });
+
+}

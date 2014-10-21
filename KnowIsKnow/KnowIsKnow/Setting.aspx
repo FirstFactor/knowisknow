@@ -2,13 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/Setting.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
+  
     <script type="text/javascript" src="js/setting.js"></script>
     <title>知乎—设置</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-
 	<div id="setting-main">
 		<div class="settingMainContent">
 			<ul class="topnavs">

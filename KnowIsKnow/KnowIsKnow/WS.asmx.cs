@@ -91,6 +91,61 @@ namespace KnowIsKnow
             bllcq.Delete(Convert.ToInt32(questionid),Convert.ToInt32(userid));
             return "已取消关注";
         }
+
+
+
+        [WebMethod]
+        public void updateUserAddressJobGender(string address, string job, string gender, string userid)
+        {
+            BLL.UserInfo blluserinfo = new BLL.UserInfo();
+            int uid = Convert.ToInt32(userid);
+            Model.UserInfo modeluser = blluserinfo.GetModel(uid);
+            modeluser.userAdress = address;
+            modeluser.userJob = job;
+            modeluser.userGender = gender;
+             
+            blluserinfo.Update(modeluser);
+        }
+        [WebMethod]
+        public void updateUserCompanyPosition(string company, string position, string userid)
+        {
+            BLL.UserInfo blluserinfo = new BLL.UserInfo();
+            int uid = Convert.ToInt32(userid);
+            Model.UserInfo modeluser = blluserinfo.GetModel(uid);
+            modeluser.userCompany = company;
+            modeluser.userJobPosition = position;
+            blluserinfo.Update(modeluser);
+        }
+        [WebMethod]
+        public void updateUserAcademyMajor(string academy, string major,string userid)
+        {
+            BLL.UserInfo blluserinfo = new BLL.UserInfo();
+            int uid = Convert.ToInt32(userid);
+            Model.UserInfo modeluser = blluserinfo.GetModel(uid);
+            modeluser.userAcademy = academy;
+            modeluser.userMajor = major;
+            blluserinfo.Update(modeluser);
+        }
+
+        [WebMethod]
+        public void updateUserBio(string bio, string userid)
+        {
+            BLL.UserInfo blluserinfo = new BLL.UserInfo();
+            int uid = Convert.ToInt32(userid);
+            Model.UserInfo modeluser = blluserinfo.GetModel(uid);
+            modeluser.userProBio = bio;          
+            blluserinfo.Update(modeluser);
+        }
+        [WebMethod]
+        public string updateUserHeadimg(string headimg,string userid)
+        {
+            BLL.UserInfo blluserinfo = new BLL.UserInfo();
+            int uid = Convert.ToInt32(userid);
+            Model.UserInfo modeluser = blluserinfo.GetModel(uid);
+            modeluser.userHeadImage = headimg;
+            return blluserinfo.Update(modeluser).ToString();
+        }
+
        
     }
 }

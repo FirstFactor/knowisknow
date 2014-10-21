@@ -1,23 +1,39 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/KnowIsKnow.Master" AutoEventWireup="true" CodeBehind="ProCenter.aspx.cs" Inherits="KnowIsKnow.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <link rel="Stylesheet" href="js/uploadify.css" />
+
     <link href="css/ProCenter.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/swfobject.js"></script>
+    <script type="text/javascript" src="js/jquery.uploadify.min.js"></script>
     <script type="text/javascript" src="js/procenter.js"></script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+    <div id="mengban">
+        
+    </div>
+    <div id="uploadArea">
+        <div id="upAreaHeader"><div id="upAreaClose">X</div></div>
+        <input type="file" name="uploadify" id="uploadify" />
+        <a href="javascript:$('#uploadify').uploadifyUpload()" id="uploadbtn">上传</a>| <a href="javascript:$('#uploadify').uploadifyClearQueue()"> 取消上传</a>
+        <div id="fileQueue"></div>
+    </div>
+
     <div class="wtzg-wrap wtzu-main">
 		<div class="wtzu-main-content-inner">
 			<div class="wtzm-profile-header">
 				<div class="wtzm-profile-header-main">
 					<div class="wt-top">
-						<div class="wtellipsis">
-							<span class="wtname">文韬</span>
+						<div class="wtellipsis" uid="<%=userid %>">
+							<span class="wtname"><%=nickname %></span>
 							<span>,</span>
-							<span id="wtqianming" title="爱好世间美好的一切">爱好世间美好的一切</span>
+							<span id="wtqianming" title="爱好世间美好的一切"><%=shuoshuo %></span>
 						</div>
 					</div>
 					<div class="wtclearfix">
 						<div class="wtzm-profile-header-avatar-container">
-							<img src="http://pic2.zhimg.com/da8e974dc_l.jpg" class="wtzm-profile-header-img"/>
+							<img src="<%=headimg %>" class="wtzm-profile-header-img"/>
 						</div>
 						<div class="wtzm-profile-header-info">
 							<div class="wtitems">

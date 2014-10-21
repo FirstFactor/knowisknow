@@ -11,7 +11,9 @@ namespace KnowIsKnow
   
     public partial class KnowIsKnow : System.Web.UI.MasterPage
     {
-        string userid;
+        public string userid;
+        public string usernickname;
+        public string userheadimg;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["UserID"] == null)
@@ -22,6 +24,8 @@ namespace KnowIsKnow
             else
             {
                 userid = Session["UserID"].ToString();
+                usernickname = Session["UserNickName"].ToString();
+                userheadimg = Session["UserHeadImage"].ToString();
             }
         }
         public void sendQuestion(object o, EventArgs e) {

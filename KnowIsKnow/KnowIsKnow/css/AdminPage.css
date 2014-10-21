@@ -437,6 +437,45 @@ img{ border:0;}
     .op:hover {
         background:#ccc;
         z-index:99;
-    } 
+        
+    }
 
 
+
+
+
+
+#mengban {
+    position:fixed;
+    height:100%;
+    width:100%;
+    z-index:999;
+    background:#222;
+    display:none;
+}
+#uploadArea {
+    position:fixed;
+    width:600px;
+    height:400px;
+    margin:auto;
+    left:0;
+    right:0; 
+    top:0; 
+    bottom:0;
+    z-index:10000;
+    background-color:#fff;
+    display:none;
+}
+#upAreaHeader {
+    height:30px;
+    background:#ccc;
+
+}
+#upAreaClose {
+    float:right;
+    margin-right:10px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+   
+}
