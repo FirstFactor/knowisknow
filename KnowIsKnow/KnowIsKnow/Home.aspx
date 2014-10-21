@@ -48,7 +48,7 @@
                 <div class="zqq-jubao-submit">确定</div>
             </div>
         </div>
-        
+        <div class="userid" userid="<%=userid %>"></div>
         <div class="zqq-main">
 			<div class="zqq-mini-main">
 				<div class="zqq-mm-R">
@@ -59,26 +59,24 @@
                         <asp:Repeater ID="rpt" runat="server">
                             <ItemTemplate>
                                 <div class="zqq-small-question">
-							<div class="zqq-head-photo">
-								<img class="zqq-head-face" src="image/1.jpg"/>
-							</div>
-							<div class="zqq-question-detail">
-								<div class="zqq-question-info"><%# Eval("questionProvider") %> 提出了问题</div>
-								<div class="zqq-question-title">
-									<%# Eval("questionTitle") %>
-								</div>
-								<div class="zqq-question-content">
-									<div class="zqq-content-word"><%# Eval("questionContent") %></div>
-									<img class="zqq-content-pic" src="" /> 
-								</div>
-								<div class="zqq-question-ft">
-									<div class="zqq-follow-topic">
-                                        <a class="zqq-follow-topic-button">关注话题</a>
-                                        <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>
-									</div>
-									<div class="zqq-jubao">举报</div>
-								</div>
-							</div>
+							    <div class="zqq-head-photo">
+								    <img class="zqq-head-face" src="<%# Eval("userHeadImage") %>" />
+							    </div>
+							    <div class="zqq-question-detail">
+							    	<div class="zqq-question-info"><%# Eval("userNickName") %> 提出了问题</div>
+							    	<div class="zqq-question-title" questionid="<%#Eval("questionID") %>"><%# Eval("questionTitle") %></div>
+								    <div class="zqq-question-content">
+									    <div class="zqq-content-word"><%# Eval("questionContent") %></div>
+									    <img class="zqq-content-pic" src="" /> 
+								    </div>
+								    <div class="zqq-question-ft">
+									    <div class="zqq-follow-topic">
+                                            <a class="zqq-follow-topic-button">关注问题</a>
+                                            <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>
+								    	</div>
+								    	<div class="zqq-jubao">举报</div>
+							    	</div>
+							    </div>
 							</div>
                             </ItemTemplate>
                         </asp:Repeater>

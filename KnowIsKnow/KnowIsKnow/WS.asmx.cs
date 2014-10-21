@@ -70,6 +70,27 @@ namespace KnowIsKnow
             return "ok";
         }
 
+
+
+
+        [WebMethod]
+        public string followQuestion(string questionid, string userid)
+        {
+            BLL.CareQuestion bllcq = new BLL.CareQuestion();
+            Model.CareQuestion cq = new Model.CareQuestion();
+            cq.careQuestionID = Convert.ToInt32(questionid);
+            cq.questionCaredByUID = Convert.ToInt32(userid);
+            bllcq.Add(cq);
+            return "已关注该问题";
+        }
+        [WebMethod]
+        public string nFollowQuestion(string questionid, string userid)
+        {
+            BLL.CareQuestion bllcq = new BLL.CareQuestion();
+            Model.CareQuestion cq = new Model.CareQuestion();
+            bllcq.Delete(Convert.ToInt32(questionid),Convert.ToInt32(userid));
+            return "已取消关注";
+        }
        
     }
 }

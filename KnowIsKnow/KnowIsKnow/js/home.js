@@ -1,11 +1,38 @@
 ﻿$(function () {
+
     $(".zqq-follow-topic-button").click(function () {
         $(this).toggleClass("zqq-display");
         $(this).next().toggleClass("zqq-display");
+
+        var questionid = $(this).parent().parent().parent().find(".zqq-question-title").attr("questionid");
+        var userid = $(".userid").attr("userid");
+        $.ajax({
+            data: "{ questionid:'" + questionid + "', userid:' " + userid + "' }",
+            dataType: "json",
+            url: "ws.asmx/followQuestion",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+        });
     });
     $(".zqq-noFollow-topic-button").click(function () {
         $(this).toggleClass("zqq-display");
         $(this).prev().toggleClass("zqq-display");
+
+        var questionid = $(this).parent().parent().parent().find(".zqq-question-title").attr("questionid");
+        var userid = $(".userid").attr("userid");
+        $.ajax({
+            data: "{ questionid:'" + questionid + "', userid:' " + userid + "' }",
+            dataType: "json",
+            url: "ws.asmx/nFollowQuestion",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+        });
     });
 
     $(".zqq-question-detail").hover(function () {

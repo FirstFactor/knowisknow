@@ -10,13 +10,26 @@ namespace KnowIsKnow
 {
     public partial class Home : System.Web.UI.Page
     {
-        
+        public string userid;
         protected void Page_Load(object sender, EventArgs e)
         {
-            BLL.QuestionInfo quelist = new BLL.QuestionInfo();
-            DataSet ds = quelist.GetList("questionTitle is not null");
-            this.rpt.DataSource=ds.Tables[0];
-            this.rpt.DataBind();
+            if (Session["UserID"] == null)
+            {
+                Response.Write("<script>window.location.href='index.aspx'</script>");
+            }
+            else {
+                userid = Session["UserID"].ToString();
+                BLL.QuestionUserView quelist = new BLL.QuestionUserView();
+                DataSet ds = quelist.GetList("questionTitle is not null");
+                this.rpt.DataSource = ds.Tables[0];
+                this.rpt.DataBind();
+
+                BLL.CareQuestion bllcq = new BLL.CareQuestion();
+                DataSet dsca = bllcq.GetList("");
+
+            }
         }
+        
+
     }
 }
