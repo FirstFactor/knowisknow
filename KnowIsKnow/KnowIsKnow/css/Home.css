@@ -19,7 +19,7 @@ ul,li{list-style: none;list-style-position: outside;}
 
 .zqq-tiwen-inner{display: none; width: 400px;height: 250px;background: #fff; position: absolute; z-index: 9000; top: 200px; left: 480px; border-radius: 4px;box-shadow: 0 0 80px 0 rgba(0,0,0,.4); overflow: hidden;}
 .zqq-tiwen-menban-title{width: 100%;height: 30px;background: #044e97;color: #fff;font-size: 22px;font-weight: bold;}
-.zqq-tiwen-menban-title-main{float: left;line-height: 30px; width: 370px;height: 30px;}
+.zqq-tiwen-menban-title-main{float: left;line-height: 30px; width: 360px;height: 30px;}
 .zqq-tiwen-menban-close{float: right; width: 30px;height: 30px;text-align: center; cursor: pointer;}
 .zqq-publish{width:350px;height: 200px;padding:0 20px 11px 20px;}
 .zqq-publish-input-title{width: 350px;height: 18px;margin-top: 15px;border:1px solid #ccc;outline: none;}
