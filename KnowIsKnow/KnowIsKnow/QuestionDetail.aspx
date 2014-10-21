@@ -3,5 +3,6 @@
     <link href="css/QuestionDetail.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/questiondetail.js"></script>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>

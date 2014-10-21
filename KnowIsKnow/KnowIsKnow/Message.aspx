@@ -19,19 +19,19 @@
                         <div id="wk-item" class="navigable">
 					<div class="zm-pm-item">
 						<a class="zm-item-link">
-							<img class="zm-pm-item-img" src="<%#getHeaderImage(Eval("MessageSenderID")) %>"/>
+							<img class="zm-pm-item-img" src="<%#getHeaderImage(Eval("MessageSenderID"),Eval("MessageReceiverID")) %>"/>
 						</a>
 						<div class="zm-pm-item-main">
-							<a class="pm-touser" ><%# getNickName(Eval("MessageSenderID")) %></a>
-							：<%# getContent( Eval("MessageSenderID")) %></div>
+							<a class="pm-touser" ><%# getNickName(Eval("MessageSenderID"),Eval("MessageReceiverID")) %></a>
+							：<%# getContent( Eval("MessageSenderID"),Eval("MessageReceiverID")) %></div>
 						<div class="zg-gray zu-pm-item-meta">
 							<span class="zg-gray zg-left">
-								<%#getDatatime( Eval("MessageSenderID")) %>
+								<%#getDatatime( Eval("MessageSenderID"),Eval("MessageReceiverID")) %>
 							</span>
-							<a href="MessageDetail.aspx?MsgsID=<%# Eval("MessageSenderID") %>" class="zg-link-litblue">共 <%#getMessageCount(Eval("MessageSenderID")) %> 条对话</a>
+							<a href="MessageDetail.aspx?MsgsID=<%# Eval("MessageSenderID") %>" class="zg-link-litblue">共 <%#getMessageCount(Eval("MessageSenderID"),Eval("MessageReceiverID")) %> 条对话</a>
                             
 							<span class="zg-bull">|</span>
-							<a href="#" class="zg-link-litblue huifusixin" usernickname="<%#getchatNickName(Eval("MessageSenderID")) %>">回复</a>
+							<a href="#" class="zg-link-litblue huifusixin" usernickname="<%#getchatNickName(Eval("MessageSenderID"),Eval("MessageReceiverID")) %>" userid="<%# Eval("MessageSenderID")%>">回复</a>
 							<span class="zg-bull">|</span>
 							<a href="#" class="zg-link-litblue">举报</a>
 							<span class="zg-bull">|</span>
@@ -82,7 +82,10 @@
 					</dt>
 					<dd class="zm-form-table-field">
 						<div class="zm-pm-selector-wrap">
-							<asp:TextBox ID="txtMessageReceive" runat="server" class="zg-form-text-input zm-pm-user-selector label-input-label" type="text" placeholder="搜索用户"></asp:TextBox>
+							<asp:TextBox ID="txtMessageReceive" runat="server" class="zg-form-text-input zm-pm-user-selector label-input-label" type="text" placeholder="搜索用户">
+                                
+                            </asp:TextBox>
+                            <asp:TextBox runat="server" id="wkuserid" class="zm-wkuserid" type="text"></asp:TextBox>
 						</div>
 					</dd>
 					<dt class="zm-form-table-head zm-form-table-head-align-middle">
