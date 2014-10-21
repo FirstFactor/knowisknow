@@ -214,16 +214,19 @@ $(function () {
         $(".zqyuserimg").removeClass("zqyuserspec");
         $(this).addClass("zqyuserspec");
 
-        var phid = $(this).attr("phid");
+        var phsrc = $(this).attr("src");
 
+        var shuoshuo = $(this).attr("shuoshuo");
+
+        var mingzi = $(this).attr("mingzi");
 
         var html = "";
         html += ' 					<div class="zqytopic">';
-        html += '						<img src="css/images/user' + phid + '.jpg" class="story_avatar">';
+        html += '						<img src="'+phsrc+'" class="story_avatar">';
         html += '						<div class="story_title">';
         html += '							<div>';
-        html += '								<a href="#" class="story_jies mingzi">Cat Chen</a>';
-        html += '								<span>上知乎，求欢乐</span>';
+        html += '								<a href="#" class="story_jies mingzi">'+mingzi+'</a>';
+        html += '								<span>'+shuoshuo+'</span>';
         html += '							</div>';
         html += '							<div class="story_jies">68743 人关注该话题，1000 个精华回答</div>';
         html += '						</div>';

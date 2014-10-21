@@ -110,33 +110,23 @@
 	 <div class="zqybottom">
 			<div class="bottomwrap">
 				<div class="zqyuserlist">
-					<div class="zqyuserph">
-						<img src="css/images/user1.jpg" class="zqyuserimg zqyuserspec" phid="1" />
-					</div>
+					
+                    <asp:Repeater runat="server" ID="touph">
+                        <ItemTemplate>
+                            <div class="zqyuserph">
+						        <img src="<%# Eval("userHeadImage") %>" class="zqyuserimg" shuoshuo="<%# Eval("userShuoShuo") %>"  mingzi="<%# Eval("userNickName") %>"/>
+					        </div>
 
-					<div class="zqyuserph">
-						<img src="css/images/user2.jpg" class="zqyuserimg" phid="2" />
-					</div>
-
-					<div class="zqyuserph">
-						<img src="css/images/user3.jpg" class="zqyuserimg" phid="3" />
-					</div>
-
-					<div class="zqyuserph">
-						<img src="css/images/user4.jpg" class="zqyuserimg" phid="4" />
-					</div>
-
-					<div class="zqyuserph">
-						<img src="css/images/user5.jpg" class="zqyuserimg" phid="5" />
-					</div>
+                        </ItemTemplate>
+                    </asp:Repeater>
 				</div>
 				<div class="zqyuserstory">
  					<div class="zqytopic">
 						<img src="css/images/user1.jpg" class="story_avatar">
 						<div class="story_title">
 							<div>
-								<a href="#" class="story_jies mingzi">Cat Chen</a>
-								<span>上知乎，求欢乐</span>
+								<a href="#" class="story_jies mingzi">系统</a>
+								<span>床前明月光</span>
 							</div>
 							<div class="story_jies">68743 人关注该话题，1000 个精华回答</div>
 						</div>

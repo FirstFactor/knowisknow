@@ -11,10 +11,14 @@ using SendEmailSample;
 namespace KnowIsKnow
 {
     public partial class Index : System.Web.UI.Page
-    {
+    { 
         protected void Page_Load(object sender, EventArgs e)
         {
+            BLL.UserInfo blluserinfo = new BLL.UserInfo();
+            DataSet ds = blluserinfo.GetList("userID<'" + 154 + "'");
+            this.touph.DataSource = ds.Tables[0];
 
+            this.touph.DataBind();
         }
 
         protected void btnzhuce_Click(object sender, EventArgs e)
