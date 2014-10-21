@@ -14,8 +14,31 @@
     })
     $(".zm-pm-user-selector").keyup(function ()
     {
-       
+        var thisusernickname=$(".zg-form-text-input").val();
+        $(".ac-renderer").html(" ");
+     
+        $.ajax({
+            data: "{usernickname:'"+thisusernickname+"'}",
+            dataType: "json",
+            url: "ws.asmx/selectUserInfo",
+            type: "post",
+            contentType: "application/json",
+            success: function (result) {
+                $(result.d).each(function () {
+                    var html = "";
+                    html += '     <div class="ac-row">';
+                    html += '         <img class="zm-item-img-avatar zg-left" src="Images/sprites.png"/>';
+                    html += '         <span class="zu-autocomplete-row-name">' +this.userNickName+ '</span>';
+                    html += '         <span class="zg-gray-normal zu-autocomplete-row-description">呵呵</span>';
+                    html += '     </div>';
+                    $(".ac-renderer").append(html);
+                })
+                
+            }
+
+        });
         $(".ac-renderer").show();
+       
         $(".ac-row").hover(function () {
 
             $(this).addClass("ac-active");

@@ -75,13 +75,14 @@
                         <asp:Repeater runat="server" id="topiclist">
                             <ItemTemplate>
                                  <li>
-                            <a class="box">
-                                <img src="css/images/user1.jpg " width="50" height="50"  style="float:left;border-radius:50%;"/>
+             
+                            <a class="box" runat="server" id="guanzhuhuati">
+                                <img src="<%# Eval("topicPicUrl") %>" width="50" height="50"  style="float:left;border-radius:50%;"/>
                                 <div class="boxright" >
                                     <strong style="color:#444;" runat="server" id="guanzhutopic"><%# Eval("topicTitle") %></strong>
                                     <div class="extra_info">
                                         <div>
-                                        <strong runat="server" id="guanzhucount"><%# Eval("topicAttention") %></strong>
+                                        <strong runat="server" id="guanzhucount" class="topicattention"><%# Eval("topicAttention") %></strong>
                                          人关注
                                         </div>
                                         <div runat="server" id="miaosu">
@@ -94,6 +95,7 @@
                                         <span class="zhuangtai" state="0">  关注</span>
                                     </div>
                                 </div>
+                                <div runat="server" class="bbb" id="topicid" style="display:none"><%# Eval("topicID") %></div>
                             </a>
                         </li>
                             </ItemTemplate>
@@ -105,6 +107,9 @@
                 <div class="command">
                     <a class="tiaoguo" href="Home.aspx">进入知乎</a>
                 </div>
+
+                <div class="eee" runat="server" id="aaa" style="width:100px;height:30px;color:red;display:none;"></div>
+                
             </div>
             
 

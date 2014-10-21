@@ -13,8 +13,8 @@ namespace KnowIsKnow
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            BLL.QuestionUserReplyView quelist = new BLL.QuestionUserReplyView();
-            DataSet ds = quelist.GetList("replyofReplyID is not null");
+            BLL.QuestionInfo quelist = new BLL.QuestionInfo();
+            DataSet ds = quelist.GetList("questionTitle is not null");
             this.rpt.DataSource=ds.Tables[0];
             this.rpt.DataBind();
         }
