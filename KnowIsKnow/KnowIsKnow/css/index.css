@@ -59,7 +59,7 @@ li{list-style-type: none;}
 
 .failtip{padding: 5px 0;font-size: 12px;}
 
-.icon_sign{width: 16px;height: 16px;display: block;margin-right: 10px; float: left;background-image: url("zimages/signup.png");background-position: -52px 0;}
+.icon_sign{width: 16px;height: 16px;display: block;margin-right: 10px; float: left;background-image: url("images/zqyicon1.png");background-position: -52px 0;}
 
 
 
@@ -83,11 +83,30 @@ li{list-style-type: none;}
 .story_content_answer{width: 440px;height: 50px;margin-top: 12px;}
 
 .answer_jies:hover{text-decoration: underline;}
-.story_end{width: 440px;height: 25px;color: rgba(116,145,168);}
+.story_end{width: 440px;height: 25px;color: rgb(116,145,168);}
 .huati{color: rgb(116,145,168);}
 
 .mingzi:hover{text-decoration: underline;}
 
 .huati:hover{text-decoration: underline;}
 
+
+.mengban{width:100%;height:100%; background-color:rgb(22, 114, 185);z-index:9999;position:absolute;top:0px;left:0px;display:none;}
+
+
+.view{width:480px;min-height:400px;margin: auto;margin-top:83px;display:block;}
+.view p{font-size:14px;line-height:24px;padding:10px 0;margin:0;}
+
+.kaishi{width:50px;height:33px;padding:0px 10px;border:1px solid #1D80CF;margin-left:250px;cursor:pointer;line-height:33px;display:block;
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(128, 195, 247)), to(rgb(107, 186, 248)));border-radius:6px;text-align:center;margin-top:10px;}
+
+.followtopic{width:820px;min-height:520px;margin:auto;margin-top:100px; display:none;}
+
+.followtip{width:825px;height:35px;}
+
+.tiaoguo{display:block;float:right;margin-right:5px; cursor:pointer;width:45px;height:33px;padding:0 13px;border:1px solid rgb(29, 128, 207);background: -webkit-gradient(linear,left top,left bottom,from(#80c3f7),to(#6bbaf8));text-align:center;line-height:33px;border-radius:5px;}
+.topics{display:inline-block;}
+.topics li{float:left;margin:0 10px 10px 0;}
+
+.box{width:173px;height:56px;padding:10px;border:1px solid rgb(29, 128, 207);background-color:#FFF;display:block;border-radius:5px;}
 .showfault{ width:200px;min-height:0px;font-size:18px;background-color:red;color:#FFF;position:absolute;top:0px;left:560px;text-align:center;}

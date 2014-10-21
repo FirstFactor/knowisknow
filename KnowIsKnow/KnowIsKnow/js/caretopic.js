@@ -30,7 +30,22 @@
         $(this).parent().parent().parent().parent().hide();
     });
     $(".quxiaoguanzhu").click(function () {
+        var userid = $("#ycid").html();
+        
+        var topicid = $(this).attr("tpid");
+        
         $(this).parent().parent().parent().parent().hide();
+
+        $.ajax({
+            data: "{ topicid:'"+topicid+"', userid:' "+userid+"' }",
+            dataType: "json",
+            url: "ws.asmx/DeleteCareTopic",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+        });
     });
 
 

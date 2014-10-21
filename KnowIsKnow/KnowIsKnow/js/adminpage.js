@@ -80,6 +80,25 @@
         $(this).parent().find(".topicstate").html($(this).parent().find(".selectedtopicstate").html());
         $(this).parent().find(".spanshow").show();
         $(this).parent().find(".spanshow").next().hide();
+
+        thistopicid = $(this).parent().attr("topicinfoid");
+        thistopicTitle = $(this).parent().find(".adTopicTitleInput").val();
+        thistopicDesc = $(this).parent().find(".adTopicDesInput").val();
+        thistopicPicUrl = "1";
+        thistopicAttention = $(this).parent().find(".topicAttention").html();
+        thistopicState = $(this).parent().find(".selectedtopicstate").html();
+       
+        $.ajax({
+            data: { "topicid": thistopicid, "topictitle": thistopicTitle, "topicdes": thistopicDesc, "topicpicurl": thistopicPicUrl, "topicattention": thistopicAttention, "topicstate": thistopicState },
+            datatype: "json",
+            url: "ws.asmx/UpdateTopicInfo",
+            type: "post",
+            contenttype: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+
+        });
         
     });
         
@@ -93,5 +112,32 @@
     });
 
 
+    $(".report").click(function () {
+        $(".report").removeClass("reportactive");
+        $(this).addClass("reportactive");
+
+        var showID = $(this).attr("showID");
+        $(".reportlist").hide();
+        $("." + showID).show();
+    });
+
+
+    $(".reportOperation1").click(function () {
+        
+
+        $(".reportOperation1").css("z-index", "");
+        $(this).css("z-index", "99");
+
+        if ($(this).find("dd").css("display") == "block") {
+            $(this).find("dd").hide();
+        } else {
+            $(this).find("dd").show();
+        }
+
+    });
+    $(".op").click(function () {
+        $(this).parent().find("dt").html("已" + $(this).html());
+        $(this).parent().find("dd").remove();
+    });
     
 });

@@ -26,7 +26,7 @@
 			</div>
 			<div class="zqq-tiwen-search-content">
 				<p>
-					知为知是一个真诚、友善、认真、互助的社区
+					知乎是一个真诚、友善、认真、互助的社区
 					<br/>
 					我们希望每一个疑惑都有解答，好的问题更容易得到好答案
 				</p>
@@ -43,7 +43,7 @@
 					<br/>
 				</p>
 				<p>
-					<b>知为知禁止这些提问</b>
+					<b>知乎禁止这些提问</b>
 					<br/>
 					1、和已有问题完全重复的问题，
 					<b>为避免重复，提问前可以先进行搜索</b>
@@ -53,7 +53,7 @@
 					3、投票类问题。例如：你支持方舟子还是韩寒？
 					<br/>
 					4、作业或其他希望代为完成个人任务类的内容，以及针对个人具体病情的求医问药类问题
-					完整的提问建议可查看 知为知的提问规范有哪些？
+					完整的提问建议可查看 知乎的提问规范有哪些？
 				</p>
 			</div>
 			<div class="zqq-tiwen-search-bar">
@@ -72,13 +72,13 @@
 				<div class="zqq-tiwen-menban-close">X</div>
 			</div>
 			<div class="zqq-publish">
-				<textarea class="zqq-publish-input-title"></textarea>
+                <asp:TextBox runat="server" ID="txtQuestionTitle" class="zqq-publish-input-title" ></asp:TextBox>
 				<div class="zqq-publish-contentTitle">问题说明（可选）：</div>
-				<textarea class="zqq-publish-input-content"></textarea>
+                <asp:TextBox runat="server" ID="txtQuestionContent" class="zqq-publish-input-content" ></asp:TextBox>
 				<div class="zqq-publish-topicChose">选择话题：</div>
-				<textarea class="zqq-publish-input-topic"></textarea>
+				<textarea class="zqq-publish-"></textarea>
 				<div class="zqq-publish-ft">
-					<div class="zqq-btn-publish">发布</div>
+                    <asp:Button runat="server" ID="btnsendQuestion" Class="zqq-btn-publish"  Text="发布" OnClick="sendQuestion"/>
 				</div>						
 			</div>
 		</div>
@@ -87,10 +87,47 @@
         <div id="Mheader">
             <div id="wttop">
 		<div id="wtzh-top-inner" class="wtzg-wrap">
-			<a href="/" class="wtzu-top-link-logo" id="wtzh-top-link-logo">知为知</a>
+			<a href="/" class="wtzu-top-link-logo" id="wtzh-top-link-logo">知乎</a>
 			<div id="wtwho">
 				<img src="http://pic1.zhimg.com/da8e974dc_s.jpg" class="wtavatar" />
-				<div id="wtname"><span>文韬</span></div>
+				<div id="wtname">
+                    <span>文韬</span>
+                   
+				</div>
+                 <ul class="top-nav-dropdown">
+                        <li class="lhovercolor">
+                            <a class="hovercolor" href="#">
+                                <i class="zg-icon zg-icon-dd-home">
+                                   
+                                </i>
+                                 我的主页
+                            </a>
+                        </li>
+                        <li class="lhovercolor">
+                            <a class="hovercolor" href="Message.aspx">
+                                <i class="zg-icon zg-icon-dd-pm">
+                                    
+                                </i>
+                                私信
+                            </a>
+                        </li>
+                        <li class="lhovercolor">
+                            <a class="hovercolor" href="#">
+                                <i class="zg-icon zg-icon-dd-settings">
+                                    
+                                </i>
+                                设置
+                            </a>
+                        </li>
+                        <li class="lhovercolor">
+                            <a class="hovercolor" href="#">
+                                <i class="zg-icon zg-icon-dd-logout">
+                                   
+                                </i>
+                                 退出
+                            </a>
+                        </li>
+                    </ul>
 			</div>
 			<div role="search" id="wtzh-top-search" class="wtzu-top-search">
 				<div id="wtzh-top-search-form" class="wtzu-top-search-form wtform-with-magnify">

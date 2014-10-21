@@ -55,6 +55,7 @@
     <Compile Include="QuestionInfoCareQuestionView.cs" />
     <Compile Include="QuestionTopic.cs" />
     <Compile Include="QuestionUserReplyView.cs" />
+    <Compile Include="QuestionUserView.cs" />
     <Compile Include="ReplyQuestion.cs" />
     <Compile Include="ReportQuestion.cs" />
     <Compile Include="ReportQuestionUserView.cs" />

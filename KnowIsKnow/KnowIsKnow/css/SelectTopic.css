@@ -1,2 +1,37 @@
 ﻿body {
+    background-color:rgb(22, 114, 185);
+    font-size:14px;
+    color:#FFF;
 }
+a {text-decoration:none; color:#FFF;}
+li{list-style:none;}
+
+
+
+/*.mengban{width:100%; background-color:rgb(22, 114, 185);display:block;}*/
+
+
+.view{width:480px;min-height:400px;margin: auto;margin-top:83px;display:block;}
+.view p{font-size:14px;line-height:24px;padding:10px 0;margin:0;}
+
+.kaishi{width:50px;height:33px;padding:0px 10px;border:1px solid #1D80CF;margin-left:250px;cursor:pointer;line-height:33px;display:block;
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(128, 195, 247)), to(rgb(107, 186, 248)));border-radius:6px;text-align:center;margin-top:10px;}
+
+.followtopic{width:820px;min-height:520px;margin:auto;margin-top:100px; display:none;}
+
+.followtip{width:825px;height:35px;}
+
+.tiaoguo{display:block;float:right;margin-right:5px; cursor:pointer;width:60px;height:33px;padding:0 13px;border:1px solid rgb(29, 128, 207);background: -webkit-gradient(linear,left top,left bottom,from(#80c3f7),to(#6bbaf8));text-align:center;line-height:33px;border-radius:5px;}
+.topics{display:inline-block;}
+.topics li{float:left;margin:0 10px 10px 0;}
+
+.box{width:173px;height:56px;padding:10px;border:1px solid rgb(29, 128, 207);background-color:#f6f7f8;display:block;border-radius:5px;cursor:pointer;}
+
+
+.boxright{width:110px;height:50px;float:right;}
+.extra_info{width:100px;height:25px;color:#666;font-size:6px;margin-top:5px;display:block;}
+.follow_tip{margin-top:10px;display:none;}
+
+.clickguanzhu{width:16px;height:16px;display:block;background-image:url("images/close.png");background-position:-284px -111px;float:left;}
+
+.zhuangtai{color:#666;font-size:12px; margin-left:5px;}

@@ -22,15 +22,16 @@
 							<img class="zm-pm-item-img" src="<%#getHeaderImage(Eval("MessageSenderID")) %>"/>
 						</a>
 						<div class="zm-pm-item-main">
-							<a class="pm-touser"><%# getNickName(Eval("MessageSenderID")) %></a>
+							<a class="pm-touser" ><%# getNickName(Eval("MessageSenderID")) %></a>
 							：<%# getContent( Eval("MessageSenderID")) %></div>
 						<div class="zg-gray zu-pm-item-meta">
 							<span class="zg-gray zg-left">
 								<%#getDatatime( Eval("MessageSenderID")) %>
 							</span>
-							<a href="MessageDetail.aspx" class="zg-link-litblue">共 <%#getMessageCount(Eval("MessageSenderID")) %> 条对话</a>
+							<a href="MessageDetail.aspx?MsgsID=<%# Eval("MessageSenderID") %>" class="zg-link-litblue">共 <%#getMessageCount(Eval("MessageSenderID")) %> 条对话</a>
+                            
 							<span class="zg-bull">|</span>
-							<a href="#" class="zg-link-litblue">回复</a>
+							<a href="#" class="zg-link-litblue huifusixin" usernickname="<%#getchatNickName(Eval("MessageSenderID")) %>">回复</a>
 							<span class="zg-bull">|</span>
 							<a href="#" class="zg-link-litblue">举报</a>
 							<span class="zg-bull">|</span>
@@ -96,6 +97,23 @@
 				<div class="zm-command zg-clear">
 					<a class="zm-command-cancel">取消</a>
 					<asp:Button  runat="server"  class="zg-btn-blue zg-r3px" id="btnsendMessage" OnClick="sendMessage" Text="发送"/>
+				</div>
+                <div class="ac-renderer">
+					<%--<div class="ac-row">
+						<img class="zm-item-img-avatar zg-left" src="Images/sprites.png"/>
+						<span class="zu-autocomplete-row-name">aaa</span>
+						<span class="zg-gray-normal zu-autocomplete-row-description">呵呵</span>
+					</div>
+					<div class="ac-row">
+						<img class="zm-item-img-avatar zg-left" src="Images/sprites.png"/>
+						<span class="zu-autocomplete-row-name">nnn</span>
+						<span class="zg-gray-normal zu-autocomplete-row-description">呵呵</span>
+					</div>
+					<div class="ac-row">
+						<img class="zm-item-img-avatar zg-left" src="Images/sprites.png"/>
+						<span class="zu-autocomplete-row-name">ddd</span>
+						<span class="zg-gray-normal zu-autocomplete-row-description">呵呵</span>
+					</div>--%>
 				</div>
 			</div>
 		</div>
