@@ -30,7 +30,7 @@ namespace KnowIsKnow
         }
         public void sendQuestion(object o, EventArgs e) {
             string questionTitle = this.txtQuestionTitle.Text;
-            string questionContent = this.txtQuestionContent.Text;
+            string questionContent = this.txtQuestionContent.InnerText;
             DateTime now = DateTime.Now;
             BLL.QuestionInfo bllque = new BLL.QuestionInfo();
             Model.QuestionInfo que = new Model.QuestionInfo();

@@ -1,4 +1,10 @@
-﻿$(function () {
+﻿
+var um;
+$(function () {
+    um = UM.getEditor('txtQuestionContent', {
+        toolbar: ['bold italic underline | superscript subscript | image video | horizontal']
+    });
+
     $(document).on("click", ".wtzu-top-add-question", function () {
         $(".zqq-menban").show();
         $(".zqq-tiwen-search").show();

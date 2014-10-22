@@ -28,9 +28,7 @@ namespace KnowIsKnow
             if (Session["UserID"] == null)
             {
 
-                Session["UserID"] = 3;
-                Session["UserNickName"]="wangkan";
-                 Session["UserHeadImage"]="1";
+                Response.Redirect("Index.aspx");
 
             }
             else {

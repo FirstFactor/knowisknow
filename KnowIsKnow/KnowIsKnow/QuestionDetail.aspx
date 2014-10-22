@@ -1,6 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/KnowIsKnow.Master" AutoEventWireup="true" CodeBehind="WebForm8.aspx.cs" Inherits="KnowIsKnow.WebForm8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/QuestionDetail.css" rel="stylesheet" type="text/css"/>
+    <!--全峻佚修改_Umditor-->
+    <script src="umeditor/third-party/jquery.min.js"></script>
+    <script src="umeditor/umeditor.config.js"></script>
+    <script src="umeditor/umeditor.js"></script>
+    <link href="umeditor/themes/default/css/umeditor.css" rel="stylesheet" />
+
+    <!--全峻佚修改_Umditor-->
+
     <script type="text/javascript" src="js/questiondetail.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -132,9 +140,13 @@
 		</div>
 		<div class="zg-clear"></div>
         <div class="wkreplyint">
-            <asp:TextBox ID="wkreplycontent" runat="server" class="zm-editable-editor-field-element editable" TextMode="MultiLine"></asp:TextBox>
-            <asp:Button ID="wkreply" runat="server" class="submit-button zg-btn-blue" Text="添加回答" OnClick="wkreply_click"/>
+            <!--全峻佚修改_ueditor添加回答-->
+            <div id="container"  class="zm-editable-editor-field-element editable" ></div>
+            <input type="button" id="wkreply"  class="submit-button zg-btn-blue" name="name" quesid="<%=quesid %>"   value="添加回答 " />
+            <!--全峻佚修改_ueditor添加回答-->
         </div>
 	</div>
+
+    <div id="getuserid" uid="<%=userid %>"></div>
 
 </asp:Content>

@@ -116,10 +116,10 @@ $(function () {
 
         $.ajax({
             data: { "topicid": thistopicid, "topictitle": thistopicTitle, "topicdes": thistopicDesc, "topicpicurl": thistopicPicUrl, "topicattention": thistopicAttention, "topicstate": thistopicState },
-            datatype: "json",
+            dataType: "json",
             url: "ws.asmx/UpdateTopicInfo",
             type: "post",
-            contenttype: "application/json",
+            contentType: "application/json",
             success: function (res) {
                 alert(res.d);
             }

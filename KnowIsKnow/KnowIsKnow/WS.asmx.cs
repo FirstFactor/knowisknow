@@ -181,5 +181,50 @@ namespace KnowIsKnow
             modeluser.userPwd = userpwd;
             return blluserinfo.Update(modeluser).ToString();
         }
+
+        /// <summary>
+        /// 回复功能
+        /// </summary>
+        /// <param name="replyquestionID">问题ID</param>
+        /// <param name="replyofuid">回复人的ID</param>
+        /// <param name="replycontent">回复的内容</param>
+        /// <param name="replyofreplyid">对回复的回复的ID</param>
+        /// <returns></returns>
+        [WebMethod]
+        public string Reply(int replyquestionID, int replyofuid,string replycontent,int replyofreplyid)
+        {
+            BLL.ReplyQuestion reply = new BLL.ReplyQuestion();
+            DateTime now = DateTime.Now;
+            Model.ReplyQuestion answer = new Model.ReplyQuestion();
+            answer.replyQuestionID = replyquestionID;
+            answer.replyofUID = replyofuid;
+            answer.replyContent = replycontent;
+            answer.replyDateTime = now;
+            answer.replyofReplyID = replyofreplyid;
+
+            reply.Add(answer);
+            return "ok";
+        }
+        
+        /// <summary>
+        /// 提出问题
+        /// </summary>
+        /// <param name="questiontilte">标题</param>
+        /// <param name="questioncontent">内容</param>
+        /// <param name="questionproviderid">提问者ID</param>
+        /// <returns></returns>
+        [WebMethod]
+        public string PubQuestion(string questiontilte, string questioncontent, string questionproviderid)
+        {
+            DateTime now = DateTime.Now;
+            BLL.QuestionInfo bllquestion = new BLL.QuestionInfo();
+            Model.QuestionInfo question = new Model.QuestionInfo();
+            question.questionTitle = questiontilte;
+            question.questionContent = questioncontent;
+            question.questionProvider =Convert.ToInt32(questionproviderid);
+            question.quetionPubTime = now;
+            bllquestion.Add(question);
+            return "ok";
+        }
     }
 }

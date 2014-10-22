@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -55,8 +56,10 @@ namespace KnowIsKnow
                 pictureNewName = DateTime.Now.Ticks.ToString() + suffix;
 
                 file.SaveAs(uploadpath + pictureNewName);
-                string picpath = "images/headimages/" + pictureNewName;
+                string str = uploadpath + pictureNewName;
 
+                string[] s = Regex.Split(str, "\\\\images", RegexOptions.IgnoreCase);
+                string picpath = "images" + s[1];
                 Response.Write(picpath);
             }
             else

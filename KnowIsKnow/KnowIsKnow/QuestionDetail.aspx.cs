@@ -9,8 +9,8 @@ namespace KnowIsKnow
 {
     public partial class WebForm8 : System.Web.UI.Page
     {
-        string userid;
-        string quesid;
+        public string userid;
+        public string quesid;
         public string questitle;
         public string quescontent;
         public int wkcount;
@@ -62,19 +62,19 @@ namespace KnowIsKnow
         }
         protected void wkreply_click(object sender, EventArgs e) 
         {
-            string sendcontent = this.wkreplycontent.Text;
-            DateTime now = DateTime.Now;
-            BLL.ReplyQuestion bllrques = new BLL.ReplyQuestion();
-            Model.ReplyQuestion mrq = new Model.ReplyQuestion();
-            mrq.replyofUID = Convert.ToInt32 (userid);
-            mrq.replyContent = sendcontent;
-            mrq.replyDateTime = now;
+            //string sendcontent = this.wkreplycontent.Text;
+            //DateTime now = DateTime.Now;
+            //BLL.ReplyQuestion bllrques = new BLL.ReplyQuestion();
+            //Model.ReplyQuestion mrq = new Model.ReplyQuestion();
+            //mrq.replyofUID = Convert.ToInt32 (userid);
+            //mrq.replyContent = sendcontent;
+            //mrq.replyDateTime = now;
             
-            mrq.replyQuestionID =Convert.ToInt32(quesid);
-            mrq.replySate ="normal";
-            bllrques.Add(mrq);
-            this.wkreplycontent.Text = "";
-            Response.Write("<script>window.location.href='QuestionDetail.aspx'</script>");
+            //mrq.replyQuestionID =Convert.ToInt32(quesid);
+            //mrq.replySate ="normal";
+            //bllrques.Add(mrq);
+            //this.wkreplycontent.Text = "";
+            //Response.Write("<script>window.location.href='QuestionDetail.aspx'</script>");
         }
     }
 }
