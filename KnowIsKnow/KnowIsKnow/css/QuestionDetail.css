@@ -86,3 +86,11 @@ strong{font-weight: bold;}
 .z-icon-share{display: inline-block;line-height: 10px;vertical-align: 0;background-image: url("../Images/sprites.png");background-repeat: no-repeat;margin-right: 5px;width: 11px;height: 10px;background-position: -67px -22px;}
 .z-icon-collect{display: inline-block;line-height: 10px;vertical-align: 0;background-image: url("../Images/sprites.png");background-repeat: no-repeat;margin-right: 5px;width: 7px;height: 10px;background-position: -56px -22px;}
 .zg-bull{padding: 0 3px;color: #bbb;display: inline-block;font-family: Arial;}
+
+.wkreplyint {margin-left:48px;width:584px; padding :8px 10px;border :1px solid #808080;border-radius:0 0 3px 3px;background:#fff;}
+.editable {min-height:88px;background:#fff;font-size:13px;cursor:text;display:inline-block;width:584px;}
+.zg-btn-blue {background:#1472CF;background-color:#1472CF;background-image: -webkit-linear-gradient(top,#1d7fe2,#0865c2);background-repeat: repeat-x;text-shadow: 0 -1px 0 rgba(0,0,0,.5);border: 1px solid #0D6EB8;color: #fff!important;box-shadow: 0 1px 0 rgba(255,255,255,.2) inset,0 1px 0 rgba(0,0,0,.2);}
+.zg-btn-blue {font-size:14px;line-height:1.7;text-decoration:none;vertical-align:middle;display:inline-block;text-align:center;padding:4px 10px;cursor:pointer;border-radius:3px;white-space:nowrap;}
+
+
+
