@@ -15,7 +15,16 @@ h2{font-weight: 700;font-size: 14px;outline: 0;margin: 0;color: #666;}
 
 .wtzu-main{min-height: 340px;padding: 25px 0 50px;position: relative;z-index: 2;}
 .wtzg-wrap{width: 960px;margin: 0 auto;clear: both;display: block;}
-.wtzu-main-content-inner{float: left; width: 632px;display: block;position: relative;}
+
+
+
+
+
+
+
+
+
+
 .wtzm-profile-header{border: 1px solid #ddd;border-radius: 4px;box-shadow: 0 1px 0 #f2f4f5;color: #666;}
 .wt-top{font-size: 1.4em;margin-bottom: 10px;}
 .wtellipsis{word-wrap: normal;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
@@ -33,6 +42,7 @@ h2{font-weight: 700;font-size: 14px;outline: 0;margin: 0;color: #666;}
 .wtbusiness{border-left: 1px solid #eee;margin-left: 6px;padding-left: 10px;margin-top: 6px;}
 .wttopic-link{color: #666;}
 .wticon-profile-male{background-position: -144px -110px;}
+.wticon-profile-female{background-position: -128px -110px;}
 .wtzu-edit-button-icon{background-position: -118px -50px;height: 12px;margin-right: 4px;outline: medium none;overflow: hidden;width: 12px;vertical-align: -3px;background-image: url("images/sprites-1.9.2.png");background-repeat: no-repeat;display: inline-block;}
 .wtzu-edit-button{visibility: hidden;cursor: pointer;}
 .wtedit-msg{color: #259;}
@@ -48,8 +58,8 @@ h2{font-weight: 700;font-size: 14px;outline: 0;margin: 0;color: #666;}
 .wtzg-btn-blue{margin: -3px 0 0 8px;background: #1472CF;background-color: #1575d5;text-shadow:0 -1px 0 rgba(0,0,0,.5);border: 1px solid #0D6EB8;color: #fff!important;box-shadow: 0 1px 0 rgba(255,255,255,.2) inset,0 1px 0 rgba(0,0,0,.2);font-size: 14px;
 line-height: 1.7;text-decoration: none;vertical-align: middle;display: inline-block;text-align: center;padding: 4px 10px;cursor: pointer;border-radius: 3px;white-space: nowrap;box-sizing:border-box;}
 .wticon-profile-company{background-position: -92px -110px;}
-
-
+.wtinfo22{display:none;}
+.wtinfo32{display:none;}
 
 .wtedit-wrap2{display: none;}
 .wtedit-wrap3{display: none;}
@@ -163,3 +173,49 @@ line-height: 1.7;text-decoration: none;vertical-align: middle;display: inline-bl
     
 }
 /************全峻佚修改 上传图片样式************/
+
+.wtzu-main-content-inner{float: left; width: 632px;position: relative;}
+.wtzu-main-content-inner2{float: left; width: 632px;position: relative;display: none;}
+.wtzm-profile-mbox{ margin: 0 0 25px;clear: both;border-radius: 4px;border: 1px solid #ddd;box-shadow: 0 1px 0 #f2f4f5;position: relative;}
+.wtziliao{height: 68px;display: block;}
+.wtzm-profile-module{position: relative;padding: 24px 12px;}
+.wtzm-profile-progress-title{float: left;height: 20px;line-height: 20px;color: #666;}
+.wtzm-profile-progress-bar{float: left;height: 20px;line-height: 20px; left: 120px;right: 20px;background: #eaeaea;position: absolute;border-radius: 10px;text-align: center;white-space: nowrap;}
+.wtzm-profile-progress-bar span{left: 0;background: #48a5e6;color: #fff;position: absolute;border-radius: 10px;text-align: center;white-space: nowrap;width: 37%;}
+.wtzg-link-litblue2{font-size: 12px;color: #698ebf;font-weight: 400; cursor: pointer;}
+.wtzm-profile-details-editform-avatar{border-top: 1px solid #eee;line-height: 1.5;height: 105px;display: block;position: relative;}
+h3{font-weight: 400;margin: -1px 0 0;float: left;width: 100px;text-align: right;color: #666;}
+.wtzm-profile-module-desc{margin-left: 140px;}
+.wtzm-form-table{width: 100%;margin: 0;}
+.wtzm-form-table-head{width: 100px;position: relative;float: left;}
+.wtzg-avatar-big{width: 100px;height: 100px;border: 0 none;border-radius: 4px;}
+.wtzm-form-table-field{ padding: 0 0 10px;vertical-align: top;width: 271px;float: left;display: block;}
+.wtprofile-edit-avatar-btn{min-width: 60px;position: relative;margin-left: 25px!important;margin-top: 2px!important;}
+.wtprofile-edit-avatar-tip{margin: 10px 0 0 25px;}
+.wtzg-gray{color: #999;font-size: 12px;font-weight: 400;}
+.wtzm-profile-details-editform-gender{border-top: 1px solid #eee;height: 22px;}
+.wtzm-profile-module-desc2{margin-left: 140px;}
+.wtzm-profile-details-editform-weibo{border-top: 1px solid #eee;height: 159px;}
+.wtdesc{display: block;margin: 10px 0;color: #999;}
+.wtsettings-item{padding: 12px 0;width: 100%;}
+.wtzu-settings-sina-bind{padding: 0 0 0 25px;background: transparent url("images/ico_sina.gif") scroll no-repeat 0 2px;}
+.wtzu-settings-qqconn-bind{padding: 2px 0 2px 25px;background: transparent url("images/ico_qq.png") scroll no-repeat 0 5px;}
+.wtyijvhua{border-top: 1px solid #eee;height: 68px;}
+.wtzm-profile-edit-fieldset{position: relative;margin: -8px 0 0;padding: 0;border: 0;}
+.wtzm-profile-edit-fieldset .wtzg-form-text-input{width: 270px;}
+.wtzm-profile-details-editform-desc{border-top: 1px solid #eee;height: 129px;}
+.wtzm-editable-editor-wrap{margin: 8px 0 5px;position: relative;}
+.wtzm-editable-editor-outer{position: relative;background: #fff;}
+.wtzg-form-text-inputse{width: 325px!important;}
+#wtzm-profile-edit-description{line-height: 16px;}
+.wtsuozaihangye{border-top: 1px solid #eee;height: 68px;}
+.wtzm-profile-edit-fieldset select{width: 200px!important;}
+.wtjvzhudi2{border-top: 1px solid #eee;height: 36px;}
+.wttianjiajvzhudi{padding: 8px 10px!important;}
+.wtzm-profile-details-editform-career{border-top: 1px solid #eee;height: 49px;}
+.wtzm-profile-details-editform-career p{margin: 0 0 1em;}
+.wtgsname{width: 147px!important;}
+.wtzhiwei{margin-left: 10px;}
+.wtzm-profile-details-editform-footer{background: #f5f5f5;border-radius: 0 0 4px 4px;border-top: 1px solid#ddd!important;box-shadow: 0 1px 0 #fff inset;}
+.wtzm-profile-details-editform-footer p{text-align: center;position: relative;}
+.wtzm-profile-details-editform-footer p a{position: absolute;left: 45px;top: 13px;}
