@@ -34,7 +34,7 @@ namespace KnowIsKnow
             DateTime now = DateTime.Now;
             BLL.QuestionInfo bllque = new BLL.QuestionInfo();
             Model.QuestionInfo que = new Model.QuestionInfo();
-            que.questionProvider = 3;
+            que.questionProvider = Convert.ToInt32(userid);
             que.questionTitle = questionTitle;
             que.questionContent = questionContent;
             que.quetionPubTime = now;
