@@ -8,24 +8,26 @@
 	<div class="zg-wrap zu-main question-page">
 		<div class="zu-main-content">
 			<div class="zu-main-content-inner with-indention-votebar">
+                
 				<div class="zm-tag-editor zg-section">
 					<div class="zm-tag-editor-labels zg-clear">
-						<asp:Label ID="wkquestiont" runat="server" class="zm-item-tag">游戏</asp:Label>
-					</div>
+                        <asp:Repeater runat="server" ID="rptQttip">
+                    <ItemTemplate>
+						<asp:Label ID="wkquestiont" runat="server" class="zm-item-tag"><%# GetTopicTittle(Eval("quesrionTTID"),Eval("topicTID")) %></asp:Label>
+					</ItemTemplate>
+                </asp:Repeater>
+                        </div>
 				</div>
+                    
 				<div id="zh-question-title" class="zm-editable-status-normal">
-					<h2 class="zm-item-title zm-editable-content">有没有LOL和DOTA都玩过的，假设出现这样的一个地图?</h2>
+					<h2 class="zm-item-title zm-editable-content"><%=questitle %></h2>
 				</div>
 				<div id="zh-question-detail" class="zm-item-rich-text zm-editable-status-normal">
 					<div class="zm-editable-content">
-						一方是lol的英雄，商店也只有lol的物品，河道这边也全是lol的野怪，另一方全部都是dota的东西，商店也算是dota的东西，这样的话哪边胜算大点？
-						<br/>
-						<br/>
-						_分割线_
-						<br/>
-						刚刚同学给我科普了下，lol想赢基本没戏，如果就是要赢，可以怎么做？
+						<%=quescontent %>
 					</div>
 				</div>
+
 				<div class="zm-item-meta zm-item-comment-el clearfix" id="zh-question-meta-wrap">
 					<div class="zm-meta-panel">
 						<a href="#" name="share" class="share meta-item">

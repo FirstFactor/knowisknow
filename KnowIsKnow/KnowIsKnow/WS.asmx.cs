@@ -146,6 +146,24 @@ namespace KnowIsKnow
             return blluserinfo.Update(modeluser).ToString();
         }
 
+        [WebMethod]
+        public string updataName(string userid, string name)
+        {
+            BLL.UserInfo blluserinfo = new BLL.UserInfo();
+            int uid = Convert.ToInt32(userid);
+            Model.UserInfo modeluser = blluserinfo.GetModel(uid);
+            modeluser.userNickName = name;
+            return blluserinfo.Update(modeluser).ToString();
+        }
        
+        [WebMethod]
+        public string updataPwd(string userid,string userpwd)
+        {
+            BLL.UserInfo blluserinfo = new BLL.UserInfo();
+            int uid = Convert.ToInt32(userid);
+            Model.UserInfo modeluser = blluserinfo.GetModel(uid);
+            modeluser.userPwd = userpwd;
+            return blluserinfo.Update(modeluser).ToString();
+        }
     }
 }

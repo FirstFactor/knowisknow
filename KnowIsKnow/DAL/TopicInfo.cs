@@ -334,5 +334,10 @@ namespace DAL
         #region  ExtensionMethod
 
         #endregion  ExtensionMethod
+        public DataSet GetTopicTittle(string sql)
+        {
+            return DbHelperSQL.Query(sql);
+
+        }
     }
 }

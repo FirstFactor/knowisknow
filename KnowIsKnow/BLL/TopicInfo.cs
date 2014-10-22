@@ -177,5 +177,10 @@ namespace BLL
         #region  ExtensionMethod
 
         #endregion  ExtensionMethod
+        public DataSet GetTopicTittle(string sql)
+        {
+            DAL.TopicInfo dalMUV = new DAL.TopicInfo();
+            return dalMUV.GetTopicTittle(sql);
+        }
     }
 }
