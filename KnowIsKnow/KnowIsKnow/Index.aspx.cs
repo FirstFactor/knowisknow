@@ -19,6 +19,9 @@ namespace KnowIsKnow
             this.touph.DataSource = ds.Tables[0];
 
             this.touph.DataBind();
+
+
+            
         }
 
         protected void btnzhuce_Click(object sender, EventArgs e)

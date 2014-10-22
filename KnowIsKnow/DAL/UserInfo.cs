@@ -433,5 +433,9 @@ namespace DAL
         #region  ExtensionMethod
 
         #endregion  ExtensionMethod
+        public DataSet GetreplyName(string sql)
+        {
+            return DbHelperSQL.Query(sql);
+        }
     }
 }

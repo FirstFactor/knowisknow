@@ -57,7 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminLogin.aspx" />
     <Content Include="AdminPage.aspx" />
+    <Content Include="css\AdminLogin.css" />
     <Content Include="css\AdminPage.css" />
     <Content Include="css\CareTopic.css" />
     <Content Include="css\FindHot.css" />
@@ -80,6 +82,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Home.aspx" />
     <Content Include="Index.aspx" />
+    <Content Include="js\AdminLogin.js" />
     <Content Include="js\adminpage.js" />
     <Content Include="js\cancel.png" />
     <Content Include="js\caretopic.js" />
@@ -133,6 +136,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage.aspx.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

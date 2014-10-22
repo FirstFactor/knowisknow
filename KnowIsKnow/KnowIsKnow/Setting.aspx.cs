@@ -11,7 +11,15 @@ namespace KnowIsKnow
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserID"]==null)
+            {
+                Response.Redirect("Index.aspx");
+            }
+            xingming.InnerHtml = Session["UserNickName"].ToString();
+            wodeemail.InnerHtml = Session["UserEmail"].ToString();
+            cfuserid.InnerHtml = Session["UserID"].ToString();
+            cfuserpwd.InnerHtml = Session["UserPwd"].ToString();
         }
+
     }
 }

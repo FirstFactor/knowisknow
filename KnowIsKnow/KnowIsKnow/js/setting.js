@@ -4,6 +4,66 @@
 
     clickli();
 
+    var userid = $(".hquserid").html();
+    $(".xiugaimz").click(function () {
+        var xing = $("#zqyxing").val();
+        var ming = $("#zqyming").val();
+        var name = xing + ming;
+        if (name=="") {
+            $(".bcxinxi").html("姓名不能为空！");
+            $(".baocuntip").show();
+        }
+        if (name != "") {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: "WS.asmx/updataName",
+                data: "{userid:'" + userid + "',name:'" + name + "'}",
+                dataType: 'json',
+                success: function (result) {
+                    $(".bcxinxi").html("姓名修改成功！");
+                    $(".baocuntip").show();
+                }
+            });
+        }
+    });
+
+
+
+    $(".baocunmima").click(function () {
+        var yuanmima = $(".hquserpwd").html();
+        var dangqianmima = $(".dqmima").val();
+        var xindemima = $(".xdmima").val();
+        var querenmima = $(".qrmima").val();
+        
+        if (yuanmima != dangqianmima) {
+            $(".bcxinxi").html("原密码输入不正确，请正确输入！");
+            $(".baocuntip").show();
+        }
+        if (xindemima != querenmima) {
+            $(".bcxinxi").html("两次输入密码不一致，请重新输入！");
+            $(".baocuntip").show();
+        }
+        if (yuanmima == dangqianmima && xindemima == querenmima) {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: "WS.asmx/updataPwd",
+                data: "{userid:'" + userid + "',userpwd:'" + xindemima + "'}",
+                dataType: 'json',
+                success: function (result) {
+                    $(".bcxinxi").html("密码修改成功！");
+                    $(".baocuntip").show();
+                }
+            });
+        }
+      
+    });
+
+
+    $(".queding").click(function () {
+        $(".baocuntip").hide();
+    });
 });
 
 
@@ -12,7 +72,7 @@
 function clickbtn1() {
 
     $(".zu-edit-button").click(function () {
-        //alert("d");
+       // alert("d");
         $(this).next().show();
 
     });

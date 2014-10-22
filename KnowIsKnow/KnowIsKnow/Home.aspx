@@ -45,18 +45,25 @@
                         <input class="zqq-jubao-otherReason" type="text" placeholder="请填写原因" />
                     </li>
                 </ul>
-                <div class="zqq-jubao-submit">确定</div>
+                <div  class="zqq-jubao-submit" >确定</div>
             </div>
         </div>
         <div class="userid" userid="<%=userid %>"></div>
-        <div class="zqq-main">
-			<div class="zqq-mini-main">
-				<div class="zqq-mm-R">
-					<div class="zqq-mm-R-L">
+				<div class="zqq-main">
+					<div class="zqq-main-L">
 						<div class="zqq-question-area">
-						<div class="zqq-newQuestion"></div>
+                            <div class="zqq-question-area-hd">
+                                <i class="zqq-icon zqq-icon-questionList"></i>
+                                最新动态
+                                <a href="Setting.aspx" class="zqq-question-area-setting">
+                                    <i class="zqq-icon zqq-icon-setting"></i>
+                                    设置
+                                </a>
+                            </div>
 
-                        <asp:Repeater ID="rpt" runat="server">
+						    <div class="zqq-newQuestion"></div>
+
+                            <asp:Repeater ID="rpt" runat="server">
                             <ItemTemplate>
                                 <div class="zqq-small-question">
 							    <div class="zqq-head-photo">
@@ -64,7 +71,8 @@
 							    </div>
 							    <div class="zqq-question-detail">
 							    	<div class="zqq-question-info"><%# Eval("userNickName") %> 提出了问题</div>
-							    	<div class="zqq-question-title" questionid="<%#Eval("questionID") %>"><%# Eval("questionTitle") %></div>
+							    	<%--<div id="zqq-questionTitle1" class="zqq-question-title" questionid="<%# Eval("questionID") %>"><%# Eval("questionTitle") %></div>--%>
+                                    <a href='QuestionDetail.aspx?QuesID=<%# Eval("questionID")%>' class="zqq-question-title" questionid='<%# Eval("questionID") %>' ><%# Eval("questionTitle") %></a>
 								    <div class="zqq-question-content">
 									    <div class="zqq-content-word"><%# Eval("questionContent") %></div>
 									    <img class="zqq-content-pic" src="" /> 
@@ -74,15 +82,13 @@
                                             <a class="zqq-follow-topic-button">关注问题</a>
                                             <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>
 								    	</div>
-								    	<div class="zqq-jubao">举报</div>
+								    	<div class="zqq-jubao" questionid='<%# Eval("questionID") %>'>举报</div>
 							    	</div>
 							    </div>
 							</div>
                             </ItemTemplate>
-                        </asp:Repeater>
-                           
-                        
-						<%--<div class="zqq-small-question">
+                            </asp:Repeater>
+						    <%--<div class="zqq-small-question">
 							<div class="zqq-head-photo">
 								<img class="zqq-head-face" src="image/1.jpg"/>
 							</div>
@@ -106,9 +112,18 @@
 							</div>--%>
 						</div>
 					</div>
-					<div class="zqq-mm-R-R"></div>
+					<div class="zqq-main-R">
+                        <div class="zqq-side zqq-lm1"></div>
+                        <div class="zqq-side zqq-lm2">
+                            <ul class="zqq-lm2-ul">
+                                <li class="zqq-side-li">
+                                    <a href="TopicSquare.aspx" class="zqq-side-link">
+                                        <i class="zqq-icon zqq-icon-topicSquare"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+					</div>
 				</div>
-			</div>
-		</div>
 		<div class="zqq-footer"></div>
 </asp:Content>

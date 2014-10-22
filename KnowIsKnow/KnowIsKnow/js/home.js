@@ -44,9 +44,14 @@
     $(document).on("click", ".zqq-jubao", function () {
         $(".zqq-menban").show();
         $(".zqq-jubao-inner").show();
+
+        var jubaoQuestionID = $(this).attr("questionid");
+        $(".zqq-jubao-submit").attr("questionid", jubaoQuestionID);
     });
 
     $(".zqq-jubao-checked1").click(function () {
+        var value = $(this).attr("value");
+        $(".zqq-jubao-submit").attr("zhi", value);
         $(this).attr("mark", 1);
         $(".zqq-jubao-checked2").attr("mark", 0);
         $(".zqq-jubao-checked3").attr("mark", 0);
@@ -61,6 +66,8 @@
         $(".zqq-jubao-otherReason").hide();
     });
     $(".zqq-jubao-checked2").click(function () {
+        var value = $(this).attr("value");
+        $(".zqq-jubao-submit").attr("zhi", value);
         $(this).attr("mark", 1);
         $(".zqq-jubao-checked4").attr("mark", 0);
         $(".zqq-jubao-checked3").attr("mark", 0);
@@ -75,6 +82,8 @@
         $(".zqq-jubao-otherReason").hide();
     });
     $(".zqq-jubao-checked3").click(function () {
+        var value = $(this).attr("value");
+        $(".zqq-jubao-submit").attr("zhi", value);
         $(this).attr("mark", 1);
         $(".zqq-jubao-checked2").attr("mark", 0);
         $(".zqq-jubao-checked4").attr("mark", 0);
@@ -89,6 +98,8 @@
         $(".zqq-jubao-otherReason").hide();
     });
     $(".zqq-jubao-checked4").click(function () {
+        var value = $(this).attr("value");
+        $(".zqq-jubao-submit").attr("zhi", value);
         $(this).attr("mark", 1);
         $(".zqq-jubao-checked2").attr("mark", 0);
         $(".zqq-jubao-checked3").attr("mark", 0);
@@ -103,6 +114,8 @@
         $(".zqq-jubao-otherReason").hide();
     });
     $(".zqq-jubao-checked5").click(function () {
+        var value = $(this).attr("value");
+        $(".zqq-jubao-submit").attr("zhi",value);
         $(this).attr("mark", 1);
         $(".zqq-jubao-checked2").attr("mark", 0);
         $(".zqq-jubao-checked3").attr("mark", 0);
@@ -127,12 +140,43 @@
             alert("请选择举报原因！");
             return false;
         }
-        if (checked5 == 1) {
+        else if (checked5 == 1) {
             var juaboReason = $(".zqq-jubao-otherReason").val();
             if (juaboReason == "") {
                 alert("请输入举报原因!");
                 return false;
             }
+            else {
+                var questionid = $(this).attr("questionid");
+                var userid = $(".userid").attr("userid");
+                var reportType = $(this).attr("zhi");
+                var otherReason = $(".zqq-jubao-otherReason").val();
+                $.ajax({
+                    data: "{ questionid:'" + questionid + "', userid:' " + userid + "', reportType:'" + reportType + "',otherReason:'" + otherReason + "'}",
+                    dataType: "json",
+                    url: "ws.asmx/reportQuestion",
+                    type: "post",
+                    contentType: "application/json",
+                    success: function (res) {
+                        alert(res.d);
+                    }
+                });
+            }
+        }
+        else {
+            var questionid = $(this).attr("questionid");
+            var userid = $(".userid").attr("userid");
+            var reportType = $(this).attr("zhi");
+            $.ajax({
+                data: "{ questionid:'" + questionid + "', userid:' " + userid + "', reportType:'" + reportType + "'}",
+                dataType: "json",
+                url: "ws.asmx/reportQuestion",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    alert(res.d);
+                }
+            });
         }
         $(".zqq-menban").hide();
         $(".zqq-jubao-inner").hide();

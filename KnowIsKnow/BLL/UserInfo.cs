@@ -177,5 +177,10 @@ namespace BLL
         #region  ExtensionMethod
 
         #endregion  ExtensionMethod
+        public DataSet GetreplyName(string sql)
+        {
+            DAL.UserInfo dalMUV = new DAL.UserInfo();
+            return dalMUV.GetreplyName(sql);
+        }
     }
 }

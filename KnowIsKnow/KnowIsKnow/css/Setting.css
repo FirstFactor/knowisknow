@@ -141,7 +141,7 @@ body{font-size: 12px;}
 	
 	float: left;
 }
-.zg-btn-blue{
+.clickbc{
 	border-radius: 3px;
 	width: 60px;
 	height: 36px;
@@ -234,3 +234,9 @@ margin: 0;}
 	color: #ccc;
 }
 
+.baocunmima{line-height:38px;font-size:14px;text-align:center;}
+
+
+.baocuntip{width:300px;height:200px;top:170px;left:550px;background-color:#EEE;display:none;position:fixed;z-index:9999;}
+.bcxinxi{height:40px;padding:30px 20px;font-size:16px;line-height:40px;}
+.queding{width:30px;height:20px;cursor:pointer;background-color:#1472CF;color:#FFF;margin-left:130px;padding:10px;border-radius:5px;}
