@@ -64,7 +64,8 @@
 							    </div>
 							    <div class="zqq-question-detail">
 							    	<div class="zqq-question-info"><%# Eval("userNickName") %> 提出了问题</div>
-							    	<div class="zqq-question-title" questionid="<%#Eval("questionID") %>"><%# Eval("questionTitle") %></div>
+							    	<%--<div id="zqq-questionTitle1" class="zqq-question-title" questionid="<%# Eval("questionID") %>"><%# Eval("questionTitle") %></div>--%>
+                                    <a href='QuestionDetail.aspx?QuesID=<%# Eval("questionID")%>' class="zqq-question-title" questionid='<%# Eval("questionID") %>' ><%# Eval("questionTitle") %></a>
 								    <div class="zqq-question-content">
 									    <div class="zqq-content-word"><%# Eval("questionContent") %></div>
 									    <img class="zqq-content-pic" src="" /> 

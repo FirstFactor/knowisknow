@@ -20,16 +20,12 @@ namespace KnowIsKnow
             else {
                 userid = Session["UserID"].ToString();
                 BLL.QuestionUserView quelist = new BLL.QuestionUserView();
-                DataSet ds = quelist.GetList("questionTitle is not null");
+                DataSet ds = quelist.GetList("1=1 order by quetionPubTime desc");
                 this.rpt.DataSource = ds.Tables[0];
                 this.rpt.DataBind();
-
-                BLL.CareQuestion bllcq = new BLL.CareQuestion();
-                DataSet dsca = bllcq.GetList("");
 
             }
         }
         
-
     }
 }
