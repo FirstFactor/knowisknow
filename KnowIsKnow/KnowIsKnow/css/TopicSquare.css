@@ -23,7 +23,7 @@ strong {font-weight: bold;}
 
 
 .zh-general-list{width: 632px;}
-.zm-topic-cat-sub .item {position: relative;float: left;width: 50%;list-style: none;border-bottom: 1px dotted #eee;}
+.zm-topic-cat-sub .item {position: relative;float: left;width: 316px;list-style: none;border-bottom: 1px dotted #eee;}
 .zm-topic-cat-sub .blk {padding-left: 62px;margin: 18px 15px 18px 0;}
 .zm-topic-cat-sub strong{max-width: 12em;display: inline-block;height: 1.5em;word-wrap: normal;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 .zm-topic-cat-sub strong:hover{text-decoration: underline;}
@@ -32,6 +32,7 @@ strong {font-weight: bold;}
 .zm-topic-cat-sub img{position: absolute;left: 0;width: 50px;height: 50px;border-radius: 3px;top: 23px;}
 .z-icon-follow{width: 8px;height: 9px; display: inline-block;line-height: 10px;vertical-align: 0;background-image: url("images/sprites-1.9.2.png");background-repeat: no-repeat;margin-right: 5px;background-position: -97px -23px;}
 .zg-follow {color: #698ebf;}
+.z-icon-unfollow{width: 8px;height: 9px; display: inline-block;line-height: 10px;vertical-align: 0;background-image: url("images/sprites-1.9.2.png");background-repeat: no-repeat;margin-right: 5px;background-position: -97px -23px;}
 .zm-topic-cat-sub .item.even img {left: 15px;}
 .zm-topic-cat-sub .item.even .blk {margin-left: 15px;margin-right: 0;}
 
@@ -98,3 +99,8 @@ img.avatar.\34 0 {width: 40px;height: 40px;border-radius: 4px;}
 .popover .arrow{position: absolute;}
 .popover.bottom .arrow2 {z-index:110; position: absolute;top: -61px;left: 18px; margin-left: -13px;border-left: 13px solid transparent;border-right: 13px solid transparent;border-bottom: 13px solid #fff;}
 .popover .arrow2 {position: absolute;}
+
+
+
+
+.zg-special {visibility:hidden;}

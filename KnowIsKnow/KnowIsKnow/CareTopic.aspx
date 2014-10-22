@@ -87,7 +87,7 @@
                         <div class="ghmiddlecontentleftcontentdiv">
 					        <div class="ghmiddlecontentleftcontentdivdiv">
 						        <a href="" class="ghmiddlecontentleftcontentdivdiva">
-							        <img src="images/1.jpg" class="ghmiddlecontentleftcontentdivdivimg">
+							        <img src="<%# Eval("topicPicUrl") %>" class="ghmiddlecontentleftcontentdivdivimg">
 						        </a>
 						        <div class="ghmiddlecontentleftcontentdivdivdiv">
 							        <div class="ghmiddlecontentleftcontentdivdivdivguanzhutitle">
@@ -169,9 +169,9 @@
                 </asp:Repeater>
 			</div>
 			<div id="ghmiddlecontentrightbottom">
-				<a href="" id="ghmiddlecontentrightbottoma">
+				<a href="TopicSquare.aspx" id="ghmiddlecontentrightbottoma">
 					<p id="ghmiddlecontentrightbottomap"></p>
-					<span href="" id="ghmiddlecontentrightbottomaspan">话题广场</span>
+					<span id="ghmiddlecontentrightbottomaspan">话题广场</span>
 				</a>
 			</div>
 		</div>

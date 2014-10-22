@@ -101,7 +101,7 @@
 				</ul>
 				<div class="zm-topic-cat-sub">
 					<div class="zh-general-list clearfix">
-						<div class="item">
+						<%--<div class="item">
 							<div class="blk">
 								<a target="_blank" href="/topic/19554827">
 									<img src="images/1445bf4c6_xs.jpg" alt="体育"/>
@@ -244,7 +244,23 @@
 									</a>
 								</div>
 							</div>
-						</div>
+						</div>--%>
+                        <asp:DataList runat="server" ID="rptquestionlist" RepeatColumns="2" RepeatDirection="Horizontal" RepeatLayout="Table">                       
+
+                                <ItemTemplate>
+                                    <div class="item">
+							            <div class="blk">
+								            <a target="_blank" href="/topic/19554827">
+									            <img src="<%# Eval("topicPicUrl") %>"/>
+									            <strong><%# Eval("topicTitle") %></strong>
+								            </a>
+								            <p><%# Eval("topicDes") %></p>
+								            <a   class="follow meta-item zg-follow"><i class="z-icon-follow"></i>关注</a>
+                                            <a   class="follow meta-item zg-special">取消关注</a>                                   
+							            </div>
+						            </div>
+                                </ItemTemplate>
+                        </asp:DataList>
 						<a class="zg-btn-white zu-button-more">
 							<span> 更多</span>
 						</a>

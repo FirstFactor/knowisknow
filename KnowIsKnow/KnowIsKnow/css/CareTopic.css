@@ -56,7 +56,7 @@
 #ghmiddlecontentrightbottom{width: 270px;height: 22px;cursor: pointer;}
 #ghmiddlecontentrightbottoma{width: 71px;height: 22px;display: block;float: right;}
 #ghmiddlecontentrightbottomap{margin-top:4px; width: 14px;height: 14px;vertical-align: -2px;margin-right: 5px;float: left;background-image: url("images/close.png");background-position: -234px -4px;}
-#ghmiddlecontentrightbottomaspan{color: #666;font-size: 13px;float: left;}
+#ghmiddlecontentrightbottomaspan{color: #666;font-size: 13px;float: left;cursor:pointer;}
 
 
 #ghbottommenu{width: 100%;height: 63px;}
