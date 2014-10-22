@@ -10,42 +10,42 @@
 namespace KnowIsKnow {
     
     
-    public partial class WebForm5 {
+    public partial class AdminLogin {
         
         /// <summary>
-        /// xingming 控件。
+        /// form1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl xingming;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// cfuserid 控件。
+        /// ademail 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cfuserid;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ademail;
         
         /// <summary>
-        /// cfuserpwd 控件。
+        /// adpassword 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cfuserpwd;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword adpassword;
         
         /// <summary>
-        /// wodeemail 控件。
+        /// toadmin 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl wodeemail;
+        protected global::System.Web.UI.WebControls.Button toadmin;
     }
 }
