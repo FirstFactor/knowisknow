@@ -92,6 +92,22 @@ namespace KnowIsKnow
             return "已取消关注";
         }
 
+        [WebMethod]
+        public string reportQuestion(string questionid, string userid, string reportType, string otherReason)
+        {
+            DateTime now = DateTime.Now;
+            BLL.ReportQuestion bllrq = new BLL.ReportQuestion();
+            Model.ReportQuestion rq = new Model.ReportQuestion();
+            rq.reportQuestionID = Convert.ToInt32(questionid);
+            rq.reportQuestionByUID = Convert.ToInt32(userid);
+            rq.reportQuestionReasonTypeID = Convert.ToInt32(reportType);
+            rq.reportQuestionReason = otherReason.ToString();
+            rq.reportQuestionDateTime = now;
+            rq.reportQuestionDealState = "undeal";
+            bllrq.Add(rq);
+            return "举报成功，请耐心等待处理结果";
+        }
+
 
 
         [WebMethod]
