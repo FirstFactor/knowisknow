@@ -12,7 +12,7 @@
 			<div id="ghmiddlecontentlefttitle">
 				<p id="ghmiddlecontentlefttitlepic"></p>
 				<span>话题动态</span>
-				<a href="" id="ghmiddlecontentlefttitlea">共关注 3 个话题</a>
+				<a href="" id="ghmiddlecontentlefttitlea">共关注 <%= geshu %> 个话题</a>
 			</div>
 			<div id="ghmiddlecontentleftcontent">
 				<%--<div class="ghmiddlecontentleftcontentdiv">
