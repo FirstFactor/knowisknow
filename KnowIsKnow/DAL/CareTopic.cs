@@ -51,14 +51,16 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into CareTopic(");
-            strSql.Append("careTopicID,topicCaredByUID)");
+            strSql.Append("careTopicID,topicCaredByUID,careTopicState)");
             strSql.Append(" values (");
-            strSql.Append("@careTopicID,@topicCaredByUID)");
+            strSql.Append("@careTopicID,@topicCaredByUID,@careTopicState)");
             SqlParameter[] parameters = {
 					new SqlParameter("@careTopicID", SqlDbType.Int,4),
-					new SqlParameter("@topicCaredByUID", SqlDbType.Int,4)};
+					new SqlParameter("@topicCaredByUID", SqlDbType.Int,4),
+                    new SqlParameter("@careTopicState",SqlDbType.VarChar,50)};
             parameters[0].Value = model.careTopicID;
             parameters[1].Value = model.topicCaredByUID;
+            parameters[2].Value = model.careTopicState;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -79,13 +81,16 @@ namespace DAL
             strSql.Append("update CareTopic set ");
 #warning 系统发现缺少更新的字段，请手工确认如此更新是否正确！
             strSql.Append("careTopicID=@careTopicID,");
-            strSql.Append("topicCaredByUID=@topicCaredByUID");
+            strSql.Append("topicCaredByUID=@topicCaredByUID,");
+            strSql.Append("careTopicState=@careTopicState");
             strSql.Append(" where careTopicID=@careTopicID and topicCaredByUID=@topicCaredByUID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@careTopicID", SqlDbType.Int,4),
-					new SqlParameter("@topicCaredByUID", SqlDbType.Int,4)};
+					new SqlParameter("@topicCaredByUID", SqlDbType.Int,4),
+                    new SqlParameter("@careTopicState",SqlDbType.VarChar,50)};
             parameters[0].Value = model.careTopicID;
             parameters[1].Value = model.topicCaredByUID;
+            parameters[2].Value = model.careTopicState;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -132,7 +137,7 @@ namespace DAL
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 careTopicID,topicCaredByUID from CareTopic ");
+            strSql.Append("select  top 1 careTopicID,topicCaredByUID,careTopicState from CareTopic ");
             strSql.Append(" where careTopicID=@careTopicID and topicCaredByUID=@topicCaredByUID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@careTopicID", SqlDbType.Int,4),
@@ -169,6 +174,13 @@ namespace DAL
                 {
                     model.topicCaredByUID = int.Parse(row["topicCaredByUID"].ToString());
                 }
+                if (row["careTopicState"] != null && row["careTopicState"].ToString() != "")
+                {
+                    model.careTopicState = row["careTopicState"].ToString();
+                }
+
+
+                
             }
             return model;
         }
@@ -179,7 +191,7 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select careTopicID,topicCaredByUID ");
+            strSql.Append("select careTopicID,topicCaredByUID,careTopicState ");
             strSql.Append(" FROM CareTopic ");
             if (strWhere.Trim() != "")
             {
@@ -199,7 +211,7 @@ namespace DAL
             {
                 strSql.Append(" top " + Top.ToString());
             }
-            strSql.Append(" careTopicID,topicCaredByUID ");
+            strSql.Append(" careTopicID,topicCaredByUID,careTopicState ");
             strSql.Append(" FROM CareTopic ");
             if (strWhere.Trim() != "")
             {

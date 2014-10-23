@@ -18,6 +18,15 @@ namespace Model
         #region Model
         private int _caretopicid;
         private int _topiccaredbyuid;
+
+        private string _caretopicstate;
+
+        public string careTopicState
+        {
+            get { return _caretopicstate; }
+            set { _caretopicstate = value; }
+        }
+
         /// <summary>
         /// 
         /// </summary>
