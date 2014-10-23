@@ -1,9 +1,9 @@
 ﻿ var ue;
 $(function () {
-    ue = UM.getEditor('container', {
+    ue = UE.getEditor('container', {
 
     });
-    ue.setHeight(300);
+ 
 
     $("#wkreply").click(function () {
 

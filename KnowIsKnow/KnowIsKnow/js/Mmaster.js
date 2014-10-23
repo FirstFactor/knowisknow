@@ -1,10 +1,19 @@
 ﻿
-var um;
+
 $(function () {
-    um = UM.getEditor('txtQuestionContent', {
-        toolbar: ['bold italic underline | superscript subscript | image video | horizontal']
+    var um = UE.getEditor('txtQuestionContent', {
+        toolbars: [[        
+            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', '|', 'forecolor', 'insertorderedlist', 'insertunorderedlist', '|',          
+            'fontfamily', 'fontsize', '|',        
+            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 
+            'link', 'unlink', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+            'simpleupload', 'insertimage', 'emotion',  'insertvideo',  'attachment', '|',
+            'horizontal', 'spechars', '|',
+            'inserttable'
+           
+        ]]
     });
-    um.setHeight(50);
+    //um.setHeight(50);
     $(document).on("click", ".wtzu-top-add-question", function () {
         $(".zqq-menban").show();
         $(".zqq-tiwen-search").show();

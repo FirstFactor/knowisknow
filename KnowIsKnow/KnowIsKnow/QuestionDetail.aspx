@@ -2,10 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/QuestionDetail.css" rel="stylesheet" type="text/css"/>
     <!--全峻佚修改_Umditor-->
-    
-    <script src="umeditor/umeditor.config.js"></script>
+
+   
+
+    <%--<script src="umeditor/umeditor.config.js"></script>
     <script src="umeditor/umeditor.js"></script>
-    <link href="umeditor/themes/default/css/umeditor.css" rel="stylesheet" />
+    <link href="umeditor/themes/default/css/umeditor.css" rel="stylesheet" />--%>
 
     <!--全峻佚修改_Umditor-->
 

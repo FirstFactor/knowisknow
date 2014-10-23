@@ -38,7 +38,7 @@ namespace KnowIsKnow
                 BLL.QuestionUserReplyView bllQurv = new BLL.QuestionUserReplyView();
                 DataSet dsa = bllQurv.GetList("questionID=" + quesid + " and replyofReplyID=0");
                 wkcount = dsa.Tables[0].Rows.Count;
-                datatime = Convert.ToDateTime(dsa.Tables[0].Rows[0]["replyDateTime"]).ToShortDateString().ToString();
+               datatime = Convert.ToDateTime(dsa.Tables[0].Rows[0]["replyDateTime"]).ToShortDateString().ToString();
                 
                 this.wkrtpReply.DataSource = dsa.Tables[0];
                 this.wkrtpReply.DataBind();
