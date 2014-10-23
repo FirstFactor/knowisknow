@@ -80,17 +80,45 @@ strong{font-weight: bold;}
 .zm-item-meta{color: #999;}
 .meta-item{color: #999;}
 .answer-date-link-wrap+.meta-item{margin-left: 7px;}
-.zm-meta-panel>a{color: #999;display: inline-block;vertical-align: middle;}
+.zm-meta-panel>a{color: #999;display: inline-block;vertical-align: middle;cursor:pointer;}
 .z-icon-comment{display: inline-block;line-height: 10px;vertical-align: 0;background-image: url("../Images/sprites.png");background-repeat: no-repeat;margin-right: 5px;width: 9px;height: 10px;background-position: -28px -22px;}
 .z-icon-thank{display: inline-block;line-height: 10px;vertical-align: 0;background-image: url("../Images/sprites.png");background-repeat: no-repeat;margin-right: 5px;width: 10px;height: 10px;background-position: -41px -22px;}
 .z-icon-share{display: inline-block;line-height: 10px;vertical-align: 0;background-image: url("../Images/sprites.png");background-repeat: no-repeat;margin-right: 5px;width: 11px;height: 10px;background-position: -67px -22px;}
 .z-icon-collect{display: inline-block;line-height: 10px;vertical-align: 0;background-image: url("../Images/sprites.png");background-repeat: no-repeat;margin-right: 5px;width: 7px;height: 10px;background-position: -56px -22px;}
 .zg-bull{padding: 0 3px;color: #bbb;display: inline-block;font-family: Arial;}
 
-.wkreplyint {margin-left:48px;width:584px; padding :8px 10px;border :1px solid #808080;border-radius:0 0 3px 3px;background:#fff;}
-.editable {min-height:88px;background:#fff;font-size:13px;cursor:text;display:inline-block;width:584px;}
+.wkreplyint {margin-left:48px;width:510px; padding :8px 10px;border :1px solid #fff;border-radius:0 0 3px 3px;background:#fff;}
+.editable {min-height:88px;background:#fff;font-size:13px;cursor:text;display:inline-block;width:510px;}
 .zg-btn-blue {background:#1472CF;background-color:#1472CF;background-image: -webkit-linear-gradient(top,#1d7fe2,#0865c2);background-repeat: repeat-x;text-shadow: 0 -1px 0 rgba(0,0,0,.5);border: 1px solid #0D6EB8;color: #fff!important;box-shadow: 0 1px 0 rgba(255,255,255,.2) inset,0 1px 0 rgba(0,0,0,.2);}
 .zg-btn-blue {font-size:14px;line-height:1.7;text-decoration:none;vertical-align:middle;display:inline-block;text-align:center;padding:4px 10px;cursor:pointer;border-radius:3px;white-space:nowrap;}
+.zm-comment-box .empty {border:0;box-shadow:none;}
+.zm-comment-box {margin:10px 0 35px;background:#fff;max-width:540px;position:relative;border-radius:4px;display:none;}
+.zm-comment-box.empty .zm-comment-box-ft {margin:0 30px 0 0;padding:0;border:0;background:0;}
+.zm-comment-box.empty.cannot-comment .zm-comment-box-ft, .zm-comment-box .zm-comment-box-ft {border-radius:0 0 4px 4px;border-top:1px solid #eee;}
+.zm-comment-form .zm-comment-textarea, .zm-comment-form .zm-comment-editable {padding:7px 8px;font-size:13px;line-height:22px;min-height:22px;white-space:pre-wrap;color:#222;cursor:text;border:1px solid #ddd;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.1)inset;background-color:#fff;}
+.zm-comment-form.expanded .zm-command {display:block;line-height:33px;}
+.zm-comment-form .zm-command {padding-bottom:0;}
+.zm-command {padding:10px 0;text-align:right;}
+.zm-command > .zg-btn-blue {vertical-align:baseline;}
+.zm-command-cancel{margin:0 15px 0 0;cursor:pointer;}
+.zg-right {float:right;}
+.zm-command {text-align:right;}
+.wkrreplyContent {display:inline-block;width:10px;min-height:40px;}
+.zm-item-comment .zm-comment-content-wrap {margin:0 0 0 35px;}
+
+.zm-item-comment .zm-comment-hd, .zm-item-comment .zm-comment-ft {color:#999;}
+.zm-item-comment .zm-comment-content{color:#222;min-height:22px;}
+.zm-item-comment .zm-comment-ft {font-size:12px;}
+.zm-comment-op-link {margin-left:.5em;color:#999;font-size:12px;}
+.zg-icon-comment-like, .zm-comment-op-link > .zg-icon {margin-left:5px;width:11px;height:11px;vertical-align:-1px;}
+.zg-icon-comment-reply {background-position:-250px -92px;}
+.zg-icon-comment-like{background-position:-222px -92px;}
+.zm-comment-op-link .z-icon-no-help {background-position:-71px -183px;}
+.zm-item-comment > .zm-item-link-avatar {float:left;margin:4px 0;}
+
+
+
+
 
 
 
