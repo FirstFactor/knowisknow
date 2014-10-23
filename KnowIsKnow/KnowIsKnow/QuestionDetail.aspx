@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/QuestionDetail.css" rel="stylesheet" type="text/css"/>
     <!--全峻佚修改_Umditor-->
-    <script src="umeditor/third-party/jquery.min.js"></script>
+    
     <script src="umeditor/umeditor.config.js"></script>
     <script src="umeditor/umeditor.js"></script>
     <link href="umeditor/themes/default/css/umeditor.css" rel="stylesheet" />
@@ -105,9 +105,9 @@
 						<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
 							<div class="zm-meta-panel">
 								<span class="answer-date-link-wrap">
-									<a class="answer-date-link meta-item"><%# Eval("replyDateTime") %></a>
+									<a class="answer-date-link meta-item">发布于<%= datatime %></a>
 								</span>
-								<a class=" meta-item toggle-comment">
+								<a class=" meta-item toggle-comment" IsOpen="1" quesid="<%=quesid %>>
 									<i class="z-icon-comment"></i>
 									添加评论
 								</a>
@@ -128,6 +128,47 @@
 								<span class="zg-bull zu-autohide">•</span>
 								<a class="meta-item zu-autohide">举报</a>
 							</div>
+                            <div class="zm-comment-box empty">
+                                <i class="icon icon-spike zm-comment-bubble"></i>
+                                <a class="zg-anchor-hidden"></a>
+                                <div class="zm-comment-list">
+                                    <div class="zm-item-comment">
+                                        <a class="zm-item-link-avatar">
+                                            <img src="#" />
+                                        </a>
+                                        <div class="zm-comment-content-wrap">
+                                            <div class="zm-comment-hd">
+                                                <a class="zg-link">董君</a>
+                                            </div>
+                                            <div class="zm-comment-content">
+                                                AP估计需要比较好的逃生手段了
+                                            </div>
+                                            <div class="zm-comment-ft">
+                                                <span class="date">2014-10-11</span>
+                                                <a class="reply zm-comment-op-link">
+                                                    <i class="zg-icon zg-icon-comment-reply"></i>
+                                                    回复
+                                                </a>
+                                                <a class="like zm-comment-op-link ">
+                                                    <i class="zg-icon zg-icon-comment-like"></i>
+                                                    赞
+                                                </a>
+                                                <a class="report zm-comment-op-link needsfocus">
+                                                    <i class="zg-icon z-icon-no-help"></i>
+                                                    举报
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="zm-comment-form zm-comment-box-ft expanded">
+                                    <input class="zm-comment-editable editable" />
+                                    <div class="zm-command zg-clear">
+                                        <a class="zg-right zg-btn-blue">评论</a>
+                                        <a class="zm-command-cancel">取消</a>
+                                    </div>
+                                </div>
+                            </div>
 						</div>
                     </ItemTemplate>
                 </asp:Repeater>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -91,14 +92,16 @@ namespace KnowIsKnow
             return da.Tables[0].Rows[0]["userNickName"].ToString();
 
         }
-        public string getDatatime(object sid,object rid)
+        public string getDatatime(object sid, object rid)
         {
+            string datatime;
             int senderID = (int)sid;
             int receiverID = (int)rid;
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
             Model.MessageUserView msg = bllMsg.GetModel(senderID,receiverID);
-
-            return msg.MessageSendTime.ToString();
+            datatime = msg.MessageSendTime.ToString();
+            return datatime;
+            
 
         }
         public string getHeaderImage(object sid,object rid)

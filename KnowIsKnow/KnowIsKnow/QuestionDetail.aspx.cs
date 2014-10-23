@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Globalization;
+
 namespace KnowIsKnow
 {
     public partial class WebForm8 : System.Web.UI.Page
@@ -14,6 +16,7 @@ namespace KnowIsKnow
         public string questitle;
         public string quescontent;
         public int wkcount;
+        public string datatime;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["UserID"] == null)
@@ -35,6 +38,8 @@ namespace KnowIsKnow
                 BLL.QuestionUserReplyView bllQurv = new BLL.QuestionUserReplyView();
                 DataSet dsa = bllQurv.GetList("questionID=" + quesid + " and replyofReplyID=0");
                 wkcount = dsa.Tables[0].Rows.Count;
+                datatime = Convert.ToDateTime(dsa.Tables[0].Rows[0]["replyDateTime"]).ToShortDateString().ToString();
+                
                 this.wkrtpReply.DataSource = dsa.Tables[0];
                 this.wkrtpReply.DataBind();
             }
