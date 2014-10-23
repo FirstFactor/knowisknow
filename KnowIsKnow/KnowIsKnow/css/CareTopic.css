@@ -2,22 +2,22 @@
 #huanzhuhuatiall{padding-top: 46px !important;padding-top: 0px\9;}
 #ghtopmenu{background-color: #0666c5;width: 100%;height: 45px;position: fixed;left: 0;top: 0;z-index: 20;border-bottom: 1px;}
 
-#ghmiddlecontent{ min-height: 340px;width: 960px;margin: auto;position: relative;display: block;padding: 25px 0 50px;overflow: hidden;}
-#ghmiddlecontentleft{width: 632px;margin: 0 328px 0 0;min-height: 340px;display: block;float: left;}
+#ghmiddlecontent{ min-height: 340px;width: 960px;margin: auto;position: relative;display: block;padding: 25px 0 50px;}
+#ghmiddlecontentleft{width: 632px;margin: 0 58px 0 0;min-height: 340px;display: block;float:left;}
 #ghmiddlecontentlefttitle{width: 632px;height: 23px;line-height: 23px;margin-bottom: 10px;}
 #ghmiddlecontentlefttitlepic{margin-top: 4px; width: 16px;height: 16px;background-position: -71px -88px;background-image: url("images/close.png");float: left;vertical-align: -4px;margin-right: 9px;background-repeat: no-repeat;display: inline-block;}
 #ghmiddlecontentlefttitle span{font-size: 14px;font-weight: 700;color: #666;float: left;}
 #ghmiddlecontentlefttitlea{font-size: 12px;float: right;text-decoration: none;color: #999;}
 #ghmiddlecontentlefttitlea:hover{text-decoration: underline;color: #259;}
 #ghmiddlecontentleftcontent{width: 632px;min-height: 315px;border-top: 1px solid #ccc;height: auto;}
-.ghmiddlecontentleftcontentdiv{width: 632px;height: 110px;padding: 15px 0;}
-.ghmiddlecontentleftcontentdivdiv{width: 632px;height: 110px;}
-.ghmiddlecontentleftcontentdivdivdiv{width: 568px;height: 107px;margin-top: 3px;margin-left: 64px !important;margin-left: 14px\9;}
+.ghmiddlecontentleftcontentdiv{width: 632px;height: 80px;padding: 15px 0;}
+.ghmiddlecontentleftcontentdivdiv{width: 632px;height: 80px;}
+.ghmiddlecontentleftcontentdivdivdiv{width: 568px;height: 77px;margin-top: 3px;margin-left: 64px !important;margin-left: 14px\9;}
 .ghmiddlecontentleftcontentdivdiva{width: 50px;height: 50px;display: block;float: left;margin-top: 4px;}
 .ghmiddlecontentleftcontentdivdivimg{background-size: 50px 50px;width: 50px;height: 50px;float: left;}
 .ghmiddlecontentleftcontentdivdivdivguanzhutitle{width: 568px;height: 23px;margin-bottom: 6px;line-height: 16px;}
-.ghmiddlecontentleftcontentdivdivdivguanzhucontent{width: 568px;height: 78px;}
-.ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion{width: 568px;height: 78px;}
+.ghmiddlecontentleftcontentdivdivdivguanzhucontent{width: 568px;height: 48px;}
+.ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion{width: 568px;height: 48px;}
 .ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion1{width: 568px;height: 22px;}
 .ghmiddlecontentleftcontentdivdivdivguanzhutitlea1{ font-weight: 700;font-size: 14px;color:  #222;text-decoration: none;float: left;}
 .ghmiddlecontentleftcontentdivdivdivguanzhutitlea1:hover{text-decoration: underline;}
@@ -38,7 +38,7 @@
 .ghmiddlecontentleftcontentdivdivdivguanzhucontentquestionspan{color: #999;font-size: 12px;font-weight: 400;line-height: 1.7;margin-left: 5px;}
 
 
-#ghmiddlecontentright{float: left;margin: 0 0 0 -270px;width: 270px;min-height: 55px;float: left;}
+#ghmiddlecontentright{float: left;width: 270px;min-height: 55px;float: left;}
 #ghmiddlecontentrighttop{width: 270px;height: 23px;margin-bottom: 10px;line-height: 23px;}
 #ghmiddlecontentrighttop span{font-size: 14px;font-weight: 700;color: #666;float: left;}
 #ghmiddlecontentrightmiddle{width: 270px;min-height: 4px;overflow: hidden;}
