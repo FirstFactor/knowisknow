@@ -28,19 +28,19 @@ namespace KnowIsKnow
                 userheadimg = Session["UserHeadImage"].ToString();
             }
         }
-        public void sendQuestion(object o, EventArgs e) {
-            string questionTitle = this.txtQuestionTitle.Text;
-            string questionContent = this.txtQuestionContent.InnerText;
-            DateTime now = DateTime.Now;
-            BLL.QuestionInfo bllque = new BLL.QuestionInfo();
-            Model.QuestionInfo que = new Model.QuestionInfo();
-            que.questionProvider = Convert.ToInt32(userid);
-            que.questionTitle = questionTitle;
-            que.questionContent = questionContent;
-            que.quetionPubTime = now;
-            que.questionSate = "unread";
-            bllque.Add(que);
-            Response.Write("<script>window.location.href='home.aspx'</script>");
-        }
+        //public void sendQuestion(object o, EventArgs e) {
+        //    string questionTitle = this.txtQuestionTitle.Text;
+        //    string questionContent = this.txtQuestionContent.InnerText;
+        //    DateTime now = DateTime.Now;
+        //    BLL.QuestionInfo bllque = new BLL.QuestionInfo();
+        //    Model.QuestionInfo que = new Model.QuestionInfo();
+        //    que.questionProvider = Convert.ToInt32(userid);
+        //    que.questionTitle = questionTitle;
+        //    que.questionContent = questionContent;
+        //    que.quetionPubTime = now;
+        //    que.questionSate = "unread";
+        //    bllque.Add(que);
+        //    Response.Write("<script>window.location.href='home.aspx'</script>");
+        //}
     }
 }
