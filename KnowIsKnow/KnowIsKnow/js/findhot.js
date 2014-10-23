@@ -31,10 +31,10 @@
         $(".zmxpanel3give").hide();
     });
     $(".zmxex").click(function () {
-        $(".zmxshouqi").css("display", "block");
-        $(".zmxhidecontent").css("display", "block");
-        $(".zmxdate").css("display", "block");
-        $(".zmxrich").css("display", "none");
+        $(this).parent().next().css("display", "block");
+        $(this).parent().next().next().css("display", "block");
+        $(this).parent().next().next().next().css("display", "block");
+        $(this).parent().css("display", "none");
     })
     $(".zmxcollapse").click(function () {
         $(".zmxshouqi").css("display", "none");
