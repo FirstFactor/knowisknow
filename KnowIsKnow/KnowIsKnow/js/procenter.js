@@ -11,6 +11,10 @@
         $(".wtinfo-wrap").hide();
         $(".wtedit-wrap").show();
     });
+    $(".wthangye").click(function () {
+        $(".wtinfo-wrap").hide();
+        $(".wtedit-wrap").show();
+    });
     $(".wtbtnblue1").click(function () {
         var ju = $(".wtzg-form-text-input").val();
         if (ju == "") {

@@ -42,7 +42,7 @@
 									<span class="wtinfo-wrap">
 										<span class="wtlocation"><a class="wtzg-link-litblue-normal">填写居住地</a></span>
 										<span class="wtbusiness wthangye">
-											<a href="/topic/19619368" class="wttopic-link">填写行业</a>
+											<a class="wttopic-link">填写行业</a>
 										</span>
 										<span class="wtbusiness"><i class="wticon  wticon-male wticon-profile-male"></i></span>
 										<a class="wtzu-edit-button wtzubtn"><i class="wtzu-edit-button-icon"></i><span class="wtedit-msg">修改</span></a>
