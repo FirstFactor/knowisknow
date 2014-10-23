@@ -49,5 +49,20 @@
         $(".zqq-jubao-submit").attr("questionid", jubaoQuestionID);
     });
 
+    $(".zqq-side-li1").hover(function () {
+        $(".zqq-icon-caredQuestion").css("background-position","-183px -24px");
+    }, function () {
+        $(".zqq-icon-caredQuestion").css("background-position", "-183px -4px");
+    });
+    $(".zqq-side-li2").hover(function () {
+        $(".zqq-icon-allQuestion").css("background-position", "-217px -24px");
+    }, function () {
+        $(".zqq-icon-allQuestion").css("background-position", "-217px -4px");
+    });
+    $(".zqq-side-li3").hover(function () {
+        $(".zqq-icon-topicSquare").css("background-position", "-234px -24px");
+    }, function () {
+        $(".zqq-icon-topicSquare").css("background-position", "-234px -4px");
+    });
     
 });

@@ -46,37 +46,42 @@
 							</div>
                             </ItemTemplate>
                             </asp:Repeater>
-						    <%--<div class="zqq-small-question">
-							<div class="zqq-head-photo">
-								<img class="zqq-head-face" src="image/1.jpg"/>
-							</div>
-							<div class="zqq-question-detail">
-								<div class="zqq-question-info">pansz 提出了问题</div>
-								<div class="zqq-question-title">
-									有哪些功能和名称完全没有关系的东西？
-								</div>
-								<div class="zqq-question-content">
-									<div class="zqq-content-word">比如蓝牙……</div>
-									<img class="zqq-content-pic" src="" /> 
-								</div>
-								<div class="zqq-question-ft">
-									<div class="zqq-follow-topic">
-                                        <a class="zqq-follow-topic-button">关注话题</a>
-                                        <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>
-									</div>
-									<div class="zqq-jubao">举报</div>
-								</div>
-							</div>
-							</div>--%>
 						</div>
 					</div>
 					<div class="zqq-main-R">
                         <div class="zqq-side zqq-lm1"></div>
                         <div class="zqq-side zqq-lm2">
                             <ul class="zqq-lm2-ul">
-                                <li class="zqq-side-li">
+                                <li class="zqq-side-li zqq-side-li1">
+                                    <a href="Home.aspx" class="zqq-side-link">
+                                        <i class="zqq-icon zqq-icon-caredQuestion"></i>
+                                        我关注的问题
+                                    </a>
+                                </li>
+                                <li class="zqq-side-li zqq-side-li2">
+                                    <a href="allQuestion.aspx" class="zqq-side-link">
+                                        <i class="zqq-icon zqq-icon-allQuestion"></i>
+                                        所有问题
+                                    </a>
+                                </li>
+                                <li class="zqq-side-li zqq-side-li3">
                                     <a href="TopicSquare.aspx" class="zqq-side-link">
                                         <i class="zqq-icon zqq-icon-topicSquare"></i>
+                                        话题广场
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="zqq-side zqq-lm3">
+                            <div class="zqq-lm3-T">
+                                <h3>常去话题</h3>
+                                <a href="TopicSquare.aspx" class="zqq-offenTopic">查看全部 »</a>
+                            </div>
+                            <ul class="zqq-lm3-ul">
+                                <li class="zqq-side-li zqq-side-li11">
+                                    <a href="" class="zqq-side-link1">
+                                        <img src="images/zqq-dianying.jpg" class="zqq-side-photo"/>
+                                        电影
                                     </a>
                                 </li>
                             </ul>
