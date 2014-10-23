@@ -103,7 +103,7 @@
 							        <div class="ghmiddlecontentleftcontentdivdivdivguanzhucontent">
 								        <div class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion">
 									        <a href="" class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestiona"><%# Eval(" topicDes ") %></a>
-									        <span class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestionspan">1 分钟前</span>
+									        <span class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestionspan">关注人数：<%# Eval(" topicAttention ") %></span>
 								        </div>
 								        <%--<div class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion">
 									        <a href="" class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestiona">国内哪些游戏已进入海外市场？</a>

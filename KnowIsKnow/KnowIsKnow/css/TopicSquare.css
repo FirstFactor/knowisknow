@@ -31,7 +31,7 @@ strong {font-weight: bold;}
 .zm-topic-cat-sub .follow {position: absolute;top: 18px;right: 15px;}
 .zm-topic-cat-sub img{position: absolute;left: 0;width: 50px;height: 50px;border-radius: 3px;top: 23px;}
 .z-icon-follow{width: 8px;height: 9px; display: inline-block;line-height: 10px;vertical-align: 0;background-image: url("images/sprites-1.9.2.png");background-repeat: no-repeat;margin-right: 5px;background-position: -97px -23px;}
-.zg-follow {color: #698ebf;}
+.zg-follow {color: #698ebf;cursor:pointer;}
 .z-icon-unfollow{width: 8px;height: 9px; display: inline-block;line-height: 10px;vertical-align: 0;background-image: url("images/sprites-1.9.2.png");background-repeat: no-repeat;margin-right: 5px;background-position: -97px -23px;}
 .zm-topic-cat-sub .item.even img {left: 15px;}
 .zm-topic-cat-sub .item.even .blk {margin-left: 15px;margin-right: 0;}
@@ -102,5 +102,6 @@ img.avatar.\34 0 {width: 40px;height: 40px;border-radius: 4px;}
 
 
 
-
-.zg-special {visibility:hidden;}
+#ymid {display:none;}
+#thid {display:none;}
+.special {visibility:hidden;}
