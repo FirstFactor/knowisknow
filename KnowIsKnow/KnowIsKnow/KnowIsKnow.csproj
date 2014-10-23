@@ -79,7 +79,9 @@
     <Content Include="css\Index.css" />
     <Content Include="css\ProCenter.css" />
     <Content Include="css\QuestionDetail.css" />
+    <Content Include="css\resetpassword.css" />
     <Content Include="css\SelectTopic.css" />
+    <Content Include="css\setnewpassword.css" />
     <Content Include="css\Setting.css" />
     <Content Include="css\SuperAdminPage.css" />
     <Content Include="css\TopicSquare.css" />
@@ -102,6 +104,7 @@
     <Content Include="js\mmaster.js" />
     <Content Include="js\procenter.js" />
     <Content Include="js\questiondetail.js" />
+    <Content Include="js\resetpassword.js" />
     <Content Include="js\selecttopic.js" />
     <Content Include="js\setting.js" />
     <Content Include="js\superadminpage.js" />
@@ -111,7 +114,9 @@
     <Content Include="js\uploadify.swf" />
     <Content Include="KnowIsKnow.Master" />
     <Content Include="ProCenter.aspx" />
+    <Content Include="resetpassword.aspx" />
     <Content Include="SelectTopic.aspx" />
+    <Content Include="setnewpassword.aspx" />
     <Content Include="SiteMap.aspx" />
     <Content Include="TopicSquare.aspx" />
     <Content Include="CareTopic.aspx" />
@@ -281,12 +286,26 @@
     <Compile Include="ProCenter.aspx.designer.cs">
       <DependentUpon>ProCenter.aspx</DependentUpon>
     </Compile>
+    <Compile Include="resetpassword.aspx.cs">
+      <DependentUpon>resetpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resetpassword.aspx.designer.cs">
+      <DependentUpon>resetpassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SelectTopic.aspx.cs">
       <DependentUpon>SelectTopic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SelectTopic.aspx.designer.cs">
       <DependentUpon>SelectTopic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="setnewpassword.aspx.cs">
+      <DependentUpon>setnewpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="setnewpassword.aspx.designer.cs">
+      <DependentUpon>setnewpassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="SiteMap.aspx.cs">
       <DependentUpon>SiteMap.aspx</DependentUpon>

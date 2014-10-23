@@ -23,6 +23,8 @@
                 success: function (result) {
                     $(".bcxinxi").html("姓名修改成功！");
                     $(".baocuntip").show();
+                    $("#zqyxing").val("");
+                    $("#zqyming").val("");
                 }
             });
         }
@@ -54,6 +56,9 @@
                 success: function (result) {
                     $(".bcxinxi").html("密码修改成功！");
                     $(".baocuntip").show();
+                    $(".dqmima").val("");
+                    $(".xdmima").val("");
+                    $(".qrmima").val("");
                 }
             });
         }

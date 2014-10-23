@@ -85,7 +85,7 @@ namespace SendEmailSample
                 mailClient.Send(mail);
                 mail.Dispose();
 
-                return "邮件发送成功。";
+                return "";
             }
             catch (SmtpFailedRecipientsException e)
             {

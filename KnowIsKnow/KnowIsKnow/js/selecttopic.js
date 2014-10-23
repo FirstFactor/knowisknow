@@ -54,7 +54,7 @@
                 data: "{topicID:'" + topicid + "'}",
                 dataType: 'json',
                 success: function (result) {
-                    alert(result.d);
+                    //alert(result.d);
                 }
             });
             
