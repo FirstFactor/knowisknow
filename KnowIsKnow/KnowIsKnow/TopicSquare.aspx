@@ -4,6 +4,7 @@
     <script type="text/javascript" src="js/topicsquare.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="ymid"><%=userID %></div>
 	<div class="zg-wrap zu-main">
 		<div class="zu-main-cotent-inner">
 			<div class="zm-topic-cat-page">
@@ -101,162 +102,21 @@
 				</ul>
 				<div class="zm-topic-cat-sub">
 					<div class="zh-general-list clearfix">
-						<%--<div class="item">
-							<div class="blk">
-								<a target="_blank" href="/topic/19554827">
-									<img src="images/1445bf4c6_xs.jpg" alt="体育"/>
-									<strong>体育</strong>
-								</a>
-								<p>体育，又称体育运动或简称运动，是人们遵循人体的生长发育规律和身…</p>
-								<a id="t::-1538" href="javascript:;" class="follow meta-item zg-follow"><i class="z-icon-follow"></i>关注</a>
-							</div>
-						</div>
-						<div class="item even">
-							<div class="blk">
-								<a target="_blank" href="/topic/19562832">
-									<img src="images/f85294643_xs.jpg" alt="篮球"/>
-									<strong>篮球</strong>
-								</a>
-								<p>篮球是一个由两队参与的球类运动，每队出场5名队员。目的是将球进…</p>
-								<a id="t::-4196" href="javascript:;" class="follow meta-item zg-follow"><i class="z-icon-follow"></i>关注</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="blk">
-								<a target="_blank" href="/topic/19559052">
-									<img src="images/06fecb761_xs.jpg" alt="足球"/>
-									<strong>足球</strong>
-								</a>
-								<p>足球是足球运动或足球比赛的简称；当然它也指足球比赛中的用球，但…</p>
-								<a id="t::-2955" href="javascript:;" class="follow meta-item zg-follow"><i class="z-icon-follow"></i>关注</a>
-							</div>
-						</div>
-						<div class="item even">
-							<div class="blk">
-								<a target="_blank" href="/topic/19552439">
-									<img src="images/5daddd688_xs.jpg" alt="NBA"/>
-									<strong>NBA</strong>
-								</a>
-								<p>NBA（全称 National Basketball Asso…</p>
-								<a id="t::-744" href="javascript:;" class="follow meta-item zg-follow"><i class="z-icon-follow"></i>关注</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="blk">
-								<a target="_blank" href="/topic/19588437">
-									<img src="images/5a8cff419_xs.jpg" alt="羽毛球"/>
-									<strong>羽毛球</strong>
-								</a>
-								<p>羽毛球是一项隔着球网，使用长柄网状球拍击打平口端扎有一圈羽毛的…</p>
-								<a id="t::-12732" href="javascript:;" class="follow meta-item zg-follow">
-									<i class="z-icon-follow"></i>关注
-								</a>
-							</div>
-						</div>
-						<div class="item even">
-							<div class="blk">
-								<a target="_blank" href="/topic/19558415">
-									<img src="images/6ff253b3a_xs.jpg" alt="游泳"/>
-									<strong>游泳</strong>
-								</a>
-								<p>游泳可分为竞技游泳和实用游泳。竞技游泳包括蝶泳、仰泳、蛙泳和自…</p>
-								<a id="t::-2742" href="javascript:;" class="follow meta-item zg-follow">
-									<i class="z-icon-follow"></i>关注
-								</a>
-							</div>
-						</div>
-                        <div id="item" style="display: none;">
-							<div class="item">
-								<div class="blk">
-									<a target="_blank" href="/topic/19563451">
-										<img src="images/a9fdf1d30_xs.jpg" alt="电子竞技"/>
-										<strong>电子竞技</strong>
-									</a>
-									<p>电子竞技 是指使用电脑游戏来比赛的体育项目。随着游戏对经济、社…</p>
-									<a id="t::-4392" href="javascript:;" class="follow meta-item zg-follow">
-										<i class="z-icon-follow"></i>
-										关注
-									</a>
-								</div>
-							</div>
-							<div class="item even">
-								<div class="blk">
-									<a target="_blank" href="/topic/19587397">
-										<img src="images/e9e9e53be_xs.jpg" alt="欧洲冠军联赛"/>
-										<strong>欧洲冠军联赛</strong>
-									</a>
-									<p>欧洲冠军联赛（英语：UEFA Champions League…</p>
-									<a id="t::-12382" href="javascript:;" class="follow meta-item zg-follow">
-										<i class="z-icon-follow"></i>
-										关注
-									</a>
-								</div>
-							</div>
-							<div class="item">
-								<div class="blk">
-									<a target="_blank" href="/topic/19609249">
-										<img src="images/392c679a0_xs.jpg" alt="网球"/>
-										<strong>网球</strong>
-									</a>
-									<p>网球(tennis)是一项优美而激烈的运动，网球运动的由来和发…</p>
-									<a id="t::-19729" href="javascript:;" class="follow meta-item zg-follow">
-										<i class="z-icon-follow"></i>
-										关注
-									</a>
-								</div>
-							</div>
-							<div class="item even">
-								<div class="blk">
-									<a target="_blank" href="/topic/19624021">
-										<img src="images/bca88815c_xs.jpg" alt="台球"/>
-										<strong>台球</strong>
-									</a>
-									<p>台球，台湾又称撞球，港澳、马新又称桌球，中国大陆在斯诺克小台上…</p>
-									<a id="t::-24682" href="javascript:;" class="follow meta-item zg-follow">
-										<i class="z-icon-follow"></i>
-										关注
-									</a>
-								</div>
-							</div>
-							<div class="item">
-								<div class="blk">
-									<a target="_blank" href="/topic/19555495">
-										<img src="images/52e07f808_xs.jpg" alt="围棋"/>
-										<strong>围棋</strong>
-									</a>
-									<p>世界上最复杂的博弈类智力游戏。中国国粹之一。琴棋书画中的棋即指…</p>
-									<a id="t::-1752" href="javascript:;" class="follow meta-item zg-follow">
-										<i class="z-icon-follow"></i>
-										关注
-									</a>
-								</div>
-							</div>
-							<div class="item even">
-								<div class="blk">
-									<a target="_blank" href="/topic/19567881">
-										<img src="images/aa1aaf3a6_xs.jpg" alt="曼彻斯特联队（Manchester United）"/>
-										<strong>曼彻斯特联队（Manchester United）</strong>
-									</a>
-									<p>全名：Manchester United FC 成立：1878…</p>
-									<a id="t::-5906" href="javascript:;" class="follow meta-item zg-follow">
-										<i class="z-icon-follow"></i>
-										关注
-									</a>
-								</div>
-							</div>
-						</div>--%>
+						
                         <asp:DataList runat="server" ID="rptquestionlist" RepeatColumns="2" RepeatDirection="Horizontal" RepeatLayout="Table">                       
 
                                 <ItemTemplate>
+                                    
                                     <div class="item">
+                                        
 							            <div class="blk">
 								            <a target="_blank" href="/topic/19554827">
 									            <img src="<%# Eval("topicPicUrl") %>"/>
 									            <strong><%# Eval("topicTitle") %></strong>
 								            </a>
 								            <p><%# Eval("topicDes") %></p>
-								            <a   class="follow meta-item zg-follow"><i class="z-icon-follow"></i>关注</a>
-                                            <a   class="follow meta-item zg-special">取消关注</a>                                   
+								            <a href="javascript:;" class="follow meta-item zg-follow" teshu="<%# Check(Eval("topicID")) %>" thid="<%#Eval("topicID") %>"><i class="z-icon-follow"></i>关注</a>
+                                                                          
 							            </div>
 						            </div>
                                 </ItemTemplate>
