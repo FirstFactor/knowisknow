@@ -19,8 +19,8 @@ namespace KnowIsKnow
             }
             else {
                 userid = Session["UserID"].ToString();
-                BLL.QuestionUserView quelist = new BLL.QuestionUserView();
-                DataSet ds = quelist.GetList("questionSate='normal' order by quetionPubTime desc");
+                BLL.CarePersonQuestionView quelist = new BLL.CarePersonQuestionView();
+                DataSet ds = quelist.GetList("questionSate='normal' and personCaredByUID=" + userid + " order by quetionPubTime desc");
                 this.rpt.DataSource = ds.Tables[0];
                 this.rpt.DataBind();
 
