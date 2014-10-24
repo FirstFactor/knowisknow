@@ -45,6 +45,7 @@
     <Compile Include="CarePersonQuestionView.cs" />
     <Compile Include="CarePersonUserInfoView.cs" />
     <Compile Include="CareQuestion.cs" />
+    <Compile Include="CareQuestionQuestionUserView.cs" />
     <Compile Include="CareTopic.cs" />
     <Compile Include="MessageInfo.cs" />
     <Compile Include="MessageUserView.cs" />

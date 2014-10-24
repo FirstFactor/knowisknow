@@ -8,26 +8,26 @@ using System.Threading.Tasks;
 namespace BLL
 {
     /// <summary>
-    /// CarePersonQuestionView
+    /// CareQuestionQuestionUserView
     /// </summary>
-    public partial class CarePersonQuestionView
+    public partial class CareQuestionQuestionUserView
     {
-        private readonly DAL.CarePersonQuestionView dal = new DAL.CarePersonQuestionView();
-        public CarePersonQuestionView()
+        private readonly DAL.CareQuestionQuestionUserView dal = new DAL.CareQuestionQuestionUserView();
+        public CareQuestionQuestionUserView()
         { }
         #region  BasicMethod
         /// <summary>
         /// 是否存在该记录
         /// </summary>
-        public bool Exists(int questionID, int personCaredByUID)
+        public bool Exists(int careQuestionID, int questionCaredByUID)
         {
-            return dal.Exists(questionID, personCaredByUID);
+            return dal.Exists(careQuestionID, questionCaredByUID);
         }
 
         /// <summary>
         /// 增加一条数据
         /// </summary>
-        public bool Add(Model.CarePersonQuestionView model)
+        public bool Add(Model.CareQuestionQuestionUserView model)
         {
             return dal.Add(model);
         }
@@ -35,7 +35,7 @@ namespace BLL
         /// <summary>
         /// 更新一条数据
         /// </summary>
-        public bool Update(Model.CarePersonQuestionView model)
+        public bool Update(Model.CareQuestionQuestionUserView model)
         {
             return dal.Update(model);
         }
@@ -43,19 +43,19 @@ namespace BLL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(int questionID, int personCaredByUID)
+        public bool Delete(int careQuestionID, int questionCaredByUID)
         {
 
-            return dal.Delete(questionID, personCaredByUID);
+            return dal.Delete(careQuestionID, questionCaredByUID);
         }
 
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.CarePersonQuestionView GetModel(int questionID, int personCaredByUID)
+        public Model.CareQuestionQuestionUserView GetModel(int careQuestionID, int questionCaredByUID)
         {
 
-            return dal.GetModel(questionID, personCaredByUID);
+            return dal.GetModel(careQuestionID, questionCaredByUID);
         }
 
        
@@ -76,7 +76,7 @@ namespace BLL
         /// <summary>
         /// 获得数据列表
         /// </summary>
-        public List<Model.CarePersonQuestionView> GetModelList(string strWhere)
+        public List<Model.CareQuestionQuestionUserView> GetModelList(string strWhere)
         {
             DataSet ds = dal.GetList(strWhere);
             return DataTableToList(ds.Tables[0]);
@@ -84,13 +84,13 @@ namespace BLL
         /// <summary>
         /// 获得数据列表
         /// </summary>
-        public List<Model.CarePersonQuestionView> DataTableToList(DataTable dt)
+        public List<Model.CareQuestionQuestionUserView> DataTableToList(DataTable dt)
         {
-            List<Model.CarePersonQuestionView> modelList = new List<Model.CarePersonQuestionView>();
+            List<Model.CareQuestionQuestionUserView> modelList = new List<Model.CareQuestionQuestionUserView>();
             int rowsCount = dt.Rows.Count;
             if (rowsCount > 0)
             {
-                Model.CarePersonQuestionView model;
+                Model.CareQuestionQuestionUserView model;
                 for (int n = 0; n < rowsCount; n++)
                 {
                     model = dal.DataRowToModel(dt.Rows[n]);

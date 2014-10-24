@@ -9,29 +9,28 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-
     /// <summary>
-    /// 数据访问类:CarePersonQuestionView
+    /// 数据访问类:CareQuestionQuestionUserView
     /// </summary>
-    public partial class CarePersonQuestionView
+    public partial class CareQuestionQuestionUserView
     {
-        public CarePersonQuestionView()
+        public CareQuestionQuestionUserView()
         { }
         #region  BasicMethod
 
         /// <summary>
         /// 是否存在该记录
         /// </summary>
-        public bool Exists(int questionID, int personCaredByUID)
+        public bool Exists(int careQuestionID, int questionCaredByUID)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select count(1) from CarePersonQuestionView");
-            strSql.Append(" where questionID=@questionID and personCaredByUID=@personCaredByUID ");
+            strSql.Append("select count(1) from CareQuestionQuestionUserView");
+            strSql.Append(" where careQuestionID=@careQuestionID and questionCaredByUID=@questionCaredByUID ");
             SqlParameter[] parameters = {
-					new SqlParameter("@questionID", SqlDbType.Int,4),
-					new SqlParameter("@personCaredByUID", SqlDbType.Int,4)			};
-            parameters[0].Value = questionID;
-            parameters[1].Value = personCaredByUID;
+					new SqlParameter("@careQuestionID", SqlDbType.Int,4),
+					new SqlParameter("@questionCaredByUID", SqlDbType.Int,4)			};
+            parameters[0].Value = careQuestionID;
+            parameters[1].Value = questionCaredByUID;
 
             return DbHelperSQL.Exists(strSql.ToString(), parameters);
         }
@@ -40,60 +39,52 @@ namespace DAL
         /// <summary>
         /// 增加一条数据
         /// </summary>
-        public bool Add(Model.CarePersonQuestionView model)
+        public bool Add(Model.CareQuestionQuestionUserView model)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("insert into CarePersonQuestionView(");
-            strSql.Append("questionID,questionTitle,questionContent,quetionPubTime,questionSate,questionReportCount,questonApproveCount,carePersonID,personCaredByUID,userNickName,userHeadImage,userState,userShuoShuo,userGender,userBirthday,userAdress,userJob,userCompany,userJobPosition,userAcademy,userMajor,userProBio,userEmail)");
+            strSql.Append("insert into CareQuestionQuestionUserView(");
+            strSql.Append("careQuestionID,questionCaredByUID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,userNickName,userHeadImage,userEmail,userState,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition)");
             strSql.Append(" values (");
-            strSql.Append("@questionID,@questionTitle,@questionContent,@quetionPubTime,@questionSate,@questionReportCount,@questonApproveCount,@carePersonID,@personCaredByUID,@userNickName,@userHeadImage,@userState,@userShuoShuo,@userGender,@userBirthday,@userAdress,@userJob,@userCompany,@userJobPosition,@userAcademy,@userMajor,@userProBio,@userEmail)");
+            strSql.Append("@careQuestionID,@questionCaredByUID,@questionTitle,@questionContent,@questionProvider,@quetionPubTime,@questonApproveCount,@questionReportCount,@questionSate,@userNickName,@userHeadImage,@userEmail,@userState,@userBirthday,@userAdress,@userJob,@userShuoShuo,@userCompany,@userJobPosition)");
             SqlParameter[] parameters = {
-					new SqlParameter("@questionID", SqlDbType.Int,4),
+					new SqlParameter("@careQuestionID", SqlDbType.Int,4),
+					new SqlParameter("@questionCaredByUID", SqlDbType.Int,4),
 					new SqlParameter("@questionTitle", SqlDbType.VarChar,50),
 					new SqlParameter("@questionContent", SqlDbType.VarChar,-1),
+					new SqlParameter("@questionProvider", SqlDbType.Int,4),
 					new SqlParameter("@quetionPubTime", SqlDbType.DateTime),
-					new SqlParameter("@questionSate", SqlDbType.VarChar,50),
-					new SqlParameter("@questionReportCount", SqlDbType.Int,4),
 					new SqlParameter("@questonApproveCount", SqlDbType.Int,4),
-					new SqlParameter("@carePersonID", SqlDbType.Int,4),
-					new SqlParameter("@personCaredByUID", SqlDbType.Int,4),
+					new SqlParameter("@questionReportCount", SqlDbType.Int,4),
+					new SqlParameter("@questionSate", SqlDbType.VarChar,50),
 					new SqlParameter("@userNickName", SqlDbType.VarChar,20),
 					new SqlParameter("@userHeadImage", SqlDbType.VarChar,100),
+					new SqlParameter("@userEmail", SqlDbType.VarChar,100),
 					new SqlParameter("@userState", SqlDbType.VarChar,20),
-					new SqlParameter("@userShuoShuo", SqlDbType.VarChar,50),
-					new SqlParameter("@userGender", SqlDbType.NVarChar,1),
 					new SqlParameter("@userBirthday", SqlDbType.Date,3),
 					new SqlParameter("@userAdress", SqlDbType.VarChar,100),
 					new SqlParameter("@userJob", SqlDbType.VarChar,50),
+					new SqlParameter("@userShuoShuo", SqlDbType.VarChar,50),
 					new SqlParameter("@userCompany", SqlDbType.VarChar,50),
-					new SqlParameter("@userJobPosition", SqlDbType.VarChar,50),
-					new SqlParameter("@userAcademy", SqlDbType.VarChar,50),
-					new SqlParameter("@userMajor", SqlDbType.VarChar,50),
-					new SqlParameter("@userProBio", SqlDbType.VarChar,-1),
-					new SqlParameter("@userEmail", SqlDbType.VarChar,100)};
-            parameters[0].Value = model.questionID;
-            parameters[1].Value = model.questionTitle;
-            parameters[2].Value = model.questionContent;
-            parameters[3].Value = model.quetionPubTime;
-            parameters[4].Value = model.questionSate;
-            parameters[5].Value = model.questionReportCount;
+					new SqlParameter("@userJobPosition", SqlDbType.VarChar,50)};
+            parameters[0].Value = model.careQuestionID;
+            parameters[1].Value = model.questionCaredByUID;
+            parameters[2].Value = model.questionTitle;
+            parameters[3].Value = model.questionContent;
+            parameters[4].Value = model.questionProvider;
+            parameters[5].Value = model.quetionPubTime;
             parameters[6].Value = model.questonApproveCount;
-            parameters[7].Value = model.carePersonID;
-            parameters[8].Value = model.personCaredByUID;
+            parameters[7].Value = model.questionReportCount;
+            parameters[8].Value = model.questionSate;
             parameters[9].Value = model.userNickName;
             parameters[10].Value = model.userHeadImage;
-            parameters[11].Value = model.userState;
-            parameters[12].Value = model.userShuoShuo;
-            parameters[13].Value = model.userGender;
-            parameters[14].Value = model.userBirthday;
-            parameters[15].Value = model.userAdress;
-            parameters[16].Value = model.userJob;
+            parameters[11].Value = model.userEmail;
+            parameters[12].Value = model.userState;
+            parameters[13].Value = model.userBirthday;
+            parameters[14].Value = model.userAdress;
+            parameters[15].Value = model.userJob;
+            parameters[16].Value = model.userShuoShuo;
             parameters[17].Value = model.userCompany;
             parameters[18].Value = model.userJobPosition;
-            parameters[19].Value = model.userAcademy;
-            parameters[20].Value = model.userMajor;
-            parameters[21].Value = model.userProBio;
-            parameters[22].Value = model.userEmail;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -108,81 +99,69 @@ namespace DAL
         /// <summary>
         /// 更新一条数据
         /// </summary>
-        public bool Update(Model.CarePersonQuestionView model)
+        public bool Update(Model.CareQuestionQuestionUserView model)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("update CarePersonQuestionView set ");
-            strSql.Append("questionID=@questionID,");
+            strSql.Append("update CareQuestionQuestionUserView set ");
+            strSql.Append("careQuestionID=@careQuestionID,");
+            strSql.Append("questionCaredByUID=@questionCaredByUID,");
             strSql.Append("questionTitle=@questionTitle,");
             strSql.Append("questionContent=@questionContent,");
+            strSql.Append("questionProvider=@questionProvider,");
             strSql.Append("quetionPubTime=@quetionPubTime,");
-            strSql.Append("questionSate=@questionSate,");
-            strSql.Append("questionReportCount=@questionReportCount,");
             strSql.Append("questonApproveCount=@questonApproveCount,");
-            strSql.Append("carePersonID=@carePersonID,");
-            strSql.Append("personCaredByUID=@personCaredByUID,");
+            strSql.Append("questionReportCount=@questionReportCount,");
+            strSql.Append("questionSate=@questionSate,");
             strSql.Append("userNickName=@userNickName,");
             strSql.Append("userHeadImage=@userHeadImage,");
+            strSql.Append("userEmail=@userEmail,");
             strSql.Append("userState=@userState,");
-            strSql.Append("userShuoShuo=@userShuoShuo,");
-            strSql.Append("userGender=@userGender,");
             strSql.Append("userBirthday=@userBirthday,");
             strSql.Append("userAdress=@userAdress,");
             strSql.Append("userJob=@userJob,");
+            strSql.Append("userShuoShuo=@userShuoShuo,");
             strSql.Append("userCompany=@userCompany,");
-            strSql.Append("userJobPosition=@userJobPosition,");
-            strSql.Append("userAcademy=@userAcademy,");
-            strSql.Append("userMajor=@userMajor,");
-            strSql.Append("userProBio=@userProBio,");
-            strSql.Append("userEmail=@userEmail");
-            strSql.Append(" where questionID=@questionID and personCaredByUID=@personCaredByUID ");
+            strSql.Append("userJobPosition=@userJobPosition");
+            strSql.Append(" where careQuestionID=@careQuestionID and questionCaredByUID=@questionCaredByUID ");
             SqlParameter[] parameters = {
-					new SqlParameter("@questionID", SqlDbType.Int,4),
+					new SqlParameter("@careQuestionID", SqlDbType.Int,4),
+					new SqlParameter("@questionCaredByUID", SqlDbType.Int,4),
 					new SqlParameter("@questionTitle", SqlDbType.VarChar,50),
 					new SqlParameter("@questionContent", SqlDbType.VarChar,-1),
+					new SqlParameter("@questionProvider", SqlDbType.Int,4),
 					new SqlParameter("@quetionPubTime", SqlDbType.DateTime),
-					new SqlParameter("@questionSate", SqlDbType.VarChar,50),
-					new SqlParameter("@questionReportCount", SqlDbType.Int,4),
 					new SqlParameter("@questonApproveCount", SqlDbType.Int,4),
-					new SqlParameter("@carePersonID", SqlDbType.Int,4),
-					new SqlParameter("@personCaredByUID", SqlDbType.Int,4),
+					new SqlParameter("@questionReportCount", SqlDbType.Int,4),
+					new SqlParameter("@questionSate", SqlDbType.VarChar,50),
 					new SqlParameter("@userNickName", SqlDbType.VarChar,20),
 					new SqlParameter("@userHeadImage", SqlDbType.VarChar,100),
+					new SqlParameter("@userEmail", SqlDbType.VarChar,100),
 					new SqlParameter("@userState", SqlDbType.VarChar,20),
-					new SqlParameter("@userShuoShuo", SqlDbType.VarChar,50),
-					new SqlParameter("@userGender", SqlDbType.NVarChar,1),
 					new SqlParameter("@userBirthday", SqlDbType.Date,3),
 					new SqlParameter("@userAdress", SqlDbType.VarChar,100),
 					new SqlParameter("@userJob", SqlDbType.VarChar,50),
+					new SqlParameter("@userShuoShuo", SqlDbType.VarChar,50),
 					new SqlParameter("@userCompany", SqlDbType.VarChar,50),
-					new SqlParameter("@userJobPosition", SqlDbType.VarChar,50),
-					new SqlParameter("@userAcademy", SqlDbType.VarChar,50),
-					new SqlParameter("@userMajor", SqlDbType.VarChar,50),
-					new SqlParameter("@userProBio", SqlDbType.VarChar,-1),
-					new SqlParameter("@userEmail", SqlDbType.VarChar,100)};
-            parameters[0].Value = model.questionID;
-            parameters[1].Value = model.questionTitle;
-            parameters[2].Value = model.questionContent;
-            parameters[3].Value = model.quetionPubTime;
-            parameters[4].Value = model.questionSate;
-            parameters[5].Value = model.questionReportCount;
+					new SqlParameter("@userJobPosition", SqlDbType.VarChar,50)};
+            parameters[0].Value = model.careQuestionID;
+            parameters[1].Value = model.questionCaredByUID;
+            parameters[2].Value = model.questionTitle;
+            parameters[3].Value = model.questionContent;
+            parameters[4].Value = model.questionProvider;
+            parameters[5].Value = model.quetionPubTime;
             parameters[6].Value = model.questonApproveCount;
-            parameters[7].Value = model.carePersonID;
-            parameters[8].Value = model.personCaredByUID;
+            parameters[7].Value = model.questionReportCount;
+            parameters[8].Value = model.questionSate;
             parameters[9].Value = model.userNickName;
             parameters[10].Value = model.userHeadImage;
-            parameters[11].Value = model.userState;
-            parameters[12].Value = model.userShuoShuo;
-            parameters[13].Value = model.userGender;
-            parameters[14].Value = model.userBirthday;
-            parameters[15].Value = model.userAdress;
-            parameters[16].Value = model.userJob;
+            parameters[11].Value = model.userEmail;
+            parameters[12].Value = model.userState;
+            parameters[13].Value = model.userBirthday;
+            parameters[14].Value = model.userAdress;
+            parameters[15].Value = model.userJob;
+            parameters[16].Value = model.userShuoShuo;
             parameters[17].Value = model.userCompany;
             parameters[18].Value = model.userJobPosition;
-            parameters[19].Value = model.userAcademy;
-            parameters[20].Value = model.userMajor;
-            parameters[21].Value = model.userProBio;
-            parameters[22].Value = model.userEmail;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -198,17 +177,17 @@ namespace DAL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(int questionID, int personCaredByUID)
+        public bool Delete(int careQuestionID, int questionCaredByUID)
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("delete from CarePersonQuestionView ");
-            strSql.Append(" where questionID=@questionID and personCaredByUID=@personCaredByUID ");
+            strSql.Append("delete from CareQuestionQuestionUserView ");
+            strSql.Append(" where careQuestionID=@careQuestionID and questionCaredByUID=@questionCaredByUID ");
             SqlParameter[] parameters = {
-					new SqlParameter("@questionID", SqlDbType.Int,4),
-					new SqlParameter("@personCaredByUID", SqlDbType.Int,4)			};
-            parameters[0].Value = questionID;
-            parameters[1].Value = personCaredByUID;
+					new SqlParameter("@careQuestionID", SqlDbType.Int,4),
+					new SqlParameter("@questionCaredByUID", SqlDbType.Int,4)			};
+            parameters[0].Value = careQuestionID;
+            parameters[1].Value = questionCaredByUID;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -225,19 +204,19 @@ namespace DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.CarePersonQuestionView GetModel(int questionID, int personCaredByUID)
+        public Model.CareQuestionQuestionUserView GetModel(int careQuestionID, int questionCaredByUID)
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 questionID,questionTitle,questionContent,quetionPubTime,questionSate,questionReportCount,questonApproveCount,carePersonID,personCaredByUID,userNickName,userHeadImage,userState,userShuoShuo,userGender,userBirthday,userAdress,userJob,userCompany,userJobPosition,userAcademy,userMajor,userProBio,userEmail from CarePersonQuestionView ");
-            strSql.Append(" where questionID=@questionID and personCaredByUID=@personCaredByUID ");
+            strSql.Append("select  top 1 careQuestionID,questionCaredByUID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,userNickName,userHeadImage,userEmail,userState,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition from CareQuestionQuestionUserView ");
+            strSql.Append(" where careQuestionID=@careQuestionID and questionCaredByUID=@questionCaredByUID ");
             SqlParameter[] parameters = {
-					new SqlParameter("@questionID", SqlDbType.Int,4),
-					new SqlParameter("@personCaredByUID", SqlDbType.Int,4)			};
-            parameters[0].Value = questionID;
-            parameters[1].Value = personCaredByUID;
+					new SqlParameter("@careQuestionID", SqlDbType.Int,4),
+					new SqlParameter("@questionCaredByUID", SqlDbType.Int,4)			};
+            parameters[0].Value = careQuestionID;
+            parameters[1].Value = questionCaredByUID;
 
-            Model.CarePersonQuestionView model = new Model.CarePersonQuestionView();
+            Model.CareQuestionQuestionUserView model = new Model.CareQuestionQuestionUserView();
             DataSet ds = DbHelperSQL.Query(strSql.ToString(), parameters);
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -253,14 +232,18 @@ namespace DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.CarePersonQuestionView DataRowToModel(DataRow row)
+        public Model.CareQuestionQuestionUserView DataRowToModel(DataRow row)
         {
-            Model.CarePersonQuestionView model = new Model.CarePersonQuestionView();
+            Model.CareQuestionQuestionUserView model = new Model.CareQuestionQuestionUserView();
             if (row != null)
             {
-                if (row["questionID"] != null && row["questionID"].ToString() != "")
+                if (row["careQuestionID"] != null && row["careQuestionID"].ToString() != "")
                 {
-                    model.questionID = int.Parse(row["questionID"].ToString());
+                    model.careQuestionID = int.Parse(row["careQuestionID"].ToString());
+                }
+                if (row["questionCaredByUID"] != null && row["questionCaredByUID"].ToString() != "")
+                {
+                    model.questionCaredByUID = int.Parse(row["questionCaredByUID"].ToString());
                 }
                 if (row["questionTitle"] != null)
                 {
@@ -270,29 +253,25 @@ namespace DAL
                 {
                     model.questionContent = row["questionContent"].ToString();
                 }
+                if (row["questionProvider"] != null && row["questionProvider"].ToString() != "")
+                {
+                    model.questionProvider = int.Parse(row["questionProvider"].ToString());
+                }
                 if (row["quetionPubTime"] != null && row["quetionPubTime"].ToString() != "")
                 {
                     model.quetionPubTime = DateTime.Parse(row["quetionPubTime"].ToString());
-                }
-                if (row["questionSate"] != null)
-                {
-                    model.questionSate = row["questionSate"].ToString();
-                }
-                if (row["questionReportCount"] != null && row["questionReportCount"].ToString() != "")
-                {
-                    model.questionReportCount = int.Parse(row["questionReportCount"].ToString());
                 }
                 if (row["questonApproveCount"] != null && row["questonApproveCount"].ToString() != "")
                 {
                     model.questonApproveCount = int.Parse(row["questonApproveCount"].ToString());
                 }
-                if (row["carePersonID"] != null && row["carePersonID"].ToString() != "")
+                if (row["questionReportCount"] != null && row["questionReportCount"].ToString() != "")
                 {
-                    model.carePersonID = int.Parse(row["carePersonID"].ToString());
+                    model.questionReportCount = int.Parse(row["questionReportCount"].ToString());
                 }
-                if (row["personCaredByUID"] != null && row["personCaredByUID"].ToString() != "")
+                if (row["questionSate"] != null)
                 {
-                    model.personCaredByUID = int.Parse(row["personCaredByUID"].ToString());
+                    model.questionSate = row["questionSate"].ToString();
                 }
                 if (row["userNickName"] != null)
                 {
@@ -302,17 +281,13 @@ namespace DAL
                 {
                     model.userHeadImage = row["userHeadImage"].ToString();
                 }
+                if (row["userEmail"] != null)
+                {
+                    model.userEmail = row["userEmail"].ToString();
+                }
                 if (row["userState"] != null)
                 {
                     model.userState = row["userState"].ToString();
-                }
-                if (row["userShuoShuo"] != null)
-                {
-                    model.userShuoShuo = row["userShuoShuo"].ToString();
-                }
-                if (row["userGender"] != null)
-                {
-                    model.userGender = row["userGender"].ToString();
                 }
                 if (row["userBirthday"] != null && row["userBirthday"].ToString() != "")
                 {
@@ -326,6 +301,10 @@ namespace DAL
                 {
                     model.userJob = row["userJob"].ToString();
                 }
+                if (row["userShuoShuo"] != null)
+                {
+                    model.userShuoShuo = row["userShuoShuo"].ToString();
+                }
                 if (row["userCompany"] != null)
                 {
                     model.userCompany = row["userCompany"].ToString();
@@ -333,22 +312,6 @@ namespace DAL
                 if (row["userJobPosition"] != null)
                 {
                     model.userJobPosition = row["userJobPosition"].ToString();
-                }
-                if (row["userAcademy"] != null)
-                {
-                    model.userAcademy = row["userAcademy"].ToString();
-                }
-                if (row["userMajor"] != null)
-                {
-                    model.userMajor = row["userMajor"].ToString();
-                }
-                if (row["userProBio"] != null)
-                {
-                    model.userProBio = row["userProBio"].ToString();
-                }
-                if (row["userEmail"] != null)
-                {
-                    model.userEmail = row["userEmail"].ToString();
                 }
             }
             return model;
@@ -360,8 +323,8 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select questionID,questionTitle,questionContent,quetionPubTime,questionSate,questionReportCount,questonApproveCount,carePersonID,personCaredByUID,userNickName,userHeadImage,userState,userShuoShuo,userGender,userBirthday,userAdress,userJob,userCompany,userJobPosition,userAcademy,userMajor,userProBio,userEmail ");
-            strSql.Append(" FROM CarePersonQuestionView ");
+            strSql.Append("select careQuestionID,questionCaredByUID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,userNickName,userHeadImage,userEmail,userState,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition ");
+            strSql.Append(" FROM CareQuestionQuestionUserView ");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);
@@ -380,8 +343,8 @@ namespace DAL
             {
                 strSql.Append(" top " + Top.ToString());
             }
-            strSql.Append(" questionID,questionTitle,questionContent,quetionPubTime,questionSate,questionReportCount,questonApproveCount,carePersonID,personCaredByUID,userNickName,userHeadImage,userState,userShuoShuo,userGender,userBirthday,userAdress,userJob,userCompany,userJobPosition,userAcademy,userMajor,userProBio,userEmail ");
-            strSql.Append(" FROM CarePersonQuestionView ");
+            strSql.Append(" careQuestionID,questionCaredByUID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,userNickName,userHeadImage,userEmail,userState,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition ");
+            strSql.Append(" FROM CareQuestionQuestionUserView ");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);
@@ -396,7 +359,7 @@ namespace DAL
         public int GetRecordCount(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select count(1) FROM CarePersonQuestionView ");
+            strSql.Append("select count(1) FROM CareQuestionQuestionUserView ");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);
@@ -425,9 +388,9 @@ namespace DAL
             }
             else
             {
-                strSql.Append("order by T.personCaredByUID desc");
+                strSql.Append("order by T.questionCaredByUID desc");
             }
-            strSql.Append(")AS Row, T.*  from CarePersonQuestionView T ");
+            strSql.Append(")AS Row, T.*  from CareQuestionQuestionUserView T ");
             if (!string.IsNullOrEmpty(strWhere.Trim()))
             {
                 strSql.Append(" WHERE " + strWhere);
@@ -452,8 +415,8 @@ namespace DAL
                     new SqlParameter("@OrderType", SqlDbType.Bit),
                     new SqlParameter("@strWhere", SqlDbType.VarChar,1000),
                     };
-            parameters[0].Value = "CarePersonQuestionView";
-            parameters[1].Value = "personCaredByUID";
+            parameters[0].Value = "CareQuestionQuestionUserView";
+            parameters[1].Value = "questionCaredByUID";
             parameters[2].Value = PageSize;
             parameters[3].Value = PageIndex;
             parameters[4].Value = 0;

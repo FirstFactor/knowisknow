@@ -31,10 +31,27 @@ namespace KnowIsKnow
         [WebMethod]
         public string DealQuestionReport(int reportQuID) {
 
+            #region 更新举报信息的状态
+
             BLL.ReportQuestion rptq = new BLL.ReportQuestion();
             Model.ReportQuestion model = rptq.GetModel(reportQuID);
-            model.reportQuestionDealState = "unnormal";
-            rptq.Update(model);
+            model.reportQuestionDealState = "dealed";
+            rptq.Update(model); 
+
+            #endregion
+
+
+
+            #region 更新问题表中的问题状态
+
+            BLL.QuestionInfo quest = new BLL.QuestionInfo();
+            Model.QuestionInfo modelquest = new Model.QuestionInfo();
+            modelquest.questionSate = "unnormal";
+
+
+            #endregion
+
+
             return "ok";
         }
         /// <summary>
@@ -50,7 +67,7 @@ namespace KnowIsKnow
 
             BLL.ReportReply rptp = new BLL.ReportReply();
             Model.ReportReply model = rptp.GetModel(reportReID);
-            model.reportReplyDealState = "unnormal";
+            model.reportReplyDealState = "dealed";
             rptp.Update(model); 
 
             #endregion
