@@ -55,9 +55,13 @@ ul,li{list-style: none;list-style-position: outside;}
 .zqq-icon-topicSquare {background-position:-234px -4px;}
 .zqq-lm3 {height:160px;padding-left:5px; border-top:1px solid #eee;}
 .zqq-lm3-T {height:23px; margin:10px 0;}
-.zqq-lm3-T h3 {width:100px;float:left;}
+.zqq-lm3-T h3 {width:200px;float:left;}
 .zqq-offenTopic {float:right;color: #698ebf;}
 .zqq-offenTopic:hover {text-decoration:underline;}
 .zqq-lm3-ul {}
+.zqq-side-li11 {height:25px;padding:5px 0;}
 .zqq-side-link1 {width:100%;height:28px;margin-bottom:20px; color:#666;}
-.zqq-side-photo {border-radius:3px;}
+.zqq-side-photo {float:left; border-radius:3px;}
+.zqq-side-lm3-a {float:left; height:28px;line-height:28px;margin-left:10px;}
+
+.zqq-lm4 {height:160px;padding-left:5px; border-top:1px solid #eee;}
