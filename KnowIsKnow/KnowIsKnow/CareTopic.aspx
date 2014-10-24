@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/KnowIsKnow.Master" AutoEventWireup="true" CodeBehind="CareTopic.aspx.cs" Inherits="KnowIsKnow.CareTopic" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css/CareTopic.css" rel="stylesheet" type="text/css"/>
+    <link href="css/CareTopic.css?kmlj=ujhjh" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/caretopic.js"></script>
     
 </asp:Content>
@@ -98,7 +98,7 @@
 								        <a class=" special ghmiddlecontentleftcontentdivdivdivguanzhutitlea2 ">
 									        <i class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea2i"></i>取消固定
 								        </a>
-								        <a  class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea3 guanzhuhuatispecial quxiaoguanzhu" tpid="<%# Eval("topicID")%>">取消关注</a>
+								        <a  href="" class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea3 guanzhuhuatispecial quxiaoguanzhu" tpid="<%# Eval("topicID")%>">取消关注</a>
 							        </div>
 							        <div class="ghmiddlecontentleftcontentdivdivdivguanzhucontent">
 								        <div class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion">

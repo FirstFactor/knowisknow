@@ -1,4 +1,101 @@
-﻿$(function () {
+﻿var userid;
+$(function () {
+    userid = $(".wtellipsis").attr("uid");
+
+    var ju = $(".wtzg-form-text-input0").val();
+    if (ju == "") {
+        var html = '<a class="wtzg-link-litblue-normal">填写居住地</a>';
+        $(".wtlocation").html(html);
+    }
+    else {
+        $(".wtlocation").html(ju);
+    }
+    var hangye = $(".wtbusiness-selection2").val();
+    if (hangye == "" || hangye == "选择行业") {
+        var html = '<a class="wtzg-link-litblue-normal" name="edit">填写行业</a>';
+        $(".wthangye").html(html);
+
+    }
+    else {
+        $(".wthangye").html(hangye);
+
+    }
+
+    var gen = $("#wtsp").attr("xingbie");
+    if (gen == "男") {
+        $(".wticon-male").addClass("wticon-profile-male");
+    }
+    if (gen == "女") {
+        $(".wticon-male").addClass("wticon-profile-female");
+    }
+
+    
+  
+        
+    var work = $(".wtzg-form-text-input2").val();
+    if (work == "") {
+        var html = '<a class="wtzg-link-litblue-normal">填写工作信息</a>';
+        $(".wtinfo21").html(html);
+    }
+    else {
+        $(".wtinfo21").html(work);
+    }
+    var po = $(".wtzg-form-text-input3").val();
+   
+    if (po == "") {
+        var html = '<a class="wtzg-link-litblue-normal">填写职位</a>';
+        $(".wtinfo22").html(html);
+        
+    }
+    else {
+        $(".wtinfo22").html(po);
+    }
+    if (work == "" && po == "") {
+        var html1 = '<a class="wtzg-link-litblue-normal">填写工作信息</a>';
+        $(".wtinfo21").html(html1);
+        var html2 = '<a class="wtzg-link-litblue-normal"></a>';
+        $(".wtinfo22").html(html2);
+    }
+
+
+    var school = $(".wtzg-form-text-input4").val();
+    if (school == "") {
+        var html = '<a class="wtzg-link-litblue-normal">填写学校信息</a>';
+        $(".wtinfo31").html(html);
+    }
+    else {
+        $(".wtinfo31").html(school);
+    }
+    var zhuanye = $(".wtzg-form-text-input5").val();
+    if (zhuanye == "") {
+        var html = '<a class="wtzg-link-litblue-normal">填写专业</a>';
+        $(".wtinfo32").html(html);
+    }
+    else {
+        $(".wtinfo32").html(zhuanye);
+    }
+    if (school == "" && zhuanye == "") {
+        var html1 = '<a class="wtzg-link-litblue-normal">填写教育信息</a>';
+        $(".wtinfo31").html(html1);
+        var html2 = '<a class="wtzg-link-litblue-normal"></a>';
+        $(".wtinfo32").html(html2);
+    }
+    
+    var geren = $(".wtzm-editable-editor-input1").val();
+    if (geren == "") {
+        var html = "";
+        html += '<a name="edit" class="wtzg-link-litblue-normal">';
+        html += '	<i class="wtzg-icon wtzg-icon-edit-button-blue wticon"></i>';
+        html += '   <span>填写个人简介</span>';
+        html += '</a>';
+        $(".wtgerenjianjie").html(html);
+    }
+    else {
+        $(".wtgerenjianjie").html(geren);
+    }
+
+
+
     $("#wtfanhuigerenzhuye").click(function () {
         $(".wtzu-main-content-inner").show();
         $(".wtzu-main-content-inner2").hide();
@@ -16,7 +113,7 @@
         $(".wtedit-wrap").show();
     });
     $(".wtbtnblue1").click(function () {
-        var ju = $(".wtzg-form-text-input").val();
+        var ju = $(".wtzg-form-text-input0").val();
         if (ju == "") {
             var html = '<a class="wtzg-link-litblue-normal">填写居住地</a>';
             $(".wtlocation").html(html);
@@ -25,12 +122,14 @@
             $(".wtlocation").html(ju);
         }
         var hangye = $(".wtbusiness-selection2").val();
-        if (hangye == "") {
-            var html = '<a class="zg-link-litblue-normal" name="edit">填写行业</a>';
+        if (hangye == "" || hangye == "选择行业") {
+            var html = '<a class="wtzg-link-litblue-normal" name="edit">填写行业</a>';
             $(".wthangye").html(html);
+  
         }
         else {
             $(".wthangye").html(hangye);
+           
         }
         var nan = $(".male").attr("value");
         if (nan == 1) {
@@ -50,6 +149,29 @@
         
         $(".wtinfo-wrap").show();
         $(".wtedit-wrap").hide();
+
+        var address = $(".wtzg-form-text-input0").val();
+        var job = $(".wtbusiness-selection2").val();
+        var gender;
+        if (nan == 1) {
+            gender = '男';
+        }
+        if (nv == 1) {
+            gender = '女';
+
+        }
+        
+        $.ajax({
+            data: "{'address':'" + address + "','job':'" + job + "','gender':'" + gender + "','userid':'" + userid + "' }",
+            dataType: "json",
+            url: "ws.asmx/updateUserAddressJobGender",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+
+        });
     });
     $(".wtit").hover(function () {
         $(".wtzubtn").addClass("wtzu-edit-button2");
@@ -65,23 +187,23 @@
         $(".wtedit-wrap2").show();
     });
     $(".wtbtnblue2").click(function () {
-        var ju = $(".wtzg-form-text-input2").val();
-        if (ju == "") {
+        var work = $(".wtzg-form-text-input2").val();
+        if (work == "") {
             var html = '<a class="wtzg-link-litblue-normal">填写工作信息</a>';
             $(".wtinfo21").html(html);
         }
         else {
-            $(".wtinfo21").html(ju);
+            $(".wtinfo21").html(work);
         }
-        var work = $(".wtzg-form-text-input3").val();
-        if (work == "") {
+        var po = $(".wtzg-form-text-input3").val();
+        if (po == "") {
             var html = '<a class="wtzg-link-litblue-normal">填写职位</a>';
             $(".wtinfo22").html(html);
         }
         else {
-            $(".wtinfo22").html(work);
+            $(".wtinfo22").html(po);
         }
-        if (ju == "" && work == "") {
+        if (work == "" && po == "") {
             var html1 = '<a class="wtzg-link-litblue-normal">填写工作信息</a>';
             $(".wtinfo21").html(html1);
             var html2 = '<a class="wtzg-link-litblue-normal"></a>';
@@ -90,29 +212,45 @@
 
         $(".wtinfo2").show();
         $(".wtedit-wrap2").hide();
+
+        var company = $(".wtzg-form-text-input2").val();
+        var position = $(".wtzg-form-text-input3").val();
+       
+        $.ajax({
+            data: "{'company':'" + company + "','position':'" + position + "','userid':'" + userid + "'}",
+            dataType: "json",
+            url: "ws.asmx/updateUserCompanyPosition",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+
+        });
+
     });
     $(".wtinfo3").click(function () {
         $(".wtinfo3").hide();
         $(".wtedit-wrap3").show();
     });
     $(".wtbtnblue3").click(function () {
-        var ju = $(".wtzg-form-text-input4").val();
-        if (ju == "") {
+        var school = $(".wtzg-form-text-input4").val();
+        if (school == "") {
             var html = '<a class="wtzg-link-litblue-normal">填写学校信息</a>';
             $(".wtinfo31").html(html);
         }
         else {
-            $(".wtinfo31").html(ju);
+            $(".wtinfo31").html(school);
         }
-        var work = $(".wtzg-form-text-input5").val();
-        if (work == "") {
+        var zhuanye = $(".wtzg-form-text-input5").val();
+        if (zhuanye == "") {
             var html = '<a class="wtzg-link-litblue-normal">填写专业</a>';
             $(".wtinfo32").html(html);
         }
         else {
-            $(".wtinfo32").html(work);
+            $(".wtinfo32").html(zhuanye);
         }
-        if (ju == "" && work == "") {
+        if (school == "" && zhuanye == "" ) {
             var html1 = '<a class="wtzg-link-litblue-normal">填写教育信息</a>';
             $(".wtinfo31").html(html1);
             var html2 = '<a class="wtzg-link-litblue-normal"></a>';
@@ -120,13 +258,28 @@
         }
         $(".wtinfo3").show();
         $(".wtedit-wrap3").hide();
+
+        var academy = $(".wtzg-form-text-input4").val();
+        var major = $(".wtzg-form-text-input5").val();
+        
+        $.ajax({
+            data: "{'academy':'" + academy + "','major':'" + major + "','userid':'" + userid + "'}",
+            dataType: "json",
+            url: "ws.asmx/updateUserAcademyMajor",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+
+        });
     });
     $(".wtgerenjianjie").click(function () {
         $(".wtgerenjianjie").hide();
         $(".wtedit-wrap4").show();
     });
     $(".wtbtnblue").click(function () {
-        var geren = $(".wtzm-editable-editor-input").val();
+        var geren = $(".wtzm-editable-editor-input1").val();
         if (geren == "") {
             var html="";
              html += '<a name="edit" class="wtzg-link-litblue-normal">';
@@ -141,6 +294,21 @@
 
         $(".wtgerenjianjie").show();
         $(".wtedit-wrap4").hide();
+
+        var bio = $(".wtzm-editable-editor-input1").val();
+    
+        $.ajax({
+            data: "{'bio':'" + bio + "','userid':'" + userid + "'}",
+            dataType: "json",
+            url: "ws.asmx/updateUserBio",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+
+        });
+
     });
 
     $(".male").click(function () {

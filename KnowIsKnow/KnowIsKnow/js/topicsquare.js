@@ -39,7 +39,7 @@
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    alert(res.d);
+                    
                 }
             });
             
@@ -56,7 +56,7 @@
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    alert(res.d);
+                    
                 }
             });
             $(this).attr("teshu", "false");
