@@ -238,5 +238,17 @@ namespace KnowIsKnow
             info.topicAttention = ss;
             return blltopicinfo.Update(info).ToString();
          }
+
+        [WebMethod]
+        public string deltopicAttention(string topicID)
+        {
+            BLL.TopicInfo blltopicinfo = new BLL.TopicInfo();
+            int aa = Convert.ToInt32(topicID);
+            Model.TopicInfo info = blltopicinfo.GetModel(aa);
+            int ss = Convert.ToInt32(info.topicAttention);
+            ss = ss - 1;
+            info.topicAttention = ss;
+            return blltopicinfo.Update(info).ToString();
+        }
     }
 }

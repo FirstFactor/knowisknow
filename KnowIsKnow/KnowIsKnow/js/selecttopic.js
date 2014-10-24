@@ -43,7 +43,7 @@
                 data: "{topicid:'" + topicid + "',userid:'" + userid + "'}",
                 dataType: 'json',
                 success: function (result) {
-                    //alert(result.d);
+                   
                 }
             });
             
@@ -68,9 +68,21 @@
                 data: "{topicid:'" + topicid + "',userid:'" + userid + "'}",
                 dataType: 'json',
                 success: function (result) {
-                    //alert(result.d);
+                    
                 }
             });
+
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: "WS.asmx/deltopicAttention",
+                data: "{topicID:'" + topicid + "'}",
+                dataType: 'json',
+                success: function (result) {
+                     
+                }
+            });
+
             $(this).find(".zhuangtai").html("关注");
             $(this).find(".zhuangtai").attr("state", 0);
         }
