@@ -43,7 +43,17 @@
                 }
             });
             
-
+            $.ajax({
+                data: "{ topicID:'" + topicid + "'}",
+                dataType: "json",
+                url: "ws.asmx/updatatopicinfo",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    
+                }
+            });
+           
             $(this).attr("teshu", "true");
             
         }
@@ -59,6 +69,17 @@
                     
                 }
             });
+            $.ajax({
+                data: "{ topicID:'" + topicid + "'}",
+                dataType: "json",
+                url: "ws.asmx/deltopicAttention",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+
+                }
+            });
+
             $(this).attr("teshu", "false");
         } 
     });
