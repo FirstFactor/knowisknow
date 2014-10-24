@@ -55,7 +55,7 @@ namespace KnowIsKnow
             BLL.CareTopic topic = new BLL.CareTopic();
             Model.CareTopic topicinfo = new Model.CareTopic();
             topicinfo.careTopicID = Convert.ToInt32(topicid);
-
+            topicinfo.careTopicState = "normal";
             topicinfo.topicCaredByUID = Convert.ToInt32( userid);
         
             topic.Add(topicinfo);
