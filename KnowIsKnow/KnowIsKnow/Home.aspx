@@ -28,7 +28,11 @@
 								    <img class="zqq-head-face" src="<%# Eval("userHeadImage") %>" />
 							    </div>
 							    <div class="zqq-question-detail">
-							    	<div class="zqq-question-info"><%# Eval("userNickName") %> 提出了问题</div>
+                                    <div class="zqq-question-hd">
+                                        <div class="zqq-question-info "><%# Eval("userNickName") %> 提出了问题</div>
+                                        <div class="zqq-question-pubTime "><%# Eval("quetionPubTime") %></div>
+                                        <div class="clear"></div>
+                                    </div>
 							    	<%--<div id="zqq-questionTitle1" class="zqq-question-title" questionid="<%# Eval("questionID") %>"><%# Eval("questionTitle") %></div>--%>
                                     <a href='QuestionDetail.aspx?QuesID=<%# Eval("questionID")%>' class="zqq-question-title" questionid='<%# Eval("questionID") %>' ><%# Eval("questionTitle") %></a>
 								    <div class="zqq-question-content">
@@ -37,8 +41,8 @@
 								    </div>
 								    <div class="zqq-question-ft">
 									    <div class="zqq-follow-topic">
-                                            <a class="zqq-follow-topic-button">关注问题</a>
-                                            <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>
+                                            <a class="zqq-follow-topic-button" panduan='<%# CheckCareQuestion(Eval("questionID")) %>'  questionid='<%# Eval("questionID") %>'>关注问题</a>
+                                           <%-- <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>--%>
 								    	</div>
 								    	<div class="zqq-jubao" questionid='<%# Eval("questionID") %>'>举报</div>
 							    	</div>

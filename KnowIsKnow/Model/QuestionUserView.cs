@@ -24,7 +24,7 @@ namespace Model
         private string _userheadimage;
         private string _userstate;
         private string _usergender;
-        private DateTime? _userbirthday;
+        private DateTime _userbirthday;
         private string _useradress;
         private string _userjob;
         private string _usershuoshuo;
@@ -33,6 +33,34 @@ namespace Model
         private string _useracademy;
         private string _usermajor;
         private string _userprobio;
+        private DateTime _quetionpubtime;
+        private int _questonapprovecount;
+        private int _questionreportcount;
+        private string _questionsate;
+
+        public string questionSate
+        {
+            get { return _questionsate; }
+            set { _questionsate = value; }
+        }
+
+        public int questionReportCount
+        {
+            get { return _questionreportcount; }
+            set { _questionreportcount = value; }
+        }
+
+        public int questonApproveCount
+        {
+            get { return _questonapprovecount; }
+            set { _questonapprovecount = value; }
+        }
+
+        public DateTime quetionPubTime
+        {
+            get { return _quetionpubtime; }
+            set { _quetionpubtime = value; }
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -108,7 +136,7 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
-        public DateTime? userBirthday
+        public DateTime userBirthday
         {
             set { _userbirthday = value; }
             get { return _userbirthday; }

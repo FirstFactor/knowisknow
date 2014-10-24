@@ -41,9 +41,9 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into QuestionUserView(");
-            strSql.Append("questionID,questionTitle,questionContent,questionProvider,userID,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio)");
+            strSql.Append("questionID,questionTitle,questionContent,questionProvider,userID,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,quetionPubTime,questonApproveCount,questionReportCount,questionSate)");
             strSql.Append(" values (");
-            strSql.Append("@questionID,@questionTitle,@questionContent,@questionProvider,@userID,@userNickName,@userHeadImage,@userState,@userGender,@userBirthday,@userAdress,@userJob,@userShuoShuo,@userCompany,@userJobPosition,@userAcademy,@userMajor,@userProBio)");
+            strSql.Append("@questionID,@questionTitle,@questionContent,@questionProvider,@userID,@userNickName,@userHeadImage,@userState,@userGender,@userBirthday,@userAdress,@userJob,@userShuoShuo,@userCompany,@userJobPosition,@userAcademy,@userMajor,@userProBio,@quetionPubTime,@questonApproveCount,@questionReportCount,@questionSate)");
             SqlParameter[] parameters = {
 					new SqlParameter("@questionID", SqlDbType.Int,4),
 					new SqlParameter("@questionTitle", SqlDbType.VarChar,50),
@@ -62,7 +62,13 @@ namespace DAL
 					new SqlParameter("@userJobPosition", SqlDbType.VarChar,50),
 					new SqlParameter("@userAcademy", SqlDbType.VarChar,50),
 					new SqlParameter("@userMajor", SqlDbType.VarChar,50),
-					new SqlParameter("@userProBio", SqlDbType.VarChar,-1)};
+					new SqlParameter("@userProBio", SqlDbType.VarChar,-1),
+                    new SqlParameter("@quetionPubTime", SqlDbType.DateTime,8),
+                    new SqlParameter("@questonApproveCount", SqlDbType.Int,4),
+                    new SqlParameter("@questionReportCount", SqlDbType.Int,4),
+                    new SqlParameter("@questionSate", SqlDbType.VarChar,50)
+                                        };
+
             parameters[0].Value = model.questionID;
             parameters[1].Value = model.questionTitle;
             parameters[2].Value = model.questionContent;
@@ -81,6 +87,11 @@ namespace DAL
             parameters[15].Value = model.userAcademy;
             parameters[16].Value = model.userMajor;
             parameters[17].Value = model.userProBio;
+            parameters[18].Value = model.quetionPubTime;
+            parameters[19].Value = model.questonApproveCount;
+            parameters[20].Value = model.questionReportCount;
+            parameters[21].Value = model.questionSate;
+
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -116,7 +127,11 @@ namespace DAL
             strSql.Append("userJobPosition=@userJobPosition,");
             strSql.Append("userAcademy=@userAcademy,");
             strSql.Append("userMajor=@userMajor,");
-            strSql.Append("userProBio=@userProBio");
+            strSql.Append("userProBio=@userProBio,");
+            strSql.Append("quetionPubTime=@quetionPubTime,");
+            strSql.Append("questonApproveCount=@questonApproveCount,");
+            strSql.Append("questionReportCount=@questionReportCount,");
+            strSql.Append("questionSate=@questionSate");
             strSql.Append(" where questionID=@questionID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@questionID", SqlDbType.Int,4),
@@ -136,7 +151,12 @@ namespace DAL
 					new SqlParameter("@userJobPosition", SqlDbType.VarChar,50),
 					new SqlParameter("@userAcademy", SqlDbType.VarChar,50),
 					new SqlParameter("@userMajor", SqlDbType.VarChar,50),
-					new SqlParameter("@userProBio", SqlDbType.VarChar,-1)};
+					new SqlParameter("@userProBio", SqlDbType.VarChar,-1),
+                    new SqlParameter("@quetionPubTime", SqlDbType.DateTime,8),
+                    new SqlParameter("@questonApproveCount", SqlDbType.Int,4),
+                    new SqlParameter("@questionReportCount", SqlDbType.Int,4),
+                    new SqlParameter("@questionSate", SqlDbType.VarChar,50)                    
+                                        };
             parameters[0].Value = model.questionID;
             parameters[1].Value = model.questionTitle;
             parameters[2].Value = model.questionContent;
@@ -155,7 +175,10 @@ namespace DAL
             parameters[15].Value = model.userAcademy;
             parameters[16].Value = model.userMajor;
             parameters[17].Value = model.userProBio;
-
+            parameters[18].Value = model.quetionPubTime;
+            parameters[19].Value = model.questonApproveCount;
+            parameters[20].Value = model.questionReportCount;
+            parameters[21].Value = model.questionSate;
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
             {
@@ -217,7 +240,7 @@ namespace DAL
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 questionID,questionTitle,questionContent,questionProvider,userID,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio from QuestionUserView ");
+            strSql.Append("select  top 1 questionID,questionTitle,questionContent,questionProvider,userID,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,quetionPubTime,questonApproveCount,questionReportCount,questionSate from QuestionUserView ");
             strSql.Append(" where questionID=@questionID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@questionID", SqlDbType.Int,4)			};
@@ -316,6 +339,26 @@ namespace DAL
                 {
                     model.userProBio = row["userProBio"].ToString();
                 }
+
+
+
+               
+                if (row["quetionPubTime"] != null)
+                {
+                    model.quetionPubTime = DateTime.Parse(row["quetionPubTime"].ToString());
+                }
+                if (row["questonApproveCount"] != null)
+                {
+                    model.questonApproveCount = model.questonApproveCount = int.Parse(row["questonApproveCount"].ToString());
+                }
+                if (row["questionReportCount"] != null)
+                {
+                    model.questonApproveCount = model.questionReportCount = int.Parse(row["questionReportCount"].ToString());
+                }
+                if (row["questionSate"] != null)
+                {
+                    model.questionSate = row["questionSate"].ToString();
+                }
             }
             return model;
         }
@@ -326,7 +369,7 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select questionID,questionTitle,questionContent,questionProvider,userID,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio ");
+            strSql.Append("select questionID,questionTitle,questionContent,questionProvider,userID,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,quetionPubTime,questonApproveCount,questionReportCount,questionSate ");
             strSql.Append(" FROM QuestionUserView ");
             if (strWhere.Trim() != "")
             {
@@ -346,7 +389,7 @@ namespace DAL
             {
                 strSql.Append(" top " + Top.ToString());
             }
-            strSql.Append(" questionID,questionTitle,questionContent,questionProvider,userID,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio ");
+            strSql.Append(" questionID,questionTitle,questionContent,questionProvider,userID,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,quetionPubTime,questonApproveCount,questionReportCount,questionSate ");
             strSql.Append(" FROM QuestionUserView ");
             if (strWhere.Trim() != "")
             {

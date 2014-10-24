@@ -20,7 +20,10 @@ ul,li{list-style: none;list-style-position: outside;}
 .zqq-head-photo{float: left; width: 45px;height: 77px;padding-top:8px;}
 .zqq-head-face{width: 38px;height: 38px;border-radius:3px; cursor: pointer;}
 .zqq-question-detail{float:left; width: 495px;}
-.zqq-question-info{float: left;width: 495px;height: 15px;color: #999;font-size: 13px;}
+.zqq-question-hd {width:495px;}
+.clear {clear:both;}
+.zqq-question-info{float: left;width: 300px;color: #999;font-size: 13px;}
+.zqq-question-pubTime {float:right;color:#999;}
 .zqq-question-title{float: left;height: 20px;margin:10px 0; font-weight: bold;font-size: 14px;color: #259;cursor: pointer;}
 .zqq-question-title:hover{text-decoration: underline;}
 .zqq-question-content{float:left; width: 495px;font-size: 14px;height:auto;}
@@ -30,9 +33,9 @@ ul,li{list-style: none;list-style-position: outside;}
 .zqq-question-ft{float:left; width: 540px;height: 14px; font-size: 12px;color: #999;}
 .zqq-follow-topic{float: left;cursor: pointer;}
 .zqq-follow-topic:hover{text-decoration: underline;}
-.zqq-display {display:none;}
+/*.zqq-display {display:none;}*/
 .zqq-follow-topic-button:hover{text-decoration: underline;color: #259;}
-.zqq-noFollow-topic-button:hover{text-decoration: underline;}
+/*.zqq-noFollow-topic-button:hover{text-decoration: underline;}*/
 .zqq-jubao{display: none; float: right;padding-left: 10px;cursor: pointer;}
 .zqq-jubao:hover{text-decoration: underline;color: #259;}
 
