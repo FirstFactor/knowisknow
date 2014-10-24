@@ -45,6 +45,7 @@
     <Compile Include="AdminInfo.cs" />
     <Compile Include="Approve.cs" />
     <Compile Include="CarePerson.cs" />
+    <Compile Include="CarePersonQuestionView.cs" />
     <Compile Include="CarePersonUserInfoView.cs" />
     <Compile Include="CareQuestion.cs" />
     <Compile Include="CareTopic.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="QuestionUserReplyView.cs" />
     <Compile Include="QuestionUserView.cs" />
     <Compile Include="ReplyQuestion.cs" />
+    <Compile Include="ReplyQuestionUserView.cs" />
     <Compile Include="ReportQuestion.cs" />
     <Compile Include="ReportQuestionUserView.cs" />
     <Compile Include="ReportReasonDic.cs" />
