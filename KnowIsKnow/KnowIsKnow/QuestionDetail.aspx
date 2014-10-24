@@ -83,7 +83,7 @@
 										<img src="Images/da8e974dc_s.jpg" class="zm-list-avatar">
 									</a>
 									<a><%# GetreplyName(Eval("replyofUID")) %></a>
-									,
+									
 									<strong class="zu-question-my-bio"title="加钱党，加一党"><%# Eval("userShuoShuo") %></strong>
 								</h3>
 							</div>
@@ -109,7 +109,7 @@
 								<span class="answer-date-link-wrap">
 									<a class="answer-date-link meta-item">发布于<%= datatime %></a>
 								</span>
-								<a class=" meta-item toggle-comment" IsOpen="1" quesid="<%=quesid %>>
+								<a class=" meta-item toggle-comment" IsOpen="1" wkreplyid="<%# Eval("replyofUID") %>" wkreplyofreplyid="<%#Eval("ReplyID")%>" nextclass="ll<%#Eval("ReplyID") %>" quesid="<%=quesid %>>
 									<i class="z-icon-comment"></i>
 									添加评论
 								</a>
@@ -133,8 +133,8 @@
                             <div class="zm-comment-box empty">
                                 <i class="icon icon-spike zm-comment-bubble"></i>
                                 <a class="zg-anchor-hidden"></a>
-                                <div class="zm-comment-list">
-                                    <div class="zm-item-comment">
+                                <div class="zm-comment-list LL<%# Eval("ReplyID") %>>">
+                                   <%-- <div class="zm-item-comment">
                                         <a class="zm-item-link-avatar">
                                             <img src="#" />
                                         </a>
@@ -161,12 +161,12 @@
                                                 </a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>--%>
                                 </div>
-                                <div class="zm-comment-form zm-comment-box-ft expanded">
+                                <div class="zm-comment-form zm-comment-box-ft expanded ">
                                     <input class="zm-comment-editable editable" />
                                     <div class="zm-command zg-clear">
-                                        <a class="zg-right zg-btn-blue">评论</a>
+                                        <div class="zg-right zg-btn-blue wkpinglun" wkreplyid="<%# Eval("replyofUID") %>" wkreplyofreplyid="<%#Eval("ReplyID")%>" quesid="<%=quesid %>">评论</div>
                                         <a class="zm-command-cancel">取消</a>
                                     </div>
                                 </div>

@@ -41,26 +41,29 @@ namespace KnowIsKnow
                       ls.Add(test);
                     }
                 }
-                lst.Add(ls[0]);
-                for (int i = 1; i < ls.Count; i++)
-                   
+                if (lst.Count>0)
                 {
-                    bool findFlag = false;
-                    for (int j = 0; j < lst.Count; j++)
+                    lst.Add(ls[0]);
+                    for (int i = 1; i < ls.Count; i++)
                     {
-                        if (ls[i].Messagereceiverid == lst[j].Messagesenderid && ls[i].Messagesenderid==lst[j].Messagereceiverid)
+                        bool findFlag = false;
+                        for (int j = 0; j < lst.Count; j++)
                         {
-                            findFlag = true;
-                            break;
-                           
+                            if (ls[i].Messagereceiverid == lst[j].Messagesenderid && ls[i].Messagesenderid == lst[j].Messagereceiverid)
+                            {
+                                findFlag = true;
+                                break;
+
+                            }
                         }
+                        if (findFlag == false)
+                        {
+                            lst.Add(ls[i]);
+                        }
+
                     }
-                    if (findFlag == false)
-                    {
-                        lst.Add(ls[i]);
-                    }
-                   
                 }
+                
                 this.rptMsg.DataSource = lst;
                 this.rptMsg.DataBind();
             }
