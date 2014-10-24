@@ -107,6 +107,7 @@
     <Content Include="js\questiondetail.js" />
     <Content Include="js\resetpassword.js" />
     <Content Include="js\selecttopic.js" />
+    <Content Include="js\setnewpassword.js" />
     <Content Include="js\setting.js" />
     <Content Include="js\superadminpage.js" />
     <Content Include="js\swfobject.js" />

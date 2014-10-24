@@ -109,4 +109,4 @@ li{list-style-type: none;}
 .topics li{float:left;margin:0 10px 10px 0;}
 
 .box{width:173px;height:56px;padding:10px;border:1px solid rgb(29, 128, 207);background-color:#FFF;display:block;border-radius:5px;}
-.showfault{ width:200px;min-height:0px;font-size:18px;background-color:red;color:#FFF;position:absolute;top:0px;left:560px;text-align:center;}
+.showfault{ width:200px;min-height:0px;font-size:18px;color:#FFF;position:absolute;top:0px;left:560px;text-align:center;}
