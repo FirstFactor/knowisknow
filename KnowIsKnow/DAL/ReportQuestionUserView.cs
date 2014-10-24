@@ -43,9 +43,9 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into ReportQuestionUserView(");
-            strSql.Append("questionID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,reportQuestionReason,reportQuestionByUID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent)");
+            strSql.Append("questionID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,reportQuestionReason,reportQuestionByUID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent,reportQuID,reportQuestionDateTime,reportQuestionDealState,reportQuestionReasonTypeID)");
             strSql.Append(" values (");
-            strSql.Append("@questionID,@questionTitle,@questionContent,@questionProvider,@quetionPubTime,@questonApproveCount,@questionReportCount,@questionSate,@reportQuestionReason,@reportQuestionByUID,@userEmail,@userNickName,@userHeadImage,@userState,@userGender,@userBirthday,@userAdress,@userJob,@userShuoShuo,@userCompany,@userJobPosition,@userAcademy,@userMajor,@userProBio,@reportReasonContent)");
+            strSql.Append("@questionID,@questionTitle,@questionContent,@questionProvider,@quetionPubTime,@questonApproveCount,@questionReportCount,@questionSate,@reportQuestionReason,@reportQuestionByUID,@userEmail,@userNickName,@userHeadImage,@userState,@userGender,@userBirthday,@userAdress,@userJob,@userShuoShuo,@userCompany,@userJobPosition,@userAcademy,@userMajor,@userProBio,@reportReasonContent,@reportQuID,@reportQuestionDateTime,@reportQuestionDealState,@reportQuestionReasonTypeID)");
             SqlParameter[] parameters = {
 					new SqlParameter("@questionID", SqlDbType.Int,4),
 					new SqlParameter("@questionTitle", SqlDbType.VarChar,50),
@@ -71,7 +71,13 @@ namespace DAL
 					new SqlParameter("@userAcademy", SqlDbType.VarChar,50),
 					new SqlParameter("@userMajor", SqlDbType.VarChar,50),
 					new SqlParameter("@userProBio", SqlDbType.VarChar,-1),
-					new SqlParameter("@reportReasonContent", SqlDbType.VarChar,400)};
+					new SqlParameter("@reportReasonContent", SqlDbType.VarChar,400),
+
+                    new SqlParameter("@reportQuID", SqlDbType.Int,4),
+                    new SqlParameter("@reportQuestionDateTime", SqlDbType.DateTime),
+                    new SqlParameter("@reportQuestionDealState", SqlDbType.VarChar,50),
+                    new SqlParameter("@reportQuestionReasonTypeID", SqlDbType.Int,4) };
+         
             parameters[0].Value = model.questionID;
             parameters[1].Value = model.questionTitle;
             parameters[2].Value = model.questionContent;
@@ -97,6 +103,11 @@ namespace DAL
             parameters[22].Value = model.userMajor;
             parameters[23].Value = model.userProBio;
             parameters[24].Value = model.reportReasonContent;
+
+            parameters[25].Value = model.reportQuID;
+            parameters[26].Value = model.reportQuestionDateTime;
+            parameters[27].Value = model.reportQuestionDealState;
+            parameters[28].Value = model.reportQuestionReasonTypeID;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -140,6 +151,12 @@ namespace DAL
             strSql.Append("userMajor=@userMajor,");
             strSql.Append("userProBio=@userProBio,");
             strSql.Append("reportReasonContent=@reportReasonContent");
+
+            strSql.Append("reportQuID=@reportQuID");
+            strSql.Append("reportQuestionDateTime=@reportQuestionDateTime");
+            strSql.Append("reportQuestionDealState=@reportQuestionDealState");
+            strSql.Append("reportQuestionReasonTypeID=@reportQuestionReasonTypeID");
+
             strSql.Append(" where questionID=@questionID and reportQuestionByUID=@reportQuestionByUID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@questionID", SqlDbType.Int,4),
@@ -166,7 +183,13 @@ namespace DAL
 					new SqlParameter("@userAcademy", SqlDbType.VarChar,50),
 					new SqlParameter("@userMajor", SqlDbType.VarChar,50),
 					new SqlParameter("@userProBio", SqlDbType.VarChar,-1),
-					new SqlParameter("@reportReasonContent", SqlDbType.VarChar,400)};
+					new SqlParameter("@reportReasonContent", SqlDbType.VarChar,400),
+
+                    new SqlParameter("@reportQuID", SqlDbType.Int,4),
+                    new SqlParameter("@reportQuestionDateTime", SqlDbType.DateTime),
+                    new SqlParameter("@reportQuestionDealState", SqlDbType.VarChar,50),
+                    new SqlParameter("@reportQuestionReasonTypeID", SqlDbType.Int,4)};
+
             parameters[0].Value = model.questionID;
             parameters[1].Value = model.questionTitle;
             parameters[2].Value = model.questionContent;
@@ -192,6 +215,12 @@ namespace DAL
             parameters[22].Value = model.userMajor;
             parameters[23].Value = model.userProBio;
             parameters[24].Value = model.reportReasonContent;
+
+            parameters[25].Value = model.reportQuID;
+            parameters[26].Value = model.reportQuestionDateTime;
+            parameters[27].Value = model.reportQuestionDealState;
+            parameters[28].Value = model.reportQuestionReasonTypeID;
+
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -238,7 +267,7 @@ namespace DAL
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 questionID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,reportQuestionReason,reportQuestionByUID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent from ReportQuestionUserView ");
+            strSql.Append("select  top 1 questionID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,reportQuestionReason,reportQuestionByUID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent,reportQuID,reportQuestionDateTime,reportQuestionDealState,reportQuestionReasonTypeID from ReportQuestionUserView ");
             strSql.Append(" where questionID=@questionID and reportQuestionByUID=@reportQuestionByUID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@questionID", SqlDbType.Int,4),
@@ -367,6 +396,25 @@ namespace DAL
                 {
                     model.reportReasonContent = row["reportReasonContent"].ToString();
                 }
+
+                 if (row["reportQuestionDateTime"] != null && row["reportQuestionDateTime"].ToString() != "")
+                {
+                    model.reportQuestionDateTime = DateTime.Parse(row["reportQuestionDateTime"].ToString());
+                }
+                if (row["reportQuID"] != null && row["reportQuID"].ToString() != "")
+                {
+                    model.reportQuID = int.Parse(row["reportQuID"].ToString());
+                }
+                if (row["reportQuestionDealState"] != null)
+                {
+                    model.reportQuestionDealState = row["reportQuestionDealState"].ToString();
+                }
+                if (row["reportQuestionReasonTypeID"] != null && row["reportQuestionReasonTypeID"].ToString() != "")
+                {
+                    model.reportQuestionReasonTypeID = int.Parse(row["reportQuestionReasonTypeID"].ToString());
+                }
+              
+
             }
             return model;
         }
@@ -377,7 +425,7 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select questionID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,reportQuestionReason,reportQuestionByUID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent ");
+            strSql.Append("select questionID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,reportQuestionReason,reportQuestionByUID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent,reportQuID,reportQuestionDateTime,reportQuestionDealState,reportQuestionReasonTypeID ");
             strSql.Append(" FROM ReportQuestionUserView ");
             if (strWhere.Trim() != "")
             {
@@ -397,7 +445,7 @@ namespace DAL
             {
                 strSql.Append(" top " + Top.ToString());
             }
-            strSql.Append(" questionID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,reportQuestionReason,reportQuestionByUID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent ");
+            strSql.Append(" questionID,questionTitle,questionContent,questionProvider,quetionPubTime,questonApproveCount,questionReportCount,questionSate,reportQuestionReason,reportQuestionByUID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent,reportQuID,reportQuestionDateTime,reportQuestionDealState,reportQuestionReasonTypeID ");
             strSql.Append(" FROM ReportQuestionUserView ");
             if (strWhere.Trim() != "")
             {

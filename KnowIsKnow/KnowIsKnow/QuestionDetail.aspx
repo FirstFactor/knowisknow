@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/questiondetail.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+    <a href="#mao">11111</a>
 	<div class="zg-wrap zu-main question-page">
 		<div class="zu-main-content">
 			<div class="zu-main-content-inner with-indention-votebar">
@@ -182,14 +182,14 @@
            
 		</div>
 		<div class="zg-clear"></div>
-        <div class="wkreplyint">
+        <div class="wkreplyint" id="mao">
             <!--全峻佚修改_ueditor添加回答-->
             <div id="container"  class="zm-editable-editor-field-element editable" ></div>
             <input type="button" id="wkreply"  class="submit-button zg-btn-blue" name="name" quesid="<%=quesid %>"   value="添加回答 " />
             <!--全峻佚修改_ueditor添加回答-->
         </div>
 	</div>
-
+   
     <div id="getuserid" uid="<%=userid %>"></div>
 
 </asp:Content>

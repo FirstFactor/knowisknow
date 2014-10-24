@@ -162,10 +162,45 @@ $(function () {
 
     });
     $(".op").click(function () {
+       
         $(this).parent().find("dt").html("已" + $(this).html());
         $(this).parent().find("dd").remove();
+        
+        var reportID = $(this).attr("reportID");
+        var state = $(this).attr("state");
+       
+        if (state == "delete")
+        {
+            $.ajax({
+                data: "{'reportQuID':" + reportID + "}",
+                dataType: "json",
+                url: "WSQuan.asmx/DealQuestionReport",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    alert(res.d);
+                }
+
+            });
+        }
+        if (state == "deleteReportReply")
+        {
+            $.ajax({
+                data: "{'reportReID':" + reportID + "}",
+                dataType: "json",
+                url: "WSQuan.asmx/DealReplyReport",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    alert(res.d);
+                }
+
+            });
+        }
     });
 
+
+   
 
 
 });

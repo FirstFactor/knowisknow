@@ -229,7 +229,7 @@
 
                             <asp:Repeater runat="server" ID="rptreportQeslist">
                                 <ItemTemplate>
-                                     <li ><span class="questionTitle"><a href="#"><%# Eval("questionTitle") %></a></span> <span class="reportReason"><%#Eval("reportReasonContent") %></span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op">删除</dd><dd class="op">忽略</dd></dl></div></li>
+                                     <li ><span class="questionTitle"><a href="QuestionDetail.aspx?QuesID=<%#Eval("questionID")%>"><%# Eval("questionTitle") %></a></span> <span class="reportReason"><%#Eval("reportReasonContent") %><%#Eval("reportQuestionReason") %></span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op" state="delete" reportID="<%#Eval("reportQuID")%>">删除</dd><dd class="op" state="ignore">忽略</dd></dl></div></li>
                                 </ItemTemplate>
                             </asp:Repeater>
                            <%-- <li ><span class="questionTitle"><a href="#">content</a></span> <span class="reportReason">reason</span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op">删除</dd><dd class="op">忽略</dd></dl></div></li>
@@ -240,8 +240,13 @@
                         <ul>
                             <li ><span class="questionTitle">Title</span> <span class="reportReason">reason</span> <span class="reportOperation">operation1</span></li>
 
-                            <li ><span class="questionTitle"><a href="#">content</a></span> <span class="reportReason">reason</span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op">删除</dd><dd class="op">忽略</dd></dl></div></li>
-                           <li ><span class="questionTitle"><a href="#">content</a></span> <span class="reportReason">reason</span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op">删除</dd><dd class="op">忽略</dd></dl></div></li>
+
+                            <asp:Repeater runat="server" ID="rtpReportReply">
+                                <ItemTemplate>
+                                   <li ><span class="questionTitle"><a href="QuestionDetail.aspx?QuesID=<%# Eval("replyQuestionID")%>#mao<%# Eval("reportReplyID") %>"><%# Eval("replyContent") %></a></span> <span class="reportReason"><%#Eval("reportReasonContent") %><%#Eval("reportReplyReason") %></span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op"  state="deleteReportReply" reportID="<%#Eval("reportReID")%>">删除</dd><dd class="op" state="ignore">忽略</dd></dl></div></li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                           
                         </ul>
                     </div>
                 </div>

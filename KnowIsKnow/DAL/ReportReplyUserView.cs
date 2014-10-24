@@ -21,16 +21,16 @@ namespace DAL
         /// <summary>
         /// 是否存在该记录
         /// </summary>
-        public bool Exists(int reportReplyByUID, int reportReplyID)
+        public bool Exists(int reportReplyByUID, int reportReID)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select count(1) from ReportReplyUserView");
-            strSql.Append(" where reportReplyByUID=@reportReplyByUID and reportReplyID=@reportReplyID ");
+            strSql.Append(" where reportReplyByUID=@reportReplyByUID and reportReID=@reportReID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@reportReplyByUID", SqlDbType.Int,4),
-					new SqlParameter("@reportReplyID", SqlDbType.Int,4)			};
+					new SqlParameter("@reportReID", SqlDbType.Int,4)			};
             parameters[0].Value = reportReplyByUID;
-            parameters[1].Value = reportReplyID;
+            parameters[1].Value = reportReID;
 
             return DbHelperSQL.Exists(strSql.ToString(), parameters);
         }
@@ -43,9 +43,9 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into ReportReplyUserView(");
-            strSql.Append("reportReplyByUID,reportReplyID,reportReID,reportReplyReason,reportReplyDataTime,reportReplyDealState,reportReplyResonTypeID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent)");
+            strSql.Append("reportReplyByUID,reportReplyID,reportReID,reportReplyReason,reportReplyDataTime,reportReplyDealState,reportReplyResonTypeID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent,replySate,replyofReplyID,replyApproveCount,replyDateTime,replyContent,replyofUID,replyQuestionID)");
             strSql.Append(" values (");
-            strSql.Append("@reportReplyByUID,@reportReplyID,@reportReID,@reportReplyReason,@reportReplyDataTime,@reportReplyDealState,@reportReplyResonTypeID,@userEmail,@userNickName,@userHeadImage,@userState,@userGender,@userBirthday,@userAdress,@userJob,@userShuoShuo,@userCompany,@userJobPosition,@userAcademy,@userMajor,@userProBio,@reportReasonContent)");
+            strSql.Append("@reportReplyByUID,@reportReplyID,@reportReID,@reportReplyReason,@reportReplyDataTime,@reportReplyDealState,@reportReplyResonTypeID,@userEmail,@userNickName,@userHeadImage,@userState,@userGender,@userBirthday,@userAdress,@userJob,@userShuoShuo,@userCompany,@userJobPosition,@userAcademy,@userMajor,@userProBio,@reportReasonContent,@replySate,@replyofReplyID,@replyApproveCount,@replyDateTime,@replyContent,@replyofUID,@replyQuestionID)");
             SqlParameter[] parameters = {
 					new SqlParameter("@reportReplyByUID", SqlDbType.Int,4),
 					new SqlParameter("@reportReplyID", SqlDbType.Int,4),
@@ -68,7 +68,14 @@ namespace DAL
 					new SqlParameter("@userAcademy", SqlDbType.VarChar,50),
 					new SqlParameter("@userMajor", SqlDbType.VarChar,50),
 					new SqlParameter("@userProBio", SqlDbType.VarChar,-1),
-					new SqlParameter("@reportReasonContent", SqlDbType.VarChar,400)};
+					new SqlParameter("@reportReasonContent", SqlDbType.VarChar,400),
+					new SqlParameter("@replySate", SqlDbType.VarChar,50),
+					new SqlParameter("@replyofReplyID", SqlDbType.Int,4),
+					new SqlParameter("@replyApproveCount", SqlDbType.Int,4),
+					new SqlParameter("@replyDateTime", SqlDbType.DateTime),
+					new SqlParameter("@replyContent", SqlDbType.VarChar,-1),
+					new SqlParameter("@replyofUID", SqlDbType.Int,4),
+					new SqlParameter("@replyQuestionID", SqlDbType.Int,4)};
             parameters[0].Value = model.reportReplyByUID;
             parameters[1].Value = model.reportReplyID;
             parameters[2].Value = model.reportReID;
@@ -91,6 +98,13 @@ namespace DAL
             parameters[19].Value = model.userMajor;
             parameters[20].Value = model.userProBio;
             parameters[21].Value = model.reportReasonContent;
+            parameters[22].Value = model.replySate;
+            parameters[23].Value = model.replyofReplyID;
+            parameters[24].Value = model.replyApproveCount;
+            parameters[25].Value = model.replyDateTime;
+            parameters[26].Value = model.replyContent;
+            parameters[27].Value = model.replyofUID;
+            parameters[28].Value = model.replyQuestionID;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -130,8 +144,15 @@ namespace DAL
             strSql.Append("userAcademy=@userAcademy,");
             strSql.Append("userMajor=@userMajor,");
             strSql.Append("userProBio=@userProBio,");
-            strSql.Append("reportReasonContent=@reportReasonContent");
-            strSql.Append(" where reportReplyByUID=@reportReplyByUID and reportReplyID=@reportReplyID ");
+            strSql.Append("reportReasonContent=@reportReasonContent,");
+            strSql.Append("replySate=@replySate,");
+            strSql.Append("replyofReplyID=@replyofReplyID,");
+            strSql.Append("replyApproveCount=@replyApproveCount,");
+            strSql.Append("replyDateTime=@replyDateTime,");
+            strSql.Append("replyContent=@replyContent,");
+            strSql.Append("replyofUID=@replyofUID,");
+            strSql.Append("replyQuestionID=@replyQuestionID");
+            strSql.Append(" where reportReplyByUID=@reportReplyByUID and reportReID=@reportReID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@reportReplyByUID", SqlDbType.Int,4),
 					new SqlParameter("@reportReplyID", SqlDbType.Int,4),
@@ -154,7 +175,14 @@ namespace DAL
 					new SqlParameter("@userAcademy", SqlDbType.VarChar,50),
 					new SqlParameter("@userMajor", SqlDbType.VarChar,50),
 					new SqlParameter("@userProBio", SqlDbType.VarChar,-1),
-					new SqlParameter("@reportReasonContent", SqlDbType.VarChar,400)};
+					new SqlParameter("@reportReasonContent", SqlDbType.VarChar,400),
+					new SqlParameter("@replySate", SqlDbType.VarChar,50),
+					new SqlParameter("@replyofReplyID", SqlDbType.Int,4),
+					new SqlParameter("@replyApproveCount", SqlDbType.Int,4),
+					new SqlParameter("@replyDateTime", SqlDbType.DateTime),
+					new SqlParameter("@replyContent", SqlDbType.VarChar,-1),
+					new SqlParameter("@replyofUID", SqlDbType.Int,4),
+					new SqlParameter("@replyQuestionID", SqlDbType.Int,4)};
             parameters[0].Value = model.reportReplyByUID;
             parameters[1].Value = model.reportReplyID;
             parameters[2].Value = model.reportReID;
@@ -177,6 +205,13 @@ namespace DAL
             parameters[19].Value = model.userMajor;
             parameters[20].Value = model.userProBio;
             parameters[21].Value = model.reportReasonContent;
+            parameters[22].Value = model.replySate;
+            parameters[23].Value = model.replyofReplyID;
+            parameters[24].Value = model.replyApproveCount;
+            parameters[25].Value = model.replyDateTime;
+            parameters[26].Value = model.replyContent;
+            parameters[27].Value = model.replyofUID;
+            parameters[28].Value = model.replyQuestionID;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -192,17 +227,17 @@ namespace DAL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(int reportReplyByUID, int reportReplyID)
+        public bool Delete(int reportReplyByUID, int reportReID)
         {
 
             StringBuilder strSql = new StringBuilder();
             strSql.Append("delete from ReportReplyUserView ");
-            strSql.Append(" where reportReplyByUID=@reportReplyByUID and reportReplyID=@reportReplyID ");
+            strSql.Append(" where reportReplyByUID=@reportReplyByUID and reportReID=@reportReID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@reportReplyByUID", SqlDbType.Int,4),
-					new SqlParameter("@reportReplyID", SqlDbType.Int,4)			};
+					new SqlParameter("@reportReID", SqlDbType.Int,4)			};
             parameters[0].Value = reportReplyByUID;
-            parameters[1].Value = reportReplyID;
+            parameters[1].Value = reportReID;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -219,17 +254,17 @@ namespace DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.ReportReplyUserView GetModel(int reportReplyByUID, int reportReplyID)
+        public Model.ReportReplyUserView GetModel(int reportReplyByUID, int reportReID)
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 reportReplyByUID,reportReplyID,reportReID,reportReplyReason,reportReplyDataTime,reportReplyDealState,reportReplyResonTypeID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent from ReportReplyUserView ");
-            strSql.Append(" where reportReplyByUID=@reportReplyByUID and reportReplyID=@reportReplyID ");
+            strSql.Append("select  top 1 reportReplyByUID,reportReplyID,reportReID,reportReplyReason,reportReplyDataTime,reportReplyDealState,reportReplyResonTypeID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent,replySate,replyofReplyID,replyApproveCount,replyDateTime,replyContent,replyofUID,replyQuestionID from ReportReplyUserView ");
+            strSql.Append(" where reportReplyByUID=@reportReplyByUID and reportReID=@reportReID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@reportReplyByUID", SqlDbType.Int,4),
-					new SqlParameter("@reportReplyID", SqlDbType.Int,4)			};
+					new SqlParameter("@reportReID", SqlDbType.Int,4)			};
             parameters[0].Value = reportReplyByUID;
-            parameters[1].Value = reportReplyID;
+            parameters[1].Value = reportReID;
 
             Model.ReportReplyUserView model = new Model.ReportReplyUserView();
             DataSet ds = DbHelperSQL.Query(strSql.ToString(), parameters);
@@ -340,6 +375,34 @@ namespace DAL
                 {
                     model.reportReasonContent = row["reportReasonContent"].ToString();
                 }
+                if (row["replySate"] != null)
+                {
+                    model.replySate = row["replySate"].ToString();
+                }
+                if (row["replyofReplyID"] != null && row["replyofReplyID"].ToString() != "")
+                {
+                    model.replyofReplyID = int.Parse(row["replyofReplyID"].ToString());
+                }
+                if (row["replyApproveCount"] != null && row["replyApproveCount"].ToString() != "")
+                {
+                    model.replyApproveCount = int.Parse(row["replyApproveCount"].ToString());
+                }
+                if (row["replyDateTime"] != null && row["replyDateTime"].ToString() != "")
+                {
+                    model.replyDateTime = DateTime.Parse(row["replyDateTime"].ToString());
+                }
+                if (row["replyContent"] != null)
+                {
+                    model.replyContent = row["replyContent"].ToString();
+                }
+                if (row["replyofUID"] != null && row["replyofUID"].ToString() != "")
+                {
+                    model.replyofUID = int.Parse(row["replyofUID"].ToString());
+                }
+                if (row["replyQuestionID"] != null && row["replyQuestionID"].ToString() != "")
+                {
+                    model.replyQuestionID = int.Parse(row["replyQuestionID"].ToString());
+                }
             }
             return model;
         }
@@ -350,7 +413,7 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select reportReplyByUID,reportReplyID,reportReID,reportReplyReason,reportReplyDataTime,reportReplyDealState,reportReplyResonTypeID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent ");
+            strSql.Append("select reportReplyByUID,reportReplyID,reportReID,reportReplyReason,reportReplyDataTime,reportReplyDealState,reportReplyResonTypeID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent,replySate,replyofReplyID,replyApproveCount,replyDateTime,replyContent,replyofUID,replyQuestionID ");
             strSql.Append(" FROM ReportReplyUserView ");
             if (strWhere.Trim() != "")
             {
@@ -370,7 +433,7 @@ namespace DAL
             {
                 strSql.Append(" top " + Top.ToString());
             }
-            strSql.Append(" reportReplyByUID,reportReplyID,reportReID,reportReplyReason,reportReplyDataTime,reportReplyDealState,reportReplyResonTypeID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent ");
+            strSql.Append(" reportReplyByUID,reportReplyID,reportReID,reportReplyReason,reportReplyDataTime,reportReplyDealState,reportReplyResonTypeID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,reportReasonContent,replySate,replyofReplyID,replyApproveCount,replyDateTime,replyContent,replyofUID,replyQuestionID ");
             strSql.Append(" FROM ReportReplyUserView ");
             if (strWhere.Trim() != "")
             {
@@ -415,7 +478,7 @@ namespace DAL
             }
             else
             {
-                strSql.Append("order by T.reportReplyID desc");
+                strSql.Append("order by T.reportReID desc");
             }
             strSql.Append(")AS Row, T.*  from ReportReplyUserView T ");
             if (!string.IsNullOrEmpty(strWhere.Trim()))
@@ -443,7 +506,7 @@ namespace DAL
                     new SqlParameter("@strWhere", SqlDbType.VarChar,1000),
                     };
             parameters[0].Value = "ReportReplyUserView";
-            parameters[1].Value = "reportReplyID";
+            parameters[1].Value = "reportReID";
             parameters[2].Value = PageSize;
             parameters[3].Value = PageIndex;
             parameters[4].Value = 0;

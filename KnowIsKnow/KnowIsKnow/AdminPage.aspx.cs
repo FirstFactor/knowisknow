@@ -21,9 +21,14 @@ namespace KnowIsKnow
             this.rpttopic.DataBind();
 
             BLL.ReportQuestionUserView reportquestion = new BLL.ReportQuestionUserView();
-            DataSet ds2 = reportquestion.GetList("1=1");
+            DataSet ds2 = reportquestion.GetList("reportQuestionDealState='undeal'");
             this.rptreportQeslist.DataSource = ds2.Tables[0];
             this.rptreportQeslist.DataBind();
+
+            BLL.ReportReplyUserView reportreply = new BLL.ReportReplyUserView();
+            DataSet ds3 = reportreply.GetList("reportReplyDealState='undeal'");
+            this.rtpReportReply.DataSource = ds3.Tables[0];
+            this.rtpReportReply.DataBind();
         }
 
         protected void UpLoadbtn1_Click(object sender, EventArgs e)

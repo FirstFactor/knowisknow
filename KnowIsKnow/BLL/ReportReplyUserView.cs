@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
+
     /// <summary>
     /// ReportReplyUserView
     /// </summary>
@@ -19,9 +20,9 @@ namespace BLL
         /// <summary>
         /// 是否存在该记录
         /// </summary>
-        public bool Exists(int reportReplyByUID, int reportReplyID)
+        public bool Exists(int reportReplyByUID, int reportReID)
         {
-            return dal.Exists(reportReplyByUID, reportReplyID);
+            return dal.Exists(reportReplyByUID, reportReID);
         }
 
         /// <summary>
@@ -43,45 +44,22 @@ namespace BLL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(int reportReplyByUID, int reportReplyID)
+        public bool Delete(int reportReplyByUID, int reportReID)
         {
 
-            return dal.Delete(reportReplyByUID, reportReplyID);
+            return dal.Delete(reportReplyByUID, reportReID);
         }
 
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.ReportReplyUserView GetModel(int reportReplyByUID, int reportReplyID)
+        public Model.ReportReplyUserView GetModel(int reportReplyByUID, int reportReID)
         {
 
-            return dal.GetModel(reportReplyByUID, reportReplyID);
+            return dal.GetModel(reportReplyByUID, reportReID);
         }
 
-        /// <summary>
-        /// 得到一个对象实体，从缓存中
-        /// </summary>
-        public Model.ReportReplyUserView GetModelByCache(int reportReplyByUID, int reportReplyID)
-        {
-
-            string CacheKey = "ReportReplyUserViewModel-" + reportReplyByUID + reportReplyID;
-            object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
-            if (objModel == null)
-            {
-                try
-                {
-                    objModel = dal.GetModel(reportReplyByUID, reportReplyID);
-                    if (objModel != null)
-                    {
-                        int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
-                        Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
-                    }
-                }
-                catch { }
-            }
-            return (Model.ReportReplyUserView)objModel;
-        }
-
+       
         /// <summary>
         /// 获得数据列表
         /// </summary>

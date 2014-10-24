@@ -414,6 +414,8 @@
     <Content Include="ueditor\third-party\video-js\font\vjs.eot" />
     <Content Include="ueditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="ueditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="WS2.asmx" />
+    <Content Include="WSQuan.asmx" />
     <Content Include="WSWang.asmx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -580,6 +582,14 @@
     </Compile>
     <Compile Include="WS.asmx.cs">
       <DependentUpon>WS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WS2.asmx.cs">
+      <DependentUpon>WS2.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSQuan.asmx.cs">
+      <DependentUpon>WSQuan.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="WSWang.asmx.cs">

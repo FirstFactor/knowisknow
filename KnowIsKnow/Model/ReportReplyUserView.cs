@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
+
     /// <summary>
     /// ReportReplyUserView:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>
@@ -37,6 +38,13 @@ namespace Model
         private string _usermajor;
         private string _userprobio;
         private string _reportreasoncontent;
+        private string _replysate;
+        private int _replyofreplyid;
+        private int _replyapprovecount;
+        private DateTime _replydatetime;
+        private string _replycontent;
+        private int _replyofuid;
+        private int _replyquestionid;
         /// <summary>
         /// 
         /// </summary>
@@ -212,6 +220,62 @@ namespace Model
         {
             set { _reportreasoncontent = value; }
             get { return _reportreasoncontent; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string replySate
+        {
+            set { _replysate = value; }
+            get { return _replysate; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int replyofReplyID
+        {
+            set { _replyofreplyid = value; }
+            get { return _replyofreplyid; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int replyApproveCount
+        {
+            set { _replyapprovecount = value; }
+            get { return _replyapprovecount; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime replyDateTime
+        {
+            set { _replydatetime = value; }
+            get { return _replydatetime; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string replyContent
+        {
+            set { _replycontent = value; }
+            get { return _replycontent; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int replyofUID
+        {
+            set { _replyofuid = value; }
+            get { return _replyofuid; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int replyQuestionID
+        {
+            set { _replyquestionid = value; }
+            get { return _replyquestionid; }
         }
         #endregion Model
 

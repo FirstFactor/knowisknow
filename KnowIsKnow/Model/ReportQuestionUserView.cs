@@ -40,6 +40,35 @@ namespace Model
         private string _usermajor;
         private string _userprobio;
         private string _reportreasoncontent;
+
+        private int _reportquid;
+
+        public int reportQuID
+        {
+            get { return _reportquid; }
+            set { _reportquid = value; }
+        }
+        private DateTime _reportquestiondatetime;
+
+        public DateTime reportQuestionDateTime
+        {
+            get { return _reportquestiondatetime; }
+            set { _reportquestiondatetime = value; }
+        }
+        private string _reportquestiondealstate;
+
+        public string reportQuestionDealState
+        {
+            get { return _reportquestiondealstate; }
+            set { _reportquestiondealstate = value; }
+        }
+        private int _reportquestionreasontypeid;
+
+        public int reportQuestionReasonTypeID
+        {
+            get { return _reportquestionreasontypeid; }
+            set { _reportquestionreasontypeid = value; }
+        }
         /// <summary>
         /// 
         /// </summary>
