@@ -43,7 +43,7 @@
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+                
             }
         });
     });

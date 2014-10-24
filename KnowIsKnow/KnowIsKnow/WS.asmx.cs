@@ -50,7 +50,7 @@ namespace KnowIsKnow
 
        
         [WebMethod]
-        public string AddCareTopic(string topicid, string userid)
+        public void AddCareTopic(string topicid, string userid)
         {
             BLL.CareTopic topic = new BLL.CareTopic();
             Model.CareTopic topicinfo = new Model.CareTopic();
@@ -59,15 +59,15 @@ namespace KnowIsKnow
             topicinfo.topicCaredByUID = Convert.ToInt32( userid);
         
             topic.Add(topicinfo);
-            return "ok";
+            
         }
         [WebMethod]
-        public  string DeleteCareTopic(string topicid, string userid)
+        public  void DeleteCareTopic(string topicid, string userid)
         {
             BLL.CareTopic topic = new BLL.CareTopic();
             Model.CareTopic topicinfo = new Model.CareTopic();
             topic.Delete(Convert.ToInt32(topicid), Convert.ToInt32(userid));
-            return "ok";
+            
         }
 
 
