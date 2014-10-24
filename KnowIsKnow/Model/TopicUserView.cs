@@ -36,6 +36,14 @@ namespace Model
         private string _useracademy;
         private string _usermajor;
         private string _userprobio;
+
+        private string _caretopicstate;
+
+        public string careTopicState
+        {
+            get { return _caretopicstate; }
+            set { _caretopicstate = value; }
+        }
         /// <summary>
         /// 
         /// </summary>

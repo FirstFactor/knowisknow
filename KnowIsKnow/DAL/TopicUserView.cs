@@ -43,9 +43,9 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into TopicUserView(");
-            strSql.Append("topicID,topicTitle,topicDes,topicPicUrl,topicAttention,topicState,userID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio)");
+            strSql.Append("topicID,topicTitle,topicDes,topicPicUrl,topicAttention,topicState,userID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,careTopicState)");
             strSql.Append(" values (");
-            strSql.Append("@topicID,@topicTitle,@topicDes,@topicPicUrl,@topicAttention,@topicState,@userID,@userEmail,@userNickName,@userHeadImage,@userState,@userGender,@userBirthday,@userAdress,@userJob,@userShuoShuo,@userCompany,@userJobPosition,@userAcademy,@userMajor,@userProBio)");
+            strSql.Append("@topicID,@topicTitle,@topicDes,@topicPicUrl,@topicAttention,@topicState,@userID,@userEmail,@userNickName,@userHeadImage,@userState,@userGender,@userBirthday,@userAdress,@userJob,@userShuoShuo,@userCompany,@userJobPosition,@userAcademy,@userMajor,@userProBio,@careTopicState)");
             SqlParameter[] parameters = {
 					new SqlParameter("@topicID", SqlDbType.Int,4),
 					new SqlParameter("@topicTitle", SqlDbType.NVarChar,50),
@@ -67,7 +67,8 @@ namespace DAL
 					new SqlParameter("@userJobPosition", SqlDbType.VarChar,50),
 					new SqlParameter("@userAcademy", SqlDbType.VarChar,50),
 					new SqlParameter("@userMajor", SqlDbType.VarChar,50),
-					new SqlParameter("@userProBio", SqlDbType.VarChar,-1)};
+					new SqlParameter("@userProBio", SqlDbType.VarChar,-1),
+                    new SqlParameter("@careTopicState", SqlDbType.VarChar,50)};
             parameters[0].Value = model.topicID;
             parameters[1].Value = model.topicTitle;
             parameters[2].Value = model.topicDes;
@@ -89,6 +90,7 @@ namespace DAL
             parameters[18].Value = model.userAcademy;
             parameters[19].Value = model.userMajor;
             parameters[20].Value = model.userProBio;
+            parameters[21].Value = model.careTopicState;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -128,6 +130,7 @@ namespace DAL
             strSql.Append("userAcademy=@userAcademy,");
             strSql.Append("userMajor=@userMajor,");
             strSql.Append("userProBio=@userProBio");
+            strSql.Append("careTopicState=@careTopicState");
             strSql.Append(" where topicID=@topicID and userID=@userID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@topicID", SqlDbType.Int,4),
@@ -150,7 +153,8 @@ namespace DAL
 					new SqlParameter("@userJobPosition", SqlDbType.VarChar,50),
 					new SqlParameter("@userAcademy", SqlDbType.VarChar,50),
 					new SqlParameter("@userMajor", SqlDbType.VarChar,50),
-					new SqlParameter("@userProBio", SqlDbType.VarChar,-1)};
+					new SqlParameter("@userProBio", SqlDbType.VarChar,-1),
+                    new SqlParameter("@careTopicState", SqlDbType.VarChar,50)};
             parameters[0].Value = model.topicID;
             parameters[1].Value = model.topicTitle;
             parameters[2].Value = model.topicDes;
@@ -172,6 +176,7 @@ namespace DAL
             parameters[18].Value = model.userAcademy;
             parameters[19].Value = model.userMajor;
             parameters[20].Value = model.userProBio;
+            parameters[21].Value = model.careTopicState;
 
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -218,7 +223,7 @@ namespace DAL
         {
 
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select  top 1 topicID,topicTitle,topicDes,topicPicUrl,topicAttention,topicState,userID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio from TopicUserView ");
+            strSql.Append("select  top 1 topicID,topicTitle,topicDes,topicPicUrl,topicAttention,topicState,userID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,careTopicState from TopicUserView ");
             strSql.Append(" where topicID=@topicID and userID=@userID ");
             SqlParameter[] parameters = {
 					new SqlParameter("@topicID", SqlDbType.Int,4),
@@ -331,6 +336,11 @@ namespace DAL
                 {
                     model.userProBio = row["userProBio"].ToString();
                 }
+                if (row["careTopicState"] != null)
+                {
+                    model.userProBio = row["careTopicState"].ToString();
+                }
+                
             }
             return model;
         }
@@ -341,7 +351,7 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select topicID,topicTitle,topicDes,topicPicUrl,topicAttention,topicState,userID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio ");
+            strSql.Append("select topicID,topicTitle,topicDes,topicPicUrl,topicAttention,topicState,userID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,careTopicState ");
             strSql.Append(" FROM TopicUserView ");
             if (strWhere.Trim() != "")
             {
@@ -361,7 +371,7 @@ namespace DAL
             {
                 strSql.Append(" top " + Top.ToString());
             }
-            strSql.Append(" topicID,topicTitle,topicDes,topicPicUrl,topicAttention,topicState,userID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio ");
+            strSql.Append(" topicID,topicTitle,topicDes,topicPicUrl,topicAttention,topicState,userID,userEmail,userNickName,userHeadImage,userState,userGender,userBirthday,userAdress,userJob,userShuoShuo,userCompany,userJobPosition,userAcademy,userMajor,userProBio,careTopicState ");
             strSql.Append(" FROM TopicUserView ");
             if (strWhere.Trim() != "")
             {
