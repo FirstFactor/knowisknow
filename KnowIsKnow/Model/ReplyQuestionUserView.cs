@@ -7,26 +7,29 @@ using System.Threading.Tasks;
 namespace Model
 {
     /// <summary>
-    /// TopicUserView:实体类(属性说明自动提取数据库字段的描述信息)
+    /// ReplyQuestionUserView:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>
     [Serializable]
-    public partial class TopicUserView
+    public partial class ReplyQuestionUserView
     {
-        public TopicUserView()
+        public ReplyQuestionUserView()
         { }
         #region Model
-        private int _topicid;
-        private string _topictitle;
-        private string _topicdes;
-        private string _topicpicurl;
-        private int _topicattention;
-        private string _topicstate;
-        private int _userid;
+        private int _replyid;
+        private int _replyquestionid;
+        private int _replyofuid;
+        private string _replycontent;
+        private DateTime _replydatetime;
+        private int _replyapprovecount;
+        private int _replyofreplyid;
+        private string _replysate;
         private string _useremail;
         private string _usernickname;
         private string _userheadimage;
         private string _userstate;
+        private string _userverifycode;
         private string _usergender;
+        private string _userpwd;
         private DateTime _userbirthday;
         private string _useradress;
         private string _userjob;
@@ -36,69 +39,70 @@ namespace Model
         private string _useracademy;
         private string _usermajor;
         private string _userprobio;
-
-        private string _caretopicstate;
-
-        public string careTopicState
+        private string _questiontitle;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int ReplyID
         {
-            get { return _caretopicstate; }
-            set { _caretopicstate = value; }
+            set { _replyid = value; }
+            get { return _replyid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int topicID
+        public int replyQuestionID
         {
-            set { _topicid = value; }
-            get { return _topicid; }
+            set { _replyquestionid = value; }
+            get { return _replyquestionid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicTitle
+        public int replyofUID
         {
-            set { _topictitle = value; }
-            get { return _topictitle; }
+            set { _replyofuid = value; }
+            get { return _replyofuid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicDes
+        public string replyContent
         {
-            set { _topicdes = value; }
-            get { return _topicdes; }
+            set { _replycontent = value; }
+            get { return _replycontent; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicPicUrl
+        public DateTime replyDateTime
         {
-            set { _topicpicurl = value; }
-            get { return _topicpicurl; }
+            set { _replydatetime = value; }
+            get { return _replydatetime; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int topicAttention
+        public int replyApproveCount
         {
-            set { _topicattention = value; }
-            get { return _topicattention; }
+            set { _replyapprovecount = value; }
+            get { return _replyapprovecount; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicState
+        public int replyofReplyID
         {
-            set { _topicstate = value; }
-            get { return _topicstate; }
+            set { _replyofreplyid = value; }
+            get { return _replyofreplyid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int userID
+        public string replySate
         {
-            set { _userid = value; }
-            get { return _userid; }
+            set { _replysate = value; }
+            get { return _replysate; }
         }
         /// <summary>
         /// 
@@ -135,10 +139,26 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
+        public string userVerifyCode
+        {
+            set { _userverifycode = value; }
+            get { return _userverifycode; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
         public string userGender
         {
             set { _usergender = value; }
             get { return _usergender; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string userPwd
+        {
+            set { _userpwd = value; }
+            get { return _userpwd; }
         }
         /// <summary>
         /// 
@@ -211,6 +231,14 @@ namespace Model
         {
             set { _userprobio = value; }
             get { return _userprobio; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string questionTitle
+        {
+            set { _questiontitle = value; }
+            get { return _questiontitle; }
         }
         #endregion Model
 

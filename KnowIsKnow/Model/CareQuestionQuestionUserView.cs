@@ -7,106 +7,104 @@ using System.Threading.Tasks;
 namespace Model
 {
     /// <summary>
-    /// TopicUserView:实体类(属性说明自动提取数据库字段的描述信息)
+    /// CareQuestionQuestionUserView:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>
     [Serializable]
-    public partial class TopicUserView
+    public partial class CareQuestionQuestionUserView
     {
-        public TopicUserView()
+        public CareQuestionQuestionUserView()
         { }
         #region Model
-        private int _topicid;
-        private string _topictitle;
-        private string _topicdes;
-        private string _topicpicurl;
-        private int _topicattention;
-        private string _topicstate;
-        private int _userid;
-        private string _useremail;
+        private int _carequestionid;
+        private int _questioncaredbyuid;
+        private string _questiontitle;
+        private string _questioncontent;
+        private int _questionprovider;
+        private DateTime _quetionpubtime;
+        private int _questonapprovecount;
+        private int _questionreportcount;
+        private string _questionsate;
         private string _usernickname;
         private string _userheadimage;
+        private string _useremail;
         private string _userstate;
-        private string _usergender;
-        private DateTime _userbirthday;
+        private DateTime? _userbirthday;
         private string _useradress;
         private string _userjob;
         private string _usershuoshuo;
         private string _usercompany;
         private string _userjobposition;
-        private string _useracademy;
-        private string _usermajor;
-        private string _userprobio;
-
-        private string _caretopicstate;
-
-        public string careTopicState
+        /// <summary>
+        /// 
+        /// </summary>
+        public int careQuestionID
         {
-            get { return _caretopicstate; }
-            set { _caretopicstate = value; }
+            set { _carequestionid = value; }
+            get { return _carequestionid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int topicID
+        public int questionCaredByUID
         {
-            set { _topicid = value; }
-            get { return _topicid; }
+            set { _questioncaredbyuid = value; }
+            get { return _questioncaredbyuid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicTitle
+        public string questionTitle
         {
-            set { _topictitle = value; }
-            get { return _topictitle; }
+            set { _questiontitle = value; }
+            get { return _questiontitle; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicDes
+        public string questionContent
         {
-            set { _topicdes = value; }
-            get { return _topicdes; }
+            set { _questioncontent = value; }
+            get { return _questioncontent; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicPicUrl
+        public int questionProvider
         {
-            set { _topicpicurl = value; }
-            get { return _topicpicurl; }
+            set { _questionprovider = value; }
+            get { return _questionprovider; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int topicAttention
+        public DateTime quetionPubTime
         {
-            set { _topicattention = value; }
-            get { return _topicattention; }
+            set { _quetionpubtime = value; }
+            get { return _quetionpubtime; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicState
+        public int questonApproveCount
         {
-            set { _topicstate = value; }
-            get { return _topicstate; }
+            set { _questonapprovecount = value; }
+            get { return _questonapprovecount; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int userID
+        public int questionReportCount
         {
-            set { _userid = value; }
-            get { return _userid; }
+            set { _questionreportcount = value; }
+            get { return _questionreportcount; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string userEmail
+        public string questionSate
         {
-            set { _useremail = value; }
-            get { return _useremail; }
+            set { _questionsate = value; }
+            get { return _questionsate; }
         }
         /// <summary>
         /// 
@@ -127,6 +125,14 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
+        public string userEmail
+        {
+            set { _useremail = value; }
+            get { return _useremail; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
         public string userState
         {
             set { _userstate = value; }
@@ -135,15 +141,7 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
-        public string userGender
-        {
-            set { _usergender = value; }
-            get { return _usergender; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public DateTime userBirthday
+        public DateTime? userBirthday
         {
             set { _userbirthday = value; }
             get { return _userbirthday; }
@@ -187,30 +185,6 @@ namespace Model
         {
             set { _userjobposition = value; }
             get { return _userjobposition; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string userAcademy
-        {
-            set { _useracademy = value; }
-            get { return _useracademy; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string userMajor
-        {
-            set { _usermajor = value; }
-            get { return _usermajor; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string userProBio
-        {
-            set { _userprobio = value; }
-            get { return _userprobio; }
         }
         #endregion Model
 

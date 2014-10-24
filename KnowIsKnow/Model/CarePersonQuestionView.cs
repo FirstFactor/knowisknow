@@ -6,107 +6,110 @@ using System.Threading.Tasks;
 
 namespace Model
 {
+
     /// <summary>
-    /// TopicUserView:实体类(属性说明自动提取数据库字段的描述信息)
+    /// CarePersonQuestionView:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>
     [Serializable]
-    public partial class TopicUserView
+    public partial class CarePersonQuestionView
     {
-        public TopicUserView()
+        public CarePersonQuestionView()
         { }
         #region Model
-        private int _topicid;
-        private string _topictitle;
-        private string _topicdes;
-        private string _topicpicurl;
-        private int _topicattention;
-        private string _topicstate;
-        private int _userid;
-        private string _useremail;
+        private int _questionid;
+        private string _questiontitle;
+        private string _questioncontent;
+        private DateTime _quetionpubtime;
+        private string _questionsate;
+        private int _questionreportcount;
+        private int _questonapprovecount;
+        private int _carepersonid;
+        private int _personcaredbyuid;
         private string _usernickname;
         private string _userheadimage;
         private string _userstate;
+        private string _usershuoshuo;
         private string _usergender;
         private DateTime _userbirthday;
         private string _useradress;
         private string _userjob;
-        private string _usershuoshuo;
         private string _usercompany;
         private string _userjobposition;
         private string _useracademy;
         private string _usermajor;
         private string _userprobio;
-
-        private string _caretopicstate;
-
-        public string careTopicState
+        private string _useremail;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int questionID
         {
-            get { return _caretopicstate; }
-            set { _caretopicstate = value; }
+            set { _questionid = value; }
+            get { return _questionid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int topicID
+        public string questionTitle
         {
-            set { _topicid = value; }
-            get { return _topicid; }
+            set { _questiontitle = value; }
+            get { return _questiontitle; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicTitle
+        public string questionContent
         {
-            set { _topictitle = value; }
-            get { return _topictitle; }
+            set { _questioncontent = value; }
+            get { return _questioncontent; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicDes
+        public DateTime quetionPubTime
         {
-            set { _topicdes = value; }
-            get { return _topicdes; }
+            set { _quetionpubtime = value; }
+            get { return _quetionpubtime; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicPicUrl
+        public string questionSate
         {
-            set { _topicpicurl = value; }
-            get { return _topicpicurl; }
+            set { _questionsate = value; }
+            get { return _questionsate; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int topicAttention
+        public int questionReportCount
         {
-            set { _topicattention = value; }
-            get { return _topicattention; }
+            set { _questionreportcount = value; }
+            get { return _questionreportcount; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string topicState
+        public int questonApproveCount
         {
-            set { _topicstate = value; }
-            get { return _topicstate; }
+            set { _questonapprovecount = value; }
+            get { return _questonapprovecount; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int userID
+        public int carePersonID
         {
-            set { _userid = value; }
-            get { return _userid; }
+            set { _carepersonid = value; }
+            get { return _carepersonid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string userEmail
+        public int personCaredByUID
         {
-            set { _useremail = value; }
-            get { return _useremail; }
+            set { _personcaredbyuid = value; }
+            get { return _personcaredbyuid; }
         }
         /// <summary>
         /// 
@@ -131,6 +134,14 @@ namespace Model
         {
             set { _userstate = value; }
             get { return _userstate; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string userShuoShuo
+        {
+            set { _usershuoshuo = value; }
+            get { return _usershuoshuo; }
         }
         /// <summary>
         /// 
@@ -163,14 +174,6 @@ namespace Model
         {
             set { _userjob = value; }
             get { return _userjob; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string userShuoShuo
-        {
-            set { _usershuoshuo = value; }
-            get { return _usershuoshuo; }
         }
         /// <summary>
         /// 
@@ -211,6 +214,14 @@ namespace Model
         {
             set { _userprobio = value; }
             get { return _userprobio; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string userEmail
+        {
+            set { _useremail = value; }
+            get { return _useremail; }
         }
         #endregion Model
 

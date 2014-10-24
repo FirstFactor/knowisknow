@@ -115,6 +115,7 @@
     <Content Include="js\uploadify.swf" />
     <Content Include="KnowIsKnow.Master" />
     <Content Include="ProCenter.aspx" />
+    <Content Include="WSQuan.asmx" />
     <Content Include="resetpassword.aspx" />
     <Content Include="SelectTopic.aspx" />
     <Content Include="setnewpassword.aspx" />
@@ -413,6 +414,7 @@
     <Content Include="ueditor\third-party\video-js\font\vjs.eot" />
     <Content Include="ueditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="ueditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="WS2.asmx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -469,6 +471,10 @@
     </Compile>
     <Compile Include="ProCenter.aspx.designer.cs">
       <DependentUpon>ProCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WSQuan.asmx.cs">
+      <DependentUpon>WSQuan.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="resetpassword.aspx.cs">
       <DependentUpon>resetpassword.aspx</DependentUpon>
@@ -578,6 +584,10 @@
     </Compile>
     <Compile Include="WS.asmx.cs">
       <DependentUpon>WS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WS2.asmx.cs">
+      <DependentUpon>WS2.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
