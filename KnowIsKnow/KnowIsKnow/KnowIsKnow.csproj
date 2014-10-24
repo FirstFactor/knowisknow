@@ -115,6 +115,7 @@
     <Content Include="js\uploadify.swf" />
     <Content Include="KnowIsKnow.Master" />
     <Content Include="ProCenter.aspx" />
+    <Content Include="WSQuan.asmx" />
     <Content Include="resetpassword.aspx" />
     <Content Include="SelectTopic.aspx" />
     <Content Include="setnewpassword.aspx" />
@@ -469,6 +470,10 @@
     </Compile>
     <Compile Include="ProCenter.aspx.designer.cs">
       <DependentUpon>ProCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WSQuan.asmx.cs">
+      <DependentUpon>WSQuan.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="resetpassword.aspx.cs">
       <DependentUpon>resetpassword.aspx</DependentUpon>
