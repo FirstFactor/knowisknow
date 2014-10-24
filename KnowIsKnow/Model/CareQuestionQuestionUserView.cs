@@ -7,67 +7,48 @@ using System.Threading.Tasks;
 namespace Model
 {
     /// <summary>
-    /// QuestionUserView:实体类(属性说明自动提取数据库字段的描述信息)
+    /// CareQuestionQuestionUserView:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>
     [Serializable]
-    public partial class QuestionUserView
+    public partial class CareQuestionQuestionUserView
     {
-        public QuestionUserView()
+        public CareQuestionQuestionUserView()
         { }
         #region Model
-        private int _questionid;
+        private int _carequestionid;
+        private int _questioncaredbyuid;
         private string _questiontitle;
         private string _questioncontent;
         private int _questionprovider;
-        private int _userid;
+        private DateTime _quetionpubtime;
+        private int _questonapprovecount;
+        private int _questionreportcount;
+        private string _questionsate;
         private string _usernickname;
         private string _userheadimage;
+        private string _useremail;
         private string _userstate;
-        private string _usergender;
-        private DateTime _userbirthday;
+        private DateTime? _userbirthday;
         private string _useradress;
         private string _userjob;
         private string _usershuoshuo;
         private string _usercompany;
         private string _userjobposition;
-        private string _useracademy;
-        private string _usermajor;
-        private string _userprobio;
-        private DateTime _quetionpubtime;
-        private int _questonapprovecount;
-        private int _questionreportcount;
-        private string _questionsate;
-
-        public string questionSate
+        /// <summary>
+        /// 
+        /// </summary>
+        public int careQuestionID
         {
-            get { return _questionsate; }
-            set { _questionsate = value; }
-        }
-
-        public int questionReportCount
-        {
-            get { return _questionreportcount; }
-            set { _questionreportcount = value; }
-        }
-
-        public int questonApproveCount
-        {
-            get { return _questonapprovecount; }
-            set { _questonapprovecount = value; }
-        }
-
-        public DateTime quetionPubTime
-        {
-            get { return _quetionpubtime; }
-            set { _quetionpubtime = value; }
+            set { _carequestionid = value; }
+            get { return _carequestionid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int questionID
+        public int questionCaredByUID
         {
-            set { _questionid = value; }
-            get { return _questionid; }
+            set { _questioncaredbyuid = value; }
+            get { return _questioncaredbyuid; }
         }
         /// <summary>
         /// 
@@ -96,10 +77,34 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
-        public int userID
+        public DateTime quetionPubTime
         {
-            set { _userid = value; }
-            get { return _userid; }
+            set { _quetionpubtime = value; }
+            get { return _quetionpubtime; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int questonApproveCount
+        {
+            set { _questonapprovecount = value; }
+            get { return _questonapprovecount; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int questionReportCount
+        {
+            set { _questionreportcount = value; }
+            get { return _questionreportcount; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string questionSate
+        {
+            set { _questionsate = value; }
+            get { return _questionsate; }
         }
         /// <summary>
         /// 
@@ -120,6 +125,14 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
+        public string userEmail
+        {
+            set { _useremail = value; }
+            get { return _useremail; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
         public string userState
         {
             set { _userstate = value; }
@@ -128,15 +141,7 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
-        public string userGender
-        {
-            set { _usergender = value; }
-            get { return _usergender; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public DateTime userBirthday
+        public DateTime? userBirthday
         {
             set { _userbirthday = value; }
             get { return _userbirthday; }
@@ -180,30 +185,6 @@ namespace Model
         {
             set { _userjobposition = value; }
             get { return _userjobposition; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string userAcademy
-        {
-            set { _useracademy = value; }
-            get { return _useracademy; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string userMajor
-        {
-            set { _usermajor = value; }
-            get { return _usermajor; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public string userProBio
-        {
-            set { _userprobio = value; }
-            get { return _userprobio; }
         }
         #endregion Model
 

@@ -7,23 +7,29 @@ using System.Threading.Tasks;
 namespace Model
 {
     /// <summary>
-    /// QuestionUserView:实体类(属性说明自动提取数据库字段的描述信息)
+    /// ReplyQuestionUserView:实体类(属性说明自动提取数据库字段的描述信息)
     /// </summary>
     [Serializable]
-    public partial class QuestionUserView
+    public partial class ReplyQuestionUserView
     {
-        public QuestionUserView()
+        public ReplyQuestionUserView()
         { }
         #region Model
-        private int _questionid;
-        private string _questiontitle;
-        private string _questioncontent;
-        private int _questionprovider;
-        private int _userid;
+        private int _replyid;
+        private int _replyquestionid;
+        private int _replyofuid;
+        private string _replycontent;
+        private DateTime _replydatetime;
+        private int _replyapprovecount;
+        private int _replyofreplyid;
+        private string _replysate;
+        private string _useremail;
         private string _usernickname;
         private string _userheadimage;
         private string _userstate;
+        private string _userverifycode;
         private string _usergender;
+        private string _userpwd;
         private DateTime _userbirthday;
         private string _useradress;
         private string _userjob;
@@ -33,73 +39,78 @@ namespace Model
         private string _useracademy;
         private string _usermajor;
         private string _userprobio;
-        private DateTime _quetionpubtime;
-        private int _questonapprovecount;
-        private int _questionreportcount;
-        private string _questionsate;
-
-        public string questionSate
+        private string _questiontitle;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int ReplyID
         {
-            get { return _questionsate; }
-            set { _questionsate = value; }
-        }
-
-        public int questionReportCount
-        {
-            get { return _questionreportcount; }
-            set { _questionreportcount = value; }
-        }
-
-        public int questonApproveCount
-        {
-            get { return _questonapprovecount; }
-            set { _questonapprovecount = value; }
-        }
-
-        public DateTime quetionPubTime
-        {
-            get { return _quetionpubtime; }
-            set { _quetionpubtime = value; }
+            set { _replyid = value; }
+            get { return _replyid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int questionID
+        public int replyQuestionID
         {
-            set { _questionid = value; }
-            get { return _questionid; }
+            set { _replyquestionid = value; }
+            get { return _replyquestionid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string questionTitle
+        public int replyofUID
         {
-            set { _questiontitle = value; }
-            get { return _questiontitle; }
+            set { _replyofuid = value; }
+            get { return _replyofuid; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public string questionContent
+        public string replyContent
         {
-            set { _questioncontent = value; }
-            get { return _questioncontent; }
+            set { _replycontent = value; }
+            get { return _replycontent; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int questionProvider
+        public DateTime replyDateTime
         {
-            set { _questionprovider = value; }
-            get { return _questionprovider; }
+            set { _replydatetime = value; }
+            get { return _replydatetime; }
         }
         /// <summary>
         /// 
         /// </summary>
-        public int userID
+        public int replyApproveCount
         {
-            set { _userid = value; }
-            get { return _userid; }
+            set { _replyapprovecount = value; }
+            get { return _replyapprovecount; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int replyofReplyID
+        {
+            set { _replyofreplyid = value; }
+            get { return _replyofreplyid; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string replySate
+        {
+            set { _replysate = value; }
+            get { return _replysate; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string userEmail
+        {
+            set { _useremail = value; }
+            get { return _useremail; }
         }
         /// <summary>
         /// 
@@ -128,10 +139,26 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
+        public string userVerifyCode
+        {
+            set { _userverifycode = value; }
+            get { return _userverifycode; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
         public string userGender
         {
             set { _usergender = value; }
             get { return _usergender; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string userPwd
+        {
+            set { _userpwd = value; }
+            get { return _userpwd; }
         }
         /// <summary>
         /// 
@@ -204,6 +231,14 @@ namespace Model
         {
             set { _userprobio = value; }
             get { return _userprobio; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string questionTitle
+        {
+            set { _questiontitle = value; }
+            get { return _questiontitle; }
         }
         #endregion Model
 

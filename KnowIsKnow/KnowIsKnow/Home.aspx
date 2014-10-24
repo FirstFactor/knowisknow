@@ -28,7 +28,11 @@
 								    <img class="zqq-head-face" src="<%# Eval("userHeadImage") %>" />
 							    </div>
 							    <div class="zqq-question-detail">
-							    	<div class="zqq-question-info"><%# Eval("userNickName") %> 提出了问题</div>
+                                    <div class="zqq-question-hd">
+                                        <div class="zqq-question-info "><%# Eval("userNickName") %> 提出了问题</div>
+                                        <div class="zqq-question-pubTime "><%# Eval("quetionPubTime") %></div>
+                                        <div class="clear"></div>
+                                    </div>
 							    	<%--<div id="zqq-questionTitle1" class="zqq-question-title" questionid="<%# Eval("questionID") %>"><%# Eval("questionTitle") %></div>--%>
                                     <a href='QuestionDetail.aspx?QuesID=<%# Eval("questionID")%>' class="zqq-question-title" questionid='<%# Eval("questionID") %>' ><%# Eval("questionTitle") %></a>
 								    <div class="zqq-question-content">
@@ -37,8 +41,8 @@
 								    </div>
 								    <div class="zqq-question-ft">
 									    <div class="zqq-follow-topic">
-                                            <a class="zqq-follow-topic-button">关注问题</a>
-                                            <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>
+                                            <a class="zqq-follow-topic-button" panduan='<%# CheckCareQuestion(Eval("questionID")) %>'  questionid='<%# Eval("questionID") %>'>关注问题</a>
+                                           <%-- <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>--%>
 								    	</div>
 								    	<div class="zqq-jubao" questionid='<%# Eval("questionID") %>'>举报</div>
 							    	</div>
@@ -81,7 +85,45 @@
                                 <li class="zqq-side-li zqq-side-li11">
                                     <a href="" class="zqq-side-link1">
                                         <img src="images/zqq-dianying.jpg" class="zqq-side-photo"/>
-                                        电影
+                                        <div class="zqq-side-lm3-a">电影</div>
+                                    </a>
+                                </li>
+                                <li class="zqq-side-li zqq-side-li11">
+                                    <a href="" class="zqq-side-link1">
+                                        <img src="images/zqq-falv.jpg" class="zqq-side-photo"/>
+                                        <div class="zqq-side-lm3-a">法律</div>
+                                    </a>
+                                </li>
+                                <li class="zqq-side-li zqq-side-li11">
+                                    <a href="" class="zqq-side-link1">
+                                        <img src="images/zqq-yingyue.jpg" class="zqq-side-photo"/>
+                                        <div class="zqq-side-lm3-a">音乐</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="zqq-side zqq-lm4">
+                            <div class="zqq-lm3-T">
+                                <h3>你可能感兴趣的人</h3>
+                                <a href="TopicSquare.aspx" class="zqq-offenTopic">更多推荐 »</a>
+                            </div>
+                            <ul class="zqq-lm3-ul">
+                                <li class="zqq-side-li zqq-side-li11">
+                                    <a href="" class="zqq-side-link1">
+                                        <img src="images/zqq-dianying.jpg" class="zqq-side-photo"/>
+                                        <div class="zqq-side-lm3-a">电影</div>
+                                    </a>
+                                </li>
+                                <li class="zqq-side-li zqq-side-li11">
+                                    <a href="" class="zqq-side-link1">
+                                        <img src="images/zqq-falv.jpg" class="zqq-side-photo"/>
+                                        <div class="zqq-side-lm3-a">法律</div>
+                                    </a>
+                                </li>
+                                <li class="zqq-side-li zqq-side-li11">
+                                    <a href="" class="zqq-side-link1">
+                                        <img src="images/zqq-yingyue.jpg" class="zqq-side-photo"/>
+                                        <div class="zqq-side-lm3-a">音乐</div>
                                     </a>
                                 </li>
                             </ul>

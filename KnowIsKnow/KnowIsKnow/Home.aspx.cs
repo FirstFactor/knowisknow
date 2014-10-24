@@ -20,11 +20,27 @@ namespace KnowIsKnow
             else {
                 userid = Session["UserID"].ToString();
                 BLL.QuestionUserView quelist = new BLL.QuestionUserView();
-                DataSet ds = quelist.GetList("1=1 order by quetionPubTime desc");
+                DataSet ds = quelist.GetList("questionSate='normal' order by quetionPubTime desc");
                 this.rpt.DataSource = ds.Tables[0];
                 this.rpt.DataBind();
 
             }
+        }
+
+        public string CheckCareQuestion(object questionID)
+        {
+            BLL.CareQuestion cq = new BLL.CareQuestion();
+            List<Model.CareQuestion> list = cq.GetModelList("questionCaredByUID=" + userid);
+            int qid = Convert.ToInt32(questionID);
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].careQuestionID == qid)
+                {
+                    return "true";
+                }
+            }
+            return "false";
+        
         }
 
         
