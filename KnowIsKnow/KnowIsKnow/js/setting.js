@@ -38,27 +38,34 @@
         var xindemima = $(".xdmima").val();
         var querenmima = $(".qrmima").val();
         
-        if (yuanmima != dangqianmima) {
-            $(".bcxinxi").html("原密码输入不正确，请正确输入！");
-            $(".baocuntip").show();
-        }
+ 
+        //if (yuanmima != dangqianmima) {
+        //    $(".bcxinxi").html("原密码输入不正确，请正确输入！");
+        //    $(".baocuntip").show();
+        //}
         if (xindemima != querenmima) {
             $(".bcxinxi").html("两次输入密码不一致，请重新输入！");
             $(".baocuntip").show();
         }
-        if (yuanmima == dangqianmima && xindemima == querenmima) {
+        if (dangqianmima !="" && xindemima == querenmima) {
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
-                url: "WS.asmx/updataPwd",
-                data: "{userid:'" + userid + "',userpwd:'" + xindemima + "'}",
+                url: "WSZQY.asmx/updataPwd",
+                data: "{userid:'" + userid + "',userpwd:'" + xindemima + "',shurumima:'" + dangqianmima + "',yuanlaimima:'" + yuanmima + "'}",
                 dataType: 'json',
                 success: function (result) {
-                    $(".bcxinxi").html("密码修改成功！");
-                    $(".baocuntip").show();
-                    $(".dqmima").val("");
-                    $(".xdmima").val("");
-                    $(".qrmima").val("");
+                    if (result.d == "no") {
+                        $(".bcxinxi").html("原密码输入不密码，请重新输入！");
+                        $(".baocuntip").show();
+                    } else {
+                        $(".bcxinxi").html("密码修改成功！");
+                        $(".baocuntip").show();
+                        $(".dqmima").val("");
+                        $(".xdmima").val("");
+                        $(".qrmima").val("");
+                    }
+                   
                 }
             });
         }

@@ -35,7 +35,7 @@
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
-                url: "WS.asmx/updataPwd",
+                url: "WSZQY.asmx/chongzhimima",
                 data: "{userid:'" + userid + "',userpwd:'" + fmima + "'}",
                 dataType: 'json',
                 success: function (result) {

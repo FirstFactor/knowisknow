@@ -14,6 +14,8 @@ $(function () {
 		setTimeout('$(".zqysignin").show()',300);
 		$(".zqysignin").animate({"margin-left":"138px"},1000);*/
         $(".zqyzhucefailure").hide();
+        //$(".zqysignmail").val("");
+        //$(".zqysignmima").val("");
     });
     $(".cezhu").click(function () {
         $(".zqysignup").show();
@@ -34,53 +36,59 @@ $(function () {
         var mima = $(".zqymima").val();
         var checkmail = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
 
-        setInterval('setfaulthide()', 500);
-        //if (xing == "") {
+        //setInterval('setfaulthide()', 5000);
+        if (xing == "") {
 
-        //    var xinghtml = "<div class='failtip'><i class='icon_sign'></i>姓氏未填写</div>";
-        //    $(".zqyzhucefailure").append(xinghtml);
-        //    $(".zqyzhucefailure").show();
+            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>姓氏未填写</div>";
+            $(".zqyzhucefailure").append(xinghtml);
+            $(".zqyzhucefailure").show();
 
-        //};
-        //if (ming == "") {
-        //    var xinghtml = "<div class='failtip'><i class='icon_sign'></i>名字未填写</div>";
-        //    $(".zqyzhucefailure").append(xinghtml);
-        //    $(".zqyzhucefailure").show();
-        //};
+        };
+        if (ming == "") {
+            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>名字未填写</div>";
+            $(".zqyzhucefailure").append(xinghtml);
+            $(".zqyzhucefailure").show();
+        };
 
-        //if (email == "") {
-        //    var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱未填写</div>";
-        //    $(".zqyzhucefailure").append(emailhtml);
-        //    $(".zqyzhucefailure").show();
-        //} else {
+        if (email == "") {
+            var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱未填写</div>";
+            $(".zqyzhucefailure").append(emailhtml);
+            $(".zqyzhucefailure").show();
+        } else {
 
-        //    if (!checkmail.test(email)) {
-        //        var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱格式不对</div>";
-        //        $(".zqyzhucefailure").append(emailhtml);
-        //        $(".zqyzhucefailure").show();
-        //    };
-        //};
+            if (!checkmail.test(email)) {
+                var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱格式不对</div>";
+                $(".zqyzhucefailure").append(emailhtml);
+                $(".zqyzhucefailure").show();
+            };
+        };
 
-        //if (mima == "") {
-        //    var mimahtml = "<div class='failtip'><i class='icon_sign'></i>密码未填写</div>";
-        //    $(".zqyzhucefailure").append(mimahtml);
-        //    $(".zqyzhucefailure").show();
-        //};
+        if (mima == "") {
+            var mimahtml = "<div class='failtip'><i class='icon_sign'></i>密码未填写</div>";
+            $(".zqyzhucefailure").append(mimahtml);
+            $(".zqyzhucefailure").show();
+        };
 
-        //if (xing != "" && ming != "" && checkmail.test(email) && email != "") {
-        //    $(".zqywrapper").hide();
-        //    $(".mengban").show();
-        //    $.ajax({
-        //        data: {},
-        //        dataType: "json",
-        //        url: "ws.asmx/HelloWorld",
-        //        type: "post",
-        //        contentType: "application/json",
-        //        success: function (res) {
-
-        //        }
-        //    });
-        //}
+        if (xing != "" && ming != "" && checkmail.test(email) && email != "") {
+            //$(".zqywrapper").hide();
+            //$(".mengban").show();
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: "WSZQY.asmx/zhuce",
+                data: "{xing:'" + xing + "',ming:'" + ming + "',email:'" + email + "',mima:'" + mima + "'}",
+                dataType: 'json',
+                success: function (res) {
+                    if (res.d == "yes" ) {
+                        window.location.href = "SelectTopic.aspx?backurl=" + window.location.href;
+                    } else {
+                        var mimahtml = "<div class='failtip'><i class='icon_sign'></i>该邮箱已注册，请直接登录</div>";
+                        $(".zqyzhucefailure").html(mimahtml);
+                        $(".zqyzhucefailure").show();
+                    }                 
+                }
+            });
+        }
     });
 
 
@@ -92,26 +100,46 @@ $(function () {
         $(".zqydenglufailure").hide();
         var signmail = $(".zqysignmail").val();
         var signmima = $(".zqysignmima").val();
-        //if (signmail == "") {
-        //    var xinghtml = "<div class='failtip'><i class='icon_sign'></i>邮箱未填写</div>";
-        //    $(".zqydenglufailure").append(xinghtml);
-        //    $(".zqydenglufailure").show();
-        //} else {
-        //    //safsa@abc.ccom.cn
-        //    var checkmaildl = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
-        //    if (!checkmaildl.test(signmail)) {
-        //        var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱格式不对</div>";
-        //        $(".zqydenglufailure").append(emailhtml);
-        //        $(".zqydenglufailure").show();
-        //    }
-        //}
+        var checkmaildl = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+        if (signmail == "") {
+            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>邮箱未填写</div>";
+            $(".zqydenglufailure").append(xinghtml);
+            $(".zqydenglufailure").show();
+        } else {
+            //safsa@abc.ccom.cn
+            var checkmaildl = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+            if (!checkmaildl.test(signmail)) {
+                var emailhtml = "<div class='failtip'><i class='icon_sign'></i>邮箱格式不对</div>";
+                $(".zqydenglufailure").append(emailhtml);
+                $(".zqydenglufailure").show();
+            }
+        }
 
-        //if (signmima == "") {
-        //    var xinghtml = "<div class='failtip'><i class='icon_sign'></i>密码未填写</div>";
-        //    $(".zqydenglufailure").append(xinghtml);
-        //    $(".zqydenglufailure").show();
-        //};
-
+        if (signmima == "") {
+            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>密码未填写</div>";
+            $(".zqydenglufailure").append(xinghtml);
+            $(".zqydenglufailure").show();
+        };
+        if (checkmaildl.test(signmail) && signmima != "") {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: "WSZQY.asmx/denglu",
+                data: "{useremail:'" + signmail + "',userpwd:'" + signmima + "'}",
+                dataType: 'json',
+                success: function (res) {
+                    if (res.d ==0 ) {
+                        var xinghtml = "<div class='failtip'><i class='icon_sign'></i>帐号和密码不匹配！</div>";
+                        $(".zqydenglufailure").html(xinghtml);
+                        $(".zqydenglufailure").show();
+                        //$(".zqysignmail").val("");
+                        //$(".zqysignmima").val("");
+                    } else {                      
+                        window.location.href = "home.aspx?backurl=" + window.location.href;
+                    }
+                }
+            });
+        }
 
 
     });
@@ -287,5 +315,5 @@ function ddd() {
 
 
 function setfaulthide() {
-    $("#faultshow").hide();
+    $(".zqyzhucefailure").hide();
 }
