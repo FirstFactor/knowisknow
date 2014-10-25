@@ -417,8 +417,8 @@ namespace DAL
             return DbHelperSQL.Query(strSql.ToString());
         }
 
-        /*
-        /// <summary>
+        
+       /* /// <summary>
         /// 分页获取数据列表
         /// </summary>
         public DataSet GetList(int PageSize,int PageIndex,string strWhere)
@@ -440,8 +440,8 @@ namespace DAL
             parameters[5].Value = 0;
             parameters[6].Value = strWhere;	
             return DbHelperSQL.RunProcedure("UP_GetRecordByPage",parameters,"ds");
-        }*/
-
+        }
+        */
         #endregion  BasicMethod
         #region  ExtensionMethod
 

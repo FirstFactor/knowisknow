@@ -26,7 +26,7 @@ namespace KnowIsKnow
             {
                 Session["AdminID"] = info.Tables[0].Rows[0]["adminID"];
                 Session["AdminEmail"] = info.Tables[0].Rows[0]["adminEmail"];
-                Session["AdminEmail"] = info.Tables[0].Rows[0]["adminNickName"];
+                Session["AdminNickName"] = info.Tables[0].Rows[0]["adminNickName"];
                 Response.Redirect("AdminPage.aspx");
             }
         }

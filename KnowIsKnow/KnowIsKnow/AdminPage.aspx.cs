@@ -12,13 +12,21 @@ namespace KnowIsKnow
     public partial class AdminPage : System.Web.UI.Page
     {
 
-
+        public string userNickName;
         protected void Page_Load(object sender, EventArgs e)
         {
-            BLL.TopicInfo topic = new BLL.TopicInfo();
-            DataSet ds = topic.GetAllList();
-            this.rpttopic.DataSource = ds.Tables[0];
-            this.rpttopic.DataBind();
+
+            if (Session["AdminNickName"] == null)
+            {
+                Response.Redirect("AdminLogin.aspx");
+                return;
+            }
+            userNickName = Session["AdminNickName"].ToString();
+
+            //BLL.TopicInfo topic = new BLL.TopicInfo();
+            //DataSet ds = topic.GetList(5,"1=1","1");
+            //this.rpttopic.DataSource = ds.Tables[0];
+            //this.rpttopic.DataBind();
 
             BLL.ReportQuestionUserView reportquestion = new BLL.ReportQuestionUserView();
             DataSet ds2 = reportquestion.GetList("reportQuestionDealState='undeal'");

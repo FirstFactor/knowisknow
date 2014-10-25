@@ -26,6 +26,7 @@ namespace KnowIsKnow
         [WebMethod]
         public string UpdateTopicInfo(string topicid, string topictitle, string topicdes, string topicpicurl, string topicattention, string topicstate)
         {
+            
             BLL.TopicInfo topic = new BLL.TopicInfo();
             Model.TopicInfo topicinfo = new Model.TopicInfo();
             topicinfo.topicID = Convert.ToInt32(topicid);

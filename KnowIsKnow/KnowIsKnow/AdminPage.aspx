@@ -43,6 +43,24 @@
     <script type="text/javascript" src="js/adminpage.js"></script>
 
 
+
+    <script>
+        $(document).ready(function () {
+            $("#uploadify").uploadify({
+                'uploader': 'js/uploadify.swf',
+                'script': 'Upload.aspx',
+                'cancelImg': 'js/cancel.png',
+                'folder': 'images/topicImages',
+                'queueID': 'fileQueue',
+                'auto': false,
+                'multi': true,
+                'onComplete': function (file, data, response, i, o) { //上传成功回调方法
+                    imgurl = i;
+                    $(adimg).prev().attr("src", imgurl);
+                }
+            });
+        });
+    </script>
    
 </head>
 <body>
@@ -63,7 +81,10 @@
     <div id="adTop">
             <div id="adTopDetail">
                 <p class="adTitle">知为知</p>
-                <a href="#" class="adPerson">wangfang</a>
+               
+                <asp:Button ID="Button1" runat="server" Text="退出" style="float:right; margin-top:15px;border:0; "/>
+                <a href="#" class="adPerson" style="margin-right:15px;"><%=userNickName %></a>
+                
             </div>
         </div>
         <div id="adContentArea">
@@ -71,6 +92,7 @@
                 <li class="adNavActive"><span linkclass="addTopic">添加话题</span></li>
                 <li><span linkclass="alterTopic">修改/删除话题</span></li>
                 <li><span linkclass="dealReport">处理举报</span></li>
+                 <li><span linkclass="sendSystemMessage">发送系统消息</span></li>
             </ul>
             <ul class="adOperaDetail addTopic">
                 <li class="adInput">
@@ -98,9 +120,9 @@
                 </li>
                  <li class="adInput">
                     <span class="adSpanstyle">话题状态：</span>
-                     <div class="adCombox" IsOpen="false">                     
+                     <div class="adCombox" style="display:block" IsOpen="false">                     
                         <span runat="server" id="topicState1" class="adComboxSpan">normal</span>
-                        <span class="adComboxImg fa fa-lightbulb-o"></span>
+                        <%--<span class="adComboxImg fa fa-lightbulb-o"></span>--%>
                          <%--<ul class="adStateList">
                              <li class="adStateli">normal</li>
                              <li class="adStateli">deleted</li>
@@ -117,10 +139,12 @@
                     <span class="adSearchSpan">查找：</span>
                     <div class="adSearch">
                         <input type="text" class="adSearchInput" />
-                        <div class="adSearchImg fa fa-lightbulb-o"></div>
+                        <div class="adSearchImg fa fa-lightbulb-o">
+                        </div>
                     </div>
+                    <div class="checkTopicState" style="float:right"><div class="zhengchang" divid="normallist" style="float:left;cursor:pointer; margin-right:10px;">正常话题</div><div class="buzhengchang" href="#" divid="unnormallist" style="float:left;cursor:pointer;">已删话题</div><div class="clear"></div> </div>
                 </div>
-                <ul class="adTopicList">
+                <ul id="normallist" class="adTopicList">
                     <li class="adTopicli">
                         <ul>
                             <li class="adTopicImg">Logo
@@ -131,20 +155,21 @@
                             <li class="adTopicState">状态</li>
                             <li class="adTopicAlter">操作</li>
                             <li class="adTopicAlter">操作</li>
+                            <div class="clear"></div>
                         </ul>
                     </li>
-
+                    <div id="nor">
                     <asp:Repeater runat="server" ID="rpttopic">
                         <ItemTemplate>
                             <li class="adTopicli">
                                 <ul topicinfoid='<%# Eval("topicID") %>'>
                                     <li class="adTopicImg">
                                         <img class="spanshow logoimg" src="<%# Eval("topicPicUrl") %>" />
-                                        <span class="adComboxImg fa fa-lightbulb-o" imgurl="<%# Eval("topicPicUrl") %>"></span>
+                                        <span class="adComboxImg" imgurl="<%# Eval("topicPicUrl") %>">d</span>
                                     </li>
                                     <li class="adTopicTitle">
                                         <span class="spanshow spanTitle"><%# Eval("topicTitle") %></span>
-                                        <input type="text" class="adTopicTitleInput" value="" /></li>
+                                        <input type="text" id="addtopictitle" class="adTopicTitleInput" value="" /></li>
                                     <li class="adTopicDes">
                                         <span class="spanshow spanContent"><%# Eval("topicDes") %></span>
                                         <input type="text" class="adTopicDesInput" value="" />
@@ -157,7 +182,7 @@
                                         <span class="spanshow topicstate">normal</span>
                                         <div class="adCombox adComboxInput" IsOpen="false">
                                             <span class="adComboxSpan selectedtopicstate">normal</span>
-                                            <span class="adComboxImg fa fa-lightbulb-o"></span>
+                                            <span class="adComboxImg">*</span>
                                              <ul class="adStateList">
                                                  <li class="adStateli">normal</li>
                                                  <li class="adStateli">deleted</li>
@@ -170,10 +195,12 @@
                                     </li>
                                     <li class="adTopicAlter adshanchu">删除
                                     </li>
+                                    <div class="clear"></div>
                                 </ul>
                              </li>
                         </ItemTemplate>
                     </asp:Repeater>
+                    </div>
                     <%--<li class="adTopicli">
                         <ul>
                             <li class="adTopicImg">
@@ -212,6 +239,26 @@
                     </li>--%>
                     
                 </ul>
+                <ul id="unnormallist" class="adTopicList" style="display:none">
+                    <li class="adTopicli">
+                        <ul>
+                            <li class="adTopicImg">Logo
+                            </li>
+                            <li class="adTopicTitle">标题</li>
+                            <li class="adTopicDes">详情</li>
+                            <li class="adTopicAttention">关注数</li>
+                            <li class="adTopicState">状态</li>
+                            <li class="adTopicAlter">操作</li>
+                            <li class="adTopicAlter">操作</li>
+                            <div class="clear"></div>
+                        </ul>
+                    </li>
+                    <div id="unnor">
+
+                    </div>
+
+                </ul>
+                <input type="button"id="first" str="" name="name" value="首页" /><input type="button"id="prevtopiclist" str="" name="name" value="上一页" /><input type="button" id="nexttopiclist" str="" name="name" value="下一页" /><input type="button"id="last" str="" name="name" value="尾页" /><input type="text" id="pages" str="" name="name" value="1" />
             </div>
             <div class="adOperaDetail dealReport">
                 <ul class="reportul">
@@ -225,11 +272,11 @@
                 <div class="reportlistArea">
                     <div class="reportlist reportques">
                         <ul>
-                            <li ><span class="questionTitle">Title</span> <span class="reportReason">reason</span> <span class="reportOperation">operation1</span></li>
+                            <li ><span class="questionTitle">Title</span> <span class="reportReason">reason</span> <span class="reportOperation">operation1</span> <div class="clear"></div></li>
 
                             <asp:Repeater runat="server" ID="rptreportQeslist">
                                 <ItemTemplate>
-                                     <li ><span class="questionTitle"><a href="QuestionDetail.aspx?QuesID=<%#Eval("questionID")%>"><%# Eval("questionTitle") %></a></span> <span class="reportReason"><%#Eval("reportReasonContent") %><%#Eval("reportQuestionReason") %></span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op" state="delete" reportID="<%#Eval("reportQuID")%>">删除</dd><dd class="op" state="ignore">忽略</dd></dl></div></li>
+                                     <li ><span class="questionTitle"><a href="QuestionDetail.aspx?QuesID=<%#Eval("questionID")%>"><%# Eval("questionTitle") %></a></span> <span class="reportReason"><%#Eval("reportReasonContent") %><%#Eval("reportQuestionReason") %></span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op" state="delete" reportID="<%#Eval("reportQuID")%>">删除</dd><dd class="op" state="ignore">忽略</dd></dl></div> <div class="clear"></div></li>
                                 </ItemTemplate>
                             </asp:Repeater>
                            <%-- <li ><span class="questionTitle"><a href="#">content</a></span> <span class="reportReason">reason</span> <div class="reportOperationArea"><dl class="reportOperation1 repop"><dt class="selectop">处理</dt><dd class="op">删除</dd><dd class="op">忽略</dd></dl></div></li>
@@ -249,6 +296,23 @@
                            
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div class="adOperaDetail sendSystemMessage">
+                <div id="MessageArea">
+                    <ul>
+                        <li>发送给：<input type="text" id="receiver" name="name" value=" " /></li>
+                        <br />
+                        <li>
+                            <div style="width:940px; height:450px; border:1px solid #ccc;"></div>
+
+                        </li>
+                        <br />
+                        <li>
+                            <input type="button" id="sendMessage" name="name" value=" 发送" style="float:right" />
+
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

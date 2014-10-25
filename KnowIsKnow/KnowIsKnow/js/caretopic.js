@@ -128,6 +128,17 @@
                 
             }
         });
+
+        $.ajax({
+            data: "{ topicID:'" + topicid + "'}",
+            dataType: "json",
+            url: "ws.asmx/deltopicAttention",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+
+            }
+        });
     });
     
     xianshi();

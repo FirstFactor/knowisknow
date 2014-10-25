@@ -2,6 +2,9 @@
 ul,li{ list-style:none;}
 a{ text-decoration:none; cursor:pointer}
 img{ border:0;}
+.clear {
+    clear:both;
+}
 
 #adTop
 { 
@@ -174,11 +177,12 @@ img{ border:0;}
     position:relative;
     z-index:10;
     float:left;
-    width:100px;
+    width:80px;
     height:28px;
     border:1px solid #cccccc;
     margin-top:10px;
     cursor:pointer;
+    display:none;
 }
 .adComboxSpan 
 {
@@ -196,6 +200,7 @@ img{ border:0;}
     width:20px;
     height:30px;
     border:0;
+    display:none;
 }
 .adStateList 
 {
@@ -204,14 +209,14 @@ img{ border:0;}
     z-index:12;
     top:28px;
     left:-1px;
-    width:90px;
+    width:80px;
     height:auto;
     border:1px solid #cccccc;
     border-bottom:0;
 }
 .adStateli
 {
-    width:80px;
+    width:70px;
     padding:0 0 0 10px;
     height:30px;
     line-height:30px;
@@ -232,7 +237,7 @@ img{ border:0;}
 /*********************修改/删除话题****************************/
 .adSearchArea 
 {
-    width:500px;
+   
     height:30px;
     line-height:30px;
     font-size:14px;
@@ -296,7 +301,7 @@ img{ border:0;}
 .adTopicTitle {
     float:left;
     padding:0 10px;
-    width:150px;
+    width:130px;
     height:30px;
     line-height:30px;
     font-size:14px;
@@ -343,7 +348,7 @@ img{ border:0;}
 .adTopicState {
     float:left;
     padding:0 10px;
-    width:100px;
+    width:90px;
     height:30px;
 }
 .adTopicAlter {
@@ -404,6 +409,8 @@ img{ border:0;}
     float:left;
 }
 
+
+
 .questionTitle {
     width:300px;
 }
@@ -414,6 +421,8 @@ img{ border:0;}
 .reportOperationArea {
     float:left;
     position:relative;
+    width:100px;
+
 }
 
 .reportOperation {
@@ -428,6 +437,7 @@ img{ border:0;}
        width:100px;
     text-align:center;
     cursor:pointer;
+  
 }
 
 .op {
@@ -478,4 +488,22 @@ img{ border:0;}
     font-weight:bold;
     cursor:pointer;
    
+}
+.submit {
+display:none;
+}
+
+.spanshow {
+
+}
+.xiugaiimg {
+    display:none;
+}
+#addtopictitle {
+    display:none;
+}
+
+
+#MessageArea {
+    padding:10px;
 }

@@ -145,5 +145,36 @@ namespace KnowIsKnow
         }
 
 
+        [WebMethod]
+        public List<Model.TopicInfo> Pages(string str, string order, int startindex, int endindex)
+        {
+            int size = endindex - startindex;
+            BLL.TopicInfo blltopic = new BLL.TopicInfo();
+            //DataSet ds= blltopic.GetList(size,str,index);
+            DataSet ds = blltopic.GetListByPage( str,order,startindex,endindex );
+            List<Model.TopicInfo> list  = blltopic.DataTableToList(ds.Tables[0]);
+            return list;
+        }
+
+        [WebMethod]
+        public string CountPage(string str, int startindex, int endindex)
+        {
+            int size = endindex - startindex+1;
+            BLL.TopicInfo blltopic = new BLL.TopicInfo();
+            int count= blltopic.GetRecordCount(str);
+            int allpage;
+            if (count % size == 0)
+            {
+                allpage = count / size;
+            }
+            else {
+                allpage = (count / size) + 1;
+            }
+            return allpage.ToString();
+        }
+        
+
+
+
     }
 }
