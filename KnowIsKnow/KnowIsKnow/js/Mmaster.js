@@ -89,7 +89,7 @@ $(function () {
                 contentType: "application/json",
                 success: function (res) {
                     if (res.d == "ok") {
-                        window.location.href="Home.aspx";
+                        window.location.href="MyQuestion.aspx";
                     }
                 }
             });

@@ -8,29 +8,29 @@ using System.Data;
 
 namespace KnowIsKnow
 {
-    public partial class Home : System.Web.UI.Page
+    public partial class WebForm7 : System.Web.UI.Page
     {
-        public string userid;
+        public string userid_myquestion;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["UserID"] == null)
             {
                 Response.Write("<script>window.location.href='index.aspx'</script>");
             }
-            else {
-                userid = Session["UserID"].ToString();
-                BLL.CarePersonQuestionView quelist = new BLL.CarePersonQuestionView();
-                DataSet ds = quelist.GetList("questionSate='normal' and personCaredByUID=" + userid + " order by quetionPubTime desc");
+            else
+            {
+                userid_myquestion = Session["UserID"].ToString();
+                BLL.QuestionUserView quelist = new BLL.QuestionUserView();
+                DataSet ds = quelist.GetList("questionSate='normal' and questionProvider=" + userid_myquestion + " order by quetionPubTime desc");
                 this.rpt.DataSource = ds.Tables[0];
                 this.rpt.DataBind();
 
             }
         }
-
         public string CheckCareQuestion(object questionID)
         {
             BLL.CareQuestion cq = new BLL.CareQuestion();
-            List<Model.CareQuestion> list = cq.GetModelList("questionCaredByUID=" + userid);
+            List<Model.CareQuestion> list = cq.GetModelList("questionCaredByUID=" + userid_myquestion);
             int qid = Convert.ToInt32(questionID);
             for (int i = 0; i < list.Count; i++)
             {
@@ -40,11 +40,7 @@ namespace KnowIsKnow
                 }
             }
             return "false";
+
         }
-
-        
-
-        
-        
     }
 }

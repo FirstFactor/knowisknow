@@ -35,7 +35,7 @@
 		<div class="zqq-tiwen-search">
 			<div class="zqq-tiwen-menban-title">
 				<div class="zqq-tiwen-menban-title-main">提问</div>
-				<div class="zqq-tiwen-menban-close">X</div>
+				<div class="zqq-tiwen-menban-close"></div>
 			</div>
 			<div class="zqq-tiwen-search-content">
 				<p>
@@ -82,11 +82,11 @@
 		<div class="zqq-tiwen-inner">
 			<div class="zqq-tiwen-menban-title">
 				<div class="zqq-tiwen-menban-title-main">提问</div>
-				<div class="zqq-tiwen-menban-close">X</div>
+				<div class="zqq-tiwen-menban-close"></div>
 			</div>
 			<div class="zqq-publish">
                 <input type="text" class="zqq-publish-input-title"/>
-				<div class="zqq-publish-contentTitle">问题说明（可选）：</div>
+				<div class="zqq-publish-contentTitle">问题说明：</div>
                 <div id="txtQuestionContent" class="zqq-publish-input-content" ></div>
 
 				<div class="zqq-publish-topicChose">选择话题：</div>
@@ -100,7 +100,7 @@
         <div class="zqq-jubao-inner">
             <div class="zqq-tiwen-menban-title">
                 <div class="zqq-tiwen-menban-title-main">为什么举报这个问题？</div>
-                <div class="zqq-tiwen-menban-close">X</div>
+                <div class="zqq-tiwen-menban-close"></div>
             </div>
             <div class="zqq-jubao-chose">
                 <div class="zqq-jubao-chose-title">请选择理由</div>

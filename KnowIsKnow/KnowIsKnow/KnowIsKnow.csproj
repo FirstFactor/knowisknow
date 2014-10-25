@@ -401,6 +401,9 @@
     <Content Include="ueditor\ueditor.parse.js" />
     <Content Include="ueditor\ueditor.parse.min.js" />
     <Content Include="Upload.aspx" />
+    <Content Include="AllQuestion.aspx" />
+    <Content Include="MyQuestion.aspx" />
+    <Content Include="CaredQuestion.aspx" />
     <Content Include="WS.asmx" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
@@ -579,6 +582,27 @@
     </Compile>
     <Compile Include="Upload.aspx.designer.cs">
       <DependentUpon>Upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllQuestion.aspx.cs">
+      <DependentUpon>AllQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllQuestion.aspx.designer.cs">
+      <DependentUpon>AllQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyQuestion.aspx.cs">
+      <DependentUpon>MyQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyQuestion.aspx.designer.cs">
+      <DependentUpon>MyQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CaredQuestion.aspx.cs">
+      <DependentUpon>CaredQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CaredQuestion.aspx.designer.cs">
+      <DependentUpon>CaredQuestion.aspx</DependentUpon>
     </Compile>
     <Compile Include="WS.asmx.cs">
       <DependentUpon>WS.asmx</DependentUpon>

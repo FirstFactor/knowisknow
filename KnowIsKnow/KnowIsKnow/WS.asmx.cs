@@ -107,6 +107,16 @@ namespace KnowIsKnow
             bllrq.Add(rq);
             return "举报成功，请耐心等待处理结果";
         }
+        [WebMethod]
+        public string delMyQuestion(string questionid) {
+            int qid = Convert.ToInt32(questionid);
+            BLL.QuestionInfo blldelmyquestion = new BLL.QuestionInfo();
+            Model.QuestionInfo delmyque = blldelmyquestion.GetModel(qid);
+            delmyque.questionSate = "unnormal";
+            blldelmyquestion.Update(delmyque);
+            return "删除成功！";
+        
+        }
 
 
 

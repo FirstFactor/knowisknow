@@ -1,12 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/KnowIsKnow.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="KnowIsKnow.Home" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/KnowIsKnow.Master" AutoEventWireup="true" CodeBehind="CaredQuestion.aspx.cs" Inherits="KnowIsKnow.WebForm11" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <link href="css/Home.css" rel="stylesheet" type="text/css"/>
+    <link href="css/Home.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/home.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        
-        
-        <div class="userid" userid="<%=userid %>"></div>
+    <div class="userid" userid="<%=userid_caredquestion %>"></div>
 		<div class="zqq-main">
 					<div class="zqq-main-L">
 						<div class="zqq-question-area">
@@ -32,19 +30,29 @@
 								          <div class="zqq-profile-card zqq-topic">
 									    	<div class="zqq-upper">
 										    	<a class="zqq-avatar-link" href="/topic/19577143">
-												<span class="zqq-name"><%# Eval("userNickName") %></span>
-												<img class="zqq-avatar" src="<%# Eval("userHeadImage") %>"/>
+												<span class="zqq-name">诺贝尔奖</span>
+												<img class="zqq-avatar" src="images/07685ae24_m.jpg"/>
 										    	</a>
 											    <br/>
-										    	<div class="zqq-tagline"><%# Eval("userShuoShuo") %></div>
+										    	<div class="zqq-tagline">诺贝尔奖是根据瑞典化学家阿尔弗雷德·诺贝尔的遗嘱所设立的奖项，以表彰那些对社会做出卓越贡…</div>
 										    </div>
 									    	<div class="zqq-lower zqq-clearfix">
+										    	<div class="zqq-meta">
+											    	<a class="zqq-item" target="_blank" href="/topic/19577143/questions">
+												    	<span class="zqq-value">735</span>
+											    		<span class="zqq-key">问题</span>
+											    	</a>
+											    	<a class="zqq-item" target="_blank" href="/topic/19577143/top-answers">
+											    		<span class="zqq-value">241</span>
+											    		<span class="zqq-key">精华</span>
+										    		</a>
+											    	<a class="zqq-item" target="_blank" href="/topic/19577143/followers">
+											    		<span class="zqq-value">840</span>
+										    			<span class="zqq-key">关注者</span>
+										    		</a>
+										    	</div>
 											    <div class="zqq-operation">
-                                                    
-											    	<button class="zqq-zg-btn zqq-zg-btn-follow zqq-zm-rich-follow-btn">关注</button>
-                                                    <div class="zqq-messageButtonArea">
-                                                        <i class="zqq-icon zqq-messageButton"></i>
-                                                    </div>
+											    	<button data-follow="t:button" data-id="8978" class="zqq-zg-btn zqq-zg-btn-follow zqq-zm-rich-follow-btn">关注</button>
 										    	</div>
 									    	</div>
 									     </div>
@@ -60,17 +68,17 @@
                                         <div class="clear"></div>
                                     </div>
 							    	<%--<div id="zqq-questionTitle1" class="zqq-question-title" questionid="<%# Eval("questionID") %>"><%# Eval("questionTitle") %></div>--%>
-                                    <a href='QuestionDetail.aspx?QuesID=<%# Eval("questionID")%>' class="zqq-question-title" questionid='<%# Eval("questionID") %>' ><%# Eval("questionTitle") %></a>
+                                    <a href='QuestionDetail.aspx?QuesID=<%# Eval("careQuestionID")%>' class="zqq-question-title" questionid='<%# Eval("careQuestionID") %>' ><%# Eval("questionTitle") %></a>
 								    <div class="zqq-question-content">
 									    <div class="zqq-content-word"><%# Eval("questionContent") %></div>
 									    <img class="zqq-content-pic" src="" /> 
 								    </div>
 								    <div class="zqq-question-ft">
 									    <div class="zqq-follow-topic">
-                                            <a class="zqq-follow-topic-button" panduan='<%# CheckCareQuestion(Eval("questionID")) %>'  questionid='<%# Eval("questionID") %>'>关注问题</a>
+                                            <a class="zqq-noFollow-topic-button"   questionid='<%# Eval("careQuestionID") %>'>取消关注</a>
                                            <%-- <a class="zqq-display zqq-noFollow-topic-button">取消关注</a>--%>
 								    	</div>
-								    	<div class="zqq-jubao" questionid='<%# Eval("questionID") %>'>举报</div>
+								    	<div class="zqq-jubao" questionid='<%# Eval("careQuestionID") %>'>举报</div>
 							    	</div>
 							    </div>
 							</div>
