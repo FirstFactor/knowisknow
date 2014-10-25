@@ -48,7 +48,7 @@ namespace KnowIsKnow
             return da; 
         }
 
-       
+
         [WebMethod]
         public void AddCareTopic(string topicid, string userid)
         {
@@ -56,8 +56,7 @@ namespace KnowIsKnow
             Model.CareTopic topicinfo = new Model.CareTopic();
             topicinfo.careTopicID = Convert.ToInt32(topicid);
             topicinfo.careTopicState = "normal";
-            topicinfo.topicCaredByUID = Convert.ToInt32( userid);
-        
+            topicinfo.topicCaredByUID = Convert.ToInt32( userid);  
             topic.Add(topicinfo);
             
         }
@@ -122,6 +121,7 @@ namespace KnowIsKnow
              
             blluserinfo.Update(modeluser);
         }
+
         [WebMethod]
         public void updateUserCompanyPosition(string company, string position, string userid)
         {
