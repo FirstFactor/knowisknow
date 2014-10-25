@@ -420,6 +420,7 @@
     <Content Include="WS2.asmx" />
     <Content Include="WSQuan.asmx" />
     <Content Include="WSWang.asmx" />
+    <Content Include="WSZQY.asmx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -618,6 +619,10 @@
     </Compile>
     <Compile Include="WSWang.asmx.cs">
       <DependentUpon>WSWang.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSZQY.asmx.cs">
+      <DependentUpon>WSZQY.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>

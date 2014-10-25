@@ -16,7 +16,10 @@ namespace KnowIsKnow
             BLL.UserInfo blluser = new BLL.UserInfo();
             DataSet ds = blluser.GetList("userEmail='" + email + "'");
             string xuliehao = Convert.ToString(ds.Tables[0].Rows[0]["userVerifyCode"]);
+            
             string userid = Convert.ToString(ds.Tables[0].Rows[0]["userID"]);
+       
+
             dddd.InnerHtml = xuliehao;
             eeee.InnerHtml = userid;
 
