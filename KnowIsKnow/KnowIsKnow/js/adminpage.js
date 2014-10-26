@@ -511,16 +511,21 @@ $(function () {
 
 
     $("#sendMessage").click(function () {
-
+        content = ue.getContent();
+        if (content == "") {
+            return;
+        }
+        senderid = 0;
+        receiverid = 0;//向所有人发送无法获得具体的id,暂用0代替
         $.ajax({
             async: false,
             type: "POST",
             contentType: "application/json",
-            url: "WSQuan.asmx/Send",
-            data: '{"content":"' + content + '"}',
+            url: "WSQuan.asmx/sendSystemMessage",
+            data: "{'senderid':'" + senderid + "','receiverid':'" + receiverid + "', 'content':'" + content + "'}",
             dataType: 'json',
             success: function (result) {
-                allpage = result.d;
+                alert(result.d);
             }
         });
 

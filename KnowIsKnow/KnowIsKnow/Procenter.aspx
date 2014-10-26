@@ -173,9 +173,9 @@
 											</select>
 										</div>
 										<span class="wtzg-bull">|</span><span id="wtsp" style="display:none" xingbie="<%=gender%>"></span>
-										<input type="radio" name="gender" value="1" checked="checked" class="male"/>
+										<input type="radio" name="gender1" value="1" class="male"/>
 										男&nbsp;&nbsp;
-										<input type="radio" name="gender" class="female"/>
+										<input type="radio" name="gender1" class="female"/>
 										女
 										<a href="javascript:;" class="wtzg-btn-blue wtbtnblue1" name="save">确定</a>
 
@@ -256,13 +256,13 @@
 					<a class="wtitemm  wtactive">
 						<i class="wticon wticon-profile-tab-home"></i>
 					</a>
-					<a class="wtitemm">
+					<a class="wtitemm" href="MyQuestion.aspx">
 						<span>提问</span>
-						<span class="wtnum">0</span>
+                        <span class="wtnum"><%=myquestion %></span>
 					</a>
 					<a class="wtitemm">
 						<span>回答</span>
-						<span class="wtnum">0</span>
+						<span class="wtnum"><%=myreply %></span>
 					</a>
 					<a class="wtitemm">
 						<span>专栏文章</span>
@@ -284,6 +284,19 @@
 					<h2 class="wtzm-profile-section-title">最新动态</h2>
 				</div>
 				<div id="wtzh-profile-activity-page-list">
+                    <asp:Repeater runat="server" ID="rtpcared">
+                        <ItemTemplate>
+                            <div class="wtzm-profile-section-item wtzm-item">
+						        <span>关注了话题</span>
+						        <a>
+							        <img src="<%# Eval("topicPicUrl") %>" class="wtpic"/>
+							        <span><%# Eval("topicTitle") %></span>
+						        </a>
+						        <span class="wtweek">1周前</span> 
+					        </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+
 					<div class="wtzm-profile-section-item wtzm-item">
 						<span>关注了话题</span>
 						<a>
@@ -319,7 +332,7 @@
 					<div class="wtzm-profile-module wtzg-clear">
 						<a class="wtzg-link-litblue2 wtzg-right" id="wtfanhuigerenzhuye">返回个人主页</a>
 						<h2 class="wtzm-profile-mbox-title">
-							<a>文韬</a>
+							<a><%=nickname %></a>
 							<span> » 编辑个人资料</span>
 						</h2>
 					</div>
@@ -341,7 +354,7 @@
 						<h3>性别</h3>
 						<div class="wtzm-profile-module-desc2">
 							<label>
-								<input type="radio" name="gender" value="1" checked="checked" class="male"/>
+								<input type="radio" name="gender" value="1" class="male"/>
 								男&nbsp;&nbsp;
 							</label>
 							<label>
@@ -356,11 +369,11 @@
 						<div class="wtzm-profile-module-desc">
 							<div class="wtzm-profile-edit-fieldset wtweibo-edit-wrap">
 								<label>
-								<input type="radio" name="gender" value="1" checked="checked" class="male"/>
+								<input type="radio" name="showhide" value="1" checked="checked" class="show"/>
 								显示&nbsp;&nbsp;
 								</label>
 								<label>
-								<input type="radio" name="gender" value="0" class="female"/>
+								<input type="radio" name="showhide" value="0" class="hide"/>
 								隐藏
 								</label>
 								<p class="wtdesc">你可以邀请好友加入知乎、回答问题，或把知乎上精彩问答分享到其他社区。</p>
@@ -393,7 +406,7 @@
 								<div class="wtzm-editable-editor-wrap">
 									<div class="wtzm-editable-editor-outer">
 										<div class="wtzg-form-text-input wtzg-form-text-inputse">
-											<textarea id="wtzm-profile-edit-description" class="wtzm-editable-editor-input"></textarea>
+											<textarea id="wtzm-profile-edit-description" class="wtzm-editable-editor-input"><%=probio%></textarea>
 										</div>
 									</div>
 									<p class="wtdesc">用一段话介绍你自己，会在你的个人页面显示</p>
@@ -422,7 +435,7 @@
 						<div class="wtzm-profile-module-desc">
 							<div class="wtzm-profile-edit-fieldset">
 								<span class="wttopic-input-wrap">
-									<input autocomplete="off" aria-haspopup="true" type="text" class="wttianjiajvzhudi wtzg-form-text-input" placeholder="添加居住地" aria-label="添加居住地"/>
+									<input autocomplete="off" aria-haspopup="true" type="text" class="wttianjiajvzhudi wtzg-form-text-input" placeholder="添加居住地" value="<%=address %>" aria-label="添加居住地"/>
 								</span>
 								<button class="wtzg-btn-blue">添加</button>
 							</div>
@@ -434,10 +447,10 @@
 							<div class="wtzm-profile-edit-fieldset">
 								<p>
 									<span class="wttopic-input-wrap">
-										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="公司或组织名称" aria-label="公司或组织名称"/>
+										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="公司或组织名称" value="<%=company %>" aria-label="公司或组织名称"/>
 									</span>
 									<span class="wttopic-input-wrap wtzhiwei">
-										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="你的职位（选填）" aria-label="你的职位（选填）"/>
+										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="你的职位（选填）" value="<%=position %>" aria-label="你的职位（选填）"/>
 									</span>
 									<button class="wtzg-btn-blue">添加</button>
 								</p>
@@ -451,10 +464,10 @@
 							<div class="wtzm-profile-edit-fieldset">
 								<p>
 									<span class="wttopic-input-wrap">
-										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="学校或教育机构名" aria-label="学校或教育机构名"/>
+										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="学校或教育机构名" value="<%=academy %>" aria-label="学校或教育机构名"/>
 									</span>
 									<span class="wttopic-input-wrap wtzhiwei">
-										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="专业方向（选填）" aria-label="专业方向（选填）"/>
+										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="专业方向（选填）" value="<%=major %>" aria-label="专业方向（选填）"/>
 									</span>
 									<button class="wtzg-btn-blue">添加</button>
 								</p>
@@ -466,11 +479,11 @@
 						<h3>擅长话题</h3>
 						<div class="wtzm-profile-module-desc2">
 							<label>
-								<input type="radio" name="gender" value="1" class="male"/>
+								<input type="radio" name="openclose" value="1" class="open"/>
 								开启&nbsp;&nbsp;
 							</label>
 							<label>
-								<input type="radio" name="gender" value="0" class="female" checked="checked" />
+								<input type="radio" name="openclose" value="0" class="close" checked="checked" />
 								关闭
 							</label>
 										
@@ -559,6 +572,7 @@
 			</div>
 			
 		</div>
+        <div class="clear"></div>
 	</div>
 
 </asp:Content>

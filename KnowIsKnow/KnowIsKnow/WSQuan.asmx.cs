@@ -172,9 +172,43 @@ namespace KnowIsKnow
             }
             return allpage.ToString();
         }
-        
+        /// <summary>
+        /// 群发消息
+        /// </summary>
+        /// <param name="senderid"></param>
+        /// <param name="receiverid"></param>
+        /// <param name="content"></param>
+        /// <returns></returns>
+        [WebMethod]
+        public string sendSystemMessage(int senderid,int receiverid,string content)
+        {
 
 
+            BLL.MessageInfo message = new BLL.MessageInfo();
+
+
+            BLL.UserInfo user = new BLL.UserInfo();
+            List<Model.UserInfo> userinfo=user.GetModelList("1=1");
+            for (int i = 0; i < userinfo.Count; i++)
+            {
+
+                
+                Model.MessageInfo modelmsg = new Model.MessageInfo();
+                modelmsg.MessageSendTime = DateTime.Now;
+                modelmsg.MessageContent = content;
+                modelmsg.MessageSenderID = senderid;
+                modelmsg.MessageSate = "unread";
+                modelmsg.MessageReceiverID = userinfo[i].userID; ;
+                modelmsg.MessageReportID = 0;
+
+                message.Add(modelmsg);
+
+            }
+            
+            
+           
+            return "ok";
+        }
 
     }
 }

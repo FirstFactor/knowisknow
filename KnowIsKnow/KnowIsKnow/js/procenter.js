@@ -23,9 +23,11 @@ $(function () {
 
     var gen = $("#wtsp").attr("xingbie");
     if (gen == "男") {
+        $(".male").attr("checked","checked");
         $(".wticon-male").addClass("wticon-profile-male");
     }
     if (gen == "女") {
+        $(".female").attr("checked", "checked");
         $(".wticon-male").addClass("wticon-profile-female");
     }
 
@@ -312,11 +314,16 @@ $(function () {
     });
 
     $(".male").click(function () {
-        $(".male").attr("value",1);
+        $(".male").attr("value", 1);
+        $(".female").removeAttr("checked");
+        $(".male").attr("checked", "checked");
+      
         $(".female").attr("value", 0);
     });
     $(".female").click(function () {
         $(".female").attr("value", 1);
+        $(".male").removeAttr("checked");
+        $(".female").attr("checked", "checked");
         $(".male").attr("value", 0);
     });
 

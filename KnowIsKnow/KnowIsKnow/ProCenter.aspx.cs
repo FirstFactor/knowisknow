@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -21,7 +22,8 @@ namespace KnowIsKnow
         public string probio;
         public string shuoshuo;
         public string nickname;
-      
+        public int myquestion;
+        public int myreply;
         protected void Page_Load(object sender, EventArgs e)
         {
             BLL.UserInfo blluserinfo = new BLL.UserInfo();
@@ -29,6 +31,7 @@ namespace KnowIsKnow
             {
 
                 Response.Redirect("Index.aspx");
+                return;
 
             }
             else {
@@ -45,6 +48,21 @@ namespace KnowIsKnow
                 probio=user.userProBio;
                 shuoshuo= user.userShuoShuo;
                 nickname= user.userNickName;
+
+
+                BLL.QuestionInfo countmyquestion = new BLL.QuestionInfo();
+                myquestion= countmyquestion.GetRecordCount("questionProvider="+userid);
+
+                BLL.ReplyQuestion countmyreply = new BLL.ReplyQuestion();
+                myreply= countmyreply.GetRecordCount("replyofUID="+userid+" and replyofReplyID=0");
+
+
+
+                BLL.TopicUserView topicuser = new BLL.TopicUserView();
+
+                DataSet ds=  topicuser.GetList("userID="+userid);
+                this.rtpcared.DataSource = ds.Tables[0];
+                this.rtpcared.DataBind();
             }
             
         }
