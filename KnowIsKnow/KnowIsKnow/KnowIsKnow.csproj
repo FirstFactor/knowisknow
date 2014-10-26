@@ -422,6 +422,7 @@
     <Content Include="WSQuan.asmx" />
     <Content Include="WSWang.asmx" />
     <Content Include="WSZQY.asmx" />
+    <None Include="Properties\PublishProfiles\firstpeizhi.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -430,7 +431,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminLogin.aspx.cs">

@@ -6,6 +6,10 @@ var endindex = 5;
 var page;
 
 $(function () {
+
+    ue = UE.getEditor('container', {
+
+    });
     //alert("ok");
     $("#mengban").css('opacity', 0.3);
 
@@ -505,6 +509,24 @@ $(function () {
 
     });
 
+
+    $("#sendMessage").click(function () {
+
+        $.ajax({
+            async: false,
+            type: "POST",
+            contentType: "application/json",
+            url: "WSQuan.asmx/Send",
+            data: '{"content":"' + content + '"}',
+            dataType: 'json',
+            success: function (result) {
+                allpage = result.d;
+            }
+        });
+
+        ue.setContent("");
+
+    });
 
 
 

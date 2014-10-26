@@ -68,29 +68,7 @@ namespace BLL
             return dal.GetModel(careTopicID, topicCaredByUID);
         }
 
-        /// <summary>
-        /// 得到一个对象实体，从缓存中
-        /// </summary>
-        public Model.CareTopic GetModelByCache(int careTopicID, int topicCaredByUID)
-        {
-
-            string CacheKey = "CareTopicModel-" + careTopicID + topicCaredByUID;
-            object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
-            if (objModel == null)
-            {
-                try
-                {
-                    objModel = dal.GetModel(careTopicID, topicCaredByUID);
-                    if (objModel != null)
-                    {
-                        int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
-                        Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
-                    }
-                }
-                catch { }
-            }
-            return (Model.CareTopic)objModel;
-        }
+       
 
         /// <summary>
         /// 获得数据列表

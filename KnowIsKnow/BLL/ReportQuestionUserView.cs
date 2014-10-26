@@ -58,29 +58,7 @@ namespace BLL
             return dal.GetModel(questionID, reportQuestionByUID);
         }
 
-        /// <summary>
-        /// 得到一个对象实体，从缓存中
-        /// </summary>
-        public Model.ReportQuestionUserView GetModelByCache(int questionID, int reportQuestionByUID)
-        {
-
-            string CacheKey = "ReportQuestionUserViewModel-" + questionID + reportQuestionByUID;
-            object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
-            if (objModel == null)
-            {
-                try
-                {
-                    objModel = dal.GetModel(questionID, reportQuestionByUID);
-                    if (objModel != null)
-                    {
-                        int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
-                        Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
-                    }
-                }
-                catch { }
-            }
-            return (Model.ReportQuestionUserView)objModel;
-        }
+      
 
         /// <summary>
         /// 获得数据列表

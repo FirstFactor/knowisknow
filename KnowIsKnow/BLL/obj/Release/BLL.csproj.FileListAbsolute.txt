@@ -1,0 +1,11 @@
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\bin\Release\BLL.dll
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\bin\Release\BLL.pdb
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\bin\Release\DAL.dll
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\bin\Release\Model.dll
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\bin\Release\DBUtility.dll
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\bin\Release\DAL.pdb
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\bin\Release\Model.pdb
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\bin\Release\DBUtility.pdb
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\obj\Release\BLL.dll
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\BLL\obj\Release\BLL.pdb

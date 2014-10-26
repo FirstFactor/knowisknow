@@ -1,0 +1,112 @@
+body{
+	background-image: url("images/bg.png");
+	font-size: 15px;
+	color: #FFF;
+	margin: 0px;
+	
+}
+a{text-decoration: none;}
+li{list-style-type: none;}
+.zqytop{background: #0078d8 url("images/light.png") center 0 no-repeat;min-height: 320px;}
+.zqytopContent{width: 740px;margin: 0px auto;display: block;}
+.zqytcleft{width: 360px;min-height: 320px;float: left;}
+.zqytcright{width: 340px;min-height: 320px;float: right;}
+
+
+.zqylogo{width: 345px;height: 124px;margin-top: 105px;}
+.zqylogotitle{width: 345px;height: 70px;display: block;font-size: 70px;}
+.zqylogocontent{width: 345px;height: 30px;display: block;font-size: 20px;margin-top: 30px;}
+
+
+.zqysignup{width: 202px;min-height: 280px;display: block;margin-top: 38px;margin-left: 138px;}
+.zqytitle{width:202px;height: 25px;position: relative;}
+.zqyzhuce{float: left;line-height: 25px;}
+.zqydenglu{line-height: 25px;cursor: pointer;position: absolute;top: 0px;right: 0px;color: #FFF;}
+.zqydengL{display: inline-block;float: left;}
+.zqyicon{width: 18px;height: 19px;background-image: url("images/zqyicon1.png");background-position: -1px 0px;display: inline-block;margin-top: 2px;margin-left: 8px;float: left;}
+.zqyinput{width: 202px;height: 35px;margin-top: 18px;margin-bottom: 20px;}
+.zqyfirst{outline: none; width: 61px;height:17px;padding: 8px 0px;border: 0px solid rgb(22, 114, 185);float: left;background: #e7f1f8;}
+.zqylast{outline: none; width:61px;height:17px;padding: 8px 0px;border: 0px solid rgb(22, 114, 185);float: right;background: #e7f1f8;border-radius: 5px;}
+
+.normalinput{padding: 8px 0px;border: 0px solid rgb(22, 114, 185);outline: none;border: none;background: #e7f1f8;}
+.spec{background: #e7f1f8;border-radius: 5px;}
+.zqyplaspan{width: 28px;height: 35px;float: left;line-height: 35px;color: rgb(169,169,169);font-size: 13px;margin-left: 10px;}
+.zqymail{width: 150px;height: 17px;float: left;border: none;outline: none;background: #e7f1f8;padding: 8px 0px;margin-left: 10px;}
+.zqymima{width: 150px;height: 17px;float: left;border: none;outline: none;background: #e7f1f8;padding: 8px 0px;margin-left: 10px;}
+.zqyzhucesign{width: 100%;border: 1px solid #1D80CF;text-align: center;text-shadow: 0 1px 1px rgba(0,0,0,.2);background: -webkit-gradient(linear,left top,left bottom,from(#80c3f7),to(#6bbaf8));color: #FFF;font-size: 15px;line-height: 33px;border-radius: 5px;cursor: pointer;}
+.zqyzhuceordenglu{width: 100%;border: 1px solid #1D80CF;text-align: center;text-shadow: 0 1px 1px rgba(0,0,0,.2);background-color:#80c3f7 ; background: -webkit-gradient(linear,left top,left bottom,from(#80c3f7),to(#6bbaf8));color: #FFF;font-size: 15px;line-height: 33px;border-radius: 5px;cursor: pointer;}
+.zqyzhucefailure{width: 180px;padding: 10px;margin: 18px 0 0 0;text-shadow: 0 1px 1px rgba(0,0,0,.15);display: none;background-color: rgb(10,113,196);background-color: rgba(0,0,0,0.1);}
+
+.zqydenglufailure{width: 180px;padding: 10px;margin: 18px 0 0 0;text-shadow: 0 1px 1px rgba(0,0,0,.15);display: none;background-color: rgb(10,113,196);background-color: rgba(0,0,0,0.1);}
+/*zqysignin*/
+
+.zqysignin{width: 202px;min-height: 280px;margin-top: 38px;display: none;margin-left: 138px;}
+
+.zqysignmail{width: 155px;height: 17px;float: left;}
+
+.zqysignmima{width: 155px;height: 17px;float: left;}
+
+
+.emailfirst{width: 14px;float: left;}
+.emaillast{width: 14px;float: left;}
+.xmleft{width: 95px;height:35px;float: left; background: #e7f1f8;border-radius: 5px;}
+.xmright{width: 95px;height: 35px;float: right;background: #e7f1f8;border-radius: 5px;width: 95px;}
+
+.signemailspan{float: left;display: block;}
+.signpwdspan{float: left;display: block;}
+
+
+
+.failtip{padding: 5px 0;font-size: 12px;}
+
+.icon_sign{width: 16px;height: 16px;display: block;margin-right: 10px; float: left;background-image: url("images/zqyicon1.png");background-position: -52px 0;}
+
+
+
+/*bottom*/
+
+.bottomwrap{width: 740px;height: 370px;margin: 30px auto;}
+.zqyuserlist{width: 228px;height: 370px;float: left;}
+.zqyuserstory{width: 440px;height: 310px;padding: 30px;float: right;background-color: #FFF;position: relative;color: rgb(116, 145, 168);}
+
+.zqyuserph{width: 62px;height: 62px;border-radius: 50%;background-color: #FFF;text-align: center;box-shadow: 0 1px 1px rgba(100,100,100,.15);float: left;margin: 0 10px 10px 0;}
+.zqyuserimg{width:50px; height:50px;border-radius:50%;margin-top: 6px; cursor: pointer;}
+.zqyuserspec{width: 62px;height: 62px;margin-top: 0px;}
+.zqytopic{width: 440px;height: 310px;}
+.story_avatar{width: 46px;height: 46px;border-radius: 50%;position: absolute;top: 30px;left: 30px;}
+.story_title{margin-left: 62px;}
+.story_jies{line-height: 25px;margin-top: 2px;color: rgb(116, 145, 168);}
+.sep{width: 440px;height: 1px;background-color: #e5e7e9;margin: 18px 0;}
+.vote{width: 38px;height: 25px;background-color: #B0C5D6;display: inline-block;line-height: 25px;text-align: center;border-radius: 4px;color: #FFF;float: left;}
+.answer_jies{line-height: 25px;color: rgb(116, 145, 168);margin-left: 8px;float: left;width: 390px;height:50px; }
+
+.story_content_answer{width: 440px;height: 50px;margin-top: 12px;}
+
+.answer_jies:hover{text-decoration: underline;}
+.story_end{width: 440px;height: 25px;color: rgb(116,145,168);}
+.huati{color: rgb(116,145,168);}
+
+.mingzi:hover{text-decoration: underline;}
+
+.huati:hover{text-decoration: underline;}
+
+
+.mengban{width:100%;height:100%; background-color:rgb(22, 114, 185);z-index:9999;position:absolute;top:0px;left:0px;display:none;}
+
+
+.view{width:480px;min-height:400px;margin: auto;margin-top:83px;display:block;}
+.view p{font-size:14px;line-height:24px;padding:10px 0;margin:0;}
+
+.kaishi{width:50px;height:33px;padding:0px 10px;border:1px solid #1D80CF;margin-left:250px;cursor:pointer;line-height:33px;display:block;
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(128, 195, 247)), to(rgb(107, 186, 248)));border-radius:6px;text-align:center;margin-top:10px;}
+
+.followtopic{width:820px;min-height:520px;margin:auto;margin-top:100px; display:none;}
+
+.followtip{width:825px;height:35px;}
+
+.tiaoguo{display:block;float:right;margin-right:5px; cursor:pointer;width:45px;height:33px;padding:0 13px;border:1px solid rgb(29, 128, 207);background: -webkit-gradient(linear,left top,left bottom,from(#80c3f7),to(#6bbaf8));text-align:center;line-height:33px;border-radius:5px;}
+.topics{display:inline-block;}
+.topics li{float:left;margin:0 10px 10px 0;}
+
+.box{width:173px;height:56px;padding:10px;border:1px solid rgb(29, 128, 207);background-color:#FFF;display:block;border-radius:5px;}
+.showfault{ width:200px;min-height:0px;font-size:18px;color:#FFF;position:absolute;top:0px;left:560px;text-align:center;}

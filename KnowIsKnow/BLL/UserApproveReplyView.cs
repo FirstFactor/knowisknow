@@ -58,29 +58,7 @@ namespace BLL
             return dal.GetModel(approveByUID, approveReplyID);
         }
 
-        /// <summary>
-        /// 得到一个对象实体，从缓存中
-        /// </summary>
-        public Model.UserApproveReplyView GetModelByCache(int approveByUID, int approveReplyID)
-        {
-
-            string CacheKey = "UserApproveReplyViewModel-" + approveByUID + approveReplyID;
-            object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
-            if (objModel == null)
-            {
-                try
-                {
-                    objModel = dal.GetModel(approveByUID, approveReplyID);
-                    if (objModel != null)
-                    {
-                        int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
-                        Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
-                    }
-                }
-                catch { }
-            }
-            return (Model.UserApproveReplyView)objModel;
-        }
+      
 
         /// <summary>
         /// 获得数据列表

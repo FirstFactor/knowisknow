@@ -1,0 +1,5 @@
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\DBUtility\bin\Release\DBUtility.dll
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\DBUtility\bin\Release\DBUtility.pdb
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\DBUtility\obj\Release\DBUtility.csprojResolveAssemblyReference.cache
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\DBUtility\obj\Release\DBUtility.dll
+E:\guithub\knowisknow\knowisknow\KnowIsKnow\DBUtility\obj\Release\DBUtility.pdb

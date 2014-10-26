@@ -43,6 +43,9 @@
     <script type="text/javascript" src="js/adminpage.js"></script>
 
 
+     <script src="ueditor/ueditor.config.js"></script>
+    <script src="ueditor/ueditor.all.min.js"></script>
+
 
     <script>
         $(document).ready(function () {
@@ -304,7 +307,7 @@
                         <li>发送给：<input type="text" id="receiver" name="name" value=" " /></li>
                         <br />
                         <li>
-                            <div style="width:940px; height:450px; border:1px solid #ccc;"></div>
+                            <div id="container" style="width:930px; height:300px; border:1px solid #ccc;"></div>
 
                         </li>
                         <br />
