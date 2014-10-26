@@ -41,7 +41,7 @@
 									    	<div class="zqq-lower zqq-clearfix">
 											    <div class="zqq-operation">
                                                     
-											    	<button class="zqq-zg-btn zqq-zg-btn-follow zqq-zm-rich-follow-btn">关注</button>
+											    	<button class="zqq-zg-btn-noFollow" carepersonid="<%#Eval("carePersonID") %>">取消关注</button>
                                                     <div class="zqq-messageButtonArea">
                                                         <i class="zqq-icon zqq-messageButton"></i>
                                                     </div>

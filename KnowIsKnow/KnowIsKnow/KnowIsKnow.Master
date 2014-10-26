@@ -73,9 +73,13 @@
 				<b>提问前请先搜索</b>
 				<br/>
 				<input class="zqq-search-area" type="text" placeholder="请输入问题"/>
-				<div class="zqq-search-ft">
+                <div class="zqq-search-listArea">
+                    <ul class="zqq-search-lista"></ul>
+                    <div class="zqq-search-list-last">没有找到相关问题，马上提问 »</div>
+                </div>
+				<%--<div class="zqq-search-ft">
 					<div class="zqq-search-list-last">没有找到相关问题，马上提问 »</div>
-				</div>
+				</div>--%>
 			</div>
 		</div>
 		<!******提问框*************>
@@ -90,7 +94,8 @@
                 <div id="txtQuestionContent" class="zqq-publish-input-content" ></div>
 
 				<div class="zqq-publish-topicChose">选择话题：</div>
-				<textarea class="zqq-publish-input-topic"></textarea>
+				<input type="text" class="zqq-publish-input-topic" zqqtopicid=""/>
+                <div class="zqq-renderer"></div>
 				<div class="zqq-publish-ft">
                     <div class="zqq-btn-publish" >发布</div>
 				</div>						
@@ -192,6 +197,11 @@
 			<div role="search" id="wtzh-top-search" class="wtzu-top-search">
 				<div id="wtzh-top-search-form" class="wtzu-top-search-form wtform-with-magnify">
 					<input type="text" class="wtzu-top-search-input" id="q" name="q" autocomplete="off" ariahaapopup="true" placeholder="搜索话题、问题或人..." />
+                    <div class="zqq-Fsearch-list">
+                        <ul class="zqq-Fsearch-listaa"></ul>
+                        <%--<a>dsa</a>--%>
+                    </div>
+
 					<button type="submit" class="wtmagnify-button">
 						<i class="wticon wticon-magnify-q"></i>
 					</button>

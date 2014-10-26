@@ -48,9 +48,69 @@ $(function () {
     });
 
     $(document).on("click", ".zqq-search-area", function () {
-        setInterval("checkSearch()", 100);
+        //setInterval("checkSearch()", 100);
 
     });
+
+    /*母板页搜索*/
+    $(".wtzu-top-search-input").keyup(function () {
+        var searchcontent = $(this).val();
+        $(".zqq-Fsearch-listaa").html("");
+        if (searchcontent != "") {
+            
+            $.ajax({
+                data: "{searchcontent:'" + searchcontent + "'}",
+                dataType: "json",
+                url: "ws.asmx/selectQuestionInfo",
+                type: "post",
+                contentType: "application/json",
+                success: function (result) {
+                    $(result.d).each(function () {
+                        var html = "";
+                        html += '     <li class="zqq-Fquestion-row">';
+                        html += '         <a href="QuestionDetail.aspx?QuesID=' + this.questionID + '" class="zqq-FquestionTitle">' + this.questionTitle + '</a>';
+                        html += '         <div class="zqq-Fsearch-questionid" questionid="' + this.questionID + '" ></div>'
+                        html += '     </li>';
+                        $(".zqq-Fsearch-listaa").append(html);
+                    })
+                }
+            });
+            $(".zqq-Fsearch-list").show();
+        }
+
+    });
+    /*提问先搜索*/
+    $(".zqq-search-area").keyup(function () {
+        var searchcontent = $(this).val();
+        $(".zqq-search-lista").html("");
+        if (searchcontent != "") {
+            $.ajax({
+                data: "{searchcontent:'" + searchcontent + "'}",
+                dataType: "json",
+                url: "ws.asmx/selectQuestionInfo",
+                type: "post",
+                contentType: "application/json",
+                success: function (result) {
+                    $(result.d).each(function () {
+                        var html = "";
+                        html += '     <li class="zqq-question-row">';
+                        html += '         <a href="QuestionDetail.aspx?QuesID=' + this.questionID + '" class="zqq-questionTitle">' + this.questionTitle + '</a>';
+                        html += '         <div class="zqq-search-questionid" questionid="' + this.questionID + '" ></div>'
+                        html += '     </li>';
+                        $(".zqq-search-lista").append(html);
+                    })
+                }
+            });
+            $(".zqq-search-listArea").show();
+            $(".zqq-search-list-last").show();
+        }
+        else {
+            $(".zqq-search-list-last").hide();
+        }
+        
+        
+    });
+
 
     $(document).on("click", ".zqq-search-list-last", function () {
         $(".zqq-tiwen-search").hide();
@@ -58,8 +118,50 @@ $(function () {
 
         var searchWord = $(".zqq-search-area").val();
         $(".zqq-publish-input-title").html(searchWord);
-    })
-    
+    });
+    $(".zqq-publish-input-topic").keyup(function () {
+        var topiccontent = $(this).val();
+        $(".zqq-renderer").html(" ");
+        if (topiccontent != "") {
+            $.ajax({
+                data: "{topiccontent:'" + topiccontent + "'}",
+                dataType: "json",
+                url: "ws.asmx/selectTopicInfo",
+                type: "post",
+                contentType: "application/json",
+                success: function (result) {
+                    $(result.d).each(function () {
+                        var html = "";
+                        html += '     <div class="zqq-row">';
+                        html += '         <img class="zqq-item-img-avatar zqq-left" src="' + this.topicPicUrl + '"/>';
+                        html += '         <span class="zqq-autocomplete-row-name">' + this.topicTitle + '</span>';
+                        html += '         <span class="zqq-gray-normal zqq-autocomplete-row-description">' + this.topicDes + '</span>';
+                        html += '         <div class="zqq-topicid" zqqtopicid="' + this.topicID + '" ></div>'
+                        html += '     </div>';
+                        $(".zqq-renderer").append(html);
+                    })
+                }
+            });
+            $(".zqq-renderer").show();
+
+            $(".zqq-row").hover(function () {
+
+                $(this).addClass("zqq-active");
+            }, function () {
+                $(this).removeClass("zqq-active");
+            })
+        }
+        
+    });
+    $(document).on("click", ".zqq-row", function () {
+
+        var topicTitle = $(this).find(".zqq-autocomplete-row-name").text();
+        var topicid = $(this).find(".zqq-topicid").attr("zqqtopicid");
+
+        $(".zqq-publish-input-topic").val(topicTitle);
+        $(".zqq-publish-input-topic").attr("zqqtopicid", topicid);
+        $(".zqq-renderer").hide();
+    });
 
     /*提问*/
     $(".zqq-btn-publish").click(function () {
@@ -69,31 +171,49 @@ $(function () {
 
         var questionTitle = $(".zqq-publish-input-title").val();
         var questionContent = um.getContent();
+        var questionTopicID = $(".zqq-publish-input-topic").attr("zqqtopicid");
         var userid = $(".knowIsknowID").attr("knowisknowid");
         
         if (questionTitle == "") {
             alert("请输入提问标题");
-            return false;
+            return ;
         }
-        else if (questionContent == "") {
+        if (questionContent == "") {
             alert("请输入提问内容");
-            return false;
+            return ;
         }
-        else {
+         if (questionTopicID == "") {
+            alert("请至少选择一个已存在的话题");
+            return ;
+        }
+            var quid;
            // addQuestion(questionTitle, questionContent, userid, userHeadImage, userNickName, questionid);
             $.ajax({
+                async: false,
                 data: "{ questiontilte:'" + questionTitle + "', questioncontent:' " + questionContent + "',questionproviderid:'" + userid + "' }",
                 dataType: "json",
                 url: "ws.asmx/PubQuestion",
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    if (res.d == "ok") {
+                    quid = res.d;
+                    if (res.d != "") {
                         window.location.href="MyQuestion.aspx";
                     }
                 }
             });
-        }
+            $.ajax({
+                data: "{quid:'"+ quid + "' ,questionTopicID:'" + questionTopicID + "' }",
+                dataType: "json",
+                url: "ws.asmx/PubTopic",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    if (res.d == "ok") {
+                        window.location.href = "MyQuestion.aspx";
+                    }
+                }
+            });
 
         $(".zqq-search-area").val("");
 

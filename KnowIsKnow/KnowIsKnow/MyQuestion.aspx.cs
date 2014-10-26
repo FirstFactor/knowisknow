@@ -11,6 +11,7 @@ namespace KnowIsKnow
     public partial class WebForm7 : System.Web.UI.Page
     {
         public string userid_myquestion;
+        public string myquestioncount;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["UserID"] == null)
@@ -21,6 +22,8 @@ namespace KnowIsKnow
             {
                 userid_myquestion = Session["UserID"].ToString();
                 BLL.QuestionUserView quelist = new BLL.QuestionUserView();
+                List<Model.QuestionUserView> list = quelist.GetModelList("questionProvider=" + userid_myquestion);
+                myquestioncount = list.Count.ToString();
                 DataSet ds = quelist.GetList("questionSate='normal' and questionProvider=" + userid_myquestion + " order by quetionPubTime desc");
                 this.rpt.DataSource = ds.Tables[0];
                 this.rpt.DataBind();

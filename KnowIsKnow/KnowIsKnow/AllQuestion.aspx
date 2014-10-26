@@ -39,7 +39,7 @@
 									    	<div class="zqq-lower zqq-clearfix">
 											    <div class="zqq-operation">
                                                     
-											    	<button class="zqq-zg-btn zqq-zg-btn-follow" checkcareperson="<%# CheckCarePerson(Eval("questionProvider")) %>"  questionprovider="<%#Eval("questionProvider") %>">关注</button>
+											    	<button class="zqq-zg-btn-follow" checkcareperson="<%# CheckCarePerson(Eval("questionProvider")) %>"  questionprovider="<%#Eval("questionProvider") %>">关注</button>
                                                     <div class="zqq-messageButtonArea">
                                                         <i class="zqq-icon zqq-messageButton"></i>
                                                     </div>
@@ -137,24 +137,26 @@
                                 <h3>你可能感兴趣的人</h3>
                                 <a href="TopicSquare.aspx" class="zqq-offenTopic">更多推荐 »</a>
                             </div>
-                            <ul class="zqq-lm3-ul">
-                                <li class="zqq-side-li zqq-side-li11">
-                                    <a href="" class="zqq-side-link1">
-                                        <img src="images/zqq-dianying.jpg" class="zqq-side-photo"/>
-                                        <div class="zqq-side-lm3-a">电影</div>
-                                    </a>
+                            <ul class="zqq-lm4-ul">
+                                <li class="zqq-side-lm4-li">
+                                    <img src="images/zqq-dianying.jpg" class="zqq-side-photo"/>
+                                    <div class="zqq-famousUsers">
+                                        <div class="zqq-famousUsers-hd">
+                                            <div class="zqq-famousUsers-nickName">知为知官方</div>
+                                            <div class="zqq-famousUsers-follow">关注</div>
+                                        </div>
+                                        <div class="zqq-famousUsers-shuoshuo">知为知官方团队，合作请私信。</div>
+                                    </div>
                                 </li>
-                                <li class="zqq-side-li zqq-side-li11">
-                                    <a href="" class="zqq-side-link1">
-                                        <img src="images/zqq-falv.jpg" class="zqq-side-photo"/>
-                                        <div class="zqq-side-lm3-a">法律</div>
-                                    </a>
-                                </li>
-                                <li class="zqq-side-li zqq-side-li11">
-                                    <a href="" class="zqq-side-link1">
-                                        <img src="images/zqq-yingyue.jpg" class="zqq-side-photo"/>
-                                        <div class="zqq-side-lm3-a">音乐</div>
-                                    </a>
+                                <li class="zqq-side-lm4-li">
+                                    <img src="images/zqq-dianying.jpg" class="zqq-side-photo"/>
+                                    <div class="zqq-famousUsers">
+                                        <div class="zqq-famousUsers-hd">
+                                            <div class="zqq-famousUsers-nickName">王思聪</div>
+                                            <div class="zqq-famousUsers-follow">关注</div>
+                                        </div>
+                                        <div class="zqq-famousUsers-shuoshuo">太有钱是我这辈子最大的痛苦..</div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>

@@ -87,7 +87,6 @@ namespace KnowIsKnow
         public string nFollowQuestion(string questionid, string userid)
         {
             BLL.CareQuestion bllcq = new BLL.CareQuestion();
-            Model.CareQuestion cq = new Model.CareQuestion();
             bllcq.Delete(Convert.ToInt32(questionid),Convert.ToInt32(userid));
             return "已取消关注";
         }
@@ -116,6 +115,44 @@ namespace KnowIsKnow
             blldelmyquestion.Update(delmyque);
             return "删除成功！";
         
+        }
+
+        [WebMethod]
+        public string followPerson(string questionprovider, string userid)
+        {
+            BLL.CarePerson bllcp = new BLL.CarePerson();
+            Model.CarePerson cp = new Model.CarePerson();
+            cp.carePersonID = Convert.ToInt32(questionprovider);
+            cp.personCaredByUID = Convert.ToInt32(userid);
+            bllcp.Add(cp);
+            return "已关注该用户";
+        }
+        [WebMethod]
+        public string noFollowPerson(string questionprovider, string userid)
+        {
+            BLL.CarePerson bllcp = new BLL.CarePerson();
+            bllcp.Delete(Convert.ToInt32(questionprovider), Convert.ToInt32(userid));
+            return "已取消对该用户的关注";
+        }
+        [WebMethod]
+        public List<Model.TopicInfo> selectTopicInfo(string topiccontent)
+        {
+            BLL.TopicInfo topicinfo = new BLL.TopicInfo();
+            List<Model.TopicInfo> topic = topicinfo.GetModelList("topicTitle like '%" + topiccontent + "%'");
+
+
+            return topic;
+        }
+        [WebMethod]
+        public List<Model.QuestionInfo> selectQuestionInfo(string searchcontent)
+        {
+            BLL.QuestionInfo questioninfo = new BLL.QuestionInfo();
+            DataSet ds= questioninfo.GetListByPage("questionTitle like '%" + searchcontent + "%'","",1,10);
+            List<Model.QuestionInfo> question = questioninfo.DataTableToList(ds.Tables[0]);
+            
+
+
+            return question;
         }
 
 
@@ -234,8 +271,19 @@ namespace KnowIsKnow
             question.questionContent = questioncontent;
             question.questionProvider =Convert.ToInt32(questionproviderid);
             question.quetionPubTime = now;
-            bllquestion.Add(question);
+            int quid = bllquestion.Add(question);
+            return quid.ToString();
+        }
+        [WebMethod]
+        public string PubTopic(string quid, string questionTopicID)
+        {
+            BLL.QuestionTopic bllqt = new BLL.QuestionTopic();
+            Model.QuestionTopic qt = new Model.QuestionTopic();
+            qt.quesrionTTID = Convert.ToInt32(quid);
+            qt.topicTID = Convert.ToInt32(questionTopicID);
+            bllqt.Add(qt);
             return "ok";
+
         }
 
         [WebMethod]
