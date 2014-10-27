@@ -2,6 +2,7 @@
     $(".ghmiddlecontentleftcontentdivdivdivguanzhutitlea2").click(function () {
         var abc = $(this).attr("teshu");
         var ddid1 = $(this).attr("sp");
+        var tpdz = $(this).attr("tp");
         if (abc == "false") {
             $(this).html("<i class='ghmiddlecontentleftcontentdivdivdivguanzhutitlea2i'></i>取消固定");
             var userid1 = $("#ycid").html();
@@ -14,7 +15,7 @@
             chatHtml += '<div class="ghgzchuangquhuati" id=' + ddid1 + '>';
             chatHtml += '    <div class="ghgzchuangquhuatidiv">';
             chatHtml += '        <a href="" class="ghgzchuangquhuatidivpic">';
-            chatHtml += '            <img src="images/1.jpg" class="ghgzchuangquhuatidivpicimg">';
+            chatHtml += '            <img src='+ tpdz +' class="ghgzchuangquhuatidivpicimg">';
             chatHtml += '        </a>';
             chatHtml += '        <div class="ghgzchuangquhuatidivcontent">';
             chatHtml += '           <a href="" class="ghgzchuangquhuatidivcontentname">' + topid + '</a>';
