@@ -94,7 +94,7 @@ $(function () {
         var huiid = $(this).attr("wkhuiid");
         var huiquid = $(this).attr("wkhuiquid");
         $(this).parent().parent().parent().parent().parent().find(".zm-comment-editable").val("@" + huiname+":");
-        $(this).parent().parent().parent().parent().parent().find(".wkpinglun").attr("wkreplyofreplyid", huiquid);
+        //$(this).parent().parent().parent().parent().parent().find(".wkpinglun").attr("wkreplyofreplyid", huiquid);
     });
     $(".wkpinglun").click(function () {
         var 
