@@ -55,7 +55,7 @@
 											<select name="business" class="wtbusiness-selection2" >
                                                 
 												<option value="<%=job%>"><%=job%></option>
-                                                 <option value="选择行业">选择行业</option>                 
+                                                <option value="选择行业">选择行业</option>                 
 												<option value="高新科技">高新科技</option>
                                                 <option value="互联网">&nbsp;&nbsp;&nbsp;互联网</option>
                                                 <option value="电子商务">&nbsp;&nbsp;&nbsp;电子商务</option>
@@ -353,12 +353,13 @@
 					<div class="wtzm-profile-module wtzm-profile-details-editform-gender">
 						<h3>性别</h3>
 						<div class="wtzm-profile-module-desc2">
+                            <input name="wth-xingbie" style="display:none" xingbie="<%=gender%>"/>
 							<label>
-								<input type="radio" name="gender" value="1" class="male"/>
+								<input type="radio" name="genderh1" value="1" class="male"/>
 								男&nbsp;&nbsp;
 							</label>
 							<label>
-								<input type="radio" name="gender" value="0" class="female"/>
+								<input type="radio" name="genderh1" value="0" class="female"/>
 								女
 							</label>
 										
@@ -406,7 +407,7 @@
 								<div class="wtzm-editable-editor-wrap">
 									<div class="wtzm-editable-editor-outer">
 										<div class="wtzg-form-text-input wtzg-form-text-inputse">
-											<textarea id="wtzm-profile-edit-description" class="wtzm-editable-editor-input"><%=probio%></textarea>
+											<textarea id="wtzm-profile-edit-description" name="wtzm-profile-edit-description" class="wtzm-editable-editor-input"><%=probio%></textarea>
 										</div>
 									</div>
 									<p class="wtdesc">用一段话介绍你自己，会在你的个人页面显示</p>
@@ -419,11 +420,123 @@
 						<div class="wtzm-profile-module-desc">
 							<div class="wtzm-profile-edit-fieldset">
 								<div class="wtbusiness-selection">
-									<select name="business">
-										<option value="">选择行业</option>
-										<option value="高新科技">高新科技</option>
-										<option value="互联网">&nbsp;&nbsp;&nbsp;互联网</option>
-										<option value="电子商务">&nbsp;&nbsp;&nbsp;电子商务</option>
+									<select name="wth-business">
+										 
+												<option value="<%=job%>"><%=job%></option>
+                                                <option value="选择行业">选择行业</option>                 
+												<option value="高新科技">高新科技</option>
+                                                <option value="互联网">&nbsp;&nbsp;&nbsp;互联网</option>
+                                                <option value="电子商务">&nbsp;&nbsp;&nbsp;电子商务</option>
+                                                <option value="电子游戏">&nbsp;&nbsp;&nbsp;电子游戏</option>
+                                                <option value="计算机软件">&nbsp;&nbsp;&nbsp;计算机软件</option>
+                                                <option value="计算机硬件">&nbsp;&nbsp;&nbsp;计算机硬件</option>
+                                                <option value="信息传媒">信息传媒</option>
+                                                <option value="出版业">&nbsp;&nbsp;&nbsp;出版业</option>
+                                                <option value="电影录音">&nbsp;&nbsp;&nbsp;电影录音</option>
+                                                <option value="广播电视">&nbsp;&nbsp;&nbsp;广播电视</option>
+                                                <option value="通信">&nbsp;&nbsp;&nbsp;通信</option>
+                                                <option value="金融">金融</option>
+                                                <option value="银行">&nbsp;&nbsp;&nbsp;银行</option>
+                                                <option value="资本投资">&nbsp;&nbsp;&nbsp;资本投资</option>
+                                                <option value="证券投资">&nbsp;&nbsp;&nbsp;证券投资</option>
+                                                <option value="保险">&nbsp;&nbsp;&nbsp;保险</option>
+                                                <option value="信贷">&nbsp;&nbsp;&nbsp;信贷</option>
+                                                <option value="财务">&nbsp;&nbsp;&nbsp;财务</option>
+                                                <option value="审计">&nbsp;&nbsp;&nbsp;审计</option>
+                                                <option value="服务业">服务业</option>
+                                                <option value="法律">&nbsp;&nbsp;&nbsp;法律</option>
+                                                <option value="餐饮">&nbsp;&nbsp;&nbsp;餐饮</option>
+                                                <option value="酒店">&nbsp;&nbsp;&nbsp;酒店</option>
+                                                <option value="旅游">&nbsp;&nbsp;&nbsp;旅游</option>
+                                                <option value="广告">&nbsp;&nbsp;&nbsp;广告</option>
+                                                <option value="公关">&nbsp;&nbsp;&nbsp;公关</option>
+                                                <option value="景观">&nbsp;&nbsp;&nbsp;景观</option>
+                                                <option value="咨询分析">&nbsp;&nbsp;&nbsp;咨询分析</option>
+                                                <option value="市场推广">&nbsp;&nbsp;&nbsp;市场推广</option>
+                                                <option value="人力资源">&nbsp;&nbsp;&nbsp;人力资源</option>
+                                                <option value="社工服务">&nbsp;&nbsp;&nbsp;社工服务</option>
+                                                <option value="养老服务">&nbsp;&nbsp;&nbsp;养老服务</option>
+                                                <option value="教育">教育</option>
+                                                <option value="高等教育">&nbsp;&nbsp;&nbsp;高等教育</option>
+                                                <option value="基础教育">&nbsp;&nbsp;&nbsp;基础教育</option>
+                                                <option value="职业教育">&nbsp;&nbsp;&nbsp;职业教育</option>
+                                                <option value="幼儿教育">&nbsp;&nbsp;&nbsp;幼儿教育</option>
+                                                <option value="特殊教育">&nbsp;&nbsp;&nbsp;特殊教育</option>
+                                                <option value="培训">&nbsp;&nbsp;&nbsp;培训</option>
+                                                <option value="医疗服务">医疗服务</option>
+                                                <option value="临床医疗">&nbsp;&nbsp;&nbsp;临床医疗</option>
+                                                <option value="制药">&nbsp;&nbsp;&nbsp;制药</option>
+                                                <option value="保健">&nbsp;&nbsp;&nbsp;保健</option>
+                                                <option value="美容">&nbsp;&nbsp;&nbsp;美容</option>
+                                                <option value="医疗器材">&nbsp;&nbsp;&nbsp;医疗器材</option>
+                                                <option value="生物工程">&nbsp;&nbsp;&nbsp;生物工程</option>
+                                                <option value="疗养服务">&nbsp;&nbsp;&nbsp;疗养服务</option>
+                                                <option value="护理服务">&nbsp;&nbsp;&nbsp;护理服务</option>
+                                                <option value="艺术娱乐">艺术娱乐</option>
+                                                <option value="创意艺术">&nbsp;&nbsp;&nbsp;创意艺术</option>
+                                                <option value="体育健身">&nbsp;&nbsp;&nbsp;体育健身</option>
+                                                <option value="娱乐休闲">&nbsp;&nbsp;&nbsp;娱乐休闲</option>
+                                                <option value="图书馆">&nbsp;&nbsp;&nbsp;图书馆</option>
+                                                <option value="博物馆">&nbsp;&nbsp;&nbsp;博物馆</option>
+                                                <option value="策展">&nbsp;&nbsp;&nbsp;策展</option>
+                                                <option value="博彩">&nbsp;&nbsp;&nbsp;博彩</option>
+                                                <option value="制造加工">制造加工</option>
+                                                <option value="食品饮料业">&nbsp;&nbsp;&nbsp;食品饮料业</option>
+                                                <option value="纺织皮革业">&nbsp;&nbsp;&nbsp;纺织皮革业</option>
+                                                <option value="服装业">&nbsp;&nbsp;&nbsp;服装业</option>
+                                                <option value="烟草业">&nbsp;&nbsp;&nbsp;烟草业</option>
+                                                <option value="造纸业">&nbsp;&nbsp;&nbsp;造纸业</option>
+                                                <option value="印刷业">&nbsp;&nbsp;&nbsp;印刷业</option>
+                                                <option value="化工业">&nbsp;&nbsp;&nbsp;化工业</option>
+                                                <option value="汽车">&nbsp;&nbsp;&nbsp;汽车</option>
+                                                <option value="家具">&nbsp;&nbsp;&nbsp;家具</option>
+                                                <option value="电子电器">&nbsp;&nbsp;&nbsp;电子电器</option>
+                                                <option value="机械设备">&nbsp;&nbsp;&nbsp;机械设备</option>
+                                                <option value="塑料工业">&nbsp;&nbsp;&nbsp;塑料工业</option>
+                                                <option value="金属加工">&nbsp;&nbsp;&nbsp;金属加工</option>
+                                                <option value="军火">&nbsp;&nbsp;&nbsp;军火</option>
+                                                <option value="地产建筑">地产建筑</option>
+                                                <option value="房地产">&nbsp;&nbsp;&nbsp;房地产</option>
+                                                <option value="装饰装潢">&nbsp;&nbsp;&nbsp;装饰装潢</option>
+                                                <option value="物业服务">&nbsp;&nbsp;&nbsp;物业服务</option>
+                                                <option value="特殊建造">&nbsp;&nbsp;&nbsp;特殊建造</option>
+                                                <option value="建筑设备">&nbsp;&nbsp;&nbsp;建筑设备</option>
+                                                <option value="贸易零售">贸易零售</option>
+                                                <option value="零售">&nbsp;&nbsp;&nbsp;零售</option>
+                                                <option value="大宗交易">&nbsp;&nbsp;&nbsp;大宗交易</option>
+                                                <option value="进出口贸易">&nbsp;&nbsp;&nbsp;进出口贸易</option>
+                                                <option value="公共服务">公共服务</option>
+                                                <option value="政府">&nbsp;&nbsp;&nbsp;政府</option>
+                                                <option value="国防军事">&nbsp;&nbsp;&nbsp;国防军事</option>
+                                                <option value="航天">&nbsp;&nbsp;&nbsp;航天</option>
+                                                <option value="科研">&nbsp;&nbsp;&nbsp;科研</option>
+                                                <option value="给排水">&nbsp;&nbsp;&nbsp;给排水</option>
+                                                <option value="水利能源">&nbsp;&nbsp;&nbsp;水利能源</option>
+                                                <option value="电力电网">&nbsp;&nbsp;&nbsp;电力电网</option>
+                                                <option value="公共管理">&nbsp;&nbsp;&nbsp;公共管理</option>
+                                                <option value="环境保护">&nbsp;&nbsp;&nbsp;环境保护</option>
+                                                <option value="非营利组织">&nbsp;&nbsp;&nbsp;非营利组织</option>
+                                                <option value="开采冶金">开采冶金</option>
+                                                <option value="煤炭工业">&nbsp;&nbsp;&nbsp;煤炭工业</option>
+                                                <option value="石油工业">&nbsp;&nbsp;&nbsp;石油工业</option>
+                                                <option value="黑色金属">&nbsp;&nbsp;&nbsp;黑色金属</option>
+                                                <option value="有色金属">&nbsp;&nbsp;&nbsp;有色金属</option>
+                                                <option value="土砂石开采">&nbsp;&nbsp;&nbsp;土砂石开采</option>
+                                                <option value="地热开采">&nbsp;&nbsp;&nbsp;地热开采</option>
+                                                <option value="交通仓储">交通仓储</option>
+                                                <option value="邮政">&nbsp;&nbsp;&nbsp;邮政</option>
+                                                <option value="物流递送">&nbsp;&nbsp;&nbsp;物流递送</option>
+                                                <option value="地面运输">&nbsp;&nbsp;&nbsp;地面运输</option>
+                                                <option value="铁路运输">&nbsp;&nbsp;&nbsp;铁路运输</option>
+                                                <option value="管线运输">&nbsp;&nbsp;&nbsp;管线运输</option>
+                                                <option value="航运业">&nbsp;&nbsp;&nbsp;航运业</option>
+                                                <option value="民用航空业">&nbsp;&nbsp;&nbsp;民用航空业</option>
+                                                <option value="农林牧渔">农林牧渔</option>
+                                                <option value="种植业">&nbsp;&nbsp;&nbsp;种植业</option>
+                                                <option value="畜牧养殖业">&nbsp;&nbsp;&nbsp;畜牧养殖业</option>
+                                                <option value="林业">&nbsp;&nbsp;&nbsp;林业</option>
+                                                <option value="渔业">&nbsp;&nbsp;&nbsp;渔业</option>
+
 									</select>
 								</div>
 								<p class="wtdesc">行业信息会显示在你的个人页面</p>
@@ -435,9 +548,8 @@
 						<div class="wtzm-profile-module-desc">
 							<div class="wtzm-profile-edit-fieldset">
 								<span class="wttopic-input-wrap">
-									<input autocomplete="off" aria-haspopup="true" type="text" class="wttianjiajvzhudi wtzg-form-text-input" placeholder="添加居住地" value="<%=address %>" aria-label="添加居住地"/>
+									<input autocomplete="off" name="wth-jv" aria-haspopup="true" type="text" class="wttianjiajvzhudi wtzg-form-text-input" placeholder="添加居住地" value="<%=address %>" aria-label="添加居住地"/>
 								</span>
-								<button class="wtzg-btn-blue">添加</button>
 							</div>
 						</div>
 					</div>
@@ -447,12 +559,12 @@
 							<div class="wtzm-profile-edit-fieldset">
 								<p>
 									<span class="wttopic-input-wrap">
-										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="公司或组织名称" value="<%=company %>" aria-label="公司或组织名称"/>
+										<input name="wth-company" autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="公司或组织名称" value="<%=company %>" aria-label="公司或组织名称"/>
 									</span>
 									<span class="wttopic-input-wrap wtzhiwei">
-										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="你的职位（选填）" value="<%=position %>" aria-label="你的职位（选填）"/>
+										<input name="wth-position" autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="你的职位（选填）" value="<%=position %>" aria-label="你的职位（选填）"/>
 									</span>
-									<button class="wtzg-btn-blue">添加</button>
+									
 								</p>
 
 							</div>
@@ -464,12 +576,13 @@
 							<div class="wtzm-profile-edit-fieldset">
 								<p>
 									<span class="wttopic-input-wrap">
-										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="学校或教育机构名" value="<%=academy %>" aria-label="学校或教育机构名"/>
-									</span>
+										<input id="wtinputschool" name="wtinputschool" autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="学校或教育机构名" value="<%=academy %>" aria-label="学校或教育机构名"/>
+									
+                                    </span>
 									<span class="wttopic-input-wrap wtzhiwei">
-										<input autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="专业方向（选填）" value="<%=major %>" aria-label="专业方向（选填）"/>
+										<input name="wth-major" autocomplete="off" aria-haspopup="true" type="text" class="wtzg-form-text-input wtgsname" placeholder="专业方向（选填）" value="<%=major %>" aria-label="专业方向（选填）"/>
 									</span>
-									<button class="wtzg-btn-blue">添加</button>
+									
 								</p>
 
 							</div>
@@ -491,7 +604,7 @@
 					</div>
 					<div class="wtzm-profile-module wtzm-profile-details-editform-footer">
 						<p>
-							<button class="wtzg-btn-blue">保存设置</button>
+                            <asp:Button ID="wtbuttonlast" class="wtzg-btn-blue" runat="server" Text="保存设置" OnClick="wtbuttonlast_Click" />
 							<a class="wtzg-gray-normal">取消修改</a>
 						</p>
 					</div>

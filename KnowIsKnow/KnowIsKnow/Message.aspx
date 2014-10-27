@@ -28,7 +28,7 @@
 							<span class="zg-gray zg-left">
 								<%#getDatatime( Eval("MessageSenderID"),Eval("MessageReceiverID")) %>
 							</span>
-							<a wksendid="<%# Eval("MessageSenderID")%>" wkreceiverid="<%# Eval("MessageReceiverID") %>" wkuserid="<%=userId %>" class="zg-link-litblue">共 <%#getMessageCount(Eval("MessageSenderID"),Eval("MessageReceiverID")) %> 条对话</a>
+							<a wksendid="<%# Eval("MessageSenderID")%>" wkreceiverid="<%# Eval("MessageReceiverID") %>" wkuserid="<%=userId %>" class="zg-link-litblu">共 <%#getMessageCount(Eval("MessageSenderID"),Eval("MessageReceiverID")) %> 条对话</a>
                             
 							<span class="zg-bull">|</span>
 							<a href="#" class="zg-link-litblue huifusixin" usernickname="<%#getchatNickName(Eval("MessageReceiverID"),Eval("MessageSenderID")) %>" userid="<%# Eval("MessageReceiverID")%>">回复</a>

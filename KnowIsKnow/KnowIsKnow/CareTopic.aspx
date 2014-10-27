@@ -13,7 +13,7 @@
 			<div id="ghmiddlecontentlefttitle">
 				<p id="ghmiddlecontentlefttitlepic"></p>
 				<span>话题动态</span>
-				<a href="" id="ghmiddlecontentlefttitlea">共关注 <%= geshu %> 个话题</a>
+				<a href="ProCenter.aspx" id="ghmiddlecontentlefttitlea">共关注 <%= geshu %> 个话题</a>
 			</div>
 		<div id="ghmiddlecontentleftcontent">		
 
@@ -21,20 +21,20 @@
                     <ItemTemplate>
                         <div class="ghmiddlecontentleftcontentdiv">
 					        <div class="ghmiddlecontentleftcontentdivdiv">
-						        <a href="" class="ghmiddlecontentleftcontentdivdiva">
+						        <a href="TopicSquare.aspx" class="ghmiddlecontentleftcontentdivdiva">
 							        <img src="<%# Eval("topicPicUrl") %>" class="ghmiddlecontentleftcontentdivdivimg">
 						        </a>
 						        <div class="ghmiddlecontentleftcontentdivdivdiv">
 							        <div class="ghmiddlecontentleftcontentdivdivdivguanzhutitle">
-								        <a href="" class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea1"><%# Eval(" topicTitle ") %></a>
-								        <a class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea2 a<%# Eval(" TopicID ") %>_<%=userID %>" sp="a<%# Eval(" TopicID ") %>_<%=userID %>" teshu="<%# Check(Eval("topicID")) %>">
+								        <a href="TopicSquare.aspx;" class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea1"><%# Eval(" topicTitle ") %></a>
+								        <a class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea2 a<%# Eval(" TopicID ") %>_<%=userID %>" tp="<%# Eval("topicPicUrl") %>" sp="a<%# Eval(" TopicID ") %>_<%=userID %>" teshu="<%# Check(Eval("topicID")) %>">
 									        <i class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea2i" ></i>固定话题
 								        </a> 
-								        <a  href="" class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea3 guanzhuhuatispecial quxiaoguanzhu" tpid="<%# Eval("topicID")%>">取消关注</a>
+								        <a  href="javascript:;" class="ghmiddlecontentleftcontentdivdivdivguanzhutitlea3 guanzhuhuatispecial quxiaoguanzhu" tpid="<%# Eval("topicID")%>">取消关注</a>
 							        </div>
 							        <div class="ghmiddlecontentleftcontentdivdivdivguanzhucontent">
 								        <div class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestion">
-									        <a href="" class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestiona"><%# Eval(" topicDes ") %></a>
+									        <a href="TopicSquare.aspx" class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestiona"><%# Eval(" topicDes ") %></a>
 									        <span class="ghmiddlecontentleftcontentdivdivdivguanzhucontentquestionspan">关注人数：<%# Eval(" topicAttention ") %></span>
 								        </div>								       
 							        </div>

@@ -69,7 +69,7 @@ $(function () {
             $(".zqyzhucefailure").show();
         };
 
-        if (xing != "" && ming != "" && checkmail.test(email) && email != "") {
+        if (xing != "" && ming != "" && checkmail.test(email) && email != "" && mima != "") {
             //$(".zqywrapper").hide();
             //$(".mengban").show();
             $.ajax({
