@@ -111,12 +111,14 @@ strong{font-weight: bold;}
 .zm-item-comment .zm-comment-ft {font-size:12px;}
 .zm-comment-op-link {margin-left:.5em;color:#999;font-size:12px;}
 .zg-icon-comment-like, .zm-comment-op-link > .zg-icon {margin-left:5px;width:11px;height:11px;vertical-align:-1px;}
-.zg-icon-comment-reply {background-position:-250px -92px;}
+.zg-icon-comment-reply {background-position:-250px -92px;cursor:pointer;}
 .zg-icon-comment-like{background-position:-222px -92px;}
 .zm-comment-op-link .z-icon-no-help {background-position:-71px -183px;}
 .zm-item-comment > .zm-item-link-avatar {float:left;margin:4px 0;}
 
-
+.reply {
+cursor:pointer;
+}
 
 
 

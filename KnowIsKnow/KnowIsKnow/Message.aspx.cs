@@ -11,7 +11,7 @@ namespace KnowIsKnow
 {
     public partial class WebForm6 : System.Web.UI.Page
     {
-        string userId;
+        public string userId;
         protected void Page_Load(object sender, EventArgs e)
         {
           
@@ -29,7 +29,7 @@ namespace KnowIsKnow
                 
                 userId = Session["UserID"].ToString();
                 BLL.MessageUserView message = new BLL.MessageUserView();
-                string sql = "select distinct MessageSenderID,MessageReceiverID from MessageUserView where MessageSenderID !=0 and ( MessageReceiverID =" + userId + " or MessageSenderID="+userId+") group by MessageSenderID,MessageReceiverID";
+                string sql = "select distinct MessageSenderID,MessageReceiverID from MessageUserView where ( MessageReceiverID =" + userId + " or MessageSenderID="+userId+") group by MessageSenderID,MessageReceiverID";
                 DataSet ds = message.GetUnreadSenderList(sql);
                 if (ds.Tables.Count > 0)
                 {
@@ -41,7 +41,7 @@ namespace KnowIsKnow
                       ls.Add(test);
                     }
                 }
-                if (lst.Count>0)
+                if (ls.Count>0)
                 {
                     lst.Add(ls[0]);
                     for (int i = 1; i < ls.Count; i++)
@@ -77,7 +77,7 @@ namespace KnowIsKnow
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
 
             Model.MessageUserView msg = bllMsg.GetModel(senderID, receiverID);
-            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where (MessageSenderID=" + senderID + " and MessageSenderID !=0 and MessageReceiverID =" + receiverID + ") or (MessageSenderID=" + receiverID + " and MessageSenderID !=0 and MessageReceiverID =" + senderID + ") order by MessageSendTime desc";
+            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where (MessageSenderID=" + senderID + " and MessageReceiverID =" + receiverID + ") or (MessageSenderID=" + receiverID + " and MessageReceiverID =" + senderID + ") order by MessageSendTime desc";
             DataSet da = bllMsg.GetLastMessage(sql);
 
             return da.Tables[0].Rows[0]["MessageContent"].ToString();
@@ -90,7 +90,7 @@ namespace KnowIsKnow
             int receiverID = (int)rid;
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
             Model.MessageUserView msg = bllMsg.GetModel(senderID, receiverID);
-            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where (MessageSenderID=" + senderID + " and MessageSenderID !=0 and MessageReceiverID =" + receiverID + ") or (MessageSenderID=" + receiverID + " and MessageSenderID !=0 and MessageReceiverID =" + senderID + ") order by MessageSendTime desc";
+            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where (MessageSenderID=" + senderID + " and MessageReceiverID =" + receiverID + ") or (MessageSenderID=" + receiverID + " and MessageReceiverID =" + senderID + ") order by MessageSendTime desc";
             DataSet da = bllMsg.GetLastMessage(sql);
             return da.Tables[0].Rows[0]["userNickName"].ToString();
 
@@ -123,7 +123,7 @@ namespace KnowIsKnow
             int receiverID = (int)rid;
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
             Model.MessageUserView msg = bllMsg.GetModel(senderID, receiverID);
-            string sql = "select COUNT(MessageSenderID) AS MessageSenderID from MessageUserView where( MessageSenderID=" + senderID + " and MessageReceiverID=" + userId + ") or (MessageSenderID=" + receiverID + " and MessageSenderID !=0 and MessageReceiverID =" + senderID + ")";
+            string sql = "select COUNT(MessageSenderID) AS MessageSenderID from MessageUserView where( MessageSenderID=" + senderID + " and MessageReceiverID=" + receiverID + ") or (MessageSenderID=" + receiverID + " and MessageReceiverID =" + senderID + ")";
             DataSet da = bllMsg.GetMessageCount(sql);
 
             return da.Tables[0].Rows[0]["MessageSenderID"].ToString();
@@ -140,17 +140,25 @@ namespace KnowIsKnow
         {
             string receiveNickName = this.txtMessageReceive.ToString();
             string sendContent = this.txtMessageContent.Text;
-            string messagereceiverid = this.wkuserid.Text;
-            DateTime now =DateTime.Now;
-            BLL.MessageInfo bllMsg = new BLL.MessageInfo();
-            Model.MessageInfo msg = new Model.MessageInfo();
-            msg.MessageSenderID = Convert.ToInt32(userId);
-            msg.MessageReceiverID = Convert.ToInt32(messagereceiverid);
-            msg.MessageContent = sendContent;
-            msg.MessageSendTime = now;
-            msg.MessageSate = "unread";
-            bllMsg.Add(msg);
-            Response.Write("<script>window.location.href='message.aspx'</script>");
+            if (this.wkuserid.Text == "")
+            { 
+                Response.Write("<script>alert('输入收件人错误');</script>");
+            }
+            else 
+            {
+                string messagereceiverid = this.wkuserid.Text;
+                DateTime now = DateTime.Now;
+                BLL.MessageInfo bllMsg = new BLL.MessageInfo();
+                Model.MessageInfo msg = new Model.MessageInfo();
+                msg.MessageSenderID = Convert.ToInt32(userId);
+                msg.MessageReceiverID = Convert.ToInt32(messagereceiverid);
+                msg.MessageContent = sendContent;
+                msg.MessageSendTime = now;
+                msg.MessageSate = "unread";
+                bllMsg.Add(msg);
+                Response.Write("<script>window.location.href='message.aspx'</script>");
+            }
+            
         }
     }
     public class Test

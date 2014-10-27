@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/questiondetail.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <a href="#mao">11111</a>
+    
 	<div class="zg-wrap zu-main question-page">
 		<div class="zu-main-content">
 			<div class="zu-main-content-inner with-indention-votebar">
@@ -166,7 +166,7 @@
                                 <div class="zm-comment-form zm-comment-box-ft expanded ">
                                     <input class="zm-comment-editable editable" />
                                     <div class="zm-command zg-clear">
-                                        <div class="zg-right zg-btn-blue wkpinglun" wkreplyid="<%# Eval("replyofUID") %>" wkreplyofreplyid="<%#Eval("ReplyID")%>" quesid="<%=quesid %>">评论</div>
+                                        <div class="zg-right zg-btn-blue wkpinglun" wkreplyid="<%# Eval("replyofUID") %>" wkreplyofreplyid="<%#Eval("ReplyID")%>" quesid="<%=quesid %>" >评论</div>
                                         <a class="zm-command-cancel">取消</a>
                                     </div>
                                 </div>

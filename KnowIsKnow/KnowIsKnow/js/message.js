@@ -24,6 +24,7 @@
             contentType: "application/json",
             success: function (result) {
                 $(result.d).each(function () {
+                    
                     var html = "";
                     html += '     <div class="ac-row">';
                     html += '         <img class="zm-item-img-avatar zg-left" src="Images/sprites.png"/>';
@@ -74,5 +75,16 @@
    
         $(".zm-wkuserid").val(userid);
         $(".ac-renderer").hide();
+    });
+    $(".zg-link-litblue").click(function () {
+        var sendid = $(this).attr("wksendid");
+        var receiverid = $(this).attr("wkreceiverid");
+        var userid = $(this).attr("wkuserid");
+        if (userid == sendid) {
+            window.location.href = "MessageDetail.aspx?MsgsID=" + receiverid + "";
+        }
+        else {
+            window.location.href = "MessageDetail.aspx?MsgsID=" + sendid + "";
+        }
     });
 })
