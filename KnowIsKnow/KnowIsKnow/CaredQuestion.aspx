@@ -40,7 +40,7 @@
 											    <div class="zqq-operation">
                                                     
 											    	<button class="zqq-zg-btn-follow" checkcareperson="<%# CheckCarePerson(Eval("questionProvider")) %>" questionprovider="<%#Eval("questionProvider") %>">关注</button>
-                                                    <div class="zqq-messageButtonArea">
+                                                    <div class="zqq-messageButtonArea" userid="<%# Eval("questionProvider") %>" usernickname="<%# Eval("userNickName") %>">
                                                         <i class="zqq-icon zqq-messageButton"></i>
                                                     </div>
 										    	</div>

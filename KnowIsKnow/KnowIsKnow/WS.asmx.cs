@@ -70,7 +70,20 @@ namespace KnowIsKnow
             
         }
 
-
+        [WebMethod]
+        public string senderMessage(string senderid, string receiveid, string senderContent)
+        {
+            DateTime now = DateTime.Now;
+            BLL.MessageInfo bllmi = new BLL.MessageInfo();
+            Model.MessageInfo mi = new Model.MessageInfo();
+            mi.MessageSenderID = Convert.ToInt32(senderid);
+            mi.MessageReceiverID = Convert.ToInt32(receiveid);
+            mi.MessageContent = senderContent;
+            mi.MessageSate = "unread";
+            mi.MessageSendTime = now;
+            int msgid=  bllmi.Add(mi);
+            return msgid.ToString();
+        }
 
 
         [WebMethod]

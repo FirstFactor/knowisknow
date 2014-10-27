@@ -19,6 +19,46 @@ $(function () {
         $(".zqq-tiwen-search").show();
     });
 
+    //私信
+    var receiveid ;
+    var senderid;
+    $(document).on("click", ".zqq-messageButtonArea" ,function () {
+        var usernickname = $(this).attr("usernickname");
+        receiveid = $(this).attr("userid");
+        senderid = $(".knowIsknowID").attr("knowisknowid");
+        $(".zqq-modal-dialog").show();
+        $(".zqq-menban").show();
+        $(".zqq-sixin-who").html(usernickname);
+
+    });
+    $(".zqq-zg-btn-blue").click(function () {
+        var senderContent = $(".zqq-zg-editor-input").val();
+        $.ajax({
+            data: "{ senderid:'" + senderid + "', receiveid:' " + receiveid + "',senderContent:'" + senderContent + "' }",
+            dataType: "json",
+            url: "ws.asmx/senderMessage",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.d != "") {
+                    window.location.href = "MessageDetail.aspx?MsgsID="+res.d;
+                }
+            }
+        });
+        $(".zqq-modal-dialog").hide();
+        $(".zqq-menban").hide();
+        $(".zqq-sixin-who").html("");
+        $(".zqq-zg-editor-input").val("");
+
+    });
+    $(".zqq-modal-dialog-title-close").click(function () {
+
+        $(".zqq-modal-dialog").hide();
+        $(".zqq-menban").hide();
+        $(".zqq-sixin-who").html("");
+        $(".zqq-zg-editor-input").val("");
+    });
+
     //提问前搜索框拖动
     $(".zqq-tiwen-search").draggable({
         handle: ".zqq-tiwen-menban-title",

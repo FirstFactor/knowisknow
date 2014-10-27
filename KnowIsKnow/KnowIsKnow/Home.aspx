@@ -42,7 +42,7 @@
 											    <div class="zqq-operation">
                                                     
 											    	<button class="zqq-zg-btn-noFollow" carepersonid="<%#Eval("carePersonID") %>">取消关注</button>
-                                                    <div class="zqq-messageButtonArea">
+                                                    <div class="zqq-messageButtonArea" userid="<%#Eval("carePersonID") %>" usernickname="<%# Eval("userNickName") %>">
                                                         <i class="zqq-icon zqq-messageButton"></i>
                                                     </div>
 										    	</div>
