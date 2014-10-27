@@ -76,7 +76,7 @@
         $(".zm-wkuserid").val(userid);
         $(".ac-renderer").hide();
     });
-    $(".zg-link-litblue").click(function () {
+    $(".zg-link-litblu").click(function () {
         var sendid = $(this).attr("wksendid");
         var receiverid = $(this).attr("wkreceiverid");
         var userid = $(this).attr("wkuserid");
