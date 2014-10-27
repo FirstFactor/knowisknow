@@ -66,6 +66,11 @@ namespace KnowIsKnow
                
             }
         }
+        public void zqqlogout(object sender, EventArgs e)
+        {
+            Session.Abandon(); ;
+            Response.Redirect(Request.Url.ToString());
+        }
         //public void sendQuestion(object o, EventArgs e) {
         //    string questionTitle = this.txtQuestionTitle.Text;
         //    string questionContent = this.txtQuestionContent.InnerText;
@@ -78,7 +83,7 @@ namespace KnowIsKnow
         //    que.quetionPubTime = now;
         //    que.questionSate = "unread";
         //    bllque.Add(que);
-        //    Response.Write("<script>window.location.href='home.aspx'</script>");
+        //    Response.Write("<script>window.location.href='Home.aspx'</script>");
         //}
     }
 }

@@ -215,10 +215,11 @@
                                 </a>
                             </li>
                             <li class="lhovercolor">
-                                <a class="hovercolor" href="#">
+                                <asp:Button runat="server" ID="mylogout" OnClick="zqqlogout" class="hovercolor" Text="退出"/>
+                                <%--<a  class="hovercolor zqq-logout" href="Index.aspx">
                                     <i class="zg-icon zg-icon-dd-logout"></i>
                                     退出
-                                </a>
+                                </a>--%>
                             </li>
                         </ul>
                     </div>

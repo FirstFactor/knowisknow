@@ -74,6 +74,11 @@ $(function () {
         handle: ".zqq-tiwen-menban-title",
         containment: "parent"
     });
+    //私信框拖动
+    $(".zqq-modal-dialog").draggable({
+        handle: ".zqq-modal-dialog-title",
+        containment: "parent"
+    });
     //关闭按钮通用
     $(".zqq-tiwen-menban-close").click(function () {
         $(".zqq-tiwen-search").hide();
