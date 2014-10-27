@@ -64,7 +64,7 @@ namespace KnowIsKnow
                         string suffix = filename.Substring(idx);
                         string newname = DateTime.Now.Ticks.ToString() + suffix;
                         Session["newname"] = newname;
-                        string serverpath = Server.MapPath("~/images/topicImages") + newname;
+                        string serverpath = Server.MapPath("~/images/topicImages/") + newname;
                         FileUpload1.PostedFile.SaveAs(serverpath);
                         this.Label1.Text = "上传成功！";
                     }
@@ -120,6 +120,12 @@ namespace KnowIsKnow
             addtopic.Add(topic);
             Response.Write("<script>alert('添加成功')</script>");
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("AdminLogin.aspx");
         }
     }
 }
