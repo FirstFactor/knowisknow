@@ -38,7 +38,32 @@ $(function () {
         adimg = $(this);
     });
 
+    $("#picupload").click(function () {
+        $("#mengban").show();
+        $("#uploadArea").show();
+        adimg = $(this);
+    });
 
+
+    $("#addbtn").click(function () {
+        topicTitle = $("#txttopictitle").val();
+        topicDes = $("#txtDesc").val();
+        topicPicUrl = $("#imglujing").attr("src");
+        $.ajax({
+            data: "{'topicTitle':'" + topicTitle + "','topicDes':'" + topicDes + "','topicPicUrl':'" + topicPicUrl + "'}",
+            dataType: "json",
+            url: "WSQuan.asmx/addTopic",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.d == "ok") {
+                    location.reload();
+                }
+            }
+
+        });
+
+    });
 
 
     ////********************//
@@ -198,17 +223,17 @@ $(function () {
         thistopicid = $(this).parent().attr("topicinfoid");
         thistopicTitle = $(this).parent().find(".adTopicTitleInput").val();
         thistopicDesc = $(this).parent().find(".adTopicDesInput").val();
-        thistopicPicUrl = $(this).parent().find(".logoimg").attr("src");
+        thistopicPicUrl11 = $(this).parent().find(".logoimg").attr("src");
         thistopicAttention = $(this).parent().find(".topicAttention").html();
         thistopicState = $(this).parent().find(".selectedtopicstate").html();
 
-       
+        thistopicPicUrl = encodeURI(thistopicPicUrl11);
         $.ajax({
-            data: { "topicid": thistopicid, "topictitle": thistopicTitle, "topicdes": thistopicDesc, "topicpicurl": thistopicPicUrl, "topicattention": thistopicAttention, "topicstate": thistopicState },
-            datatype: "json",
+            data: "{ 'topicid':'" + thistopicid + "', 'topictitle':'" + thistopicTitle + "', 'topicdes': '" + thistopicDesc + "','topicpicurl':'" + thistopicPicUrl + "', 'topicattention':'" + thistopicAttention + "', 'topicstate':'" + thistopicState + "'}",
+            dataType: "json",
             url: "ws.asmx/UpdateTopicInfo",
             type: "post",
-            contenttype: "application/json",///这里的东西不能东哪怕是大小写都不要动，不然图片路径传不上去
+            contentType: "application/json",///这里的东西不能东哪怕是大小写都不要动，不然图片路径传不上去
             success: function (res) {
               
             }
@@ -333,7 +358,7 @@ $(function () {
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    alert(res.d);
+                    //alert(res.d);
                 }
 
             });
@@ -346,7 +371,7 @@ $(function () {
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    alert(res.d);
+                    //alert(res.d);
                 }
 
             });
@@ -371,7 +396,7 @@ $(function () {
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    alert(res.d);
+                    //alert(res.d);
                 }
 
             });
@@ -385,7 +410,7 @@ $(function () {
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    alert(res.d);
+                   // alert(res.d);
                 }
 
             });
@@ -461,7 +486,7 @@ $(function () {
         }
         Pages(str, order, startindex, endindex);
         $("#pages").val(endindex / 5);
-        alert(allpage);
+        //alert(allpage);
     });
 
     /*************翻页********************/
@@ -525,7 +550,7 @@ $(function () {
             data: "{'senderid':'" + senderid + "','receiverid':'" + receiverid + "', 'content':'" + content + "'}",
             dataType: 'json',
             success: function (result) {
-                alert(result.d);
+               // alert(result.d);
             }
         });
 
