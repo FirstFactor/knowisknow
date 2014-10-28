@@ -29,7 +29,7 @@
                     <div id="zh-pm-detail-item-wrap" class="navigable">
 					<div class="zm-pm-item">
 						<a class="zm-item-link-avatar50">
-							<img class="zm-item-img-avatar50" src="Images/touxiang.jpg"/>
+							<img class="zm-item-img-avatar50" src="<%# Eval("userHeadImage") %>"/>
 						</a>
 						<div class="zm-pm-item-main">
 							<a><%# Eval("userNickName") %></a>

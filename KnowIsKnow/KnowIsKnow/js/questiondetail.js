@@ -47,7 +47,7 @@ $(function () {
                         var html = '';
                         html += '     <div class="zm-item-comment">';
                         html += '         <a class="zm-item-link-avatar">';
-                        html += '           <img src="#" />';
+                        html += '           <img src="' + this.userHeadImage + '" class="zm-item-img-avatar" />';
                         html += '         </a>';
                         html += '         <div class="zm-comment-content-wrap">';
                         html += '           <div class="zm-comment-hd">';
