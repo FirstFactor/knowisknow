@@ -213,6 +213,7 @@
     }, function () {
         $(this).find(".zqq-goog-hovercard").hide();
     });
+    
 
     
 });

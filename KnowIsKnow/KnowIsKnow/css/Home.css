@@ -102,11 +102,9 @@ to {top:60px;}
 .zqq-operation button {float: right;height: 32px;margin-top: 8px;vertical-align: middle;}
 .zqq-zg-btn-follow {margin-left: 15px;font-size: 13px;border-radius: 4px;cursor: pointer; background: #8ab923;background-color: #9dcc4a;background-image: -webkit-linear-gradient(top,#adda4d,#86b846);background-repeat: repeat-x;text-shadow: 0 1px 0 rgba(255,255,255,.3);border: 1px solid #6d8f29;color: #3e5e00;min-width: 78px;width: auto;box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,0 1px 0 rgba(0,0,0,.2);}
 .zqq-zg-btn-noFollow {margin-left: 15px;font-size: 13px;border-radius: 4px;cursor: pointer; background: #eee;text-shadow: 0 1px 0 rgba(255,255,255,.3);border: 1px solid #ddd;color: #888;min-width: 78px;width: auto;box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,0 1px 0 rgba(0,0,0,.2);}
-
 .zqq-arrow {z-index: 100; position: absolute; top: -62px;left: 18px;margin-left: -13px;border-left: 13px solid transparent;border-right: 13px solid transparent;border-bottom: 13px solid #ccc;}
 .zqq-arrow{position: absolute;}
 .zqq-arrow2 {z-index:110; position: absolute;top: -61px;left: 18px; margin-left: -13px;border-left: 13px solid transparent;border-right: 13px solid transparent;border-bottom: 13px solid #fff;}
 .zqq-arrow2 {position: absolute;}
-
 .zqq-messageButtonArea {float:right;margin-top:8px; width:40px; height:30px;border: 1px solid #bbb;border-radius:4px; background: #f8f8f9;background-color: #f1f1f2;cursor:pointer;}
 .zqq-messageButton {margin:8px 0 0 13px; width:17px;height:14px;background-position:0 -148px;}

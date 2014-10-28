@@ -3,7 +3,42 @@ $(function () {
     ue = UE.getEditor('container', {
 
     });
+
+    CheckQusetionProvider();
  
+    //名片
+    $(".zm-item-link-avatar").hover(function () {
+        checkcareperson();
+        $(this).find(".zqq-goog-hovercard").show();
+    }, function () {
+        $(this).find(".zqq-goog-hovercard").hide();
+    });
+    //举报
+    $(document).on("click", ".zqq-jubao", function () {
+        if ($(this).attr("checkreplyofuid") == "myReply") {
+            $(this).parent().parent().parent().hide();
+            var replyid = $(this).attr("wkreplyofreplyid");
+            $.ajax({
+                data: "{ replyid:'" + replyid + "' }",
+                dataType: "json",
+                url: "ws.asmx/delMyAnswer",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    alert(res.d);
+                }
+            });
+        }
+        else {
+            $(".zqq-menban").show();
+            $(".zqq-jubao-inner").show();
+
+            var jubaoAnswerID = $(this).attr("replyid");
+            $(".zqq-jubao-submit").attr("replyid", jubaoAnswerID);
+        }
+
+    });
+
    
     $("#wkreply").click(function () {
 
@@ -147,3 +182,26 @@ $(function () {
 
     })
 });
+
+function checkcareperson() {
+    $.each($(".zqq-zg-btn-follow "), function () {
+        if ($(this).attr("checkcareperson") == "follow") {
+            $(this).html("取消关注");
+            $(this).css({
+                "background": "#eee", "color": "#888",
+                "border": "1px solid #ddd"
+            });
+        }
+        else if ($(this).attr("checkcareperson") == "myself") {
+            $(this).hide();
+            $(this).next().hide();
+        }
+    });
+}
+function CheckQusetionProvider() {
+    $.each($(".zqq-jubao"), function () {
+        if ($(this).attr("checkreplyofuid") == "myReply") {
+            $(this).html("删除");
+        }
+    });
+}

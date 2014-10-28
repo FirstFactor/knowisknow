@@ -121,9 +121,7 @@ namespace KnowIsKnow
             {
                 return msg.receiverHeadImage;
             }
-           
-
-           
+   
         }
         public string getMessageCount(object sid,object rid)
         {
@@ -136,6 +134,56 @@ namespace KnowIsKnow
 
             return da.Tables[0].Rows[0]["MessageSenderID"].ToString();
         }
+        public string GetUserinfo(object sid, object rid)
+        {
+            int senderID = (int)sid;
+            int receiverID = (int)rid;
+            BLL.MessageUserView bllMsg = new BLL.MessageUserView();
+            Model.MessageUserView msg = bllMsg.GetModel(senderID, receiverID);
+
+            if (receiverID == Convert.ToInt32(userId))
+            {
+                return msg.MessageSenderID.ToString();
+            }
+            else
+            {
+                return msg.MessageReceiverID.ToString();
+            }
+           
+        }
+        public string GetMessageNickName(object sid, object rid)
+        {
+            int senderID = (int)sid;
+            int receiverID = (int)rid;
+            BLL.MessageUserView bllMsg = new BLL.MessageUserView();
+            Model.MessageUserView msg = bllMsg.GetModel(senderID, receiverID);
+
+            if (receiverID == Convert.ToInt32(userId))
+            {
+                return msg.userNickName.ToString();
+            }
+            else
+            {
+                return msg.receiverNickName.ToString();
+            }
+        }
+        public string GetMessageUserShuoShuo(object sid, object rid)
+        {
+            int senderID = (int)sid;
+            int receiverID = (int)rid;
+            BLL.MessageUserView bllMsg = new BLL.MessageUserView();
+            Model.MessageUserView msg = bllMsg.GetModel(senderID, receiverID);
+
+            if (receiverID == Convert.ToInt32(userId))
+            {
+                return msg.userShuoShuo.ToString();
+            }
+            else
+            {
+                return msg.receiverShuoShuo.ToString();
+            }
+        }
+
         public string getchatNickName(object sid,object rid) 
         {
             int senderID = (int)sid;
@@ -167,6 +215,25 @@ namespace KnowIsKnow
                 Response.Write("<script>window.location.href='message.aspx'</script>");
             }
             
+        }
+        public string CheckCarePerson(object GetUserinfo)
+        {
+            BLL.CarePerson cq = new BLL.CarePerson();
+            List<Model.CarePerson> list = cq.GetModelList("personCaredByUID=" + userId);
+            int qid = Convert.ToInt32(GetUserinfo);
+            int mid = Convert.ToInt32(userId);
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].carePersonID == qid)
+                {
+                    return "follow";
+                }
+            }
+            if (qid == mid)
+            {
+                return "myself";
+            }
+            return "nofollow";
         }
     }
     public class Test

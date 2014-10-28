@@ -30,6 +30,18 @@ namespace DAL
         {
             return DbHelperSQL.Query(sql);
         }
+        public DataSet GetUserinfo(string sql)
+        {
+            return DbHelperSQL.Query(sql);
+        }
+        public DataSet GetMessageNickName(string sql)
+        {
+            return DbHelperSQL.Query(sql);
+        }
+        public DataSet GetMessageUserShuoShuo(string sql)
+        {
+            return DbHelperSQL.Query(sql);
+        }
         #region  BasicMethod
 
         /// <summary>
