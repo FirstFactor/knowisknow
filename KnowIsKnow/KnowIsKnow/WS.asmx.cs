@@ -70,6 +70,13 @@ namespace KnowIsKnow
             
         }
 
+        [WebMethod(EnableSession = true)]
+        public string logout() {
+            Session.Clear();
+            return "ok";
+            
+        }
+
         [WebMethod]
         public string senderMessage(string senderid, string receiveid, string senderContent)
         {

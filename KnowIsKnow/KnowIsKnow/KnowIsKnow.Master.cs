@@ -16,6 +16,7 @@ namespace KnowIsKnow
         public string userheadimg;
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Cache.SetCacheability(System.Web.HttpCacheability.NoCache);
             if (Session["UserID"] == null)
             {
                 return;
@@ -66,11 +67,7 @@ namespace KnowIsKnow
                
             }
         }
-        public void zqqlogout(object sender, EventArgs e)
-        {
-            Session.Abandon(); ;
-            Response.Redirect(Request.Url.ToString());
-        }
+        
         //public void sendQuestion(object o, EventArgs e) {
         //    string questionTitle = this.txtQuestionTitle.Text;
         //    string questionContent = this.txtQuestionContent.InnerText;

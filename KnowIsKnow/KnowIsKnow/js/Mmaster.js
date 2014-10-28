@@ -19,6 +19,22 @@ $(function () {
         $(".zqq-tiwen-search").show();
     });
 
+    //登出
+    $(".zqq-logout").click(function () {
+        $.ajax({
+            data: "{}",
+            dataType: "json",
+            url: "ws.asmx/logout",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.d != "") {
+                    window.location.href = "Index.aspx";
+                }
+            }
+        });
+    });
+
     //私信
     var receiveid ;
     var senderid;
