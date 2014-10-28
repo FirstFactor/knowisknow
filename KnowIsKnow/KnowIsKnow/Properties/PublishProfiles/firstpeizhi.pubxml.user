@@ -14,22 +14,22 @@
       <publishTime>10/22/2014 17:16:40</publishTime>
     </File>
     <File Include="AdminPage.aspx">
-      <publishTime>10/25/2014 20:03:12</publishTime>
+      <publishTime>10/28/2014 19:51:39</publishTime>
     </File>
     <File Include="AllQuestion.aspx">
-      <publishTime>10/25/2014 20:03:09</publishTime>
+      <publishTime>10/27/2014 13:22:55</publishTime>
     </File>
     <File Include="bin/BLL.dll">
-      <publishTime>10/26/2014 15:19:56</publishTime>
+      <publishTime>10/28/2014 17:17:35</publishTime>
     </File>
     <File Include="bin/DAL.dll">
-      <publishTime>10/26/2014 15:10:21</publishTime>
+      <publishTime>10/28/2014 17:17:35</publishTime>
     </File>
     <File Include="bin/DBUtility.dll">
       <publishTime>10/26/2014 15:10:20</publishTime>
     </File>
     <File Include="bin/KnowIsKnow.dll">
-      <publishTime>10/26/2014 15:19:56</publishTime>
+      <publishTime>10/28/2014 20:35:43</publishTime>
     </File>
     <File Include="bin/Model.dll">
       <publishTime>10/26/2014 15:10:20</publishTime>
@@ -37,17 +37,20 @@
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>10/23/2014 18:04:56</publishTime>
     </File>
+    <File Include="build.aspx">
+      <publishTime>10/28/2014 17:05:32</publishTime>
+    </File>
     <File Include="CaredQuestion.aspx">
-      <publishTime>10/25/2014 20:03:09</publishTime>
+      <publishTime>10/27/2014 13:22:55</publishTime>
     </File>
     <File Include="CareTopic.aspx">
-      <publishTime>10/24/2014 16:20:17</publishTime>
+      <publishTime>10/27/2014 20:02:51</publishTime>
     </File>
     <File Include="css/AdminLogin.css">
       <publishTime>10/22/2014 17:16:40</publishTime>
     </File>
     <File Include="css/AdminPage.css">
-      <publishTime>10/25/2014 20:03:12</publishTime>
+      <publishTime>10/27/2014 13:22:57</publishTime>
     </File>
     <File Include="css/CareTopic.css">
       <publishTime>10/24/2014 16:20:17</publishTime>
@@ -59,15 +62,57 @@
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
     <File Include="css/Home.css">
-      <publishTime>10/25/2014 20:03:09</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
+    </File>
+    <File Include="css/images/adminbg.jpg">
+      <publishTime>10/22/2014 17:16:40</publishTime>
     </File>
     <File Include="css/images/bg.png">
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
+    <File Include="css/images/close.png">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="css/images/icons.png">
+      <publishTime>10/22/2014 17:16:40</publishTime>
+    </File>
+    <File Include="css/images/ico_qq.png">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="css/images/ico_sina.gif">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="css/images/into.png">
+      <publishTime>10/22/2014 17:16:40</publishTime>
+    </File>
     <File Include="css/images/light.png">
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
+    <File Include="css/images/new_logo.png">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="css/images/ok.png">
+      <publishTime>10/23/2014 17:44:18</publishTime>
+    </File>
+    <File Include="css/images/sprites-1.9.2.png">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
     <File Include="css/images/Thumbs.db">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="css/images/user1.jpg">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="css/images/user2.jpg">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="css/images/user3.jpg">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="css/images/user4.jpg">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="css/images/user5.jpg">
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
     <File Include="css/images/zqyicon1.png">
@@ -77,25 +122,37 @@
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
     <File Include="css/Index.css">
-      <publishTime>10/24/2014 16:51:25</publishTime>
+      <publishTime>10/27/2014 20:02:51</publishTime>
+    </File>
+    <File Include="css/Jcrop.gif">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="css/jquery.Jcrop.css">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="css/jquery.Jcrop.min.css">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="css/Main.css">
+      <publishTime>10/27/2014 13:22:57</publishTime>
     </File>
     <File Include="css/Message.css">
-      <publishTime>10/21/2014 16:49:27</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
     </File>
     <File Include="css/MessageDetail.css">
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
     <File Include="css/Mmaster.css">
-      <publishTime>10/25/2014 20:03:09</publishTime>
+      <publishTime>10/27/2014 13:22:55</publishTime>
     </File>
     <File Include="css/ProCenter.css">
-      <publishTime>10/24/2014 11:43:09</publishTime>
+      <publishTime>10/28/2014 17:05:34</publishTime>
     </File>
     <File Include="css/QuestionDetail.css">
-      <publishTime>10/23/2014 19:12:46</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
     </File>
     <File Include="css/resetpassword.css">
-      <publishTime>10/23/2014 17:44:18</publishTime>
+      <publishTime>10/27/2014 20:02:51</publishTime>
     </File>
     <File Include="css/SelectTopic.css">
       <publishTime>10/17/2014 16:58:46</publishTime>
@@ -111,6 +168,9 @@
     </File>
     <File Include="css/TopicSquare.css">
       <publishTime>10/23/2014 17:44:18</publishTime>
+    </File>
+    <File Include="css/uploadify.css">
+      <publishTime>10/27/2014 13:22:57</publishTime>
     </File>
     <File Include="FindHot.aspx">
       <publishTime>10/26/2014 13:57:50</publishTime>
@@ -130,26 +190,419 @@
     <File Include="fonts/FontAwesome.otf">
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
+    <File Include="Handler/CutAvatarHandler.ashx">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="Handler/UploadAvatarHandler.ashx">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
     <File Include="Helper.aspx">
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
     <File Include="Home.aspx">
-      <publishTime>10/25/2014 20:03:09</publishTime>
+      <publishTime>10/28/2014 13:57:36</publishTime>
+    </File>
+    <File Include="images/06fecb761_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/07685ae24_m.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/1445bf4c6_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/2a098f9db_m.jpg">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="images/2a098f9db_s.jpg">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="images/392c679a0_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/470280f6b_m.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/52e07f808_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/5a8cff419_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/5daddd688_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/6ff253b3a_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/a9fdf1d30_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/aa1aaf3a6_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/bca88815c_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/close.png">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="images/e9e9e53be_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/eedf96dcb_m.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/f85294643_xs.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/fb89e0ea3_m.jpg">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="images/fb89e0ea3_s.jpg">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="images/final130588590276495483.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130588592767172124.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130588600334453941.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589330871834162.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589363065240109.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589364357497480.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589371745056708.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589374128353283.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589377125177583.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589511093253909.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589561217212297.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589563706091086.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589564472577439.png">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589658844100612.jpg">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/final130589707400371678.jpg">
+      <publishTime>10/28/2014 20:33:55</publishTime>
+    </File>
+    <File Include="images/headimages/635495159212140772.png">
+      <publishTime>10/21/2014 19:18:41</publishTime>
+    </File>
+    <File Include="images/headimages/635495160598119579.png">
+      <publishTime>10/21/2014 19:21:00</publishTime>
+    </File>
+    <File Include="images/headimages/635495164132877544.png">
+      <publishTime>10/21/2014 19:26:53</publishTime>
+    </File>
+    <File Include="images/headimages/635495164882029188.png">
+      <publishTime>10/21/2014 19:28:08</publishTime>
+    </File>
+    <File Include="images/headimages/635495165586004479.png">
+      <publishTime>10/21/2014 19:29:18</publishTime>
+    </File>
+    <File Include="images/headimages/635495165713150053.png">
+      <publishTime>10/21/2014 19:29:31</publishTime>
+    </File>
+    <File Include="images/headimages/635495166621462242.png">
+      <publishTime>10/21/2014 19:31:02</publishTime>
+    </File>
+    <File Include="images/headimages/635495168002731905.png">
+      <publishTime>10/21/2014 19:33:20</publishTime>
+    </File>
+    <File Include="images/headimages/635495168305513908.png">
+      <publishTime>10/21/2014 19:33:50</publishTime>
+    </File>
+    <File Include="images/headimages/635495169819765483.png">
+      <publishTime>10/21/2014 19:36:21</publishTime>
+    </File>
+    <File Include="images/headimages/635495170280482263.png">
+      <publishTime>10/21/2014 19:37:08</publishTime>
+    </File>
+    <File Include="images/headimages/635495171236954695.png">
+      <publishTime>10/21/2014 19:38:43</publishTime>
+    </File>
+    <File Include="images/headimages/635495173070361067.png">
+      <publishTime>10/21/2014 19:41:47</publishTime>
+    </File>
+    <File Include="images/headimages/635495176133229654.png">
+      <publishTime>10/21/2014 19:46:53</publishTime>
+    </File>
+    <File Include="images/headimages/635495176636888054.png">
+      <publishTime>10/21/2014 19:47:43</publishTime>
+    </File>
+    <File Include="images/headimages/635495178471984219.png">
+      <publishTime>10/21/2014 19:50:47</publishTime>
+    </File>
+    <File Include="images/headimages/635495178908626421.png">
+      <publishTime>10/21/2014 19:51:30</publishTime>
+    </File>
+    <File Include="images/headimages/635495180883994845.png">
+      <publishTime>10/21/2014 19:54:48</publishTime>
+    </File>
+    <File Include="images/headimages/635495181311685346.png">
+      <publishTime>10/21/2014 19:55:31</publishTime>
+    </File>
+    <File Include="images/headimages/635495182284846321.png">
+      <publishTime>10/21/2014 19:57:08</publishTime>
+    </File>
+    <File Include="images/headimages/635495183876088859.png">
+      <publishTime>10/21/2014 19:59:47</publishTime>
+    </File>
+    <File Include="images/headimages/635495184331983042.png">
+      <publishTime>10/21/2014 20:00:33</publishTime>
+    </File>
+    <File Include="images/headimages/635495184924730400.png">
+      <publishTime>10/21/2014 20:01:32</publishTime>
+    </File>
+    <File Include="images/headimages/Thumbs.db">
+      <publishTime>10/25/2014 20:02:04</publishTime>
+    </File>
+    <File Include="images/headimg/final130589565869835513.png">
+      <publishTime>10/28/2014 17:05:34</publishTime>
+    </File>
+    <File Include="images/headimg/final130589566769920031.png">
+      <publishTime>10/28/2014 15:57:56</publishTime>
+    </File>
+    <File Include="images/headimg/final130589572677831188.png">
+      <publishTime>10/28/2014 16:07:47</publishTime>
+    </File>
+    <File Include="images/headimg/final130589573597176966.png">
+      <publishTime>10/28/2014 16:09:19</publishTime>
+    </File>
+    <File Include="images/headimg/final130589580464921143.png">
+      <publishTime>10/28/2014 16:20:46</publishTime>
+    </File>
+    <File Include="images/headimg/final130589580935104250.png">
+      <publishTime>10/28/2014 16:21:33</publishTime>
+    </File>
+    <File Include="images/headimg/final130589601821183974.png">
+      <publishTime>10/28/2014 16:56:22</publishTime>
+    </File>
+    <File Include="images/headimg/final130589602407616063.png">
+      <publishTime>10/28/2014 16:57:20</publishTime>
+    </File>
+    <File Include="images/headimg/final130589602564623960.png">
+      <publishTime>10/28/2014 16:57:36</publishTime>
+    </File>
+    <File Include="images/headimg/final130589721231462298.jpg">
+      <publishTime>10/28/2014 20:15:23</publishTime>
+    </File>
+    <File Include="images/main-R1.png">
+      <publishTime>10/22/2014 17:16:40</publishTime>
+    </File>
+    <File Include="images/main-R2.png">
+      <publishTime>10/22/2014 17:16:40</publishTime>
+    </File>
+    <File Include="images/Thumbs.db">
+      <publishTime>10/25/2014 20:02:04</publishTime>
+    </File>
+    <File Include="images/topic1.jpg">
+      <publishTime>10/21/2014 08:33:39</publishTime>
+    </File>
+    <File Include="images/topic10.jpg">
+      <publishTime>10/21/2014 08:33:39</publishTime>
+    </File>
+    <File Include="images/topic2.jpg">
+      <publishTime>10/21/2014 08:33:39</publishTime>
+    </File>
+    <File Include="images/topic3.jpg">
+      <publishTime>10/21/2014 08:33:39</publishTime>
+    </File>
+    <File Include="images/topic4.jpg">
+      <publishTime>10/21/2014 08:33:39</publishTime>
+    </File>
+    <File Include="images/topic5.jpg">
+      <publishTime>10/21/2014 08:33:39</publishTime>
+    </File>
+    <File Include="images/topic6.jpg">
+      <publishTime>10/21/2014 08:33:39</publishTime>
+    </File>
+    <File Include="images/topic7.jpg">
+      <publishTime>10/21/2014 08:33:39</publishTime>
+    </File>
+    <File Include="images/topic8.jpg">
+      <publishTime>10/21/2014 08:33:39</publishTime>
+    </File>
+    <File Include="images/topic9.jpg">
+      <publishTime>10/21/2014 08:33:39</publishTime>
+    </File>
+    <File Include="images/topicImages/635495157958314562.png">
+      <publishTime>10/21/2014 19:16:35</publishTime>
+    </File>
+    <File Include="images/topicImages/635495158846104200.png">
+      <publishTime>10/21/2014 19:18:04</publishTime>
+    </File>
+    <File Include="images/topicImages/635495199237109638.png">
+      <publishTime>10/21/2014 20:25:23</publishTime>
+    </File>
+    <File Include="images/topicImages/635495200439400730.png">
+      <publishTime>10/21/2014 20:27:23</publishTime>
+    </File>
+    <File Include="images/topicImages/635498348634631702.jpg">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498348744361923.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498348911028273.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498352414246015.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498352669972889.jpg">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498353660883865.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498559220065700.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498583380504625.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498584170083805.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498584822734571.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498585836180808.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498589946028982.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635498596936570033.png">
+      <publishTime>10/25/2014 20:03:12</publishTime>
+    </File>
+    <File Include="images/topicImages/635499973611546062.png">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="images/topicImages/635499973774541238.png">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="images/topicImages/635500010865611171.png">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="images/topicImages/Thumbs.db">
+      <publishTime>10/25/2014 20:02:04</publishTime>
+    </File>
+    <File Include="images/topicImages635497695493173306.png">
+      <publishTime>10/24/2014 17:45:49</publishTime>
+    </File>
+    <File Include="images/topicimg/final130588590276495483.png">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="images/topicimg/final130588592767172124.png">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="images/topicimg/final130588600334453941.png">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589330871834162.png">
+      <publishTime>10/28/2014 13:57:41</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589363065240109.png">
+      <publishTime>10/28/2014 13:57:41</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589364357497480.png">
+      <publishTime>10/28/2014 13:57:41</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589371745056708.png">
+      <publishTime>10/28/2014 13:57:41</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589374128353283.png">
+      <publishTime>10/28/2014 13:57:41</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589377125177583.png">
+      <publishTime>10/28/2014 13:57:41</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589511093253909.png">
+      <publishTime>10/28/2014 17:05:34</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589561217212297.png">
+      <publishTime>10/28/2014 17:05:34</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589563706091086.png">
+      <publishTime>10/28/2014 17:05:34</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589564472577439.png">
+      <publishTime>10/28/2014 17:05:34</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589658844100612.jpg">
+      <publishTime>10/28/2014 18:31:24</publishTime>
+    </File>
+    <File Include="images/topicimg/final130589707400371678.jpg">
+      <publishTime>10/28/2014 19:52:20</publishTime>
+    </File>
+    <File Include="images/touxiang.jpg">
+      <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="images/user1.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/user2.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/user3.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/user4.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/user5.jpg">
+      <publishTime>10/21/2014 16:49:27</publishTime>
+    </File>
+    <File Include="images/zqq-dianying.jpg">
+      <publishTime>10/23/2014 17:44:18</publishTime>
+    </File>
+    <File Include="images/zqq-falv.jpg">
+      <publishTime>10/23/2014 17:44:18</publishTime>
+    </File>
+    <File Include="images/zqq-yingyue.jpg">
+      <publishTime>10/23/2014 17:44:18</publishTime>
     </File>
     <File Include="Index.aspx">
-      <publishTime>10/25/2014 20:02:04</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
     </File>
     <File Include="js/AdminLogin.js">
       <publishTime>10/22/2014 17:16:40</publishTime>
     </File>
     <File Include="js/adminpage.js">
-      <publishTime>10/25/2014 20:03:12</publishTime>
+      <publishTime>10/28/2014 20:11:18</publishTime>
     </File>
     <File Include="js/cancel.png">
       <publishTime>10/21/2014 17:19:41</publishTime>
     </File>
     <File Include="js/caretopic.js">
-      <publishTime>10/25/2014 20:03:12</publishTime>
+      <publishTime>10/27/2014 20:02:51</publishTime>
+    </File>
+    <File Include="js/cutpic.js">
+      <publishTime>10/27/2014 13:22:57</publishTime>
     </File>
     <File Include="js/findhot.js">
       <publishTime>10/23/2014 17:44:18</publishTime>
@@ -158,16 +611,25 @@
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
     <File Include="js/home.js">
-      <publishTime>10/25/2014 20:03:09</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
     </File>
     <File Include="js/index.js">
-      <publishTime>10/25/2014 20:02:04</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
     </File>
     <File Include="js/jquery-1.9.1.min.js">
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
     <File Include="js/jquery-ui.min.js">
       <publishTime>10/17/2014 09:26:48</publishTime>
+    </File>
+    <File Include="js/jquery.color.js">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/jquery.Jcrop.js">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/jquery.Jcrop.min.js">
+      <publishTime>10/27/2014 13:22:57</publishTime>
     </File>
     <File Include="js/jquery.min.js">
       <publishTime>10/23/2014 18:47:33</publishTime>
@@ -176,19 +638,19 @@
       <publishTime>10/21/2014 17:19:59</publishTime>
     </File>
     <File Include="js/message.js">
-      <publishTime>10/21/2014 16:49:27</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
     </File>
     <File Include="js/messagedetail.js">
       <publishTime>10/17/2014 09:26:48</publishTime>
     </File>
     <File Include="js/mmaster.js">
-      <publishTime>10/25/2014 20:03:09</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
     </File>
     <File Include="js/procenter.js">
-      <publishTime>10/24/2014 11:43:09</publishTime>
+      <publishTime>10/28/2014 17:05:34</publishTime>
     </File>
     <File Include="js/questiondetail.js">
-      <publishTime>10/24/2014 16:51:25</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
     </File>
     <File Include="js/resetpassword.js">
       <publishTime>10/23/2014 17:44:18</publishTime>
@@ -214,6 +676,261 @@
     <File Include="js/topicsquare.js">
       <publishTime>10/24/2014 16:51:25</publishTime>
     </File>
+    <File Include="js/uploadify-v2.1.4/cancel.png">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/check.php">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/air/logging/FileTarget.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/air/logging/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/crypto/HMAC.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/crypto/MD5.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/crypto/MD5Stream.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/crypto/SHA1.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/crypto/SHA224.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/crypto/SHA256.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/crypto/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/crypto/WSSEUsernameToken.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/errors/IllegalStateError.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/errors/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/fileformats/vcard/Address.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/fileformats/vcard/Email.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/fileformats/vcard/Phone.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/fileformats/vcard/VCard.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/fileformats/vcard/VCardParser.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/fileformats/vcard/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/images/BitString.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/images/JPGEncoder.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/images/PNGEncoder.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/images/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/net/DynamicURLLoader.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/net/IURIResolver.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/net/MimeTypeMap.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/net/proxies/RFC2817Socket.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/net/proxies/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/net/URI.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/net/URIEncodingBitmap.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/net/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/Database.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/Definition.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/Dict.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/DictionaryServer.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/ConnectedEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/DatabaseEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/DefinitionEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/DefinitionHeaderEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/DictionaryServerEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/DisconnectedEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/ErrorEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/MatchEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/MatchStrategiesEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/NoMatchEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/events/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/MatchStrategy.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/Response.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/util/CompleteResponseEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/util/SocketHelper.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/util/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/protocols/dict/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/serialization/json/JSON.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/serialization/json/JSONDecoder.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/serialization/json/JSONEncoder.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/serialization/json/JSONParseError.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/serialization/json/JSONToken.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/serialization/json/JSONTokenizer.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/serialization/json/JSONTokenType.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/serialization/json/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/utils/ArrayUtil.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/utils/DateUtil.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/utils/DictionaryUtil.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/utils/IntUtil.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/utils/NumberFormatter.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/utils/StringUtil.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/utils/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/utils/XMLUtil.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/webapis/events/ServiceEvent.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/webapis/events/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/webapis/ServiceBase.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/webapis/URLLoaderBase.as">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/com/adobe/webapis/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/expressInstall.swf">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/jquery.uploadify.v2.1.4.js">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/jquery.uploadify.v2.1.4.min.js">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/swfobject.js">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/Thumbs.db">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/uploadify.allglyphs.swf">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/uploadify.css">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/uploadify.fla">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/uploadify.php">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/uploadify.swf">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
+    <File Include="js/uploadify-v2.1.4/vssver2.scc">
+      <publishTime>10/27/2014 13:22:57</publishTime>
+    </File>
     <File Include="js/uploadify.css">
       <publishTime>10/21/2014 17:19:59</publishTime>
     </File>
@@ -221,25 +938,25 @@
       <publishTime>10/21/2014 17:19:59</publishTime>
     </File>
     <File Include="KnowIsKnow.Master">
-      <publishTime>10/25/2014 20:03:09</publishTime>
+      <publishTime>10/28/2014 13:57:36</publishTime>
     </File>
     <File Include="Message.aspx">
-      <publishTime>10/21/2014 16:49:27</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
     </File>
     <File Include="MessageDetail.aspx">
-      <publishTime>10/17/2014 16:58:46</publishTime>
+      <publishTime>10/28/2014 13:57:36</publishTime>
     </File>
     <File Include="MyQuestion.aspx">
-      <publishTime>10/25/2014 20:03:09</publishTime>
+      <publishTime>10/27/2014 13:12:35</publishTime>
     </File>
     <File Include="ProCenter.aspx">
-      <publishTime>10/24/2014 11:43:09</publishTime>
+      <publishTime>10/28/2014 17:05:34</publishTime>
     </File>
     <File Include="QuestionDetail.aspx">
-      <publishTime>10/24/2014 19:20:58</publishTime>
+      <publishTime>10/28/2014 17:05:32</publishTime>
     </File>
     <File Include="resetpassword.aspx">
-      <publishTime>10/23/2014 17:44:18</publishTime>
+      <publishTime>10/27/2014 20:02:51</publishTime>
     </File>
     <File Include="SelectTopic.aspx">
       <publishTime>10/21/2014 08:33:39</publishTime>
@@ -1091,7 +1808,7 @@
       <publishTime>10/22/2014 20:06:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/26/2014 15:20:08</publishTime>
+      <publishTime>10/28/2014 17:18:01</publishTime>
     </File>
     <File Include="WS.asmx">
       <publishTime>10/17/2014 09:26:48</publishTime>

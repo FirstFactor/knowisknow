@@ -280,6 +280,25 @@ $(function () {
         var val = 'deleted';
         $(this).parent().find(".adComboxInput").prev().html(val);
         $(this).parent().find(".adComboxInput").next().html(val);
+
+        thistopicid = $(this).parent().attr("topicinfoid");
+        thistopicState = "unnormal"
+
+        alert(thistopicid);
+        $.ajax({
+            data: "{ 'topicid':'" + thistopicid + "', 'topicstate':'" + thistopicState + "'}",
+            dataType: "json",
+            url: "WSQuan.asmx/UpdateTopicInfoState",
+            type: "post",
+            contentType: "application/json",///这里的东西不能东哪怕是大小写都不要动，不然图片路径传不上去
+            success: function (res) {
+                alert(res.d);
+            }
+
+        });
+
+
+
         $(this).html("已删除");
     });
     //假删操作
@@ -289,6 +308,29 @@ $(function () {
         $(this).parent().find(".adComboxInput").next().html(val);
         $(this).html("已删除");
     });
+
+
+
+    /************************/
+
+    $(document).on("click", ".adhuifu", function () {
+
+        thistopicid = $(this).parent().attr("topicinfoid");
+        thistopicState = "normal"
+
+        alert(thistopicid);
+        $.ajax({
+            data: "{ 'topicid':'" + thistopicid + "', 'topicstate':'" + thistopicState + "'}",
+            dataType: "json",
+            url: "WSQuan.asmx/UpdateTopicInfoState",
+            type: "post",
+            contentType: "application/json",///这里的东西不能东哪怕是大小写都不要动，不然图片路径传不上去
+            success: function (res) {
+                alert(res.d);
+            }
+        });
+    });
+
 
     /******************************/
     $(document).on("click", ".report", function () {

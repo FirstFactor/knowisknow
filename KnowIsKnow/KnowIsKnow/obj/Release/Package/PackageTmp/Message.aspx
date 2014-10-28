@@ -18,9 +18,34 @@
                 
                         <div id="wk-item" class="navigable">
 					<div class="zm-pm-item">
-						<a class="zm-item-link">
+						<div class="zm-item-link">
 							<img class="zm-pm-item-img" src="<%#getHeaderImage(Eval("MessageSenderID"),Eval("MessageReceiverID")) %>"/>
-						</a>
+                            <div class="zqq-goog-hovercard zqq-bottom">
+						        		<div class="zqq-popover-content zqq-no-hovercard">
+								          <div class="zqq-profile-card zqq-topic">
+									    	<div class="zqq-upper">
+										    	<a class="zqq-avatar-link" href="/topic/19577143">
+												<span class="zqq-name"><%#GetMessageNickName(Eval("MessageSenderID"),Eval("MessageReceiverID")) %></span>
+												<img class="zqq-avatar" src="<%#getHeaderImage(Eval("MessageSenderID"),Eval("MessageReceiverID")) %>"/>
+										    	</a>
+											    <br/>
+										    	<div class="zqq-tagline"><%#GetMessageUserShuoShuo(Eval("MessageSenderID"),Eval("MessageReceiverID")) %></div>
+										    </div>
+									    	<div class="zqq-lower zqq-clearfix">
+											    <div class="zqq-operation">
+                                                    
+											    	<button class="zqq-zg-btn-follow" checkcareperson="<%# CheckCarePerson(GetUserinfo(Eval("MessageSenderID"),Eval("MessageReceiverID"))) %>"  questionprovider="<%#GetUserinfo(Eval("MessageSenderID"),Eval("MessageReceiverID")) %>">关注</button>
+                                                    <div class="zqq-messageButtonArea" userid="<%#GetUserinfo(Eval("MessageSenderID"),Eval("MessageReceiverID")) %>" usernickname="<%#GetMessageNickName(Eval("MessageSenderID"),Eval("MessageReceiverID")) %>">
+                                                        <i class="zqq-icon zqq-messageButton"></i>
+                                                    </div>
+										    	</div>
+									    	</div>
+									     </div>
+							        	</div>
+						        		<div class="zqq-arrow"></div>
+						        		<div class="zqq-arrow2"></div>
+						        	</div>
+						</div>
 						<div class="zm-pm-item-main">
 							<a class="pm-touser" ><%# getNickName(Eval("MessageSenderID"),Eval("MessageReceiverID")) %></a>
 							：<%# getContent( Eval("MessageSenderID"),Eval("MessageReceiverID")) %></div>
@@ -28,10 +53,10 @@
 							<span class="zg-gray zg-left">
 								<%#getDatatime( Eval("MessageSenderID"),Eval("MessageReceiverID")) %>
 							</span>
-							<a href="MessageDetail.aspx?MsgsID=<%# Eval("MessageSenderID") %>" class="zg-link-litblue">共 <%#getMessageCount(Eval("MessageSenderID"),Eval("MessageReceiverID")) %> 条对话</a>
+							<a wksendid="<%# Eval("MessageSenderID")%>" wkreceiverid="<%# Eval("MessageReceiverID") %>" wkuserid="<%=userId %>" class="zg-link-litblu">共 <%#getMessageCount(Eval("MessageSenderID"),Eval("MessageReceiverID")) %> 条对话</a>
                             
 							<span class="zg-bull">|</span>
-							<a href="#" class="zg-link-litblue huifusixin" usernickname="<%#getchatNickName(Eval("MessageSenderID"),Eval("MessageReceiverID")) %>" userid="<%# Eval("MessageSenderID")%>">回复</a>
+							<a href="#" class="zg-link-litblue huifusixin" usernickname="<%#getchatNickName(Eval("MessageReceiverID"),Eval("MessageSenderID")) %>" userid="<%# Eval("MessageReceiverID")%>">回复</a>
 							<span class="zg-bull">|</span>
 							<a href="#" class="zg-link-litblue">举报</a>
 							<span class="zg-bull">|</span>

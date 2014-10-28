@@ -1,13 +1,23 @@
 ﻿$(function () {
+    //名片
+    $(".zm-item-link").hover(function () {
+        checkcareperson();
+        $(this).find(".zqq-goog-hovercard").show();
+    }, function () {
+        $(this).find(".zqq-goog-hovercard").hide();
+    });
+
     $("#wk-pm").click(function () {
         $(".mengban").css("opacity", "0.6");
         $(".mengban").show();
         $(".modal-dialog").show();
         $(".modal-dialog-title-close").click(function () {
+            $(".ac-renderer").html("");
             $(".mengban").hide();
             $(".modal-dialog").hide();
         })
         $(".zm-command-cancel").click(function () {
+            $(".ac-renderer").html("");
             $(".mengban").hide();
             $(".modal-dialog").hide();
         })
@@ -24,9 +34,10 @@
             contentType: "application/json",
             success: function (result) {
                 $(result.d).each(function () {
+                    
                     var html = "";
                     html += '     <div class="ac-row">';
-                    html += '         <img class="zm-item-img-avatar zg-left" src="Images/sprites.png"/>';
+                    html += '         <img class="zm-item-img-avatar zg-left" src="'+this.userHeadImage+'"/>';
                     html += '         <span class="zu-autocomplete-row-name">' + this.userNickName + '</span>';
                     html += '         <span class="zg-gray-normal zu-autocomplete-row-description">呵呵</span>';
                     html += '         <div class="wkdeuserid" wk="'+this.userID+'" ></div>'
@@ -75,4 +86,31 @@
         $(".zm-wkuserid").val(userid);
         $(".ac-renderer").hide();
     });
+    $(".zg-link-litblu").click(function () {
+        var sendid = $(this).attr("wksendid");
+        var receiverid = $(this).attr("wkreceiverid");
+        var userid = $(this).attr("wkuserid");
+        if (userid == sendid) {
+            window.location.href = "MessageDetail.aspx?MsgsID=" + receiverid + "";
+        }
+        else {
+            window.location.href = "MessageDetail.aspx?MsgsID=" + sendid + "";
+        }
+    });
 })
+
+function checkcareperson() {
+    $.each($(".zqq-zg-btn-follow "), function () {
+        if ($(this).attr("checkcareperson") == "follow") {
+            $(this).html("取消关注");
+            $(this).css({
+                "background": "#eee", "color": "#888",
+                "border": "1px solid #ddd"
+            });
+        }
+        else if ($(this).attr("checkcareperson") == "myself") {
+            $(this).hide();
+            $(this).next().hide();
+        }
+    });
+}

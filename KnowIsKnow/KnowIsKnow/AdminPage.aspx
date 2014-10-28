@@ -53,7 +53,14 @@
     <script type="text/javascript">
         var imageWidth = 50;
         var imageHeiht = 50;
-        $(function () {
+        var sizeW;
+        var sizeH;
+    
+        var img;
+       
+
+       $(function () {
+           img = new Image();
             $('#uploadify').uploadify({
                 'uploader': '/js/uploadify-v2.1.4/uploadify.swf',
                 'script': '/Handler/UploadAvatarHandler.ashx',
@@ -83,6 +90,9 @@
                         }
                         $("#maxVal").val(100);                     //设置截图区大小
 
+                        $("#realimg").attr("src", result[0]);
+
+                       
                         $("#hidImageUrl").val(result[0]);             //上传路径存入隐藏域
 
 
@@ -170,6 +180,26 @@
             var imgPath = imagePath != "" ? imagePath : "images/ef_pic.jpg";
             var ic = new ImgCropper("bgDiv", "dragDiv", imgPath, imgWidth, imgHeight, null);
         }
+
+        //$(document).mouseup(function () {
+        //    calculate();
+          
+
+        //});
+
+        function calculate() {
+            imageAreawidth=$(".jcrop-tracker").width();
+            imageAreaheight = $(".jcrop-tracker").height();
+            imageWidth = $("#realimg").width();
+            imageHeiht = $("#realimg").height();
+            scalex = imageWidth / imageAreawidth;
+            scaley = imageHeiht / imageAreaheight;
+            var realx = $("#x").val() * scalex;
+            var realy = $("#y").val() * scaley;
+            $("#x").val(realx);
+            $("#y").val(realy);
+            
+        }
     </script>
 
     <%--<script>
@@ -191,7 +221,7 @@
     </script>--%>
 </head>
 <body>
-
+    <img id="realimg" src="" style="display:none" />
     <div id="mengban">
     </div>
     <div id="uploadArea">

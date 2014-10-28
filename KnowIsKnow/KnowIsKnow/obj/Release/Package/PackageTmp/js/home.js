@@ -57,6 +57,65 @@
         $(this).parent().parent().parent().parent().hide();
 
     });
+
+    $(".zqq-zg-btn-follow").click(function () {
+        var questionprovider = $(this).attr("questionprovider");
+        var userid = $(".userid").attr("userid");
+        var checkcareperson = $(this).attr("checkcareperson");
+        if (checkcareperson == "nofollow") {
+            $.ajax({
+                data: "{ questionprovider:'" + questionprovider + "', userid:' " + userid + "' }",
+                dataType: "json",
+                url: "ws.asmx/followPerson",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    alert(res.d);
+                }
+            });
+
+            $(this).html("关注");
+            $(this).attr("checkcareperson", "follow");
+            $(this).css({
+                "background": "#8ab923","background-color": "#9dcc4a", "color": "#3e5e00",
+                "border": "1px solid #6d8f29"
+            });
+        }
+        else if (checkcareperson == "follow") {
+            $.ajax({
+                data: "{ questionprovider:'" + questionprovider + "', userid:' " + userid + "' }",
+                dataType: "json",
+                url: "ws.asmx/noFollowPerson",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    alert(res.d);
+                }
+            });
+            $(this).html("取消关注");
+            $(this).attr("checkcareperson", "nofollow");
+            $(this).css({
+                "background": "#eee", "color": "#888",
+                "border": "1px solid #ddd"
+            });
+        }
+    });
+    $(".zqq-zg-btn-noFollow").click(function () {
+        var questionprovider = $(this).attr("carepersonid");
+        var userid = $(".userid").attr("userid");
+        $.ajax({
+            data: "{ questionprovider:'" + questionprovider + "', userid:' " + userid + "' }",
+            dataType: "json",
+            url: "ws.asmx/noFollowPerson",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+        });
+
+    });
+
     //$(".zqq-noFollow-topic-button").click(function () {
     //    $(this).toggleClass("zqq-display");
     //    $(this).prev().toggleClass("zqq-display");
@@ -154,6 +213,7 @@
     }, function () {
         $(this).find(".zqq-goog-hovercard").hide();
     });
+    
 
     
 });
@@ -178,6 +238,10 @@ function checkcareperson() {
     $.each($(".zqq-zg-btn-follow "), function () {
         if ($(this).attr("checkcareperson") == "follow") {
             $(this).html("取消关注");
+            $(this).css({
+                "background": "#eee", "color": "#888",
+                "border": "1px solid #ddd"
+            });
         }
         else if ($(this).attr("checkcareperson") == "myself") {
             $(this).hide();

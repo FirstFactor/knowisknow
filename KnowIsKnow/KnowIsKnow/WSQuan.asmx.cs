@@ -227,5 +227,19 @@ namespace KnowIsKnow
             addtopic.Add(topic);
             return "ok";
         }
+
+        [WebMethod]
+
+        public string UpdateTopicInfoState(int topicid, string topicstate) 
+        {
+            BLL.TopicInfo top = new BLL.TopicInfo();
+            Model.TopicInfo model = top.GetModel( topicid);
+            model.topicState = topicstate;
+
+            top.Update(model);
+            return "ok";
+        }
+
+        
     }
 }

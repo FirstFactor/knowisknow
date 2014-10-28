@@ -46,6 +46,10 @@ namespace WebApplication1.Handler
 
                     System.Drawing.Rectangle rl = new System.Drawing.Rectangle(Convert.ToInt32(pointX), Convert.ToInt32(pointY), Convert.ToInt32(rlSize), Convert.ToInt32(rlSize));   //得到截图矩形
 
+                    int i=0;
+                    i = i++;
+
+
                     gps = System.Drawing.Graphics.FromImage(bitmap);      //读到绘图对象
 
                     gps.DrawImage(thumbImg, 0, 0, rl, System.Drawing.GraphicsUnit.Pixel);
