@@ -31,3 +31,8 @@ E:\guithub\knowisknow\knowisknow\KnowIsKnow\Model\bin\Debug\Model.pdb
 E:\guithub\knowisknow\knowisknow\KnowIsKnow\Model\obj\Debug\Model.dll
 E:\guithub\knowisknow\knowisknow\KnowIsKnow\Model\obj\Debug\Model.pdb
 E:\guithub\knowisknow\knowisknow\KnowIsKnow\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\Model\bin\Debug\Model.dll
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\Model\bin\Debug\Model.pdb
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\Model\obj\Debug\Model.dll
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\Model\obj\Debug\Model.pdb
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
