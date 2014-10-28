@@ -80,7 +80,7 @@
 							<div class="zm-item-answer-author-info">
 								<h3 class="zm-item-answer-author-wrap">
 									<a class="zm-item-link-avatar">
-										<img src="Images/da8e974dc_s.jpg" class="zm-list-avatar">
+										<img src="<%#Eval("userHeadImage") %>" class="zm-list-avatar">
 									</a>
 									<a><%# GetreplyName(Eval("replyofUID")) %></a>
 									

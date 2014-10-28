@@ -111,11 +111,19 @@ namespace KnowIsKnow
         {
             int senderID = (int)sid;
             int receiverID = (int)rid;
-
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
             Model.MessageUserView msg = bllMsg.GetModel(senderID, receiverID);
+            if (receiverID == Convert.ToInt32(userId))
+            {
+                return msg.userHeadImage;
+            }
+            else 
+            {
+                return msg.receiverHeadImage;
+            }
+           
 
-            return msg.receiverHeadImage;
+           
         }
         public string getMessageCount(object sid,object rid)
         {
