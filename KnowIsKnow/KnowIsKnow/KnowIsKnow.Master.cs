@@ -16,6 +16,7 @@ namespace KnowIsKnow
         public string userheadimg;
         protected void Page_Load(object sender, EventArgs e)
         {
+            Response.Cache.SetCacheability(System.Web.HttpCacheability.NoCache);
             if (Session["UserID"] == null)
             {
                 return;
@@ -66,6 +67,7 @@ namespace KnowIsKnow
                
             }
         }
+        
         //public void sendQuestion(object o, EventArgs e) {
         //    string questionTitle = this.txtQuestionTitle.Text;
         //    string questionContent = this.txtQuestionContent.InnerText;
@@ -78,7 +80,7 @@ namespace KnowIsKnow
         //    que.quetionPubTime = now;
         //    que.questionSate = "unread";
         //    bllque.Add(que);
-        //    Response.Write("<script>window.location.href='home.aspx'</script>");
+        //    Response.Write("<script>window.location.href='Home.aspx'</script>");
         //}
     }
 }

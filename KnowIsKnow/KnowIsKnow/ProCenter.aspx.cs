@@ -48,7 +48,7 @@ namespace KnowIsKnow
                 probio=user.userProBio;
                 shuoshuo= user.userShuoShuo;
                 nickname= user.userNickName;
-
+            
 
                 BLL.QuestionInfo countmyquestion = new BLL.QuestionInfo();
                 myquestion= countmyquestion.GetRecordCount("questionProvider="+userid);
@@ -63,8 +63,29 @@ namespace KnowIsKnow
                 DataSet ds=  topicuser.GetList("userID="+userid);
                 this.rtpcared.DataSource = ds.Tables[0];
                 this.rtpcared.DataBind();
+
             }
             
+        }
+
+        protected void wtbuttonlast_Click(object sender, EventArgs e)
+        {
+            BLL.UserInfo ww = new BLL.UserInfo();
+            Model.UserInfo tt = ww.GetModel(userid);
+            tt.userAcademy = Request.Form["wtinputschool"];
+            tt.userProBio = Request.Form["wtzm-profile-edit-description"];
+            tt.userJob = Request.Form["wth-business"];
+            tt.userAdress = Request.Form["wth-jv"];
+            tt.userCompany = Request.Form["wth-company"];
+            tt.userJobPosition = Request.Form["wth-position"];
+            tt.userMajor = Request.Form["wth-major"];
+
+            tt.userGender = xingbie.Value;
+
+            Response.Write(tt.userGender);
+            ww.Update(tt);
+            
+            Response.Redirect("ProCenter.aspx");
         }
     }
 }

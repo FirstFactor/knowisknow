@@ -210,5 +210,22 @@ namespace KnowIsKnow
             return "ok";
         }
 
+
+
+        [WebMethod]
+        public string addTopic(string topicTitle, string topicDes, string topicPicUrl)
+        {
+
+
+            BLL.TopicInfo addtopic = new BLL.TopicInfo();
+            Model.TopicInfo topic = new Model.TopicInfo();
+            topic.topicTitle = topicTitle;
+            topic.topicDes = topicDes;
+            topic.topicPicUrl = topicPicUrl;
+            topic.topicAttention = 0;
+
+            addtopic.Add(topic);
+            return "ok";
+        }
     }
 }

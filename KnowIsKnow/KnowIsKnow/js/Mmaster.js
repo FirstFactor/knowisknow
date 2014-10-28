@@ -19,6 +19,22 @@ $(function () {
         $(".zqq-tiwen-search").show();
     });
 
+    //登出
+    $(".zqq-logout").click(function () {
+        $.ajax({
+            data: "{}",
+            dataType: "json",
+            url: "ws.asmx/logout",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.d != "") {
+                    window.location.href = "Index.aspx";
+                }
+            }
+        });
+    });
+
     //私信
     var receiveid ;
     var senderid;
@@ -72,6 +88,11 @@ $(function () {
     //举报框拖动
     $(".zqq-jubao-inner").draggable({
         handle: ".zqq-tiwen-menban-title",
+        containment: "parent"
+    });
+    //私信框拖动
+    $(".zqq-modal-dialog").draggable({
+        handle: ".zqq-modal-dialog-title",
         containment: "parent"
     });
     //关闭按钮通用

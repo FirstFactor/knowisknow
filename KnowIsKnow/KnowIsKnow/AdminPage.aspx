@@ -151,10 +151,11 @@
                 $.ajax({
                     type: "POST",
                     url: "/Handler/CutAvatarHandler.ashx",
-                    data: { imgUrl: $('#hidImageUrl').val(), pointX: $("#x").val(), pointY: $("#y").val(), maxVal: $("#maxVal").val() },
+                    data: { imgUrl: $('#hidImageUrl').val(), pointX: $("#x").val(), pointY: $("#y").val(), maxVal: $("#maxVal").val(), lujing: "/images/topicimg/final" },
                     success: function (msg) {
                         if (msg.indexOf('images/topicimg') != -1) {
                             $("#imgCut").attr("src", msg);
+
                             imgurl = msg;
                             $(adimg).prev().attr("src", imgurl);
                             alert("保存成功!");
@@ -260,20 +261,23 @@
             <ul class="adOperaDetail addTopic">
                 <li class="adInput">
                     <span class="adSpanstyle">主题：</span>
-                    <asp:TextBox runat="server" ID="txttopictitle" Class="adTextstyle"></asp:TextBox>
+                    <input type="text" name="name" id="txttopictitle" class="adTextstyle" value=" " />
                    
                 </li>
                 <li class="adInputSpecial">
                     <span class="adSpanstyle">详细说明：</span>
-                    <asp:TextBox runat="server" ID="txtDesc" Class="adTextareastyle" TextMode="MultiLine"></asp:TextBox>
+                    <input type="text"  id="txtDesc" class="adTextareastyle"  name="name" value=" " />
                     
                 </li>
                 <li class="adInput">
                     <span class="adSpanstyle">主题图片：</span>
                     <div class="adThemeImgstyle">
-                        <asp:FileUpload ID="FileUpload1" class="adThemeUrl" runat="server" Width="250px" />   
+                         <img  runat="server" src="1" name="imglujing" id="imglujing" style="display:none" />
+                        <input type="button" id="picupload" name="name" value="上传图片" />
+
+                       <%-- <asp:FileUpload ID="FileUpload1" class="adThemeUrl" runat="server" Width="250px" />   
                         <asp:Button ID="UpLoadbtn1" class="adImgOpen" runat="server" Text="上传图片" OnClientClick="return Check_FileType()" OnClick="UpLoadbtn1_Click" />     
-                        <asp:Label ID="Label2" runat="server" ForeColor="Red"></asp:Label>               
+                        <asp:Label ID="Label2" runat="server" ForeColor="Red"></asp:Label>         --%>      
                     </div>
                     <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
                 </li>
@@ -293,7 +297,7 @@
                      </div>
                 </li>
                  <li class="adInput">
-                     <asp:Button runat="server" ID="addbtn" class="adButtonstyle" value="添加" OnClick="addbtn_Click" Text="添加" />
+                     <input type="button" id="addbtn" class="adButtonstyle"  name="name" value="添加" />
                     
                 </li>
             </ul>
