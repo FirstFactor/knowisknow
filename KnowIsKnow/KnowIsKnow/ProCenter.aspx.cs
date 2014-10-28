@@ -79,9 +79,12 @@ namespace KnowIsKnow
             tt.userCompany = Request.Form["wth-company"];
             tt.userJobPosition = Request.Form["wth-position"];
             tt.userMajor = Request.Form["wth-major"];
-            tt.userGender = Request.Form["wth-xingbie"];
-            ww.Update(tt);
 
+            tt.userGender = xingbie.Value;
+
+            Response.Write(tt.userGender);
+            ww.Update(tt);
+            
             Response.Redirect("ProCenter.aspx");
         }
     }

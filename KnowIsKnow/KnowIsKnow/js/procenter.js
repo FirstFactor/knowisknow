@@ -1,5 +1,50 @@
 ﻿var userid;
 $(function () {
+    alert(123);
+    
+
+
+
+
+
+     var gen = $("#wtsp").attr("xingbie");
+    if (gen == "男") {
+        $(".male").attr("checked","checked");
+        $(".wticon-male").addClass("wticon-profile-male");
+    }
+    if (gen == "女") {
+        $(".female").attr("checked", "checked");
+        $(".wticon-male").addClass("wticon-profile-female");
+    }
+    $(".zqymale").click(function () {
+        $(".wtlikebtn1").addClass("wtlikebtnselected");
+        $(".wtlikebtn2").removeClass("wtlikebtnselected");
+    });
+    $(".zqyfemale").click(function () {
+        $(".wtlikebtn2").addClass("wtlikebtnselected");
+        $(".wtlikebtn1").removeClass("wtlikebtnselected");
+    });
+
+
+
+    $(".zqymale").click(function () {
+        $(".ssss").attr("value","男");
+    });
+    $(".zqyfemale").click(function () {
+        $(".ssss").attr("value", "女");
+    });
+    var xingbie = $("#xingbie11").attr("value");
+    if (xingbie == "男")
+    {
+        $(".wtlikebtn1").addClass("wtlikebtnselected");
+        $(".wtlikebtn2").removeClass("wtlikebtnselected");
+    }
+    if (xingbie == "女") {
+        $(".wtlikebtn2").addClass("wtlikebtnselected");
+        $(".wtlikebtn1").removeClass("wtlikebtnselected");
+    };
+    
+
     userid = $(".wtellipsis").attr("uid");
 
     var ju = $(".wtzg-form-text-input0").val();
@@ -21,12 +66,12 @@ $(function () {
 
     }
 
-    var gen = $("#wtsp").attr("xingbie");
-    if (gen == "男") {
+    var gen2 = $("#wtsp").attr("xingbie");
+    if (gen2 == "男") {
         $(".male").attr("checked","checked");
         $(".wticon-male").addClass("wticon-profile-male");
     }
-    if (gen == "女") {
+    if (gen2 == "女") {
         $(".female").attr("checked", "checked");
         $(".wticon-male").addClass("wticon-profile-female");
     }
@@ -170,7 +215,7 @@ $(function () {
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+                
             }
 
         });
@@ -225,7 +270,7 @@ $(function () {
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+              
             }
 
         });
@@ -271,7 +316,7 @@ $(function () {
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+              
             }
 
         });
@@ -306,7 +351,7 @@ $(function () {
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+           
             }
 
         });
