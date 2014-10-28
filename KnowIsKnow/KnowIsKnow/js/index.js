@@ -79,22 +79,45 @@ $(function () {
                 data: "{xing:'" + xing + "',ming:'" + ming + "',email:'" + email + "',mima:'" + mima + "'}",
                 dataType: 'json',
                 success: function (res) {
-                    if (res.d == "yes" ) {
+                    if (res.d == "yes") {
                         window.location.href = "SelectTopic.aspx?backurl=" + window.location.href;
                     } else {
                         var mimahtml = "<div class='failtip'><i class='icon_sign'></i>该邮箱已注册，请直接登录</div>";
                         $(".zqyzhucefailure").html(mimahtml);
                         $(".zqyzhucefailure").show();
-                    }                 
+                    }
                 }
             });
         }
     });
 
+    $(".yanzhengma").click(function () {
+        var count = 3000;
+        var original = new Array;//原始数组 
+        //给原始数组original赋值 
+        for (var i = 0; i < count; i++) {
+            original[i] = i + 1;
+        }
+        var index = Math.floor(Math.random() * original.length); //随机取一个位置 
+        $(".tuph").attr("src", "build.aspx?aaa='" + index + "'");
+    });
+
 
     /*登陆*/
-
+    shu = 0;
     $(".zqydenglusign").click(function () {
+        shu = shu + 1;
+        var count = 3000;
+        var original = new Array;//原始数组 
+        //给原始数组original赋值 
+        for (var i = 0; i < count; i++) {
+            original[i] = i + 1;
+        }
+        var index = Math.floor(Math.random() * original.length); //随机取一个位置 
+
+        var shuruyanzheng = $(".shuruyanzheng").val();
+        $(".shuruyanzheng").val("");
+
 
         $(".zqydenglufailure").html("");
         $(".zqydenglufailure").hide();
@@ -120,26 +143,73 @@ $(function () {
             $(".zqydenglufailure").append(xinghtml);
             $(".zqydenglufailure").show();
         };
-        if (checkmaildl.test(signmail) && signmima != "") {
+        if (shu ==1) {
+            if (checkmaildl.test(signmail) && signmima != "") {
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "WSZQY.asmx/denglu",
+                    data: "{useremail:'" + signmail + "',userpwd:'" + signmima + "'}",
+                    dataType: 'json',
+                    success: function (res) {
+                        if (res.d == 0) {
+                            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>帐号和密码不匹配！</div>";
+                            $(".zqydenglufailure").html(xinghtml);
+                            $(".zqydenglufailure").show();
+                            //$(".zqysignmail").val("");
+                            //$(".zqysignmima").val("");
+                        } else {
+                            window.location.href = "home.aspx?backurl=" + window.location.href;
+                        }
+                    }
+                });
+            }
+        }
+        $(".shuruyanzheng").show();
+        $(".yanzhengma").show();
+
+        if (shu > 1) {
+           
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
-                url: "WSZQY.asmx/denglu",
-                data: "{useremail:'" + signmail + "',userpwd:'" + signmima + "'}",
+                url: "WSZQY.asmx/yanzhengma",
+                data: "{}",
                 dataType: 'json',
                 success: function (res) {
-                    if (res.d ==0 ) {
-                        var xinghtml = "<div class='failtip'><i class='icon_sign'></i>帐号和密码不匹配！</div>";
-                        $(".zqydenglufailure").html(xinghtml);
+                    if (res.d != shuruyanzheng) {
+                        var xinghtml = "<div class='failtip'><i class='icon_sign'></i>验证码不正确！</div>";
+                        $(".zqydenglufailure").append(xinghtml);
                         $(".zqydenglufailure").show();
-                        //$(".zqysignmail").val("");
-                        //$(".zqysignmima").val("");
-                    } else {                      
-                        window.location.href = "home.aspx?backurl=" + window.location.href;
+                        $(".tuph").attr("src", "build.aspx?aaa='" + index + "' ");
+                    } else {
+                        if (checkmaildl.test(signmail) && signmima != "") {
+                            $.ajax({
+                                type: "POST",
+                                contentType: "application/json",
+                                url: "WSZQY.asmx/denglu",
+                                data: "{useremail:'" + signmail + "',userpwd:'" + signmima + "'}",
+                                dataType: 'json',
+                                success: function (res) {
+                                    if (res.d == 0) {
+                                        var xinghtml = "<div class='failtip'><i class='icon_sign'></i>帐号和密码不匹配！</div>";
+                                        $(".zqydenglufailure").html(xinghtml);
+                                        $(".zqydenglufailure").show();
+                                        //$(".zqysignmail").val("");
+                                        //$(".zqysignmima").val("");
+                                    } else {
+                                        window.location.href = "home.aspx?backurl=" + window.location.href;
+                                    }
+                                }
+                            });
+                        }
                     }
+
                 }
             });
+
         }
+
 
 
     });
@@ -237,6 +307,7 @@ $(function () {
 
 
 
+
     /*登录页面下方*/
     $(".zqyuserimg").mouseover(function () {
         $(".zqyuserimg").removeClass("zqyuserspec");
@@ -250,11 +321,11 @@ $(function () {
 
         var html = "";
         html += ' 					<div class="zqytopic">';
-        html += '						<img src="'+phsrc+'" class="story_avatar">';
+        html += '						<img src="' + phsrc + '" class="story_avatar">';
         html += '						<div class="story_title">';
         html += '							<div>';
-        html += '								<a href="#" class="story_jies mingzi">'+mingzi+'</a>';
-        html += '								<span>'+shuoshuo+'</span>';
+        html += '								<a href="#" class="story_jies mingzi">' + mingzi + '</a>';
+        html += '								<span>' + shuoshuo + '</span>';
         html += '							</div>';
         html += '							<div class="story_jies">68743 人关注该话题，1000 个精华回答</div>';
         html += '						</div>';
@@ -317,3 +388,4 @@ function ddd() {
 function setfaulthide() {
     $(".zqyzhucefailure").hide();
 }
+

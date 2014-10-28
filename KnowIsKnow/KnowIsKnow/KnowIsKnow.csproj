@@ -63,6 +63,7 @@
   <ItemGroup>
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminPage.aspx" />
+    <Content Include="build.aspx" />
     <Content Include="css\AdminLogin.css" />
     <Content Include="css\AdminPage.css" />
     <Content Include="css\CareTopic.css" />
@@ -546,6 +547,13 @@
     <Compile Include="AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="build.aspx.cs">
+      <DependentUpon>build.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="build.aspx.designer.cs">
+      <DependentUpon>build.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\CutAvatarHandler.ashx.cs">
       <DependentUpon>CutAvatarHandler.ashx</DependentUpon>
     </Compile>
@@ -712,6 +720,7 @@
     <Compile Include="CaredQuestion.aspx.designer.cs">
       <DependentUpon>CaredQuestion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="validatedCode.cs" />
     <Compile Include="WS.asmx.cs">
       <DependentUpon>WS.asmx</DependentUpon>
       <SubType>Component</SubType>
