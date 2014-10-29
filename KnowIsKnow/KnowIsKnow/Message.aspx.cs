@@ -29,7 +29,10 @@ namespace KnowIsKnow
                 
                 userId = Session["UserID"].ToString();
                 BLL.MessageUserView message = new BLL.MessageUserView();
+                BLL.MessageInfo bllMsg = new BLL.MessageInfo();
                 string sql = "select distinct MessageSenderID,MessageReceiverID from MessageUserView where ( MessageReceiverID =" + userId + " or MessageSenderID="+userId+") group by MessageSenderID,MessageReceiverID";
+                string sqll = "update MessageInfo set MessageSate='read' where MessageReceiverID="+userId+"";
+                int da = bllMsg.UpdataMessage(sqll);
                 DataSet ds = message.GetUnreadSenderList(sql);
                 if (ds.Tables.Count > 0)
                 {

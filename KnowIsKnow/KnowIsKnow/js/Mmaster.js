@@ -13,6 +13,10 @@ $(function () {
            
         ]]
     });
+
+    setInterval("sixinlunxun()", 300);
+  
+    
     //um.setHeight(50);
     $(document).on("click", ".wtzu-top-add-question", function () {
         $(".zqq-menban").show();
@@ -472,4 +476,26 @@ function checkSearch() {
     else {
         $(".zqq-search-list-last").hide();
     }
+}
+function sixinlunxun() {
+    var userid = $(".knowIsknowID").attr("knowisknowid");
+    
+    $.ajax({
+        data: "{userid:' " + userid + "'}",
+        dataType: "json",
+        url: "WSWang.asmx/lunxun",
+        type: "post",
+        contentType: "application/json",
+        success: function (res) {
+            if (res.d > 0) {
+                $("#zh-top-nav-new-pm").addClass("zg-noti-number");
+                $("#zh-top-nav-new-pm").html(res.d);
+
+            }
+            else {
+                $("#zh-top-nav-new-pm").removeClass("zg-noti-number");
+            }
+            
+        }
+    });
 }

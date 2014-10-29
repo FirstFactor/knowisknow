@@ -30,6 +30,15 @@ namespace KnowIsKnow
             return da;
         }
         [WebMethod]
+        public string lunxun(int userid) 
+        {
+            string result;
+            BLL.MessageInfo bllMsg = new BLL.MessageInfo();
+            DataSet da = bllMsg.GetList("MessageReceiverID="+userid+" and MessageSate='unread'");
+            result = da.Tables[0].Rows.Count.ToString();
+            return result;
+        }
+        [WebMethod]
         public string Reply(int replyquestionID, int replyofuid, string replycontent, int replyofreplyid)
         {
             BLL.ReplyQuestion reply = new BLL.ReplyQuestion();

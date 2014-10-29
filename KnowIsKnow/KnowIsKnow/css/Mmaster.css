@@ -18,7 +18,7 @@ body{line-height: 1.7;font-size: 13px;font-family: 'Helvetica Neue',Helvetica,Ar
 .wtzg-wrap{width: 960px;margin: 0 auto;clear: both;display: block;}
 .wtzu-top-link-logo{background-image: url("images/new_logo.png");background-repeat: no-repeat;background-position: 0 8px;color: #fff;display: block;
 width: 61px;height: 100%;float: left;text-indent: -9999px;}
-#wtwho{line-height: 45px; min-width: 120px;height: 100%;display: block;float: right;background-image: -webkit-linear-gradient(top,#055fb8,#095fb3);}
+#wtwho{line-height: 45px; min-width: 120px;height: 100%;display: block;float: right;background-image: -webkit-linear-gradient(top,#055fb8,#095fb3);position:relative;}
 
 #wtname{float: left;line-height: 45px;color: #fff;font-size: 14px;padding-left: 8px;}
 .wtavatar{width: 25px;border: 1px solid rgba(0,0,0,.1);box-shadow: 0 1px 0 rgba(255,255,255,.1);margin: 9px 0 0 8px;float: left;}
@@ -174,3 +174,27 @@ box-shadow: 0 1px 0 rgba(255,255,255,.2) inset,0 1px 0 rgba(0,0,0,.2);font-size:
 .wk-footer a{color: #999;}
 .wk-footer a:hover{text-decoration: underline;}
 .wk-footer .copy{float: left;}
+.zu-top-nav-userinfo .zu-top-nav-pm-count {
+    left:29px;}
+.zu-top-nav-pm-count {
+    z-index:12;
+    top:5px;
+    left:20px;
+    position:absolute;
+}
+.zg-noti-number {
+    background:#bf1031;
+    border:1px solid #b11331;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1),inset 0 1px 0 rgba(255,255,255,.15);
+    color:#fff;
+    display:inline-block;
+    font-size:11px;
+    font-weight:700;
+    padding:0 5px;
+    height:16px;
+    line-height:16px;
+    border-radius:16px;
+    text-indent:0;
+    text-align:center;
+    text-decoration:none;
+}
