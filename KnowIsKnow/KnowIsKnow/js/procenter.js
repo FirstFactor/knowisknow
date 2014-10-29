@@ -1,8 +1,7 @@
 ﻿var userid;
 $(function () {
-    alert(123);
-    
 
+    
 
 
 
