@@ -1,7 +1,6 @@
 ﻿var userid;
 $(function () {
-<<<<<<< HEAD
-=======
+
   
    
     $("#quanUpload").click(function () {
@@ -9,7 +8,7 @@ $(function () {
         $("#uploadArea").show();
     });
 
->>>>>>> origin/master
+
      var gen = $("#wtsp").attr("xingbie");
     if (gen == "男") {
         $(".male").attr("checked","checked");
