@@ -63,10 +63,6 @@ namespace KnowIsKnow
                 DataSet ds=  topicuser.GetList("userID="+userid);
                 this.rtpcared.DataSource = ds.Tables[0];
                 this.rtpcared.DataBind();
-                BLL.TopicUserView bllTopuv = new BLL.TopicUserView();
-                DataSet da = bllTopuv.GetList("userID="+userid);
-                this.Repeater2.DataSource = ds.Tables[0];
-                this.Repeater2.DataBind();
 
             }
             
