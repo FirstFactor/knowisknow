@@ -194,7 +194,7 @@
                     <a href="/" class="wtzu-top-link-logo" id="wtzh-top-link-logo">知为知</a>
                     <div id="wtwho">
                         <img src="<%=userheadimg %>" class="wtavatar" />
-                       <span id="zh-top-nav-new-pm" class="zg-noti-number zu-top-nav-pm-count"></span>
+                       <span id="zh-top-nav-new-pm" class="zu-top-nav-pm-count"></span>
                         <div id="wtname">
                             <span><%=usernickname %></span>
 

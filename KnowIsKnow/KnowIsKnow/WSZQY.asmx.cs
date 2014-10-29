@@ -106,7 +106,7 @@ namespace KnowIsKnow
                 Session["UserNickName"] = xm;
                 Session["UserEmail"] = email;
                 Session["UserPwd"] = jiamipwd;
-                Session["UserHeadImage"] = "userHeadImage/1.png";
+                Session["UserHeadImage"] = "images/headimages/1.png";
                 return "yes";
             }
             else
