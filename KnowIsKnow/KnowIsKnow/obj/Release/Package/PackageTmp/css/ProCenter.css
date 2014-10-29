@@ -104,9 +104,9 @@ line-height: 1.7;text-decoration: none;vertical-align: middle;display: inline-bl
 
 .wtzm-item{width: 602px;height: 49px;display: block;line-height: 49px;margin: 0;color: #999;}
 .wtzm-item a{cursor: pointer;}
-#wtzh-profile-activity-page-list{width: 602px;height: 99px;display: block;padding: 0 14px;}
+#wtzh-profile-activity-page-list{width: 602px;height: auto;display: block;padding: 0 14px;}
 .wtzm-profile-section-activity-main{width: 602px;height: 25px;display: block;}
-.wtpic{margin-right: 5px;border-radius: 2px;vertical-align: -7px;}
+.wtpic{margin-right: 5px;border-radius: 2px;vertical-align: -7px;width:25px;height:25px;}
 .wtweek{float: right;}
 .wtzu-main-sidebar{float: right;width: 270px;display: block;}
 .wtzm-profile-side-following{border-bottom: 1px solid #eee;margin-bottom: 15px;width: 270px;height: 58px;display: block;}
@@ -122,7 +122,7 @@ line-height: 1.7;text-decoration: none;vertical-align: middle;display: inline-bl
 .wtlink{display: block;height: 34px;width: 34px;border-radius: 3px;float: left;margin-right: 4px;}
 .wtavatar2{display: block;height: 34px;width: 34px;border-radius: 3px;}
 .wtzm-profile-side-section2{margin-top: 50px;border-top: 1px solid #eee;padding: 2px 0;}
-.wtzg-gray-normal{color: #999;font-weight: 400;}
+
 .wtzm-side-section-inner{padding-top: 15px;}
 .wtzh-footer{margin-top: 10px;text-align: left;color: #999;}
 .wtzg-wrap2{padding: 10px 0;width: auto;border-top-color: #eee;border-top: 1px solid #eee;}
@@ -132,6 +132,8 @@ line-height: 1.7;text-decoration: none;vertical-align: middle;display: inline-bl
 .wtcopy{margin-left: 1px;float: none;}
 
 .wtzm-profile-header-info a:hover{color: #259;}
+.wtlikebtn{width:6px;height:6px;border-radius:50%;margin:2px 0 0 2.8px;}
+.wtlikebtnselected{background-color:#666666;}
 
 
 
@@ -148,7 +150,7 @@ line-height: 1.7;text-decoration: none;vertical-align: middle;display: inline-bl
 #uploadArea {
     position:fixed;
     width:600px;
-    height:400px;
+    height:460px;
     margin:auto;
     left:0;
     right:0; 
@@ -219,3 +221,7 @@ h3{font-weight: 400;margin: -1px 0 0;float: left;width: 100px;text-align: right;
 .wtzm-profile-details-editform-footer{background: #f5f5f5;border-radius: 0 0 4px 4px;border-top: 1px solid#ddd!important;box-shadow: 0 1px 0 #fff inset;}
 .wtzm-profile-details-editform-footer p{text-align: center;position: relative;}
 .wtzm-profile-details-editform-footer p a{position: absolute;left: 45px;top: 13px;}
+
+.clear {
+    clear:both;
+}

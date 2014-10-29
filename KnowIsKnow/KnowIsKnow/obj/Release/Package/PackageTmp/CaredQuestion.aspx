@@ -10,7 +10,7 @@
 						<div class="zqq-question-area">
                             <div class="zqq-question-area-hd">
                                 <i class="zqq-icon zqq-icon-questionList"></i>
-                                最新动态
+                                我关注的问题  共<%=caredquestioncount %>条
                                 <a href="Setting.aspx" class="zqq-question-area-setting">
                                     <i class="zqq-icon zqq-icon-setting"></i>
                                     设置
@@ -30,29 +30,19 @@
 								          <div class="zqq-profile-card zqq-topic">
 									    	<div class="zqq-upper">
 										    	<a class="zqq-avatar-link" href="/topic/19577143">
-												<span class="zqq-name">诺贝尔奖</span>
-												<img class="zqq-avatar" src="images/07685ae24_m.jpg"/>
+												<span class="zqq-name"><%# Eval("userNickName") %></span>
+												<img class="zqq-avatar" src="<%# Eval("userHeadImage") %>"/>
 										    	</a>
 											    <br/>
-										    	<div class="zqq-tagline">诺贝尔奖是根据瑞典化学家阿尔弗雷德·诺贝尔的遗嘱所设立的奖项，以表彰那些对社会做出卓越贡…</div>
+										    	<div class="zqq-tagline"><%# Eval("userShuoShuo") %></div>
 										    </div>
 									    	<div class="zqq-lower zqq-clearfix">
-										    	<div class="zqq-meta">
-											    	<a class="zqq-item" target="_blank" href="/topic/19577143/questions">
-												    	<span class="zqq-value">735</span>
-											    		<span class="zqq-key">问题</span>
-											    	</a>
-											    	<a class="zqq-item" target="_blank" href="/topic/19577143/top-answers">
-											    		<span class="zqq-value">241</span>
-											    		<span class="zqq-key">精华</span>
-										    		</a>
-											    	<a class="zqq-item" target="_blank" href="/topic/19577143/followers">
-											    		<span class="zqq-value">840</span>
-										    			<span class="zqq-key">关注者</span>
-										    		</a>
-										    	</div>
 											    <div class="zqq-operation">
-											    	<button data-follow="t:button" data-id="8978" class="zqq-zg-btn zqq-zg-btn-follow zqq-zm-rich-follow-btn">关注</button>
+                                                    
+											    	<button class="zqq-zg-btn-follow" checkcareperson="<%# CheckCarePerson(Eval("questionProvider")) %>" questionprovider="<%#Eval("questionProvider") %>">关注</button>
+                                                    <div class="zqq-messageButtonArea" userid="<%# Eval("questionProvider") %>" usernickname="<%# Eval("userNickName") %>">
+                                                        <i class="zqq-icon zqq-messageButton"></i>
+                                                    </div>
 										    	</div>
 									    	</div>
 									     </div>

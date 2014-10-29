@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <link href="css/Home.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/home.js"></script>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         
@@ -41,8 +42,8 @@
 									    	<div class="zqq-lower zqq-clearfix">
 											    <div class="zqq-operation">
                                                     
-											    	<button class="zqq-zg-btn zqq-zg-btn-follow zqq-zm-rich-follow-btn">关注</button>
-                                                    <div class="zqq-messageButtonArea">
+											    	<button class="zqq-zg-btn-noFollow" carepersonid="<%#Eval("carePersonID") %>">取消关注</button>
+                                                    <div class="zqq-messageButtonArea" userid="<%#Eval("carePersonID") %>" usernickname="<%# Eval("userNickName") %>">
                                                         <i class="zqq-icon zqq-messageButton"></i>
                                                     </div>
 										    	</div>

@@ -89,7 +89,7 @@ namespace KnowIsKnow
             mi.MessageSate = "unread";
             mi.MessageSendTime = now;
             int msgid=  bllmi.Add(mi);
-            return msgid.ToString();
+            return  mi.MessageReceiverID.ToString();
         }
 
 
@@ -127,14 +127,24 @@ namespace KnowIsKnow
             return "举报成功，请耐心等待处理结果";
         }
         [WebMethod]
-        public string delMyQuestion(string questionid) {
+        public string delMyAnswer(string replyid)
+        {
+            int qid = Convert.ToInt32(replyid);
+            BLL.ReplyQuestion blldelmyquestion = new BLL.ReplyQuestion();
+            Model.ReplyQuestion delmyque = blldelmyquestion.GetModel(qid);
+            delmyque.replySate = "unnormal";
+            blldelmyquestion.Update(delmyque);
+            return "回答删除成功！";
+        }
+        [WebMethod]
+        public string delMyQuestion(string questionid)
+        {
             int qid = Convert.ToInt32(questionid);
             BLL.QuestionInfo blldelmyquestion = new BLL.QuestionInfo();
             Model.QuestionInfo delmyque = blldelmyquestion.GetModel(qid);
             delmyque.questionSate = "unnormal";
             blldelmyquestion.Update(delmyque);
-            return "删除成功！";
-        
+            return "提问删除成功！";
         }
 
         [WebMethod]

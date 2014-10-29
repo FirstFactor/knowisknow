@@ -1,5 +1,50 @@
 ﻿var userid;
 $(function () {
+  
+   
+    $("#quanUpload").click(function () {
+        $("#mengban").show();
+        $("#uploadArea").show();
+    });
+
+     var gen = $("#wtsp").attr("xingbie");
+    if (gen == "男") {
+        $(".male").attr("checked","checked");
+        $(".wticon-male").addClass("wticon-profile-male");
+    }
+    if (gen == "女") {
+        $(".female").attr("checked", "checked");
+        $(".wticon-male").addClass("wticon-profile-female");
+    }
+    $(".zqymale").click(function () {
+        $(".wtlikebtn1").addClass("wtlikebtnselected");
+        $(".wtlikebtn2").removeClass("wtlikebtnselected");
+    });
+    $(".zqyfemale").click(function () {
+        $(".wtlikebtn2").addClass("wtlikebtnselected");
+        $(".wtlikebtn1").removeClass("wtlikebtnselected");
+    });
+
+
+
+    $(".zqymale").click(function () {
+        $(".ssss").attr("value","男");
+    });
+    $(".zqyfemale").click(function () {
+        $(".ssss").attr("value", "女");
+    });
+    var xingbie = $("#xingbie11").attr("value");
+    if (xingbie == "男")
+    {
+        $(".wtlikebtn1").addClass("wtlikebtnselected");
+        $(".wtlikebtn2").removeClass("wtlikebtnselected");
+    }
+    if (xingbie == "女") {
+        $(".wtlikebtn2").addClass("wtlikebtnselected");
+        $(".wtlikebtn1").removeClass("wtlikebtnselected");
+    };
+    
+
     userid = $(".wtellipsis").attr("uid");
 
     var ju = $(".wtzg-form-text-input0").val();
@@ -21,11 +66,13 @@ $(function () {
 
     }
 
-    var gen = $("#wtsp").attr("xingbie");
-    if (gen == "男") {
+    var gen2 = $("#wtsp").attr("xingbie");
+    if (gen2 == "男") {
+        $(".male").attr("checked","checked");
         $(".wticon-male").addClass("wticon-profile-male");
     }
-    if (gen == "女") {
+    if (gen2 == "女") {
+        $(".female").attr("checked", "checked");
         $(".wticon-male").addClass("wticon-profile-female");
     }
 
@@ -168,7 +215,7 @@ $(function () {
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+                
             }
 
         });
@@ -223,7 +270,7 @@ $(function () {
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+              
             }
 
         });
@@ -269,7 +316,7 @@ $(function () {
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+              
             }
 
         });
@@ -304,7 +351,7 @@ $(function () {
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+           
             }
 
         });
@@ -312,18 +359,25 @@ $(function () {
     });
 
     $(".male").click(function () {
-        $(".male").attr("value",1);
+        $(".male").attr("value", 1);
+        $(".female").removeAttr("checked");
+        $(".male").attr("checked", "checked");
+      
         $(".female").attr("value", 0);
     });
     $(".female").click(function () {
         $(".female").attr("value", 1);
+        $(".male").removeAttr("checked");
+        $(".female").attr("checked", "checked");
         $(".male").attr("value", 0);
     });
+
 
    
     /********全峻佚修改上传头像*********/
 
-    upload();
+ 
+  
     $("#mengban").css({'opacity': 0.3,'height':$(window).height()});
 
 
@@ -345,40 +399,5 @@ $(function () {
 
 
 /******全峻佚 修改上传头像*********/
-function upload() {
 
-    $("#uploadify").uploadify({
-        'uploader': 'js/uploadify.swf',
-        'script': 'Upload.aspx',
-        'cancelImg': 'js/cancel.png',
-        'folder': 'images/headimages',
-        'queueID': 'fileQueue',
-        'auto': false,
-        'multi': true,
-        'onComplete': function (file, data, response, i, o) { //上传成功回调方法
-            if (i ==1) {
-                alert("请选择png,jpg,gif,bmp格式的图片");
-                return;
-            }
-            var uid=$(".wtellipsis").attr("uid");
-            $.ajax({
-                data: "{headimg:'" + i + "',userid:'"+uid+"'}",           
-                dataType: "json",
-                url: "ws.asmx/updateUserHeadimg",
-                type: "post",
-                contentType: "application/json",
-                success: function (res) {
-                    if(res.d=="True")
-                    {
-                        alert("传输完成！");
-                    }
-                }
-
-            });
-
-           
-        }
-    });
-
-}
 /******全峻佚 修改上传头像*********/

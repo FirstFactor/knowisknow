@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/questiondetail.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <a href="#mao">11111</a>
+    
 	<div class="zg-wrap zu-main question-page">
 		<div class="zu-main-content">
 			<div class="zu-main-content-inner with-indention-votebar">
@@ -76,16 +76,43 @@
 						</div>
                          <asp:Repeater runat="server" ID="wkrtpReply">
                     <ItemTemplate>
+                        <div class="answer-main">
 						<div class="answer-head">
 							<div class="zm-item-answer-author-info">
 								<h3 class="zm-item-answer-author-wrap">
-									<a class="zm-item-link-avatar">
-										<img src="Images/da8e974dc_s.jpg" class="zm-list-avatar">
-									</a>
+									<div class="zm-item-link-avatar">
+										<img src="<%#Eval("userHeadImage") %>" class="zm-list-avatar"/>
+                                        <div class="zqq-goog-hovercard zqq-bottom">
+						        		<div class="zqq-popover-content zqq-no-hovercard">
+								          <div class="zqq-profile-card zqq-topic">
+									    	<div class="zqq-upper">
+										    	<a class="zqq-avatar-link" href="/topic/19577143">
+												<span class="zqq-name"><%# Eval("userNickName") %></span>
+												<img class="zqq-avatar" src="<%# Eval("userHeadImage") %>"/>
+										    	</a>
+											    <br/>
+										    	<div class="zqq-tagline"><%# Eval("userShuoShuo") %></div>
+										    </div>
+									    	<div class="zqq-lower zqq-clearfix">
+											    <div class="zqq-operation">
+                                                    
+											    	<button class="zqq-zg-btn-follow" checkcareperson="<%# CheckCarePerson(Eval("replyofUID")) %>"  questionprovider="<%#Eval("replyofUID") %>">关注</button>
+                                                    <div class="zqq-messageButtonArea" userid="<%# Eval("replyofUID") %>" usernickname="<%# Eval("userNickName") %>">
+                                                        <i class="zqq-icon zqq-messageButton"></i>
+                                                    </div>
+										    	</div>
+									    	</div>
+									     </div>
+							        	</div>
+						        		<div class="zqq-arrow"></div>
+						        		<div class="zqq-arrow2"></div>
+						        	</div>
+									</div>
 									<a><%# GetreplyName(Eval("replyofUID")) %></a>
 									
 									<strong class="zu-question-my-bio"title="加钱党，加一党"><%# Eval("userShuoShuo") %></strong>
 								</h3>
+                                
 							</div>
 							<div class="zm-item-vote-info ">
 								<span class="voters">
@@ -113,22 +140,9 @@
 									<i class="z-icon-comment"></i>
 									添加评论
 								</a>
-								<a class="meta-item zu-autohide">
-									<i class="z-icon-thank"></i>
-									感谢
-								</a>
-								<a class="meta-item zu-autohide">
-									<i class="z-icon-share"></i>
-									分享
-								</a>
-								<a class="meta-item zu-autohide">
-									<i class="z-icon-collect"></i>
-									感谢
-								</a>
+								
 								<span class="zg-bull zu-autohide">•</span>
-								<a class="meta-item zu-autohide">没有帮助</a>
-								<span class="zg-bull zu-autohide">•</span>
-								<a class="meta-item zu-autohide">举报</a>
+								<a class="meta-item zu-autohide zqq-jubao" checkreplyofuid="<%# checkreplyofuid(Eval("ReplyID")) %>" wkreplyid="<%# Eval("replyofUID") %>" wkreplyofreplyid="<%#Eval("ReplyID")%>">举报</a>
 							</div>
                             <div class="zm-comment-box empty">
                                 <i class="icon icon-spike zm-comment-bubble"></i>
@@ -166,12 +180,13 @@
                                 <div class="zm-comment-form zm-comment-box-ft expanded ">
                                     <input class="zm-comment-editable editable" />
                                     <div class="zm-command zg-clear">
-                                        <div class="zg-right zg-btn-blue wkpinglun" wkreplyid="<%# Eval("replyofUID") %>" wkreplyofreplyid="<%#Eval("ReplyID")%>" quesid="<%=quesid %>">评论</div>
+                                        <div class="zg-right zg-btn-blue wkpinglun" wkreplyid="<%# Eval("replyofUID") %>" wkreplyofreplyid="<%#Eval("ReplyID")%>" quesid="<%=quesid %>" >评论</div>
                                         <a class="zm-command-cancel">取消</a>
                                     </div>
                                 </div>
                             </div>
 						</div>
+                        </div>
                     </ItemTemplate>
                 </asp:Repeater>
 					</div>

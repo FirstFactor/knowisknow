@@ -4,23 +4,215 @@
     <link rel="Stylesheet" href="js/uploadify.css" />
 
     <link href="css/ProCenter.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="js/swfobject.js"></script>
-    <script type="text/javascript" src="js/jquery.uploadify.min.js"></script>
+
+
+
+    <script type="text/javascript" src="js/jquery.Jcrop.js"></script>
+    <script src="js/uploadify-v2.1.4/jquery.uploadify.v2.1.4.min.js" type="text/javascript"></script>
+    <script src="js/uploadify-v2.1.4/swfobject.js" type="text/javascript"></script>
+    <link href="css/jquery.Jcrop.css" rel="stylesheet" type="text/css" />
+    <link href="css/Main.css" rel="stylesheet" type="text/css" />
+    
+
+
     <script type="text/javascript" src="js/procenter.js"></script>
+
+
+   <script type="text/javascript">
+       var imageWidth = 50;
+       var imageHeiht = 50;
+       $(function () {
+           $('#uploadify').uploadify({
+               'uploader': '/js/uploadify-v2.1.4/uploadify.swf',
+               'script': '/Handler/UploadAvatarHandler.ashx',
+               'cancelImg': '/js/uploadify-v2.1.4/cancel.png',
+               'folder': '/Temp',
+               'queueID': 'fileQueue',
+               'auto': true,
+               'multi': false,
+               'method': 'get',
+               'fileExt': '*.jpg;*.png',
+               'fileDesc': '请选择jpg , png文件...',
+               'scriptData': null,
+               'sizeLimit': 2097152,
+               'onComplete': function (event, queueID, fileObj, response, data) {
+                   if (response.indexOf('Temp') != -1) {
+
+                       $("#bgDiv img").remove();                      //移除截图区里image标签
+                       $("#btnSave").show();                          //保存按钮显示                    
+                       var result = response.split('$');              //得返回参数
+
+                       var maxVal = 0;
+                       if (result[1] > result[2]) {
+                           maxVal = result[2];
+                       }
+                       else {
+                           maxVal = result[1];
+                       }
+                       $("#ContentPlaceHolder1_maxVal").val(100);                     //设置截图区大小
+
+                       $("#hidImageUrl").val(result[0]);             //上传路径存入隐藏域
+
+
+                       $("#ContentPlaceHolder1_imgCut").attr("src", result[0]);
+                       //ShowImg(result[0],result[1],result[2]);       //在截图区显示
+                       var jcrop_api, boundx, boundy;
+                       var $preview = $('.preview-pane');
+                       var $pcnt = $('.preview-pane .preview-container');
+                       var $pimg = $('.preview-pane .preview-container img');
+                       var xsize = $pcnt.width();
+                       var ysize = $pcnt.height();
+
+                       $("#target").attr("src", result[0]).Jcrop(
+                                                           {
+                                                               setSelect: [0, 0, 100, 100],
+                                                               minSize: [100, 100],
+                                                               aspectRatio: 1,
+                                                               allowSelect: false,
+                                                               onChange: updatePreview,
+                                                               onSelect: updatePreview,
+                                                           }, function () {
+                                                               var bounds = this.getBounds();
+                                                               boundx = bounds[0];
+                                                               boundy = bounds[1];
+                                                               // Store the API in the jcrop_api variable
+                                                               jcrop_api = this;
+                                                               // Move the preview into the jcrop container for css positioning
+                                                               //$preview.appendTo(jcrop_api.ui.holder);
+                                                           });
+
+
+                       $("#uploadify").uploadifySettings('scriptData', { 'LastImgUrl': $('#hidImageUrl').val() }); 	  //更新参数
+
+                       function setCoords(c) {
+                           $("#ContentPlaceHolder1_x").val(c.x);
+                           $("#ContentPlaceHolder1_y").val(c.y);
+                           $("#ContentPlaceHolder1_maxVal").val(c.w);
+                       }
+
+                       function updatePreview(c) {
+                           if (parseInt(c.w) > 0) {
+                               var rx = xsize / c.w;
+                               var ry = ysize / c.h;
+                               setCoords(c);
+                               $pimg.css({
+                                   width: Math.round(rx * boundx) + 'px',
+                                   height: Math.round(ry * boundy) + 'px',
+                                   marginLeft: '-' + Math.round(rx * c.x) + 'px',
+                                   marginTop: '-' + Math.round(ry * c.y) + 'px'
+                               });
+                           }
+                       };
+                   }
+                   else {
+                       alert(response);
+                   }
+               }
+           });
+
+
+           $("#btnSave").click(function () {
+               $.ajax({
+                   async : false,
+                   type: "POST",
+                   url: "/Handler/CutAvatarHandler.ashx",
+                   data: { imgUrl: $('#hidImageUrl').val(), pointX: $("#ContentPlaceHolder1_x").val(), pointY: $("#ContentPlaceHolder1_y").val(), maxVal: $("#ContentPlaceHolder1_maxVal").val(), lujing: "/images/headimg/final" },
+                   success: function (msg) {
+                       if (msg.indexOf('images/headimg') != -1) {
+                           $("#ContentPlaceHolder1_imgCut").attr("src", msg);
+
+                           imgurl = msg;
+                           $(".wtzm-profile-header-img").attr("src", imgurl);
+                           $(".wtzg-avatar-big").attr("src", imgurl);
+
+                           $.ajax({
+                               data: "{'headimg':'" + imgurl + "','userid':'" + userid + "'}",
+                               dataType: "json",
+                               url: "ws.asmx/updateUserHeadimg",
+                               type: "post",
+                               contentType: "application/json",
+                               success: function (res) {
+
+                               }
+
+                           });
+
+
+
+                           alert("保存成功!");
+                       }
+                       else {
+                           alert("error");
+                       }
+                   },
+                   error: function (xhr, msg, e) {
+                       alert("error");
+                   }
+               });
+
+             
+           });
+       });
+       function ShowImg(imagePath, imgWidth, imgHeight) {
+           var imgPath = imagePath != "" ? imagePath : "images/ef_pic.jpg";
+           var ic = new ImgCropper("bgDiv", "dragDiv", imgPath, imgWidth, imgHeight, null);
+       }
+    </script>
+
+    <script>
+
+
+        $("#quanUpload").click(function () {
+            alert();
+
+        });
+
+    </script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div id="mengban">
     </div>
-    <div id="uploadArea">
+
+  <div id="uploadArea">
         <div id="upAreaHeader">
             <div id="upAreaClose">X</div>
         </div>
-        <input type="file" name="uploadify" id="uploadify" />
-        <a href="javascript:$('#uploadify').uploadifyUpload()" id="uploadbtn">上传</a>| <a href="javascript:$('#uploadify').uploadifyClearQueue()">取消上传</a>
+        <div class="wraper">
+            <div class="fl avatarbg left-box">
+                <img alt="[Jcrop Example]" id="target" src="" />
+            </div>
+            <div class="avatarthumb preview-pane right-box">
+                <div class="preview-container">
+                    <asp:Image ID="imgCut"  class="jcrop-preview" alt="Preview" ImageUrl="/images/blank_pic.jpg"   runat="server" />                 
+                </div>
+
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <br />
+        <div class="uploadimg">
+            <div class="upload">
+                <div class="uploadswf">
+                    <input type="file" name="uploadify" id="uploadify" />
+                </div>
+                <br />
+                <p id="fileQueue">
+                </p>
+            </div>
+        </div>
+        <input id="btnSave" type="button" value="保存" style="display: none;" />
+        <input id="x" runat="server" type="hidden" value="0" />
+        <input id="y" runat="server" type="hidden" value="0" />
+        <input id="hidImageUrl" type="hidden" value="" />
+        <input id="maxVal" runat="server" type="hidden" value="100" />
+
         <div id="fileQueue"></div>
     </div>
+
 
     <div class="wtzg-wrap wtzu-main">
         <div class="wtzu-main-content-inner">
@@ -327,10 +519,10 @@
                         <div class="wtzm-profile-module-desc">
                             <dl class="wtzm-form-table">
                                 <dt class="wtzm-form-table-head">
-                                    <img class="wtzg-avatar-big" src="http://pic4.zhimg.com/da8e974dc_l.jpg" />
+                                    <img class="wtzg-avatar-big" src="<%=headimg %>" />
                                 </dt>
                                 <dd class="wtzm-form-table-field">
-                                    <a class="wtzg-btn-blue wtprofile-edit-avatar-btn">选择头像</a>
+                                    <a class="wtzg-btn-blue wtprofile-edit-avatar-btn" id="quanUpload">选择头像</a>
                                     <div class="wtprofile-edit-avatar-tip wtzg-gray">支持 JPG、PNG、GIF 格式，不要超过 2M 。</div>
                                 </dd>
                             </dl>

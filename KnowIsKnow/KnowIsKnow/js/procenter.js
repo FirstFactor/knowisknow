@@ -1,5 +1,15 @@
 ﻿var userid;
 $(function () {
+<<<<<<< HEAD
+=======
+  
+   
+    $("#quanUpload").click(function () {
+        $("#mengban").show();
+        $("#uploadArea").show();
+    });
+
+>>>>>>> origin/master
      var gen = $("#wtsp").attr("xingbie");
     if (gen == "男") {
         $(".male").attr("checked","checked");
@@ -369,7 +379,8 @@ $(function () {
    
     /********全峻佚修改上传头像*********/
 
-    upload();
+ 
+  
     $("#mengban").css({'opacity': 0.3,'height':$(window).height()});
 
 
@@ -391,40 +402,5 @@ $(function () {
 
 
 /******全峻佚 修改上传头像*********/
-function upload() {
 
-    $("#uploadify").uploadify({
-        'uploader': 'js/uploadify.swf',
-        'script': 'Upload.aspx',
-        'cancelImg': 'js/cancel.png',
-        'folder': 'images/headimages',
-        'queueID': 'fileQueue',
-        'auto': false,
-        'multi': true,
-        'onComplete': function (file, data, response, i, o) { //上传成功回调方法
-            if (i ==1) {
-                alert("请选择png,jpg,gif,bmp格式的图片");
-                return;
-            }
-            var uid=$(".wtellipsis").attr("uid");
-            $.ajax({
-                data: "{headimg:'" + i + "',userid:'"+uid+"'}",           
-                dataType: "json",
-                url: "ws.asmx/updateUserHeadimg",
-                type: "post",
-                contentType: "application/json",
-                success: function (res) {
-                    if(res.d=="True")
-                    {
-                        alert("传输完成！");
-                    }
-                }
-
-            });
-
-           
-        }
-    });
-
-}
 /******全峻佚 修改上传头像*********/

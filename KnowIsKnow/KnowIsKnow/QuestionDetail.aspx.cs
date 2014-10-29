@@ -73,6 +73,39 @@ namespace KnowIsKnow
 
             return da.Tables[0].Rows[0]["userNickName"].ToString();
         }
+        public string checkreplyofuid(object ReplyID)
+        {
+            BLL.ReplyQuestionUserView checkQP = new BLL.ReplyQuestionUserView();
+            List<Model.ReplyQuestionUserView> QPlist = checkQP.GetModelList("replyofUID=" + userid);
+            int qp = Convert.ToInt32(ReplyID);
+            for (int y = 0; y < QPlist.Count; y++)
+            {
+                if (QPlist[y].ReplyID == qp)
+                {
+                    return "myReply";
+                }
+            }
+            return "noMyReply";
+        }
+        public string CheckCarePerson(object replyofUID)
+        {
+            BLL.CarePerson cq = new BLL.CarePerson();
+            List<Model.CarePerson> list = cq.GetModelList("personCaredByUID=" + userid);
+            int qid = Convert.ToInt32(replyofUID);
+            int mid = Convert.ToInt32(userid);
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].carePersonID == qid)
+                {
+                    return "follow";
+                }
+            }
+            if (qid == mid)
+            {
+                return "myself";
+            }
+            return "nofollow";
+        }
         protected void wkreply_click(object sender, EventArgs e) 
         {
             //string sendcontent = this.wkreplycontent.Text;

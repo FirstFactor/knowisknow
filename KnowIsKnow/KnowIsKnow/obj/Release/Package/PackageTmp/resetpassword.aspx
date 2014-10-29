@@ -13,6 +13,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="rpmain">
+            <div style="color:red;font-size:18px;position:absolute;top:232px;left:837px;" runat="server" id="tipfault"></div>
             <h1 style="color: #EEE; text-align: center; font-size: 50px; line-height: 40px;">知为知</h1>
             <span style="color: #DDD; text-align: center; display: block; font-weight: bold;">知之为知之，不知为不知，是知也</span>
             <div class="fasong" runat="server" id="qingkong"> 
