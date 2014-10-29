@@ -298,22 +298,7 @@
                         </ItemTemplate>
                     </asp:Repeater>
 
-                    <div class="wtzm-profile-section-item wtzm-item">
-                        <span>关注了话题</span>
-                        <a>
-                            <img src="images/2a098f9db_s.jpg" class="wtpic" />
-                            <span>NBA 总决赛</span>
-                        </a>
-                        <span class="wtweek">1周前</span>
-                    </div>
-                    <div class="wtzm-profile-section-item wtzm-item">
-                        <span>关注了话题</span>
-                        <a>
-                            <img src="images/fb89e0ea3_s.jpg" class="wtpic" />
-                            <span>游戏</span>
-                        </a>
-                        <span class="wtweek">1周前</span>
-                    </div>
+                   
                 </div>
             </div>
 
@@ -640,16 +625,15 @@
                         <span>2 个话题</span>
                     </a>
                 </div>
+                <asp:Repeater runat="server" ID="wtrpt">
+                        <ItemTemplate>
                 <div class="wtzm-profile-side-topics">
                     <a class="wtlink">
                         <img src="http://pic4.zhimg.com/fb89e0ea3_m.jpg" class="wtavatar2" />
                     </a>
                 </div>
-                <div class="wtzm-profile-side-topics">
-                    <a class="wtlink">
-                        <img src="http://pic1.zhimg.com/2a098f9db_m.jpg" class="wtavatar2" />
-                    </a>
-                </div>
+                            </ItemTemplate>
+               </asp:Repeater>
             </div>
             <div class="wtzm-profile-side-section2">
                 <div class="wtzm-side-section-inner">

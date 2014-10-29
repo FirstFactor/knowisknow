@@ -1,12 +1,5 @@
 ﻿var userid;
 $(function () {
-    alert(123);
-    
-
-
-
-
-
      var gen = $("#wtsp").attr("xingbie");
     if (gen == "男") {
         $(".male").attr("checked","checked");
