@@ -14,7 +14,7 @@ $(function () {
         ]]
     });
 
-   // setInterval("sixinlunxun()", 300);
+   setInterval("sixinlunxun()", 300);
   
     
     //um.setHeight(50);

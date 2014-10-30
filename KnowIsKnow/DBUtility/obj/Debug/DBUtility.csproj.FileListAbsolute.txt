@@ -30,5 +30,4 @@ E:\guithub\knowisknow\knowisknow\KnowIsKnow\DBUtility\bin\Debug\DBUtility.dll
 E:\guithub\knowisknow\knowisknow\KnowIsKnow\DBUtility\bin\Debug\DBUtility.pdb
 E:\guithub\knowisknow\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.dll
 E:\guithub\knowisknow\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.pdb
-E:\guithub\knowisknow\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
 E:\github\knowisknow\KnowIsKnow\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
