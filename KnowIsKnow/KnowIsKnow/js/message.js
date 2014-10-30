@@ -1,4 +1,12 @@
 ﻿$(function () {
+    //名片
+    $(".zm-item-link").hover(function () {
+        checkcareperson();
+        $(this).find(".zqq-goog-hovercard").show();
+    }, function () {
+        $(this).find(".zqq-goog-hovercard").hide();
+    });
+
     $("#wk-pm").click(function () {
         $(".mengban").css("opacity", "0.6");
         $(".mengban").show();
@@ -90,3 +98,19 @@
         }
     });
 })
+
+function checkcareperson() {
+    $.each($(".zqq-zg-btn-follow "), function () {
+        if ($(this).attr("checkcareperson") == "follow") {
+            $(this).html("取消关注");
+            $(this).css({
+                "background": "#eee", "color": "#888",
+                "border": "1px solid #ddd"
+            });
+        }
+        else if ($(this).attr("checkcareperson") == "myself") {
+            $(this).hide();
+            $(this).next().hide();
+        }
+    });
+}

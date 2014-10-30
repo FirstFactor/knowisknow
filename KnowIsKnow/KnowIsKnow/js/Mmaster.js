@@ -386,6 +386,7 @@ $(function () {
             }
             else {
                 var questionid = $(this).attr("questionid");
+                var replyid = $(this).attr("replyid");
                 var userid = $(".userid").attr("userid");
                 var reportType = $(this).attr("zhi");
                 var otherReason = $(".zqq-jubao-otherReason").val();
@@ -393,6 +394,16 @@ $(function () {
                     data: "{ questionid:'" + questionid + "', userid:' " + userid + "', reportType:'" + reportType + "',otherReason:'" + otherReason + "'}",
                     dataType: "json",
                     url: "ws.asmx/reportQuestion",
+                    type: "post",
+                    contentType: "application/json",
+                    success: function (res) {
+                        alert(res.d);
+                    }
+                });
+                $.ajax({
+                    data: "{ replyid:'" + replyid + "', userid:' " + userid + "', reportType:'" + reportType + "',otherReason:'" + otherReason + "'}",
+                    dataType: "json",
+                    url: "ws.asmx/reportReply",
                     type: "post",
                     contentType: "application/json",
                     success: function (res) {

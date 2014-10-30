@@ -30,6 +30,21 @@ namespace BLL
             DAL.MessageUserView dalMUV = new DAL.MessageUserView();
             return dalMUV.GetUnreadSenderList(sql);
         }
+        public DataSet GetUserinfo(string sql)
+        {
+            DAL.UserInfo dalMUV = new DAL.UserInfo();
+            return dalMUV.GetreplyName(sql);
+        }
+        public DataSet GetMessageNickName(string sql)
+        {
+            DAL.UserInfo dalMUV = new DAL.UserInfo();
+            return dalMUV.GetreplyName(sql);
+        }
+        public DataSet GetMessageUserShuoShuo(string sql)
+        {
+            DAL.UserInfo dalMUV = new DAL.UserInfo();
+            return dalMUV.GetreplyName(sql);
+        }
         #region  BasicMethod
         /// <summary>
         /// 是否存在该记录

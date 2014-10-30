@@ -3,6 +3,7 @@ $(function () {
     ue = UE.getEditor('container', {
 
     });
+    CheckReply();
     //名片
     $(".zm-item-link-avatar").hover(function () {
         checkcareperson();
@@ -53,7 +54,31 @@ $(function () {
             });
         }
     });
+    //举报
+    $(document).on("click", ".zqq-jubao", function () {
+        if ($(this).attr("checkreplyofuid") == "myReply") {
+            $(this).parent().parent().parent().hide();
+            var replyid = $(this).attr("wkreplyofreplyid");
+            $.ajax({
+                data: "{ replyid:'" + replyid + "' }",
+                dataType: "json",
+                url: "ws.asmx/delMyAnswer",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    alert(res.d);
+                }
+            });
+        }
+        else {
+            $(".zqq-menban").show();
+            $(".zqq-jubao-inner").show();
 
+            var jubaoAnswerID = $(this).attr("replyid");
+            $(".zqq-jubao-submit").attr("replyid", jubaoAnswerID);
+        }
+
+    });
 
    
     $("#wkreply").click(function () {
@@ -211,6 +236,13 @@ function checkcareperson() {
         else if ($(this).attr("checkcareperson") == "myself") {
             $(this).hide();
             $(this).next().hide();
+        }
+    });
+}
+function CheckReply() {
+    $.each($(".zqq-jubao"), function () {
+        if ($(this).attr("checkreplyofuid") == "myReply") {
+            $(this).html("删除");
         }
     });
 }
