@@ -821,7 +821,7 @@
                         <ItemTemplate>
                 <div class="wtzm-profile-side-topics">
                     <a class="wtlink">
-                        <img src="http://pic4.zhimg.com/fb89e0ea3_m.jpg" class="wtavatar2" />
+                        <img src="<%# Eval("topicPicUrl") %>" class="wtavatar2" />
                     </a>
                 </div>
                             </ItemTemplate>
