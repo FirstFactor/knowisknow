@@ -93,10 +93,18 @@ namespace KnowIsKnow
             int receiverID = (int)rid;
             BLL.MessageUserView bllMsg = new BLL.MessageUserView();
             Model.MessageUserView msg = bllMsg.GetModel(senderID, receiverID);
-            string sql = "select top 1 MessageContent,userNickName from MessageUserView  where (MessageSenderID=" + senderID + " and MessageReceiverID =" + receiverID + ") or (MessageSenderID=" + receiverID + " and MessageReceiverID =" + senderID + ") order by MessageSendTime desc";
+            string sql = "select top 1 MessageContent,userNickName,receiverNickName from MessageUserView  where (MessageSenderID=" + senderID + " and MessageReceiverID =" + receiverID + ") or (MessageSenderID=" + receiverID + " and MessageReceiverID =" + senderID + ") order by MessageSendTime desc";
             DataSet da = bllMsg.GetLastMessage(sql);
-            return da.Tables[0].Rows[0]["userNickName"].ToString();
-
+            if (receiverID == Convert.ToInt32(userId))
+            {
+                return da.Tables[0].Rows[0]["userNickName"].ToString();
+               
+            }
+            else
+            {
+                string username = "我发给--" + da.Tables[0].Rows[0]["receiverNickName"].ToString();
+                return username;
+            }
         }
         public string getDatatime(object sid, object rid)
         {
