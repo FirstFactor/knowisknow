@@ -120,7 +120,37 @@ $(function () {
             $(".zqydenglufailure").append(xinghtml);
             $(".zqydenglufailure").show();
         };
+<<<<<<< HEAD
+        if (shu <3 ) {
+            if (checkmaildl.test(signmail) && signmima != "") {
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "WSZQY.asmx/denglu",
+                    data: "{useremail:'" + signmail + "',userpwd:'" + signmima + "'}",
+                    dataType: 'json',
+                    success: function (res) {
+                        if (res.d == 0) {
+                            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>帐号和密码不匹配！</div>";
+                            $(".zqydenglufailure").html(xinghtml);
+                            $(".zqydenglufailure").show();
+                            //$(".zqysignmail").val("");
+                            //$(".zqysignmima").val("");
+                        } else {
+                            window.location.href = "home.aspx?backurl=" + window.location.href;
+                        }
+                    }
+                });
+            }
+        }
+        
+
+        if (shu > 2) {
+            $(".shuruyanzheng").show();
+            $(".yanzhengma").show();
+=======
         if (checkmaildl.test(signmail) && signmima != "") {
+>>>>>>> origin/master
             $.ajax({
                 type: "POST",
                 contentType: "application/json",

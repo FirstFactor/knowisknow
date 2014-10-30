@@ -49,6 +49,7 @@ E:\github\knowisknow\KnowIsKnow\KnowIsKnow\bin\KnowIsKnow.pdb
 E:\github\knowisknow\KnowIsKnow\KnowIsKnow\bin\BLL.dll
 E:\github\knowisknow\KnowIsKnow\KnowIsKnow\bin\Model.dll
 E:\github\knowisknow\KnowIsKnow\KnowIsKnow\bin\DAL.dll
+E:\github\knowisknow\KnowIsKnow\KnowIsKnow\bin\Maticsoft.Common.dll
 E:\github\knowisknow\KnowIsKnow\KnowIsKnow\bin\DBUtility.dll
 E:\github\knowisknow\KnowIsKnow\KnowIsKnow\bin\BLL.pdb
 E:\github\knowisknow\KnowIsKnow\KnowIsKnow\bin\Model.pdb
@@ -96,13 +97,13 @@ C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\KnowIsKnow.pdb
 C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\BLL.dll
 C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\Model.dll
 C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\DAL.dll
-C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\Maticsoft.Common.dll
 C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\DBUtility.dll
 C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\BLL.pdb
 C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\Model.pdb
 C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\DAL.pdb
 C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\DBUtility.pdb
 E:\github\knowisknow\KnowIsKnow\KnowIsKnow\bin\Newtonsoft.Json.dll
+C:\Users\just\Desktop\knowisknow\KnowIsKnow\KnowIsKnow\bin\Newtonsoft.Json.dll
 E:\guithub\knowisknow\knowisknow\KnowIsKnow\KnowIsKnow\bin\KnowIsKnow.dll.config
 E:\guithub\knowisknow\knowisknow\KnowIsKnow\KnowIsKnow\bin\KnowIsKnow.dll
 E:\guithub\knowisknow\knowisknow\KnowIsKnow\KnowIsKnow\bin\KnowIsKnow.pdb

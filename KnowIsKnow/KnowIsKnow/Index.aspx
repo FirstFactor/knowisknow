@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>知为知——知之为知之，不知为不知,是知也</title>
     <link rel="stylesheet" type="text/css" href="css/Index.css" />
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </head>
@@ -42,7 +43,6 @@
                                         <span class="zqyplaspan emaillast">名</span>
                                         <input class="zqylast"  id="inputming" />
                                     </div>
-
                                 </div>
 
                                 <div class="zqyinput spec">

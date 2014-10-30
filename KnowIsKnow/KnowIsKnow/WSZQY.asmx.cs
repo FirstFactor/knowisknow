@@ -68,12 +68,13 @@ namespace KnowIsKnow
                 modeluser.userNickName = xm;
                 modeluser.userGender = "男";
                 modeluser.userVerifyCode = strGUID;
+                modeluser.userHeadImage = "images/headImages/1.png";
                 int userid= blluser.Add(modeluser);
 
                 //向注册邮箱发送邮件通知激活
                 MailRequest mail = new MailRequest();
                 mail.Subject = "请确认你在知为知的注册邮箱";//主题
-                mail.Body = "<div style='width:500px;height:300px;margin:auto;'><div style='width:500px;height:250px; border:1px solid #DEDEDE;margin:auto;'> <div style='height:40px;font-size:25px;color:#FFF;line-height:40px;background-color:#0a82e4;text-align:center;'>知乎知</div> <div style='font-size:17px;color:#7b7b7b;padding-left:30px;font-weight:bold;line-height:70px;'>" + xing + "" + ming + " 欢迎加入知乎</div><div style='font-size:14px;color:#7b7b7b;padding-left:30px;line-height:40px;'>为了保证你正常使用知乎的「提问」「回答」「评论」等功能,请激活账号。</div> <a href='http://114.215.109.40/Home.aspx?verifycode=" + strGUID + "' style='padding:10px 25px 10px 25px;border-radius:3px;text-align:center;text-decoration:none;background-color:#0a82e4;color:#ffffff;font-size:17px;display:inline-block; margin:30px 0 0 170px;;white-space:nowrap'>立即激活账号</a></div><span style='font-size:12px;color:#b6c2cc;margin:10px 0 0 130px;display:block;'>你可以通过  <a href='http://localhost:38547/Home.aspx' style='border:none;color:#8a939b;text-decoration:none; font-size:14px;'>设置</a>  管理其它来知乎知的邮件</span><span style='font-size:12px;color:#b6c2cc;line-height:17px;display:block;margin:5px 0 0 195px;'>© 2014 知乎知</span><div style='display:none;'>" + strGUID + "</div></div>";//内容
+                mail.Body = "<div style='width:500px;height:300px;margin:auto;'><div style='width:500px;height:250px; border:1px solid #DEDEDE;margin:auto;'> <div style='height:40px;font-size:25px;color:#FFF;line-height:40px;background-color:#0a82e4;text-align:center;'>知为知</div> <div style='font-size:17px;color:#7b7b7b;padding-left:30px;font-weight:bold;line-height:70px;'>" + xing + "" + ming + " 欢迎加入知为知</div><div style='font-size:14px;color:#7b7b7b;padding-left:30px;line-height:40px;'>为了保证你正常使用知为知的「提问」「回答」「评论」等功能,请激活账号。</div> <a href='http://114.215.109.40/Home.aspx?verifycode=" + strGUID + "'  style='padding:10px 25px 10px 25px;border-radius:3px;text-align:center;text-decoration:none;background-color:#0a82e4;color:#ffffff;font-size:17px;display:inline-block; margin:30px 0 0 170px;;white-space:nowrap'>立即激活账号</a></div><span style='font-size:12px;color:#b6c2cc;margin:10px 0 0 130px;display:block;'>你可以通过  <a href='http://localhost:38547/Home.aspx' style='border:none;color:#8a939b;text-decoration:none; font-size:14px;'>设置</a>  管理其它来知为知的邮件</span><span style='font-size:12px;color:#b6c2cc;line-height:17px;display:block;margin:5px 0 0 195px;'>© 2014 知为知</span><div style='display:none;'>" + strGUID + "</div></div>";//内容
                 mail.Bcc = "13337965191@163.com";//秘密抄送人
                 mail.From = "13337965191@163.com";//发送人
                 mail.CC = email;//抄送人
@@ -106,7 +107,11 @@ namespace KnowIsKnow
                 Session["UserNickName"] = xm;
                 Session["UserEmail"] = email;
                 Session["UserPwd"] = jiamipwd;
+<<<<<<< HEAD
+                
+=======
                 Session["UserHeadImage"] = "images/headimages/1.png";
+>>>>>>> origin/master
                 return "yes";
             }
             else
