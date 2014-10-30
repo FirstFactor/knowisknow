@@ -79,13 +79,13 @@ $(function () {
                 data: "{xing:'" + xing + "',ming:'" + ming + "',email:'" + email + "',mima:'" + mima + "'}",
                 dataType: 'json',
                 success: function (res) {
-                    if (res.d == "yes" ) {
+                    if (res.d == "yes") {
                         window.location.href = "SelectTopic.aspx?backurl=" + window.location.href;
                     } else {
                         var mimahtml = "<div class='failtip'><i class='icon_sign'></i>该邮箱已注册，请直接登录</div>";
                         $(".zqyzhucefailure").html(mimahtml);
                         $(".zqyzhucefailure").show();
-                    }                 
+                    }
                 }
             });
         }
@@ -93,9 +93,9 @@ $(function () {
 
 
     /*登陆*/
-
+    var shu = 0;
     $(".zqydenglusign").click(function () {
-
+        shu = shu + 1;
         $(".zqydenglufailure").html("");
         $(".zqydenglufailure").hide();
         var signmail = $(".zqysignmail").val();
@@ -120,8 +120,8 @@ $(function () {
             $(".zqydenglufailure").append(xinghtml);
             $(".zqydenglufailure").show();
         };
-<<<<<<< HEAD
-        if (shu <3 ) {
+
+        if (shu < 3) {
             if (checkmaildl.test(signmail) && signmima != "") {
                 $.ajax({
                     type: "POST",
@@ -143,36 +143,35 @@ $(function () {
                 });
             }
         }
-        
 
-        if (shu > 2) {
+
+        if (shu > 3) {
             $(".shuruyanzheng").show();
             $(".yanzhengma").show();
-=======
-        if (checkmaildl.test(signmail) && signmima != "") {
->>>>>>> origin/master
-            $.ajax({
-                type: "POST",
-                contentType: "application/json",
-                url: "WSZQY.asmx/denglu",
-                data: "{useremail:'" + signmail + "',userpwd:'" + signmima + "'}",
-                dataType: 'json',
-                success: function (res) {
-                    if (res.d ==0 ) {
-                        var xinghtml = "<div class='failtip'><i class='icon_sign'></i>帐号和密码不匹配！</div>";
-                        $(".zqydenglufailure").html(xinghtml);
-                        $(".zqydenglufailure").show();
-                        //$(".zqysignmail").val("");
-                        //$(".zqysignmima").val("");
-                    } else {                      
-                        window.location.href = "home.aspx?backurl=" + window.location.href;
+            if (checkmaildl.test(signmail) && signmima != "") {
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "WSZQY.asmx/denglu",
+                    data: "{useremail:'" + signmail + "',userpwd:'" + signmima + "'}",
+                    dataType: 'json',
+                    success: function (res) {
+                        if (res.d == 0) {
+                            var xinghtml = "<div class='failtip'><i class='icon_sign'></i>帐号和密码不匹配！</div>";
+                            $(".zqydenglufailure").html(xinghtml);
+                            $(".zqydenglufailure").show();
+                            //$(".zqysignmail").val("");
+                            //$(".zqysignmima").val("");
+                        } else {
+                            window.location.href = "home.aspx?backurl=" + window.location.href;
+                        }
                     }
-                }
-            });
+                });
+            }
         }
 
-
     });
+
 
     $(".zqymail").click(function () {
         $(".emailspan").hide();
@@ -280,11 +279,11 @@ $(function () {
 
         var html = "";
         html += ' 					<div class="zqytopic">';
-        html += '						<img src="'+phsrc+'" class="story_avatar">';
+        html += '						<img src="' + phsrc + '" class="story_avatar">';
         html += '						<div class="story_title">';
         html += '							<div>';
-        html += '								<a href="#" class="story_jies mingzi">'+mingzi+'</a>';
-        html += '								<span>'+shuoshuo+'</span>';
+        html += '								<a href="#" class="story_jies mingzi">' + mingzi + '</a>';
+        html += '								<span>' + shuoshuo + '</span>';
         html += '							</div>';
         html += '							<div class="story_jies">68743 人关注该话题，1000 个精华回答</div>';
         html += '						</div>';

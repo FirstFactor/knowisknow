@@ -41,26 +41,27 @@
                                     </div>
                                     <div class="xmright">
                                         <span class="zqyplaspan emaillast">名</span>
-                                        <input class="zqylast"  id="inputming" />
+                                        <input class="zqylast" id="inputming" />
                                     </div>
                                 </div>
 
                                 <div class="zqyinput spec">
                                     <span class="zqyplaspan emailspan">邮箱</span>
-                                    <input  id="inputyx" class="normalinput zqymail" type="email" />
+                                    <input id="inputyx" class="normalinput zqymail" type="email" />
                                 </div>
 
                                 <div class="zqyinput spec">
                                     <span class="zqyplaspan pwdspan">密码</span>
-                                    <input  id="inputmm" class="normalinput zqymima" type="password" />
+                                    <input id="inputmm" class="normalinput zqymima" type="password" />
 
                                 </div>
+
 
                                 <div class="zqyzhucefailure">
                                 </div>
 
                                 <div class="zqyinput">
-                                    <button type="button" runat="server" class="zqyzhuceordenglu zqyzhucesign" >注册知乎</button>
+                                    <button type="button" runat="server" class="zqyzhuceordenglu zqyzhucesign">注册知乎</button>
                                     <%--<asp:Button ID="btnzhuce" runat="server" Text="注册知乎" class="zqyzhuceordenglu zqyzhucesign" OnClick="btnzhuce_Click" />--%>
                                 </div>
                             </div>
@@ -77,27 +78,29 @@
 
                                 <div class="zqyinput spec inputmail">
                                     <span class="zqyplaspan signemailspan">邮箱</span>
-                                    <input class="normalinput zqysignmail" type="email"  id="inputsignyx" />
+                                    <input class="normalinput zqysignmail" type="email" id="inputsignyx" />
                                 </div>
 
                                 <div class="zqyinput spec inputsignmima">
                                     <span class="zqyplaspan signpwdspan">密码</span>
                                     <input class="normalinput zqysignmima" type="password" id="inputsignmm" />
                                 </div>
+                    
+
                                 <div class="zqydenglufailure">
                                 </div>
 
                                 <div class="zqyinput">
-                                    <button type="button"  class="zqyzhuceordenglu  zqydenglusign">登陆</button>
+                                    <button type="button" class="zqyzhuceordenglu  zqydenglusign">登陆</button>
 
-                                   <%-- <asp:Button Text="登录" runat="server" class="zqyzhuceordenglu  zqydenglusign" ID="btndenglu" OnClick="btndenglu_Click" />--%>
+                                    <%-- <asp:Button Text="登录" runat="server" class="zqyzhuceordenglu  zqydenglusign" ID="btndenglu" OnClick="btndenglu_Click" />--%>
                                 </div>
                                 <div class="zqyinput">
-                                    <div style="float: left;width:80px;height:20px;">
+                                    <div style="float: left; width: 80px; height: 20px;">
                                         <input type="checkbox" name="name" value=" " />
                                         <span style="font-size: 12px;">记住我</span>
                                     </div>
-                                    <a href="resetpassword.aspx" style="color: #FFF; display: block; float: right; font-size: 12px;width:80px;height:20px;line-height:20px;">忘记密码?</a>
+                                    <a href="resetpassword.aspx" style="color: #FFF; display: block; float: right; font-size: 12px; width: 80px; height: 20px; line-height: 20px;">忘记密码?</a>
                                 </div>
 
 

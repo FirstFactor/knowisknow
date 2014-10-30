@@ -61,8 +61,11 @@
                                         <div class="clear"></div>
                                     </div>
 							    	<%--<div id="zqq-questionTitle1" class="zqq-question-title" questionid="<%# Eval("questionID") %>"><%# Eval("questionTitle") %></div>--%>
-                                    <a href='QuestionDetail.aspx?QuesID=<%# Eval("questionID")%>' class="zqq-question-title" questionid='<%# Eval("questionID") %>' ><%# Eval("questionTitle") %></a>
+                                    <a href='QuestionDetail.aspx?QuesID=<%# Eval("questionID")%>' class="zqq-question-title" questionid='<%# Eval("questionID") %>' ><%# GetContentSummary( Eval("questionTitle").ToString(),20,true) %></a>
+                                    <div class="zqq-shouqi">收起</div>
 								    <div class="zqq-question-content">
+                                        <div class="zqq-jiequ-content"><%# GetContentSummary( Eval("questionContent").ToString(),120,true) %></div>
+                                        <div class="zqq-xsqb">显示全部</div>
 									    <div class="zqq-content-word"><%# Eval("questionContent") %></div>
 									    <img class="zqq-content-pic" src="" /> 
 								    </div>

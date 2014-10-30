@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>知为知——知之为知之，不知为不知,是知也</title>
     <link rel="stylesheet" type="text/css" href="css/Index.css" />
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </head>
@@ -42,7 +43,6 @@
                                         <span class="zqyplaspan emaillast">名</span>
                                         <input class="zqylast"  id="inputming" />
                                     </div>
-
                                 </div>
 
                                 <div class="zqyinput spec">
@@ -84,14 +84,6 @@
                                     <span class="zqyplaspan signpwdspan">密码</span>
                                     <input class="normalinput zqysignmima" type="password" id="inputsignmm" />
                                 </div>
-
-                                <input type="text" name="name" value="" class="shuruyanzheng" style="display:block;width:199px;height:30px; border-radius:5px;display:none;" placeholder="验证码" />
-
-                                <div class="yanzhengma" style="width:202px;height:40px;margin-top:18px;display:none;">
-                                    <img src="build.aspx" alt="Alternate Text" style="width:80px;height:40px;display:block;float:left;" class="tuph"/>
-                                    <span class="seenoqing" style="font-size:12px;display:block;width:100px;height:40px;float:right;">看不清? 换一张</span>
-                                </div>
-
                                 <div class="zqydenglufailure">
                                 </div>
 
