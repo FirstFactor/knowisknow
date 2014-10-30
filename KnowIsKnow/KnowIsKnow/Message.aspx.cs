@@ -29,7 +29,10 @@ namespace KnowIsKnow
                 
                 userId = Session["UserID"].ToString();
                 BLL.MessageUserView message = new BLL.MessageUserView();
+                BLL.MessageInfo bllMsg = new BLL.MessageInfo();
                 string sql = "select distinct MessageSenderID,MessageReceiverID from MessageUserView where ( MessageReceiverID =" + userId + " or MessageSenderID="+userId+") group by MessageSenderID,MessageReceiverID";
+                string sqll = "update MessageInfo set MessageSate='read' where MessageReceiverID="+userId+"";
+                int da = bllMsg.UpdataMessage(sqll);
                 DataSet ds = message.GetUnreadSenderList(sql);
                 if (ds.Tables.Count > 0)
                 {
@@ -121,7 +124,9 @@ namespace KnowIsKnow
             {
                 return msg.receiverHeadImage;
             }
-   
+           
+
+           
         }
         public string getMessageCount(object sid,object rid)
         {
@@ -134,6 +139,15 @@ namespace KnowIsKnow
 
             return da.Tables[0].Rows[0]["MessageSenderID"].ToString();
         }
+        public string getchatNickName(object sid,object rid) 
+        {
+            int senderID = (int)sid;
+            int receiverID = (int)rid;
+            BLL.UserInfo blluser = new BLL.UserInfo();
+            DataSet da = blluser.GetList("userID="+senderID+"");
+            return da.Tables[0].Rows[0]["userNickName"].ToString();
+        }
+
         public string GetUserinfo(object sid, object rid)
         {
             int senderID = (int)sid;
@@ -149,7 +163,7 @@ namespace KnowIsKnow
             {
                 return msg.MessageReceiverID.ToString();
             }
-           
+
         }
         public string GetMessageNickName(object sid, object rid)
         {
@@ -184,14 +198,7 @@ namespace KnowIsKnow
             }
         }
 
-        public string getchatNickName(object sid,object rid) 
-        {
-            int senderID = (int)sid;
-            int receiverID = (int)rid;
-            BLL.UserInfo blluser = new BLL.UserInfo();
-            DataSet da = blluser.GetList("userID="+senderID+"");
-            return da.Tables[0].Rows[0]["userNickName"].ToString();
-        }
+
         public void sendMessage(object o, EventArgs e)
         {
             string receiveNickName = this.txtMessageReceive.ToString();
@@ -216,6 +223,7 @@ namespace KnowIsKnow
             }
             
         }
+
         public string CheckCarePerson(object GetUserinfo)
         {
             BLL.CarePerson cq = new BLL.CarePerson();

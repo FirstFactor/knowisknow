@@ -160,6 +160,5 @@ namespace BLL
             DAL.UserInfo dalMUV = new DAL.UserInfo();
             return dalMUV.GetreplyName(sql);
         }
-        
     }
 }

@@ -108,10 +108,19 @@ namespace KnowIsKnow
         //    return false;
         //}
 
-        protected void addbtn_Click(object sender, EventArgs e)
-        {
-         
-        }
+        //protected void addbtn_Click(object sender, EventArgs e)
+        //{
+        //    BLL.TopicInfo addtopic = new BLL.TopicInfo();
+        //    Model.TopicInfo topic = new Model.TopicInfo();
+        //    topic.topicTitle = this.txttopictitle.Text;
+        //    topic.topicDes = this.txtDesc.Text;
+        //    topic.topicPicUrl = "images/topicImages/" + Session["newname"];
+        //    topic.topicAttention = 0;
+
+        //    addtopic.Add(topic);
+        //    Response.Write("<script>alert('添加成功')</script>");
+
+        //}
 
         protected void Button1_Click(object sender, EventArgs e)
         {

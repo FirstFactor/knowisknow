@@ -17,6 +17,11 @@ namespace DAL
     {
         public MessageInfo()
         { }
+        public int UpdataMessage(string sql)
+        {
+            int da = DbHelperSQL.ExecuteSql(sql);
+            return da;
+        }
         #region  BasicMethod
 
         /// <summary>

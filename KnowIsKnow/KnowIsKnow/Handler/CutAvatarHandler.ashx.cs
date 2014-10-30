@@ -20,8 +20,6 @@ namespace WebApplication1.Handler
             System.Drawing.Image thumbImg = null;      //被截图 
             System.Drawing.Graphics gps = null;    //存绘图对象   
             System.Drawing.Image finalImg = null;  //最终图片
-
-
             try
             {
                 string pointX = context.Request.Params["pointX"];   //X坐标
@@ -30,7 +28,7 @@ namespace WebApplication1.Handler
                 string sizeHeight = context.Request.Params["sizeH"];   //选取区域的高度
                 string imgUrl = context.Request.Params["imgUrl"];   //被截图图片地址
                 string rlSize = context.Request.Params["maxVal"];        //截图矩形的大小
-                string lujing = context.Request.Params["lujing"];  //上传路径的
+                string lujing = context.Request.Params["lujing"];
 
                 int finalWidth = 100;
                 int finalHeight = 100;
@@ -45,10 +43,6 @@ namespace WebApplication1.Handler
                     thumbImg = System.Drawing.Image.FromFile(HttpContext.Current.Server.MapPath(imgUrl));
 
                     System.Drawing.Rectangle rl = new System.Drawing.Rectangle(Convert.ToInt32(pointX), Convert.ToInt32(pointY), Convert.ToInt32(rlSize), Convert.ToInt32(rlSize));   //得到截图矩形
-
-                    int i=0;
-                    i = i++;
-
 
                     gps = System.Drawing.Graphics.FromImage(bitmap);      //读到绘图对象
 

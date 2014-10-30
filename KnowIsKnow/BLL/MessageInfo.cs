@@ -155,5 +155,10 @@ namespace BLL
         #region  ExtensionMethod
 
         #endregion  ExtensionMethod
+        public int UpdataMessage(string sql) 
+        {
+            DAL.MessageInfo dalMUV = new DAL.MessageInfo();
+            return dalMUV.UpdataMessage(sql);
+        }
     }
 }

@@ -2,6 +2,19 @@
     panduan();
     CheckQusetionProvider();
 
+    $(".zqq-xsqb").click(function () {
+        $(this).hide();
+        $(this).parent().parent().find(".zqq-shouqi").show();
+        $(this).parent().find(".zqq-jiequ-content").hide();
+        $(this).parent().find(".zqq-content-word").show();
+    });
+    $(".zqq-shouqi").click(function () {
+        $(this).hide();
+        $(this).parent().find(".zqq-question-content").find(".zqq-jiequ-content").show();
+        $(this).parent().find(".zqq-question-content").find(".zqq-xsqb").show();
+        $(this).parent().find(".zqq-question-content").find(".zqq-content-word").hide();
+    });
+
     $(".zqq-follow-topic-button").click(function () {
         //$(this).toggleClass("zqq-display");
         //$(this).next().toggleClass("zqq-display");
@@ -213,7 +226,6 @@
     }, function () {
         $(this).find(".zqq-goog-hovercard").hide();
     });
-    
 
     
 });

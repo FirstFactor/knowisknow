@@ -437,6 +437,5 @@ namespace DAL
         {
             return DbHelperSQL.Query(sql);
         }
-       
     }
 }

@@ -1,11 +1,13 @@
 ﻿var userid;
 $(function () {
+
   
    
     $("#quanUpload").click(function () {
         $("#mengban").show();
         $("#uploadArea").show();
     });
+
 
      var gen = $("#wtsp").attr("xingbie");
     if (gen == "男") {

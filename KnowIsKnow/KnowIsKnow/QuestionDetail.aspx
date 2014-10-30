@@ -64,7 +64,10 @@
 				</div>
 				<div id="zh-question-answer-wrap" class="zh-question-answer-wrapper navigable">
 					<div class="zm-item-answer ">
-						<div class="zm-votebar goog-scrollfloater">
+						
+                         <asp:Repeater runat="server" ID="wkrtpReply">
+                    <ItemTemplate>
+                        <div class="zm-votebar goog-scrollfloater">
 							<button class="up" title="赞同">
 								<i class="icon vote-arrow"></i>
 								<span class="label">赞同</span>
@@ -74,8 +77,6 @@
 								<i class="icon vote-arroe"></i>
 							</button>
 						</div>
-                         <asp:Repeater runat="server" ID="wkrtpReply">
-                    <ItemTemplate>
                         <div class="answer-main">
 						<div class="answer-head">
 							<div class="zm-item-answer-author-info">

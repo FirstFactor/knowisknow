@@ -59,11 +59,13 @@ namespace KnowIsKnow
 
 
                 BLL.TopicUserView topicuser = new BLL.TopicUserView();
-
+                BLL.TopicUserView blltopuc = new BLL.TopicUserView();
+                DataSet da = blltopuc.GetList("userID="+userid);
                 DataSet ds=  topicuser.GetList("userID="+userid);
                 this.rtpcared.DataSource = ds.Tables[0];
                 this.rtpcared.DataBind();
-
+                this.wtrpt.DataSource = da.Tables[0];
+                this.wtrpt.DataBind();
             }
             
         }

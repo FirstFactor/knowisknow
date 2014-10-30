@@ -33,7 +33,7 @@
 .guanzhuhuatispecial{display: none;}
 
 .ghmiddlecontentleftcontentdivdivdivguanzhutitlea2i{ float: left;display: block;margin-right: 5px; width: 14px;height: 11px;background-image: url("images/close.png"); background-position: -25px -67px;line-height: 14px;}
-.ghmiddlecontentleftcontentdivdivdivguanzhucontentquestiona{float: left; display: block; font-size: 13px;color: #259;text-decoration: none;line-height: 1.7;}
+.ghmiddlecontentleftcontentdivdivdivguanzhucontentquestiona{float: left; display: block; font-size: 13px;color: #259;text-decoration: none;line-height: 1.7;width:450px;overflow:hidden;height:25px;}
 .ghmiddlecontentleftcontentdivdivdivguanzhucontentquestiona:hover{text-decoration: underline;}
 .ghmiddlecontentleftcontentdivdivdivguanzhucontentquestionspan{color: #999;font-size: 12px;font-weight: 400;line-height: 1.7;margin-left: 5px;}
 

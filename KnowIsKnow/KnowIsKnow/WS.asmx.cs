@@ -89,7 +89,7 @@ namespace KnowIsKnow
             mi.MessageSate = "unread";
             mi.MessageSendTime = now;
             int msgid=  bllmi.Add(mi);
-            return msgid.ToString();
+            return  mi.MessageReceiverID.ToString();
         }
 
 
