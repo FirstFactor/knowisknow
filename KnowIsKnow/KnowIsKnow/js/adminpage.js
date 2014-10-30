@@ -40,6 +40,33 @@ $(function () {
 
 
 
+    $("#picupload").click(function () {
+        $("#mengban").show();
+        $("#uploadArea").show();
+        adimg = $(this);
+    });
+
+
+    $("#addbtn").click(function () {
+        topicTitle = $("#txttopictitle").val();
+        topicDes = $("#txtDesc").val();
+        topicPicUrl = $("#imglujing").attr("src");
+        $.ajax({
+            data: "{'topicTitle':'" + topicTitle + "','topicDes':'" + topicDes + "','topicPicUrl':'" + topicPicUrl + "'}",
+            dataType: "json",
+            url: "WSQuan.asmx/addTopic",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                if (res.d == "ok") {
+                    location.reload();
+                }
+            }
+
+        });
+
+    });
+
 
     ////********************//
 
@@ -202,13 +229,16 @@ $(function () {
         thistopicAttention = $(this).parent().find(".topicAttention").html();
         thistopicState = $(this).parent().find(".selectedtopicstate").html();
 
-       
+        
+        thistopicPicUrl = encodeURI(thistopicPicUrl11);
+
+
         $.ajax({
-            data: { "topicid": thistopicid, "topictitle": thistopicTitle, "topicdes": thistopicDesc, "topicpicurl": thistopicPicUrl, "topicattention": thistopicAttention, "topicstate": thistopicState },
-            datatype: "json",
+            data: "{ 'topicid':'" + thistopicid + "', 'topictitle':'" + thistopicTitle + "', 'topicdes': '" + thistopicDesc + "','topicpicurl':'" + thistopicPicUrl + "', 'topicattention':'" + thistopicAttention + "', 'topicstate':'" + thistopicState + "'}",
+            dataType: "json",
             url: "ws.asmx/UpdateTopicInfo",
             type: "post",
-            contenttype: "application/json",///这里的东西不能东哪怕是大小写都不要动，不然图片路径传不上去
+            contentType: "application/json",///这里的东西不能东哪怕是大小写都不要动，不然图片路径传不上去
             success: function (res) {
               
             }
@@ -255,8 +285,57 @@ $(function () {
         var val = 'deleted';
         $(this).parent().find(".adComboxInput").prev().html(val);
         $(this).parent().find(".adComboxInput").next().html(val);
+
+        thistopicid = $(this).parent().attr("topicinfoid");
+        thistopicState = "unnormal"
+
+        alert(thistopicid);
+        $.ajax({
+            data: "{ 'topicid':'" + thistopicid + "', 'topicstate':'" + thistopicState + "'}",
+            dataType: "json",
+            url: "WSQuan.asmx/UpdateTopicInfoState",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+
+        });
+
+
         $(this).html("已删除");
+
+
+
+
     });
+
+
+
+    /************************/
+
+    $(document).on("click", ".adhuifu", function () {
+
+        thistopicid = $(this).parent().attr("topicinfoid");
+        thistopicState = "normal"
+
+        alert(thistopicid);
+        $.ajax({
+            data: "{ 'topicid':'" + thistopicid + "', 'topicstate':'" + thistopicState + "'}",
+            dataType: "json",
+            url: "WSQuan.asmx/UpdateTopicInfoState",
+            type: "post",
+            contentType: "application/json",
+            success: function (res) {
+                alert(res.d);
+            }
+        });
+    });
+
+
+
+
+
     //假删操作
     $(".adshanchu").click(function () {
         var val = 'deleted';

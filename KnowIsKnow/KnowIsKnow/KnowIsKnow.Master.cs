@@ -26,7 +26,9 @@ namespace KnowIsKnow
             {
                 userid = Session["UserID"].ToString();
                 usernickname = Session["UserNickName"].ToString();
-                userheadimg = Session["UserHeadImage"].ToString();
+                BLL.UserInfo user = new BLL.UserInfo();
+                Model.UserInfo muser=  user.GetModel(int.Parse(userid));
+                userheadimg = muser.userHeadImage;
                 string  useremail=Session["userEmail"].ToString();
                 string verify = Convert.ToString(Request.QueryString["verifycode"]);
                 if (verify != null)  
@@ -47,7 +49,7 @@ namespace KnowIsKnow
                 {
                     if (yanzheng == "unverify")
                     {
-                        jihuo.InnerHtml = "<div>欢迎！为正常使用知乎，请激活您的邮箱:<a href='https://mail.qq.com/cgi-bin/loginpage'>" + useremail + "</a></div>";
+                        jihuo.InnerHtml = "<div>欢迎！为正常使用知乎，请激活您的邮箱:<a href='https://mail.qq.com/cgi-bin/loginpage' target='_blank'>" + useremail + "</a></div>";
                     }
                 };
                 if (mail == "163.com")

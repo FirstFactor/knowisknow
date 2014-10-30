@@ -30,6 +30,7 @@ namespace WebApplication1.Handler
                 string sizeHeight = context.Request.Params["sizeH"];   //选取区域的高度
                 string imgUrl = context.Request.Params["imgUrl"];   //被截图图片地址
                 string rlSize = context.Request.Params["maxVal"];        //截图矩形的大小
+                string lujing = context.Request.Params["lujing"];
 
                 int finalWidth = 100;
                 int finalHeight = 100;
@@ -51,7 +52,7 @@ namespace WebApplication1.Handler
 
                     finalImg = PubClass.GetThumbNailImage(bitmap, finalWidth, finalHeight);
 
-                    string finalPath = "/images/topicimg/final" + DateTime.Now.ToFileTime() + ext;
+                    string finalPath = lujing + DateTime.Now.ToFileTime() + ext;
 
                     finalImg.Save(HttpContext.Current.Server.MapPath(finalPath));
 
