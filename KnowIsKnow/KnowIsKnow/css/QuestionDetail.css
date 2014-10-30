@@ -13,7 +13,8 @@ body{font-family: 'Helvetica Neue',Helvetica,Arial,Sans-serif;line-height: 1.7;f
 .zm-tag-editor{margin: 0 0 5px;}
 .zg-clear:before{content: "\0020";display: block;height: 0;visibility: hidden;}
 .zg-clear:before, .zg-clear:after{content: "\0020";display: block;height: 0;visibility: hidden;clear: both;}
-.zm-item-tag{background: #eff6fa;padding: 1px 10px 0;border-radius: 30px;text-decoration: none;margin: 0 5px 5px 0;display: inline-block;float: left;white-space: nowrap;}
+.zm-item-tag{background: #eff6fa;padding: 1px 10px 0;border-radius: 30px;text-decoration: none;margin: 0 5px 5px 0;display: inline-block;float: left;white-space: nowrap;cursor:pointer;}
+.zm-item-tag:hover{background: #259;color: #fff;}
 #zh-question-title{margin: 0 0 5px;}
 #zh-question-title>.zm-item-title{font-size: 18px;}
 #zh-question-title>.zm-item-title{display: inline;margin: 0;}
