@@ -20,8 +20,6 @@ namespace WebApplication1.Handler
             System.Drawing.Image thumbImg = null;      //被截图 
             System.Drawing.Graphics gps = null;    //存绘图对象   
             System.Drawing.Image finalImg = null;  //最终图片
-
-
             try
             {
                 string pointX = context.Request.Params["pointX"];   //X坐标

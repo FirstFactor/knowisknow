@@ -151,7 +151,7 @@
                 $.ajax({
                     type: "POST",
                     url: "/Handler/CutAvatarHandler.ashx",
-                    data: { imgUrl: $('#hidImageUrl').val(), pointX: $("#x").val(), pointY: $("#y").val(), maxVal: $("#maxVal").val(), lujing: "/images/headimg/final" },
+                    data: { imgUrl: $('#hidImageUrl').val(), pointX: $("#x").val(), pointY: $("#y").val(), maxVal: $("#maxVal").val(), lujing: "/images/topicimg/final" },
                     success: function (msg) {
                         if (msg.indexOf('images/topicimg') != -1) {
                             $("#imgCut").attr("src", msg);
@@ -420,7 +420,7 @@
                     </div>
 
                 </ul>
-                <input type="button"id="first" str="" name="name" value="首页" /><input type="button"id="prevtopiclist" str="" name="name" value="上一页" /><input type="button" id="nexttopiclist" str="" name="name" value="下一页" /><input type="button"id="last" str="" name="name" value="尾页" /><input type="text" id="pages" str="" name="name" value="1" />
+                <input type="button"id="first" str="" name="name" value="首页" /><input type="button"id="prevtopiclist" str="" name="name" value="上一页" /><input type="button" id="nexttopiclist" str="" name="name" value="下一页" /><input type="button"id="last" str="" name="name" value="尾页" /><input type="text" id="pages" str="" name="name" value="1" readonly="readonly" style="width:40px;" />
             </div>
             <div class="adOperaDetail dealReport">
                 <ul class="reportul">

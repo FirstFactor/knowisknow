@@ -289,7 +289,7 @@ $(function () {
         thistopicid = $(this).parent().attr("topicinfoid");
         thistopicState = "unnormal"
 
-        alert(thistopicid);
+     
         $.ajax({
             data: "{ 'topicid':'" + thistopicid + "', 'topicstate':'" + thistopicState + "'}",
             dataType: "json",
@@ -297,7 +297,7 @@ $(function () {
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+               // alert(res.d);
             }
 
         });
@@ -319,7 +319,7 @@ $(function () {
         thistopicid = $(this).parent().attr("topicinfoid");
         thistopicState = "normal"
 
-        alert(thistopicid);
+       // alert(thistopicid);
         $.ajax({
             data: "{ 'topicid':'" + thistopicid + "', 'topicstate':'" + thistopicState + "'}",
             dataType: "json",
@@ -327,7 +327,7 @@ $(function () {
             type: "post",
             contentType: "application/json",
             success: function (res) {
-                alert(res.d);
+                //alert(res.d);
             }
         });
     });
@@ -412,7 +412,7 @@ $(function () {
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    alert(res.d);
+                    //alert(res.d);
                 }
 
             });
@@ -425,7 +425,7 @@ $(function () {
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    alert(res.d);
+                    //alert(res.d);
                 }
 
             });
@@ -450,7 +450,7 @@ $(function () {
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    alert(res.d);
+                   // alert(res.d);
                 }
 
             });
@@ -464,7 +464,7 @@ $(function () {
                 type: "post",
                 contentType: "application/json",
                 success: function (res) {
-                    alert(res.d);
+                   // alert(res.d);
                 }
 
             });
@@ -475,6 +475,63 @@ $(function () {
 
     /*************翻页********************/
 
+
+
+
+
+    $("#first").click(function () {
+        var str;
+        if ($(this).attr("str") == "normal") {
+
+            str = "topicState='normal'";
+        }
+        if ($(this).attr("str") == "unnormal") {
+            str = "topicState='unnormal'";
+        }
+
+        order = "topicID";
+
+
+        startindex = 1;
+        endindex = 5;
+
+        Pages(str, order, startindex, endindex);
+
+        $("#pages").val(endindex / 5);
+    });
+
+    $("#last").click(function () {
+        var str;
+        if ($(this).attr("str") == "normal") {
+
+            str = "topicState='normal'";
+        }
+        if ($(this).attr("str") == "unnormal") {
+            str = "topicState='unnormal'";
+        }
+
+        order = "topicID";
+
+        var allpage;
+        $.ajax({
+            async: false,
+            type: "POST",
+            contentType: "application/json",
+            url: "WSQuan.asmx/CountPage",
+            data: '{"str":"' + str + '","startindex":"' + startindex + '","endindex":"' + endindex + '"}',
+            dataType: 'json',
+            success: function (result) {
+                allpage = result.d;
+            }
+        });
+
+        endindex = allpage * 5;
+        startindex = endindex - 4;
+
+        Pages(str, order, startindex, endindex);
+        $("#pages").val(endindex / 5);
+
+    });
 
 
 
@@ -489,7 +546,7 @@ $(function () {
            str = "topicState='unnormal'";
         }
 
-        order = "topicID"
+        order = "topicID";
 
        
         startindex = startindex - 5;
@@ -497,7 +554,7 @@ $(function () {
         if (startindex <= 0) {
             startindex = 1;
             endindex = 5;
-            alert("已经到第一页了");
+           // alert("已经到第一页了");
         }
         Pages(str, order, startindex, endindex);
         $("#pages").val( endindex / 5);
@@ -536,11 +593,11 @@ $(function () {
         if (endindex / 5 >allpage) {
             endindex = allpage * 5;
             startindex = endindex - 5+1;
-            alert("已经是最后一页了");
+            //alert("已经是最后一页了");
         }
         Pages(str, order, startindex, endindex);
         $("#pages").val(endindex / 5);
-        alert(allpage);
+       // alert(allpage);
     });
 
     /*************翻页********************/
@@ -589,6 +646,7 @@ $(function () {
     });
 
 
+
     $("#sendMessage").click(function () {
         content = ue.getContent();
         if (content == "") {
@@ -604,7 +662,7 @@ $(function () {
             data: "{'senderid':'" + senderid + "','receiverid':'" + receiverid + "', 'content':'" + content + "'}",
             dataType: 'json',
             success: function (result) {
-                alert(result.d);
+               // alert(result.d);
             }
         });
 
