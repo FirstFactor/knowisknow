@@ -143,7 +143,7 @@ $(function () {
             $(".zqydenglufailure").append(xinghtml);
             $(".zqydenglufailure").show();
         };
-        if (shu ==1) {
+        if (shu <3 ) {
             if (checkmaildl.test(signmail) && signmima != "") {
                 $.ajax({
                     type: "POST",
@@ -165,11 +165,11 @@ $(function () {
                 });
             }
         }
-        $(".shuruyanzheng").show();
-        $(".yanzhengma").show();
+        
 
-        if (shu > 1) {
-           
+        if (shu > 2) {
+            $(".shuruyanzheng").show();
+            $(".yanzhengma").show();
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
