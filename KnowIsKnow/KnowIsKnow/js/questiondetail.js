@@ -3,13 +3,58 @@ $(function () {
     ue = UE.getEditor('container', {
 
     });
- 
+    //名片
     $(".zm-item-link-avatar").hover(function () {
         checkcareperson();
         $(this).find(".zqq-goog-hovercard").show();
     }, function () {
         $(this).find(".zqq-goog-hovercard").hide();
     });
+    //关注person
+    $(".zqq-zg-btn-follow").click(function () {
+        var questionprovider = $(this).attr("questionprovider");
+        var userid = $(".knowIsknowID").attr("knowisknowid");
+        var checkcareperson = $(this).attr("checkcareperson");
+        if (checkcareperson == "nofollow") {
+            $.ajax({
+                data: "{ questionprovider:'" + questionprovider + "', userid:' " + userid + "' }",
+                dataType: "json",
+                url: "ws.asmx/followPerson",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    alert(res.d);
+                }
+            });
+
+            $(this).html("关注");
+            $(this).attr("checkcareperson", "follow");
+            $(this).css({
+                "background": "#8ab923", "background-color": "#9dcc4a", "color": "#3e5e00",
+                "border": "1px solid #6d8f29"
+            });
+        }
+        else if (checkcareperson == "follow") {
+            $.ajax({
+                data: "{ questionprovider:'" + questionprovider + "', userid:' " + userid + "' }",
+                dataType: "json",
+                url: "ws.asmx/noFollowPerson",
+                type: "post",
+                contentType: "application/json",
+                success: function (res) {
+                    alert(res.d);
+                }
+            });
+            $(this).html("取消关注");
+            $(this).attr("checkcareperson", "nofollow");
+            $(this).css({
+                "background": "#eee", "color": "#888",
+                "border": "1px solid #ddd"
+            });
+        }
+    });
+
+
    
     $("#wkreply").click(function () {
 
